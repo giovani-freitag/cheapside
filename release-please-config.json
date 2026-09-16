@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+    "packages": {
+        ".": {
+            "release-type": "node",
+            "include-component-in-tag": false,
+            "changelog-sections": [
+                { "type": "feat", "section": "Added" },
+                { "type": "fix", "section": "Fixed" },
+                { "type": "perf", "section": "Performance" },
+                { "type": "refactor", "section": "Changed" },
+                { "type": "data", "section": "Dataset" },
+                { "type": "docs", "section": "Documentation", "hidden": true },
+                { "type": "test", "section": "Tests", "hidden": true },
+                { "type": "chore", "section": "Housekeeping", "hidden": true }
+            ]
+        }
+    }
+}

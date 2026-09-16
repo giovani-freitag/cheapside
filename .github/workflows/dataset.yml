@@ -1,0 +1,50 @@
+name: Dataset
+
+on:
+    # The screen rebalances quarterly, but prices move daily and the rank with them. Weekly keeps
+    # the published table close enough to the market without burning a run a day on it.
+    schedule:
+        - cron: '0 9 * * 1'
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+concurrency:
+    group: dataset
+    cancel-in-progress: false
+
+jobs:
+    rebuild:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: npm
+
+            - run: npm ci
+
+            - run: npm run data:build
+
+            - run: npm test
+
+            # The dataset arrives as a pull request rather than a push to main: a screen that
+            # changed because a source changed shape should be read before it is published.
+            - uses: peter-evans/create-pull-request@v7
+              with:
+                  branch: dataset/refresh
+                  title: 'data: refresh the B3 screen'
+                  commit-message: 'data: refresh the B3 screen'
+                  body: |
+                      Rebuilt from CVM open data, the B3 listed-companies registry and brapi quotes.
+
+                      Review the excluded-companies count before merging: a jump usually means a
+                      source changed shape rather than that the market did.
+                  add-paths: |
+                      src/data/generated/**

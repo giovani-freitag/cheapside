@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta
+            name="description"
+            content="As vinte empresas mais baratas da B3 por EV/EBIT, com cada filtro, exclusão e número de entrada à mostra."
+        />
+        <meta name="color-scheme" content="light dark" />
+        <title>Cheapside</title>
+        <script>
+            // Painted before the first frame so the page never flashes the wrong surface.
+            (() => {
+                try {
+                    const stored = localStorage.getItem('cheapside.theme');
+                    const choice = stored === 'light' || stored === 'dark' ? stored : 'system';
+                    const dark =
+                        choice === 'dark' ||
+                        (choice === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+                    document.documentElement.dataset.surface = dark ? 'dark' : 'light';
+                } catch {
+                    document.documentElement.dataset.surface = 'light';
+                }
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
+</html>
