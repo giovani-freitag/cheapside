@@ -64,7 +64,13 @@ export function MethodView() {
                 <p className="muted">
                     Não é recomendação de investimento, e não é a afirmação de que barato é bom. As vinte
                     mais baratas de qualquer métrica incluem empresas que estão baratas por merecerem
-                    estar. Dizer quais é outro projeto, e mais difícil.
+                    estar.
+                </p>
+                <p className="muted">
+                    Separar umas das outras exige ler as demonstrações — as notas de provisões, as
+                    transações com partes relacionadas, o parecer do auditor —, que é prosa e não conta.
+                    Essa leitura existe aqui: aparece ao lado da posição quando foi feita, e a empresa
+                    fica marcada como não lida quando não foi. O que ela nunca faz é mexer no ranking.
                 </p>
             </section>
         </div>

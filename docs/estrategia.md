@@ -238,8 +238,10 @@ ajuste e não o efeito.
 
 ## 5. O que a tela não consegue fazer
 
-O escopo inicial estava certo ao dizer que as dez mais baratas conterão empresas que estão baratas
-por merecerem estar, e que separá-las é um projeto mais difícil. Este é o limite.
+O escopo inicial estava certo ao dizer que as mais baratas conterão empresas que estão baratas por
+merecerem estar, e que separá-las é trabalho mais difícil. Errou ao concluir que seria trabalho de
+outro projeto: é deste, e é a segunda camada descrita abaixo. O limite não é de escopo, é de
+matéria — a tela lê números, e a resposta está escrita em prosa.
 
 A tela responde *o que está estatisticamente barato*. Ela não responde *por quê*. O porquê mora no
 comentário da administração, nos fatores de risco, nas notas sobre contingências, nas transações com
