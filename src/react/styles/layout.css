@@ -6,19 +6,39 @@
 }
 
 .masthead__inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 14px var(--gap);
-    padding-block: 26px 18px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 6px var(--gap);
+    padding-block: 14px 10px;
 }
 
-/* The brass rule under the nameplate, the way a printed page rules off its masthead. */
 .masthead__plate {
-    border-bottom: 3px double var(--brass);
-    padding-bottom: 12px;
-    flex: 1 1 22rem;
+    margin: 0;
+}
+
+.masthead__tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-self: end;
+}
+
+/*
+ * The dateline as a rule under the nameplate: it is the one thing on the page that expires, and
+ * a reader who cannot see the date cannot tell whether the ranking is a week or a year old.
+ */
+.masthead__stamp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2px var(--gap);
+    padding-block: 7px 8px;
+    border-top: 1px solid var(--rule);
+}
+
+.masthead__stamp p {
+    margin: 0;
 }
 
 .wordmark {
@@ -34,7 +54,7 @@
 
 .wordmark__text {
     font-family: var(--font-display);
-    font-size: var(--step-4);
+    font-size: var(--step-3);
     font-weight: 600;
     letter-spacing: -0.028em;
     color: var(--ink);
@@ -42,24 +62,13 @@
 }
 
 .masthead__tagline {
-    margin: 10px 0 0;
+    grid-column: 1 / -1;
+    margin: 0;
     max-width: 52ch;
     color: var(--ink-soft);
     font-family: var(--font-display);
-    font-size: var(--step-1);
+    font-size: var(--step-0);
     line-height: 1.4;
-}
-
-.masthead__aside {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    padding-bottom: 12px;
-}
-
-.masthead__dateline {
-    text-align: right;
 }
 
 /* ---- theme picker ---- */
@@ -108,16 +117,6 @@
     line-height: 1.5;
 }
 
-/* The opening paragraph gets a drop capital, because a market page opens like one. */
-.lede--opening::first-letter {
-    float: left;
-    font-size: 3.1em;
-    line-height: 0.82;
-    padding: 0.06em 0.08em 0 0;
-    color: var(--brass);
-    font-weight: 600;
-}
-
 .note {
     margin: 16px 0 0;
     max-width: 62ch;
@@ -130,14 +129,17 @@
 .tabs__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    gap: 4px;
     border-bottom: 1px solid var(--rule-strong);
     margin-bottom: 4px;
 }
 
 .tabs__trigger {
     position: relative;
-    padding: 9px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
     border: 0;
     border-bottom: 2px solid transparent;
     margin-bottom: -1px;
@@ -150,6 +152,16 @@
     white-space: nowrap;
 }
 
+.tabs__icon {
+    display: grid;
+    place-items: center;
+    color: var(--ink-faint);
+}
+
+.tabs__trigger[data-state='active'] .tabs__icon {
+    color: var(--brass);
+}
+
 .tabs__trigger:hover {
     color: var(--ink);
 }
@@ -159,11 +171,31 @@
     border-bottom-color: var(--brass);
 }
 
+/*
+ * The count as a badge rather than a loose figure.
+ *
+ * A monospace number set beside a sans label sits on a different optical centre and reads as
+ * crooked, and three counts of one, two and three digits make a ragged strip. A pill of fixed
+ * height and minimum width puts every one of them on the same line and the same footprint.
+ */
 .tabs__badge {
-    margin-left: 7px;
-    font-family: var(--font-figure);
-    font-size: var(--step--1);
+    display: inline-grid;
+    place-items: center;
+    min-width: 21px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: var(--rule);
     color: var(--ink-faint);
+    font-family: var(--font-figure);
+    font-size: var(--step--2);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+.tabs__trigger[data-state='active'] .tabs__badge {
+    background: var(--brass-soft);
+    color: var(--brass);
 }
 
 .tabs__panel {
@@ -446,17 +478,6 @@
     border-top: 1px solid var(--rule);
 }
 
-.exclusion__header h3 {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 92ch;
-    font-size: var(--step-1);
-    font-weight: 400;
-    color: var(--ink-soft);
-}
-
 .exclusion__count {
     font-family: var(--font-figure);
     font-size: var(--step-3);
@@ -564,36 +585,9 @@
     margin: 0;
 }
 
-/*
- * Below this width the table stops scrolling sideways and drops two columns instead.
- *
- * A horizontally scrolled table takes the unfolded working with it, and a panel of twelve figures
- * that has to be dragged into view is worse than one that is a tap away. Both dropped columns are
- * inside that panel, so nothing is lost — only moved one tap further.
- */
-@media (max-width: 680px) {
-    .rank-table {
-        min-width: 0;
-    }
-
-    .rank-table__wide {
-        display: none;
-    }
-
-    .rank-table th,
-    .rank-table td {
-        padding-inline: 8px;
-    }
-
-    .rank-table__rank {
-        width: 42px;
-        font-size: var(--step-2);
-    }
-}
-
 @media (max-width: 560px) {
     .wordmark__text {
-        font-size: var(--step-3);
+        font-size: var(--step-2);
     }
 
     .shell {
@@ -602,23 +596,6 @@
 
     .lede {
         font-size: var(--step-1);
-    }
-
-    .masthead__inner {
-        align-items: flex-start;
-    }
-
-    .masthead__aside {
-        align-items: flex-start;
-        padding-bottom: 0;
-    }
-
-    .masthead__dateline {
-        text-align: left;
-    }
-
-    .working {
-        padding: 14px;
     }
 }
 
@@ -631,15 +608,75 @@
     padding: 14px 0 2px;
 }
 
-.sector-picker__select {
-    padding: 5px 9px;
+.select {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-width: 13rem;
+    max-width: 22rem;
+    padding: 7px 10px;
     border: 1px solid var(--rule-strong);
     border-radius: var(--radius);
     background: var(--paper-raised);
     color: var(--ink);
     font: inherit;
     font-size: var(--step-0);
-    max-width: 22rem;
+    cursor: pointer;
+}
+
+.select[data-state='open'] {
+    border-color: var(--brass);
+}
+
+.select__caret {
+    display: grid;
+    color: var(--ink-faint);
+}
+
+.select__menu {
+    z-index: 30;
+    min-width: var(--radix-select-trigger-width);
+    max-width: min(92vw, 26rem);
+    padding: 6px;
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius-panel);
+    background: var(--paper-raised);
+    box-shadow: 0 20px 44px -26px rgb(0 0 0 / 0.7);
+}
+
+.select__list {
+    max-height: min(320px, var(--radix-select-content-available-height));
+    overflow-y: auto;
+}
+
+.select__option {
+    display: grid;
+    grid-template-columns: 18px minmax(0, 1fr);
+    white-space: nowrap;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px 8px 6px;
+    border-radius: 7px;
+    color: var(--ink-soft);
+    font-size: var(--step-0);
+    cursor: pointer;
+    outline: none;
+}
+
+.select__option[data-highlighted] {
+    background: var(--paper-sunken);
+    color: var(--ink);
+}
+
+.select__option[data-state='checked'] {
+    color: var(--brass);
+    font-weight: 600;
+}
+
+.select__tick {
+    display: grid;
+    place-items: center;
 }
 
 .sector-picker__count {
@@ -656,5 +693,727 @@
 @media (max-width: 980px) {
     .rank-table__extra {
         display: none;
+    }
+}
+
+/* ---- the bar inside a rank ---- */
+
+/*
+ * The earnings yield, drawn to scale against the cheapest row on screen.
+ *
+ * It carries the same order the table is sorted by, which means the ranking survives the columns
+ * that drop out on a narrow screen: a reader who cannot see the enterprise value can still see
+ * that the fourth row buys half of what the first one does.
+ */
+.rank-table__yield {
+    display: block;
+    height: 3px;
+    max-width: 260px;
+    margin: 7px 0 5px;
+    border-radius: 2px;
+    background: var(--rule-strong);
+    overflow: hidden;
+}
+
+.rank-table__yield i {
+    display: block;
+    height: 100%;
+    border-radius: 2px;
+    background: var(--brass);
+}
+
+/* ---- the ticker box ---- */
+
+.find {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 9px;
+    border: 1px solid var(--rule-strong);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink-faint);
+    font-size: var(--step--1);
+    cursor: pointer;
+}
+
+.find:hover {
+    border-color: var(--brass);
+    color: var(--ink);
+}
+
+.find__key {
+    font-family: var(--font-figure);
+    font-size: var(--step--2);
+    padding: 1px 5px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--scrim);
+}
+
+.palette {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 8vh);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(520px, calc(100vw - 24px));
+    max-height: 76vh;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background: var(--paper-raised);
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius-panel);
+    box-shadow: 0 24px 60px -30px rgb(0 0 0 / 0.75);
+}
+
+/* The field is a box inside the panel, so its focus ring never meets a corner it has to be cut on. */
+.palette__field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--rule-strong);
+    border-radius: 9px;
+    background: var(--paper);
+    color: var(--ink-faint);
+}
+
+.palette__field:focus-within {
+    border-color: var(--brass);
+    box-shadow: 0 0 0 3px var(--brass-soft);
+}
+
+.palette__field input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-figure);
+    font-size: var(--step-1);
+    letter-spacing: 0.03em;
+}
+
+.palette__field input:focus {
+    outline: none;
+}
+
+.toggle-group__item:focus-visible {
+    outline-offset: -2px;
+}
+
+.palette__hits {
+    margin: 6px 0 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+}
+
+.palette__hits li + li .hit {
+    box-shadow: inset 0 1px 0 var(--rule);
+}
+
+.palette__empty {
+    margin: 0;
+    padding: 26px 16px;
+    text-align: center;
+    color: var(--ink-faint);
+    font-size: var(--step-0);
+}
+
+.hit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 9px 11px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.hit[data-active='true'] {
+    background: var(--paper-sunken);
+    box-shadow: none;
+}
+
+.hit__id {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.hit__ticker {
+    font-weight: 600;
+}
+
+.hit__name {
+    font-size: var(--step--1);
+    color: var(--ink-faint);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hit__state {
+    display: grid;
+    gap: 2px;
+    justify-items: end;
+    text-align: right;
+    flex: none;
+}
+
+.hit__figure {
+    font-size: var(--step-0);
+}
+
+.hit__where {
+    font-size: var(--step--1);
+    color: var(--ink-faint);
+}
+
+.hit__where[data-placement='portfolio'] {
+    color: var(--brass);
+}
+
+.hit__where[data-placement='out'] {
+    color: var(--flag);
+}
+
+.palette__foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 8px 0 0;
+    padding: 8px 4px 2px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-faint);
+    font-family: var(--font-figure);
+    font-size: var(--step--2);
+}
+
+/* ---- the distribution of the eligible list ---- */
+
+.distribution {
+    margin: 18px 0 0;
+    padding: 14px 16px 12px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+}
+
+.distribution__head {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
+    margin-bottom: 12px;
+}
+
+.distribution__plot {
+    position: relative;
+}
+
+/* No gap: the cut line is placed as a percentage of this track, and gaps would shift the bands. */
+.distribution__bars {
+    display: flex;
+    align-items: flex-end;
+    height: 62px;
+}
+
+.distribution__bar {
+    flex: 1;
+    min-width: 0;
+    border-right: 1px solid var(--paper-raised);
+    border-radius: 1px 1px 0 0;
+    background: var(--bar-quiet);
+}
+
+.distribution__bar[data-published='true'] {
+    background: var(--brass);
+}
+
+/* The line the twentieth position fell on, which is the whole point of drawing the tail. */
+.distribution__cut {
+    position: absolute;
+    top: -4px;
+    bottom: -6px;
+    width: 1px;
+    background: var(--flag);
+}
+
+.distribution__cut[data-side='left'] .distribution__cut-label {
+    left: auto;
+    right: 5px;
+}
+
+.distribution__cut-label {
+    position: absolute;
+    top: -2px;
+    left: 5px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    background: var(--paper-raised);
+    color: var(--flag);
+    font-size: var(--step--2);
+    white-space: nowrap;
+}
+
+.distribution__axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    color: var(--ink-faint);
+    font-size: var(--step--2);
+}
+
+.distribution__legend {
+    margin: 8px 0 0;
+    max-width: 68ch;
+    color: var(--ink-soft);
+    font-size: var(--step--1);
+    line-height: 1.45;
+}
+
+/* ---- what it costs against what it earns ---- */
+
+.versus {
+    display: grid;
+    gap: 7px;
+}
+
+.versus__row {
+    display: grid;
+    grid-template-columns: minmax(46px, auto) minmax(0, 1fr) max-content;
+    gap: 10px;
+    align-items: center;
+}
+
+.versus__bar {
+    position: relative;
+    height: 26px;
+    border-radius: var(--radius);
+    background: var(--rule);
+    overflow: hidden;
+}
+
+.versus__bar i {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: var(--brass);
+    opacity: 0.3;
+}
+
+.versus__bar[data-strong='true'] i {
+    opacity: 1;
+}
+
+.versus__figure {
+    font-size: var(--step-0);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.working__close {
+    display: none;
+}
+
+.versus__note {
+    grid-column: 1 / -1;
+    margin: 2px 0 0;
+    color: var(--ink-soft);
+    font-size: var(--step--1);
+}
+
+/* ---- removals, as bars ---- */
+
+.exclusion__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: var(--step-1);
+    font-weight: 500;
+}
+
+.exclusion__bar {
+    display: block;
+    height: 8px;
+    margin: 8px 0 10px;
+    border-radius: 2px;
+    background: var(--rule);
+    overflow: hidden;
+}
+
+.exclusion__bar i {
+    display: block;
+    height: 100%;
+    border-radius: 2px;
+    background: var(--flag);
+    opacity: 0.62;
+}
+
+.exclusion__why {
+    margin: 0;
+    max-width: 78ch;
+    color: var(--ink-soft);
+    font-size: var(--step-0);
+}
+
+.exclusion__names summary {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent);
+    font-size: var(--step--1);
+    cursor: pointer;
+}
+
+
+/* The short tab wording and the tap hint exist only for the thumb bar below 720px. */
+.tabs__short,
+.rank-hint {
+    display: none;
+}
+
+.rank-hint {
+    margin: 12px 0 2px;
+    color: var(--ink-faint);
+    font-size: var(--step--1);
+}
+
+/*
+ * Below this width the page is held in one hand.
+ *
+ * Three things change and they are the same decision three times: put what is used most where a
+ * thumb reaches. The sections move from a strip at the top to a bar at the bottom, the search
+ * becomes a button floating above that bar, and every row of the ranking becomes the tap target
+ * for its own working, so nothing has to be aimed at.
+ *
+ * The table stops being a table here. Each row is three lines — who it is, what it costs, and the
+ * bar that ranks it — instead of eight columns squeezed into three hundred and ninety pixels.
+ * Nothing is dropped that is not repeated in the working one tap below.
+ */
+@media (max-width: 720px) {
+    .rank-table {
+        min-width: 0;
+    }
+
+    .rank-table thead {
+        display: none;
+    }
+
+    .rank-table,
+    .rank-table tbody,
+    .rank-table__working,
+    .rank-table__working td {
+        display: block;
+    }
+
+    /* The bar already rules the row off; a border under it would rule it twice. */
+    .rank-table__row {
+        position: relative;
+        display: grid;
+        grid-template-columns: 22px minmax(0, 1fr) auto;
+        column-gap: 10px;
+        row-gap: 2px;
+        align-items: baseline;
+        padding: 10px 0 9px;
+        border-bottom: 0;
+    }
+
+    .rank-table__row td,
+    .rank-table__row:hover td {
+        padding: 0;
+        border: 0;
+        background: none;
+    }
+
+    .rank-table__rank {
+        grid-column: 1;
+        grid-row: 1;
+        width: auto;
+        text-align: left;
+        font-family: var(--font-figure);
+        font-size: var(--step-0);
+        color: var(--ink-faint);
+    }
+
+    .rank-table__company {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        min-width: 0;
+    }
+
+    .rank-table__multiple {
+        grid-column: 3;
+        grid-row: 1;
+        font-size: var(--step-3);
+    }
+
+    .rank-table__ev {
+        grid-column: 3;
+        grid-row: 2;
+        font-size: var(--step--1);
+        color: var(--ink-faint);
+    }
+
+    .rank-table__ebit {
+        display: none;
+    }
+
+    .rank-table__yield {
+        display: none;
+    }
+
+    /* The bar leaves the cell and rules off the row, which is the only place it fits full width. */
+    .rank-table__row::after {
+        content: '';
+        grid-column: 1 / -1;
+        grid-row: 3;
+        height: 3px;
+        margin-top: 8px;
+        border-radius: 2px;
+        background: linear-gradient(to right, var(--brass) 0 var(--yield), var(--rule-strong) var(--yield) 100%);
+    }
+
+    /* One line each: a long company name must not make one row three times the height of another. */
+    .rank-table__ticker {
+        min-width: 0;
+        margin-right: 7px;
+    }
+
+    .rank-table__name {
+        font-size: var(--step-0);
+        color: var(--ink-soft);
+    }
+
+    .rank-table__sector {
+        margin-top: 1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .rank-table__share {
+        display: none;
+    }
+
+    /* The whole row is the target. A twenty-eight pixel chevron beside it would only shrink it. */
+    /* Static on purpose: the button below anchors to the row, never to its own cell. */
+    .rank-table__toggle {
+        position: static;
+        width: 0;
+        padding: 0;
+    }
+
+    .rank-table__toggle button {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .rank-table__toggle button svg {
+        display: none;
+    }
+
+    /* The sheet below already carries the brass rule; a second one would sit on the rank. */
+    .rank-table__row--open {
+        background: var(--paper-raised);
+    }
+
+    .rank-table__row--open td {
+        background: none;
+    }
+
+    .rank-table__working td {
+        padding: 0 0 18px;
+    }
+
+    .rank-hint {
+        display: block;
+    }
+
+    .masthead__plate {
+        flex: 1 1 auto;
+    }
+
+    /* The counts are already on the tabs; a second line repeating them is a line of ranking lost. */
+    .masthead__stamp p + p {
+        display: none;
+    }
+
+    .toggle-group__item {
+        width: 46px;
+        height: 44px;
+    }
+
+    .select {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: none;
+        min-height: 44px;
+        padding: 10px 12px;
+    }
+
+    .working__line {
+        padding: 3px 0;
+    }
+
+    .working__label {
+        font-size: var(--step--1);
+    }
+
+    .working__close {
+        display: block;
+        width: 100%;
+        min-height: 44px;
+        padding: 11px;
+        border: 1px solid var(--rule-strong);
+        border-radius: var(--radius);
+        background: var(--paper-raised);
+        color: var(--ink-soft);
+        font-size: var(--step-0);
+        cursor: pointer;
+    }
+
+    /* Keyboard hints on a device with no keyboard. */
+    .palette__foot {
+        display: none;
+    }
+
+    /* The sections, as a bar under the thumb. */
+    .tabs__list {
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 20;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+        margin: 0;
+        height: calc(var(--thumb-bar) + env(safe-area-inset-bottom, 0px));
+        padding-right: 64px;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        border-top: 1px solid var(--rule-strong);
+        border-bottom: 0;
+        background: var(--paper-raised);
+        box-shadow: 0 -12px 26px -20px rgb(0 0 0 / 0.6);
+    }
+
+    .tabs__trigger {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        gap: 2px;
+        margin: 0;
+        padding: 7px 4px 8px;
+        border-bottom: 0;
+        border-top: 2px solid transparent;
+        font-size: var(--step--1);
+    }
+
+    .tabs__icon {
+        display: grid;
+        place-items: center;
+    }
+
+    .tabs__trigger[data-state='active'] {
+        border-top-color: var(--brass);
+        border-bottom-color: transparent;
+        color: var(--brass);
+    }
+
+    .tabs__long {
+        display: none;
+    }
+
+    .tabs__short {
+        display: block;
+    }
+
+    /*
+     * Same badge, moved: on a phone it rides the icon the way an unread count does.
+     *
+     * Tighter than on the desktop strip, and set in the text face rather than the figure face,
+     * because three digits in monospace at this size cover the icon they are meant to annotate.
+     */
+    .tabs__badge {
+        position: absolute;
+        top: 1px;
+        right: calc(50% - 24px);
+        min-width: 16px;
+        height: 15px;
+        padding: 0 4px;
+        font-family: var(--font-text);
+        font-weight: 600;
+    }
+
+    .tabs__panel {
+        padding-bottom: 28px;
+    }
+
+    /* The search, floating clear of the bar rather than parked in the far corner of the masthead. */
+    .find {
+        position: fixed;
+        inset: auto 0 0 auto;
+        z-index: 21;
+        display: grid;
+        place-items: center;
+        width: 64px;
+        height: calc(var(--thumb-bar) + env(safe-area-inset-bottom, 0px));
+        padding: 0 0 env(safe-area-inset-bottom, 0px);
+        border: 0;
+        border-top: 1px solid var(--rule-strong);
+        border-left: 1px solid var(--rule);
+        border-radius: 0;
+        background: var(--paper-raised);
+        color: var(--brass);
+    }
+
+    /* The name is carried by the label attribute here; sixty-four pixels do not hold two words. */
+    .find__label,
+    .find__key {
+        display: none;
+    }
+
+    .footer__inner {
+        padding-bottom: calc(var(--thumb-bar) + 38px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .working {
+        padding: 14px;
+        border-left-width: 2px;
+    }
+
+    .working__grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .distribution {
+        padding: 10px 12px 9px;
+    }
+
+    .distribution__head {
+        margin-bottom: 8px;
+    }
+
+    .distribution__bars {
+        height: 46px;
+    }
+
+    .distribution__legend {
+        font-size: var(--step--2);
     }
 }

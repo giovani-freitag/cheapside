@@ -19,6 +19,16 @@ export const EXCLUSION_REASONS = [
 
 export type ExclusionReason = (typeof EXCLUSION_REASONS)[number];
 
+/** The filter in two or three words, for places too narrow to carry the whole sentence. */
+export const EXCLUSION_LABEL: Readonly<Record<ExclusionReason, string>> = {
+    'financial-statement-shape': 'Banco ou seguradora',
+    'issuer-not-in-good-standing': 'Emissor irregular',
+    'no-recent-statement': 'Sem demonstração recente',
+    'no-operating-profit': 'Prejuízo operacional',
+    illiquid: 'Ilíquida',
+    'over-leveraged': 'Alavancada',
+};
+
 /** What the exclusion means, in one line, for a reader who wants to disagree with it. */
 export const EXCLUSION_SUMMARY: Readonly<Record<ExclusionReason, string>> = {
     'financial-statement-shape':

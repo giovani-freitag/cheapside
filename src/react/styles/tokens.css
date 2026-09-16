@@ -1,42 +1,45 @@
 /*
- * The palette of a printed market page, defined twice.
+ * The palette of a screen read at night, defined twice.
  *
- * Cheapside was London's market street before it was a pun, and the page is dressed as the thing
- * the name remembers: warm paper, ink, hairline rules, and brass for the few marks that are
- * allowed to catch the eye. Nothing carries a verdict — a cheap company is never painted green,
- * because the whole argument of the project is that cheap and good are different questions.
- * Amber and red are spent only on cautions and exclusions, where they mean what they look like.
+ * Graphite for the ground and a single amber for whatever the screen chose: the rank, the mark,
+ * the bar under a ticker. Dark is the identity here and light is its mirror — same roles, same
+ * one warm accent — so a reader who works in daylight gets the same face rather than a different
+ * product. Nothing carries a verdict: a cheap company is never painted green, because cheap and
+ * good are different questions, and red is spent only on what the screen threw out.
  *
  * The surface is stamped on the root element before React mounts, so every colour is selected
  * rather than computed and nothing repaints on load.
  */
 
 :root {
-    --ink: #1a1613;
-    --ink-soft: #574e44;
-    --ink-faint: #8b8173;
-    --paper: #f6f1e7;
-    --paper-raised: #fffdf8;
-    --paper-sunken: #ece4d5;
-    --rule: #ddd2c0;
-    --rule-strong: #c0b39d;
+    --ink: #11151b;
+    --ink-soft: #3f4a57;
+    --ink-faint: #5a6572;
+    --paper: #eef0f3;
+    --paper-raised: #ffffff;
+    --paper-sunken: #e3e7eb;
+    --rule: #dee2e8;
+    --rule-strong: #c2c9d2;
+    /* A bar that carries data has to clear 3:1 against the card it sits on; a hairline does not. */
+    --bar-quiet: #87929f;
 
-    /* Structure and links: the colour of a fountain pen, not of a hyperlink. */
-    --accent: #1d3f5c;
-    --accent-soft: #e4ebf1;
-    /* The one warm mark. Ranks, the wordmark, the rule under the masthead. */
+    /* Structure and links: ink with enough blue in it to read as a link, never a hyperlink blue. */
+    --accent: #1f4b74;
+    --accent-soft: #e5edf5;
+    /* The one warm mark. Ranks, the wordmark, the bars, the open row. */
     --brass: #8a6717;
-    --brass-soft: #efe4c8;
+    --brass-soft: #f1e6cb;
 
     --caution: #8a5a00;
     --caution-soft: #f6ecd6;
-    --flag: #962f2f;
+    --flag: #9c3b33;
     --flag-soft: #f6e5e3;
 
     --font-display: ui-serif, Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
     --font-text: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --font-figure: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', Menlo, Consolas, monospace;
 
+    --step--2: 0.7rem;
     --step--1: 0.78rem;
     --step-0: 0.875rem;
     --step-1: 1rem;
@@ -47,29 +50,37 @@
 
     --gap: 1rem;
     --radius: 3px;
+    /* A panel that floats over the page is not a hairline card, so it rounds further. */
+    --radius-panel: 10px;
+    /* The thumb bar, and the clearance every fixed thing above it is measured from. */
+    --thumb-bar: 54px;
+    --scrim: rgb(4 6 9 / 0.55);
 
     color-scheme: light;
 }
 
 :root[data-surface='dark'] {
-    --ink: #ece5d8;
-    --ink-soft: #a79d8d;
-    --ink-faint: #756c5f;
-    --paper: #15161a;
-    --paper-raised: #1d1f25;
-    --paper-sunken: #101115;
-    --rule: #2c303a;
-    --rule-strong: #434a57;
+    --ink: #e9eef4;
+    --ink-soft: #aab6c4;
+    --ink-faint: #7d8b9c;
+    --paper: #0b0e12;
+    --paper-raised: #131820;
+    --paper-sunken: #0f141a;
+    --rule: #1d242e;
+    --rule-strong: #2b3542;
+    --bar-quiet: #606f86;
 
-    --accent: #93bada;
-    --accent-soft: #1a2530;
-    --brass: #d8ae56;
-    --brass-soft: #2b2417;
+    --accent: #8fb9e0;
+    --accent-soft: #16202b;
+    --brass: #e7ab43;
+    --brass-soft: #2a2417;
+
+    --scrim: rgb(0 0 0 / 0.66);
 
     --caution: #d9a441;
     --caution-soft: #2a2314;
-    --flag: #e28c8c;
-    --flag-soft: #2e1b1b;
+    --flag: #e0837a;
+    --flag-soft: #2b1b1a;
 
     color-scheme: dark;
 }

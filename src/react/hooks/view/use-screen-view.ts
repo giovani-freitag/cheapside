@@ -22,6 +22,8 @@ export interface ScreenView {
     /** The ticker whose working is unfolded, if any. */
     openTicker?: string;
     toggleTicker: (ticker: string) => void;
+    /** Opens one company wherever the screen put it, which is what a search result promises. */
+    reveal: (ticker: string) => void;
 }
 
 /**
@@ -43,6 +45,30 @@ export function useScreenView(): ScreenView {
     const toggleTicker = useCallback((ticker: string) => {
         setOpenTicker((current) => (current === ticker ? undefined : ticker));
     }, []);
+
+    /*
+     * A revealed company clears the sector filter on the way: answering a search with a page
+     * that hides the company it just found is the one outcome worse than not finding it.
+     */
+    const reveal = useCallback(
+        (ticker: string) => {
+            const published = dataset.screen.portfolio.some((row) => row.ticker === ticker);
+            const nearby = dataset.runnersUp.some((row) => row.ticker === ticker);
+
+            setSector(ALL_SECTORS);
+
+            if (published || nearby) {
+                setTab(published ? 'portfolio' : 'eligible');
+                setOpenTicker(ticker);
+
+                return;
+            }
+
+            setTab('excluded');
+            setOpenTicker(undefined);
+        },
+        [dataset],
+    );
 
     const sectors = useMemo(() => {
         const present = new Set(dataset.screen.eligible.map((row) => row.sector).filter(Boolean));
@@ -69,5 +95,6 @@ export function useScreenView(): ScreenView {
         runnersUp: rows.runnersUp,
         openTicker,
         toggleTicker,
+        reveal,
     };
 }
