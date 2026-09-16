@@ -1,40 +1,65 @@
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-}
-
 /* ---- masthead ---- */
 
 .masthead {
-    border-bottom: 1px solid var(--rule);
     background: var(--paper-raised);
+    border-bottom: 1px solid var(--rule);
 }
 
 .masthead__inner {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: var(--gap);
-    padding-block: 22px 20px;
+    gap: 14px var(--gap);
+    padding-block: 26px 18px;
 }
 
-.masthead h1 {
-    font-size: var(--step-3);
-    letter-spacing: -0.03em;
+/* The brass rule under the nameplate, the way a printed page rules off its masthead. */
+.masthead__plate {
+    border-bottom: 3px double var(--brass);
+    padding-bottom: 12px;
+    flex: 1 1 22rem;
+}
+
+.wordmark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--brass);
+}
+
+.wordmark__mark {
+    flex: none;
+}
+
+.wordmark__text {
+    font-family: var(--font-display);
+    font-size: var(--step-4);
+    font-weight: 600;
+    letter-spacing: -0.028em;
+    color: var(--ink);
+    line-height: 1;
 }
 
 .masthead__tagline {
-    margin: 4px 0 0;
+    margin: 10px 0 0;
+    max-width: 52ch;
     color: var(--ink-soft);
-    font-size: var(--step-0);
-    max-width: 46ch;
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    line-height: 1.4;
+}
+
+.masthead__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    padding-bottom: 12px;
+}
+
+.masthead__dateline {
+    text-align: right;
 }
 
 /* ---- theme picker ---- */
@@ -51,7 +76,7 @@
     display: grid;
     place-items: center;
     width: 34px;
-    height: 30px;
+    height: 29px;
     border: 0;
     background: transparent;
     color: var(--ink-faint);
@@ -68,21 +93,34 @@
 }
 
 .toggle-group__item[data-state='on'] {
-    background: var(--accent-soft);
-    color: var(--accent);
+    background: var(--brass-soft);
+    color: var(--brass);
 }
 
 /* ---- prose ---- */
 
 .lede {
-    max-width: 68ch;
-    margin: 22px 0 18px;
+    max-width: 62ch;
+    margin: 26px 0 22px;
     color: var(--ink-soft);
-    font-size: var(--step-1);
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1.5;
+}
+
+/* The opening paragraph gets a drop capital, because a market page opens like one. */
+.lede--opening::first-letter {
+    float: left;
+    font-size: 3.1em;
+    line-height: 0.82;
+    padding: 0.06em 0.08em 0 0;
+    color: var(--brass);
+    font-weight: 600;
 }
 
 .note {
-    margin: 14px 0 0;
+    margin: 16px 0 0;
+    max-width: 62ch;
     color: var(--ink-faint);
     font-size: var(--step--1);
 }
@@ -93,13 +131,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
-    border-bottom: 1px solid var(--rule);
-    margin-bottom: 20px;
+    border-bottom: 1px solid var(--rule-strong);
+    margin-bottom: 4px;
 }
 
 .tabs__trigger {
     position: relative;
-    padding: 9px 13px;
+    padding: 9px 14px;
     border: 0;
     border-bottom: 2px solid transparent;
     margin-bottom: -1px;
@@ -107,6 +145,7 @@
     color: var(--ink-soft);
     font-size: var(--step-0);
     font-weight: 500;
+    letter-spacing: 0.01em;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -117,21 +156,18 @@
 
 .tabs__trigger[data-state='active'] {
     color: var(--ink);
-    border-bottom-color: var(--accent);
+    border-bottom-color: var(--brass);
 }
 
 .tabs__badge {
     margin-left: 7px;
-    padding: 1px 6px;
-    border-radius: 999px;
-    background: var(--paper-sunken);
-    color: var(--ink-faint);
     font-family: var(--font-figure);
     font-size: var(--step--1);
+    color: var(--ink-faint);
 }
 
 .tabs__panel {
-    padding-bottom: 48px;
+    padding-bottom: 56px;
 }
 
 /* ---- ranking table ---- */
@@ -142,29 +178,30 @@
 
 .rank-table {
     width: 100%;
-    min-width: 640px;
+    min-width: 600px;
     border-collapse: collapse;
 }
 
 .rank-table th {
-    padding: 0 12px 8px;
+    padding: 14px 12px 7px;
     border-bottom: 1px solid var(--rule-strong);
-    color: var(--ink-faint);
+    font-family: var(--font-text);
     font-size: var(--step--1);
     font-weight: 500;
     text-align: left;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.09em;
+    color: var(--ink-faint);
 }
 
 .rank-table td {
-    padding: 11px 12px;
+    padding: 13px 12px;
     border-bottom: 1px solid var(--rule);
     vertical-align: baseline;
 }
 
 .rank-table__row:hover td {
-    background: var(--paper-sunken);
+    background: var(--paper-raised);
 }
 
 .rank-table__row--open td {
@@ -172,10 +209,21 @@
     border-bottom-color: transparent;
 }
 
+/* The rank as a chapter numeral: large, light, brass. It is the point of the table. */
 .rank-table__rank {
-    width: 44px;
-    color: var(--ink-faint);
+    width: 58px;
     text-align: right;
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+    font-weight: 400;
+    color: var(--brass);
+    line-height: 1;
+}
+
+.rank-table th.rank-table__rank {
+    font-family: var(--font-text);
+    font-size: var(--step--1);
+    color: var(--ink-faint);
 }
 
 .rank-table th.rank-table__number,
@@ -185,30 +233,37 @@
 }
 
 .rank-table__number {
-    width: 128px;
+    width: 124px;
 }
 
+/* The multiple is the answer the table exists to give, so it is the biggest thing in the row. */
 .rank-table__multiple {
+    font-size: var(--step-2);
     font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .rank-table__ticker {
     display: inline-block;
-    min-width: 62px;
+    min-width: 64px;
     font-weight: 600;
+    color: var(--ink);
 }
 
 .rank-table__name {
-    color: var(--ink-soft);
+    font-family: var(--font-display);
+    font-size: var(--step-1);
+    color: var(--ink);
 }
 
 .rank-table__sector {
     display: block;
+    margin-top: 2px;
     font-size: var(--step--1);
 }
 
 .rank-table__toggle {
-    width: 44px;
+    width: 46px;
     text-align: right;
 }
 
@@ -234,7 +289,7 @@
 }
 
 .rank-table__working td {
-    padding: 0 12px 20px;
+    padding: 0 12px 22px;
     background: var(--paper-raised);
 }
 
@@ -242,30 +297,30 @@
 
 .working {
     display: grid;
-    gap: 18px;
-    padding: 16px;
+    gap: 20px;
+    padding: 18px;
     border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    border-left: 3px solid var(--brass);
     background: var(--paper);
 }
 
 .working__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 2px 24px;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 0 28px;
 }
 
 .working__line {
     display: flex;
     justify-content: space-between;
     gap: 12px;
-    padding: 4px 0;
+    padding: 5px 0;
     border-bottom: 1px dotted var(--rule);
 }
 
 .working__line--strong {
     font-weight: 600;
-    border-bottom-color: var(--rule-strong);
+    border-bottom: 1px solid var(--rule-strong);
 }
 
 .working__label {
@@ -279,47 +334,50 @@
 
 .working__provenance {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px 24px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px 28px;
     margin: 0;
-    padding-top: 4px;
+    padding-top: 6px;
     border-top: 1px solid var(--rule);
     font-size: var(--step--1);
 }
 
 .working__provenance dt {
-    color: var(--ink-faint);
+    font-size: var(--step--1);
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.09em;
+    color: var(--ink-faint);
 }
 
 .working__provenance dd {
-    margin: 2px 0 0;
+    margin: 3px 0 0;
 }
 
 /* ---- verdicts ---- */
 
 .verdict {
     margin: 0;
-    padding: 12px 14px;
-    border-left: 3px solid var(--rule-strong);
+    padding: 14px 16px;
     background: var(--paper-sunken);
-    border-radius: 0 var(--radius) var(--radius) 0;
+    border-radius: var(--radius);
     font-size: var(--step-0);
 }
 
 .verdict--absent {
+    max-width: 68ch;
     color: var(--ink-faint);
-    max-width: 72ch;
+    font-family: var(--font-display);
+    font-style: italic;
 }
 
 .verdict__header h4 {
     margin: 0;
-    font-size: var(--step-0);
+    font-size: var(--step-1);
 }
 
 .verdict__header p {
-    margin: 2px 0 10px;
+    margin: 2px 0 12px;
     font-size: var(--step--1);
 }
 
@@ -329,15 +387,15 @@
 
 .verdict__answers {
     display: grid;
-    gap: 12px;
+    gap: 14px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .verdict__answer {
-    padding-left: 10px;
-    border-left: 2px solid var(--rule);
+    padding-left: 12px;
+    border-left: 2px solid var(--rule-strong);
 }
 
 .verdict__answer--caution {
@@ -349,16 +407,18 @@
 }
 
 .verdict__question {
-    margin: 0 0 3px;
+    margin: 0 0 4px;
+    font-family: var(--font-display);
     font-weight: 600;
 }
 
 .verdict__weight {
-    margin-left: 8px;
-    padding: 1px 7px;
+    margin-left: 9px;
+    padding: 1px 8px;
     border-radius: 999px;
     background: var(--paper-raised);
     color: var(--ink-faint);
+    font-family: var(--font-text);
     font-size: var(--step--1);
     font-weight: 400;
     text-transform: lowercase;
@@ -375,14 +435,14 @@
 }
 
 .verdict__citation {
-    margin: 3px 0 0;
+    margin: 4px 0 0;
     font-size: var(--step--1);
 }
 
 /* ---- exclusions ---- */
 
 .exclusion {
-    padding: 16px 0;
+    padding: 20px 0;
     border-top: 1px solid var(--rule);
 }
 
@@ -390,25 +450,26 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 16px;
-    font-size: var(--step-0);
-    font-weight: 500;
+    gap: 20px;
+    max-width: 92ch;
+    font-size: var(--step-1);
+    font-weight: 400;
     color: var(--ink-soft);
-    max-width: 90ch;
 }
 
 .exclusion__count {
-    color: var(--ink);
     font-family: var(--font-figure);
-    font-size: var(--step-2);
+    font-size: var(--step-3);
     font-weight: 600;
+    color: var(--brass);
+    line-height: 1;
 }
 
 .exclusion__tickers {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin: 12px 0 0;
+    margin: 14px 0 0;
     padding: 0;
     list-style: none;
 }
@@ -426,17 +487,21 @@
 
 .method {
     display: grid;
-    gap: 34px;
-    max-width: 76ch;
+    gap: 38px;
+    max-width: 72ch;
 }
 
 .method h3 {
-    font-size: var(--step-2);
-    margin-bottom: 6px;
+    font-size: var(--step-3);
+    margin-bottom: 8px;
+}
+
+.method p {
+    font-family: var(--font-display);
 }
 
 .method__parameters {
-    margin: 14px 0 0;
+    margin: 16px 0 0;
 }
 
 .method__parameter {
@@ -445,7 +510,7 @@
     align-items: baseline;
     justify-content: space-between;
     gap: 8px 16px;
-    padding: 7px 0;
+    padding: 8px 0;
     border-bottom: 1px dotted var(--rule);
 }
 
@@ -461,10 +526,15 @@
 
 .method__sources {
     display: grid;
-    gap: 16px;
-    margin: 14px 0 0;
+    gap: 18px;
+    margin: 16px 0 0;
     padding: 0;
     list-style: none;
+}
+
+.method__sources a {
+    font-family: var(--font-display);
+    font-size: var(--step-1);
 }
 
 .method__sources p {
@@ -476,7 +546,7 @@
 /* ---- footer ---- */
 
 .footer {
-    border-top: 1px solid var(--rule);
+    border-top: 3px double var(--brass);
     background: var(--paper-raised);
 }
 
@@ -485,7 +555,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 6px var(--gap);
-    padding-block: 18px 22px;
+    padding-block: 20px 26px;
     color: var(--ink-faint);
     font-size: var(--step--1);
 }
@@ -497,9 +567,9 @@
 /*
  * Below this width the table stops scrolling sideways and drops two columns instead.
  *
- * A horizontally scrolled table takes the unfolded working with it, and a panel of twelve
- * figures that has to be dragged into view is worse than one that is a tap away. Both dropped
- * columns are inside that panel, so nothing is lost — only moved one tap further.
+ * A horizontally scrolled table takes the unfolded working with it, and a panel of twelve figures
+ * that has to be dragged into view is worse than one that is a tap away. Both dropped columns are
+ * inside that panel, so nothing is lost — only moved one tap further.
  */
 @media (max-width: 680px) {
     .rank-table {
@@ -514,18 +584,40 @@
     .rank-table td {
         padding-inline: 8px;
     }
+
+    .rank-table__rank {
+        width: 42px;
+        font-size: var(--step-2);
+    }
 }
 
 @media (max-width: 560px) {
-    .masthead h1 {
-        font-size: var(--step-2);
+    .wordmark__text {
+        font-size: var(--step-3);
     }
 
     .shell {
-        padding-inline: 16px;
+        padding-inline: 18px;
+    }
+
+    .lede {
+        font-size: var(--step-1);
+    }
+
+    .masthead__inner {
+        align-items: flex-start;
+    }
+
+    .masthead__aside {
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
+
+    .masthead__dateline {
+        text-align: left;
     }
 
     .working {
-        padding: 12px;
+        padding: 14px;
     }
 }

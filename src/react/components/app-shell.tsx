@@ -3,6 +3,7 @@ import { MethodView } from '@/react/components/method-view.tsx';
 import { RankTable } from '@/react/components/rank-table.tsx';
 import { TabPanel, Tabs } from '@/react/ui/tabs.tsx';
 import { ThemePicker } from '@/react/components/theme-picker.tsx';
+import { Wordmark } from '@/react/components/wordmark.tsx';
 import { useFormat } from '@/react/hooks/view/use-format.ts';
 import { useScreenView } from '@/react/hooks/view/use-screen-view.ts';
 import { useServices } from '@/react/hooks/services/use-services.ts';
@@ -19,19 +20,28 @@ export function AppShell() {
         <>
             <header className="masthead">
                 <div className="shell masthead__inner">
-                    <div>
-                        <h1>Cheapside</h1>
+                    <div className="masthead__plate">
+                        <h1>
+                            <Wordmark />
+                        </h1>
                         <p className="masthead__tagline">
                             As {screen.portfolio.length} empresas mais baratas da B3 por EV/EBIT, com a conta
                             à mostra.
                         </p>
                     </div>
-                    <ThemePicker />
+                    <div className="masthead__aside">
+                        <p className="label masthead__dateline">
+                            Apuração de {format.date(screen.builtAt)}
+                            <br />
+                            {screen.universeSize} companhias lidas
+                        </p>
+                        <ThemePicker />
+                    </div>
                 </div>
             </header>
 
             <main className="shell">
-                <p className="lede">
+                <p className="lede lede--opening">
                     Uma tela quantitativa: ordena as companhias abertas pelo que a empresa inteira custa
                     contra o que ela opera, e publica as {screen.portfolio.length} do topo. Sem opinião e
                     sem previsão — e, por isso mesmo, com tudo o que entrou no cálculo aberto para
