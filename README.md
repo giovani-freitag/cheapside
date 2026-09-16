@@ -1,69 +1,98 @@
+<div align="center">
+
+<img src="public/favicon.svg" width="72" alt="" />
+
 # Cheapside
 
-As vinte empresas mais baratas da B3 por EV/EBIT, com cada número que entrou em cada posição na
-mesma página que ela.
+**As vinte empresas mais baratas da B3, e a conta inteira de por que elas estão nessa lista.**
 
-**[giovani-freitag.github.io/cheapside](https://giovani-freitag.github.io/cheapside/)**
+[**Ver a apuração →**](https://giovani-freitag.github.io/cheapside/)
 
-## O que é
+</div>
 
-Uma tela quantitativa. Lê todas as companhias listadas na B3 a partir das demonstrações públicas da
-CVM, ordena pelo que a empresa inteira custa contra o que ela opera, e publica as vinte do topo —
-junto com as quase trezentas que removeu e o motivo de cada remoção.
+---
 
-A estratégia é a que o Clube do Valor publica como *As 20 Ações Mais Baratas da Bolsa*, que por sua
-vez é uma implementação brasileira do Acquirer's Multiple de Carlisle. As regras completas, o
-argumento de cada limiar e o que a métrica ainda erra estão em
+Cheapside é uma rua de Londres. Antes de ser rua era o mercado — *chepe*, em inglês antigo — e por
+uns seiscentos anos foi onde a City comprava e vendia. O trocadilho em inglês veio depois e é bom
+demais para recusar.
+
+Este projeto faz uma coisa só: pega toda companhia aberta listada na B3, divide o que a empresa
+inteira custa pelo que ela opera, ordena, e publica as vinte primeiras. Sem opinião, sem previsão,
+sem preço-alvo. Um número, uma ordem, e tudo que entrou na conta à vista de quem quiser discordar.
+
+## Um exemplo do que isso significa
+
+Na primeira apuração a empresa mais barata da bolsa saiu a **0,97× EV/EBIT**. A firma inteira por
+menos de um ano de lucro operacional.
+
+Os números batem com o arquivo da CVM até o último milhar de reais. E ainda assim o número é uma
+ilusão: o lucro operacional daquela empresa triplicou em um ano porque *uma única linha* de despesa
+operacional se moveu R$ 340 milhões, sem a receita se mexer. Isso tem formato de reversão de
+provisão, não de negócio que ficou três vezes melhor.
+
+A tela não tem como saber disso. E é exatamente por isso que ela mostra a conta em vez de só o
+resultado — para que você veja o R$ 340 milhões antes de comprar a ação.
+
+> Não é recomendação de investimento, e não é a afirmação de que barato é bom. As vinte mais baratas
+> de qualquer métrica incluem empresas que estão baratas por merecerem estar.
+
+## Por que EV/EBIT e não P/L
+
+Porque P/L mede a conta de juros tanto quanto o negócio, e no Brasil a conta de juros costuma ser
+maior. Porque P/VP mede o que foi pago, não o que se tem. Porque EV/EBITDA finge que depreciação não
+é custo, o que favorece justamente quem mais depende dela. Porque P/FCF ordena pelo calendário de
+obras.
+
+Sobra EV/EBIT — neutro à estrutura de capital, honesto quanto à depreciação, estável o bastante para
+ordenar. É a conclusão a que Greenblatt, Gray e Carlisle chegaram testando, e é a estratégia que o
+Clube do Valor publica como *As 20 Ações Mais Baratas da Bolsa*.
+
+O argumento completo, cada limiar defendido um por um, e os quatro jeitos que a métrica ainda erra:
 **[docs/estrategia.md](docs/estrategia.md)**.
 
-Não é recomendação de investimento, e não é a afirmação de que barato é bom. As vinte mais baratas
-de qualquer métrica incluem empresas que estão baratas por merecerem estar.
+## O que a tela joga fora, e por quê
 
-## As decisões que o escopo deixou em aberto
+De cerca de 300 companhias listadas, vinte chegam à carteira. As outras saem por um motivo
+declarado, e o motivo fica publicado ao lado do resultado:
 
-A primeira versão deste README listava cinco coisas que precisavam ser decididas antes de qualquer
-linha de código. Estão decididas, e cada uma é defendida em `docs/estrategia.md`.
+| filtro | por quê |
+| --- | --- |
+| Bancos e seguradoras | Para eles, dívida é matéria-prima. Somá-la ao valor de mercado produz um número sem significado — e a demonstração deles nem tem a linha de EBIT que o múltiplo precisa. |
+| Recuperação judicial | Estão baratas porque o capital próprio pode valer zero. Incluí-las seria pôr os piores desfechos da tela no topo da própria lista. |
+| Prejuízo operacional | Denominador negativo ordena *abaixo* de tudo que é barato de verdade. A conta não tem sentido, não é juízo de valor. |
+| Iliquidez | Um preço que ninguém consegue executar é uma ficção. |
+| Alavancagem | Barato porque o mercado está precificando o capital próprio como opção de sobrevivência é outro tipo de barato. |
 
-| | decidido | onde |
-| --- | --- | --- |
-| Qual bolsa | B3 | — |
-| O que "barato" quer dizer | EV/EBIT sobre doze meses, e não P/L, P/VP, EV/EBITDA ou P/FCF | §2 |
-| O que fica de fora | Financeiras, recuperação judicial, iliquidez, prejuízo, alavancagem, demonstração velha | §3 |
-| De onde vêm os dados | Dados abertos da CVM, registro de listadas da B3, cotações da brapi — tudo gratuito, nada exigindo token | §6 |
-| Qual é a saída | Um site estático sobre um conjunto de dados reconstruído no CI e commitado | abaixo |
+## Como funciona por dentro
 
-## Como é construído
-
-Nada roda no carregamento da página. O pipeline roda no CI, o resultado é commitado como JSON, e o
-site é uma página estática sobre ele. É isso que permite a coisa inteira viver no GitHub Pages e ser
-forkada por qualquer um: não há servidor, não há chave de API, e não há requisição que o leitor
-precise confiar.
+Nada roda quando você abre a página. O pipeline roda no CI, o resultado é commitado como JSON, e o
+site é uma página estática em cima dele. Sem servidor, sem chave de API, sem requisição que você
+precise confiar — e por isso forkável por qualquer um.
 
 ```
-scripts/build-screen.ts        o pipeline: buscar, juntar, ordenar, escrever
-  └─ src/services/cvm/         dados abertos da CVM — EBIT, caixa, dívida, situação do emissor
-  └─ src/services/b3/          o registro de listadas — a ponte do ticker até o CNPJ
-  └─ src/services/quotes/      preço, giro e valor de mercado
-  └─ src/services/liquidity/   a mediana móvel do valor negociado, um pregão por execução
-  └─ src/services/universe/    o join, e o que não consegue atravessá-lo
-  └─ src/services/screen/      os filtros e o ranking
+scripts/build-screen.ts        buscar, juntar, ordenar, escrever
+  ├─ services/cvm/             dados abertos da CVM — EBIT, caixa, dívida, situação do emissor
+  ├─ services/b3/              registro de listadas — a ponte do ticker até o CNPJ
+  ├─ services/quotes/          preço, giro, valor de mercado
+  ├─ services/liquidity/       mediana móvel do giro, um pregão por execução
+  ├─ services/universe/        o join — e o que não consegue atravessá-lo
+  └─ services/screen/          os filtros e o ranking
        ↓
-src/data/generated/screen.json  commitado, versionado, datado
+src/data/generated/screen.json    commitado, versionado, datado
        ↓
-src/react/                      a interface, que só lê
+src/react/                        a interface, que só lê
 ```
 
-Os três joins são a parte difícil, e nenhuma das fontes compartilha chave: as cotações chegam sob um
-ticker, o registro de listadas sob uma raiz de quatro letras, e as demonstrações sob um CNPJ — sob
-qualquer *estabelecimento* da empresa que tenha arquivado, que é o motivo de o join rodar na raiz do
-CNPJ e não no número inteiro.
+Três fontes, três chaves, nenhuma em comum: cotação chega por ticker, o registro por uma raiz de
+quatro letras, e as demonstrações por CNPJ — sob qualquer *estabelecimento* que tenha arquivado. A
+B3 lista a Tupy pelo terceiro estabelecimento e a CVM arquiva pelo primeiro; o join roda na raiz do
+CNPJ, senão a Tupy simplesmente some do universo sem avisar.
 
 ### Camadas
 
-`src/domain` é puro: objetos de valor, entidades e as regras de filtro, sem I/O, sem React e sem
-Node. `src/services` é dono de toda capacidade que toca o mundo externo, uma pasta cada.
-`src/react` é a interface, e não guarda lógica que não seja de exibição — os hooks leem serviços, os
-componentes leem hooks. Um teste de arquitetura garante tudo isso.
+`src/domain` é puro — objetos de valor, entidades, regras. Sem I/O, sem React, sem `node:`.
+`src/services` é dono de cada capacidade que toca o mundo externo, uma pasta por domínio.
+`src/react` só exibe. Um teste de arquitetura reprova quem furar isso.
 
 Documentação em português; código e comentários inteiramente em inglês.
 
@@ -71,41 +100,44 @@ Documentação em português; código e comentários inteiramente em inglês.
 
 ```bash
 npm install
-npm run dev           # o site, sobre o conjunto de dados commitado
-npm run data:build    # reconstrói os dados a partir das fontes (~2 min a frio, cacheado depois)
-npm run data:verdicts # escreve os briefings de leitura da carteira atual
+npm run dev            # o site, sobre os dados commitados
+npm run data:build     # reconstrói tudo das fontes (~2 min a frio, cacheado depois)
+npm run data:verdicts  # escreve os briefings de leitura da carteira
 npm test
-npm run build
 ```
 
-`data:build` baixa cerca de 150 MB de arquivos da CVM numa execução fria e os guarda no diretório
-temporário do sistema, de modo que a segunda execução só rebusca preços.
+`data:build` baixa uns 150 MB de arquivos da CVM na primeira vez e guarda no temp do sistema; da
+segunda em diante só rebusca preços.
 
-## A parte que não é aritmética
+## A parte que números não respondem
 
-A tela responde *o que está estatisticamente barato*. Ela não responde *por quê*, e a diferença entre
-uma pechincha e uma armadilha de valor mora inteira na segunda pergunta.
+Voltando ao 0,97×: a tela responde *o que está barato*. Ela não responde *por quê*, e a diferença
+entre uma pechincha e uma armadilha mora inteira nessa segunda pergunta.
 
-A primeira execução tornou isso concreto já na primeira posição: uma empresa a 0,97× EV/EBIT, cujos
-números batem exatamente com o arquivo, e cujo lucro operacional triplicou em um ano porque uma única
-linha de despesa operacional se moveu R$ 340 milhões. É o formato de uma reversão de provisão, não o
-de um negócio três vezes melhor, e um múltiplo de doze meses não tem como distinguir.
+Para isso existe uma camada opcional: uma leitura das demonstrações de cada empresa da carteira,
+respondendo três perguntas e nenhuma a mais.
 
-Por isso existe uma segunda camada, opcional: uma leitura das demonstrações de cada empresa
-publicada, respondendo três perguntas estreitas — o EBIT se repete, o balanço é o que diz ser, há
-motivo estrutural para o desconto. Ela é produzida fora deste repositório por um modelo de
-linguagem, commitada como JSON em `src/data/verdicts/`, e exibida ao lado da posição como contexto.
-Nunca move o ranking, e uma empresa que ninguém leu aparece como não lida, não como aprovada.
+1. **O EBIT se repete?** Ou está inflado por venda de ativo, reversão de provisão, ganho judicial,
+   pico de ciclo?
+2. **O balanço é o que diz ser?** Garantias fora do balanço, partes relacionadas, covenant quebrado,
+   ressalva do auditor.
+3. **Há motivo estrutural para o desconto?** Conflito com o controlador, fechamento de capital,
+   revisão tarifária, contrato que é a receita inteira e vence.
 
-`npm run data:verdicts` escreve um briefing por empresa da carteira em `docs/briefs/`, cada um
-carregando os números, os links das demonstrações, as três perguntas e o JSON exato a devolver. A
-leitura em si é um passo à parte de propósito: a tela precisa continuar reproduzível por qualquer um
-com conexão de rede e conta em lugar nenhum.
+É feita por um modelo de linguagem, fora daqui, e volta como JSON commitado em `src/data/verdicts/`.
+Aparece **ao lado** da posição, nunca dentro dela: nunca move o ranking, nunca vira nota. E empresa
+que ninguém leu aparece marcada como não lida — não como aprovada, que é o erro que um espaço em
+branco cometeria sozinho.
+
+`npm run data:verdicts` gera os briefings em `docs/briefs/` com os números, os links e o formato de
+resposta prontos. A leitura em si é passo separado de propósito: a tela precisa continuar
+reproduzível por quem não tem conta em lugar nenhum.
 
 ## Stack
 
-Vite 8 (Rolldown), React 19, primitivos do Radix sobre uma paleta própria do projeto com temas
-claro, escuro e do sistema, TypeScript, Vitest, ESLint, release-please, GitHub Pages.
+Vite 8 (Rolldown) · React 19 · Radix · TypeScript · Vitest · ESLint · release-please · GitHub Pages.
+Paleta própria, temas claro, escuro e do sistema. Três vozes tipográficas, como uma página de
+mercado impressa: serifa para prosa, sem serifa para os rótulos, monoespaçada para todo número.
 
 ## Licença
 
