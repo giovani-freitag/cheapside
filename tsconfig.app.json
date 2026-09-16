@@ -19,8 +19,7 @@
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true,
         "noImplicitOverride": true,
-        "baseUrl": ".",
-        "paths": { "@/*": ["src/*"] },
+        "paths": { "@/*": ["./src/*"] },
         "types": ["vitest/globals", "node"],
         "composite": true,
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo"
