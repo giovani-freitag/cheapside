@@ -1,15 +1,24 @@
+import { Ban, Scale, Target, Wallet } from 'lucide-react';
+import { DistributionChart } from '@/react/components/distribution-chart.tsx';
 import { ExclusionsView } from '@/react/components/exclusions-view.tsx';
 import { MethodView } from '@/react/components/method-view.tsx';
 import { RankTable } from '@/react/components/rank-table.tsx';
 import { SectorPicker } from '@/react/components/sector-picker.tsx';
 import { TabPanel, Tabs } from '@/react/ui/tabs.tsx';
 import { ThemePicker } from '@/react/components/theme-picker.tsx';
+import { TickerSearch } from '@/react/components/ticker-search.tsx';
 import { Wordmark } from '@/react/components/wordmark.tsx';
 import { useFormat } from '@/react/hooks/view/use-format.ts';
 import { useScreenView } from '@/react/hooks/view/use-screen-view.ts';
 import { useServices } from '@/react/hooks/services/use-services.ts';
 
-/** The whole page: the ranking, the tail, the removals, and the method behind all three. */
+/**
+ * The whole page: the ranking, the tail, the removals, and the method behind all three.
+ *
+ * The masthead is two lines and a stamp, because on a phone every pixel it takes is a pixel the
+ * ranking does not get, and the ranking is what the reader came for. Everything that explains the
+ * screen rather than showing it lives one tab away, in the method.
+ */
 export function AppShell() {
     const { dataset, verdicts } = useServices();
     const view = useScreenView();
@@ -21,46 +30,64 @@ export function AppShell() {
         <>
             <header className="masthead">
                 <div className="shell masthead__inner">
-                    <div className="masthead__plate">
-                        <h1>
-                            <Wordmark />
-                        </h1>
-                        <p className="masthead__tagline">
-                            As {screen.portfolio.length} empresas mais baratas da B3 por EV/EBIT, com a conta
-                            à mostra.
-                        </p>
-                    </div>
-                    <div className="masthead__aside">
-                        <p className="label masthead__dateline">
-                            Apuração de {format.date(screen.builtAt)}
-                            <br />
-                            {screen.universeSize} companhias lidas
-                        </p>
+                    <h1 className="masthead__plate">
+                        <Wordmark />
+                    </h1>
+                    <div className="masthead__tools">
+                        <TickerSearch onPick={view.reveal} />
                         <ThemePicker />
                     </div>
+                    <p className="masthead__tagline">
+                        As {screen.portfolio.length} mais baratas da B3 por EV/EBIT, com a conta à mostra.
+                    </p>
+                </div>
+                <div className="shell masthead__stamp">
+                    <p className="label">
+                        Apuração de {format.date(screen.builtAt)} · {screen.universeSize} companhias lidas
+                    </p>
+                    <p className="label">
+                        {screen.portfolio.length} publicadas · {excluded} fora
+                    </p>
                 </div>
             </header>
 
             <main className="shell">
-                <p className="lede lede--opening">
-                    Uma tela quantitativa: ordena as companhias abertas pelo que a empresa inteira custa
-                    contra o que ela opera, e publica as {screen.portfolio.length} do topo. Sem opinião e
-                    sem previsão — e, por isso mesmo, com tudo o que entrou no cálculo aberto para
-                    discordância.
-                </p>
-
                 <Tabs
                     label="Seções"
                     value={view.tab}
                     onValueChange={view.openTab}
                     tabs={[
-                        { value: 'portfolio', label: 'A carteira', badge: screen.portfolio.length },
-                        { value: 'eligible', label: 'Quem ficou perto', badge: view.runnersUp.length },
-                        { value: 'excluded', label: 'O que ficou de fora', badge: excluded },
-                        { value: 'method', label: 'O método' },
+                        {
+                            value: 'portfolio',
+                            label: 'A carteira',
+                            short: 'Carteira',
+                            icon: <Wallet size={17} />,
+                            badge: screen.portfolio.length,
+                        },
+                        {
+                            value: 'eligible',
+                            label: 'Quem ficou perto',
+                            short: 'Perto',
+                            icon: <Target size={17} />,
+                            badge: view.runnersUp.length,
+                        },
+                        {
+                            value: 'excluded',
+                            label: 'O que ficou de fora',
+                            short: 'Fora',
+                            icon: <Ban size={17} />,
+                            badge: excluded,
+                        },
+                        {
+                            value: 'method',
+                            label: 'O método',
+                            short: 'Método',
+                            icon: <Scale size={17} />,
+                        },
                     ]}
                 >
                     <TabPanel value="portfolio">
+                        <DistributionChart />
                         <SectorPicker
                             sectors={view.sectors}
                             value={view.sector}
@@ -68,6 +95,7 @@ export function AppShell() {
                             showing={view.portfolio.length}
                             noun="na carteira"
                         />
+                        <p className="rank-hint">Toque numa linha para abrir a conta.</p>
                         <RankTable
                             label="As empresas mais baratas por EV/EBIT"
                             rows={view.portfolio}

@@ -16,6 +16,15 @@ export function MethodView() {
     return (
         <div className="method">
             <section>
+                <h3>O que a tela faz</h3>
+                <p className="muted">
+                    Ordena as companhias abertas pelo que a empresa inteira custa contra o que ela opera, e
+                    publica as {dataset.screen.portfolio.length} do topo. Sem opinião e sem previsão — e, por
+                    isso mesmo, com tudo o que entrou no cálculo aberto para discordância.
+                </p>
+            </section>
+
+            <section>
                 <h3>Os parâmetros</h3>
                 <p className="muted">
                     Escolhas, não descobertas. Cada uma muda a lista, e a defesa de cada uma está em{' '}

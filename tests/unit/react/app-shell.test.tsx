@@ -69,6 +69,18 @@ describe('the page', () => {
         expect(screen.getByText('Piso de liquidez')).toBeDefined();
     });
 
+    it('draws where the portfolio falls inside the eligible list', () => {
+        render(<App />);
+
+        expect(screen.getByText(/corte \d+,\d+×/)).toBeDefined();
+    });
+
+    it('counts the eligible companies the distribution covers', () => {
+        render(<App />);
+
+        expect(screen.getByText(`${String(dataset.eligible.length)} elegíveis`)).toBeDefined();
+    });
+
     it('says when the screen was apurado', () => {
         render(<App />);
 
@@ -83,25 +95,31 @@ describe('the page', () => {
 });
 
 describe('the sector filter', () => {
-    it('offers every sector present in the eligible list', () => {
-        render(<App />);
+    async function choose(sector: string): Promise<void> {
+        await userEvent.click(screen.getByLabelText('Setor'));
+        await userEvent.click(screen.getByRole('option', { name: sector }));
+    }
 
+    it('offers every sector present in the eligible list', async () => {
+        render(<App />);
         const present = new Set(dataset.eligible.map((row) => row.sector).filter(Boolean));
 
-        expect(screen.getByLabelText('Setor').querySelectorAll('option')).toHaveLength(present.size + 1);
+        await userEvent.click(screen.getByLabelText('Setor'));
+
+        expect(screen.getAllByRole('option')).toHaveLength(present.size + 1);
     });
 
     it('opens on every sector', () => {
         render(<App />);
 
-        expect(screen.getByLabelText<HTMLSelectElement>('Setor').value).toBe('todos');
+        expect(screen.getByLabelText('Setor').textContent).toContain('Todos os setores');
     });
 
     it('narrows the table to the chosen sector', async () => {
         render(<App />);
         const sector = dataset.portfolio[0]?.sector ?? '';
 
-        await userEvent.selectOptions(screen.getByLabelText('Setor'), sector);
+        await choose(sector);
 
         const kept = dataset.portfolio.filter((row) => row.sector === sector);
         expect(screen.getAllByRole('row')).toHaveLength(kept.length + 1);
@@ -112,7 +130,7 @@ describe('the sector filter', () => {
         const sector = dataset.portfolio[0]?.sector ?? '';
         const ranks = dataset.portfolio.filter((row) => row.sector === sector).map((row) => String(row.rank));
 
-        await userEvent.selectOptions(screen.getByLabelText('Setor'), sector);
+        await choose(sector);
 
         expect(
             screen.getAllByRole('row').slice(1).map((row) => row.querySelector('td')?.textContent),
