@@ -1,0 +1,4047 @@
+{
+  "schemaVersion": 1,
+  "builtAt": "2026-09-16T00:53:59.540Z",
+  "parameters": {
+    "positions": 20,
+    "liquidityFloor": 1000000,
+    "netDebtToEbitCap": 4,
+    "stalenessCap": 8,
+    "momentumOverlay": false,
+    "momentumShortlist": 40
+  },
+  "sources": [
+    {
+      "name": "CVM — Dados Abertos (ITR e DFP)",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr",
+      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "provides": "Lucro operacional, caixa, dívida e patrimônio líquido, das demonstrações padronizadas."
+    },
+    {
+      "name": "CVM — Cadastro de companhias abertas",
+      "url": "https://dados.cvm.gov.br/dataset/cia_aberta-cad",
+      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "provides": "Situação do emissor, incluindo recuperação judicial, e o setor de atividade."
+    },
+    {
+      "name": "B3 — Empresas listadas",
+      "url": "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm",
+      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "provides": "A ponte entre o código de negociação e o CNPJ da companhia."
+    },
+    {
+      "name": "brapi",
+      "url": "https://brapi.dev",
+      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "provides": "Preço de fechamento, volume negociado e valor de mercado."
+    }
+  ],
+  "universeSize": 301,
+  "portfolio": [
+    {
+      "rank": 1,
+      "ticker": "ALLD3",
+      "tickers": [
+        "ALLD3"
+      ],
+      "name": "ALLIED",
+      "sector": "Technology Services",
+      "cnpj": "20.247.322/0001-47",
+      "price": 5.05,
+      "medianDailyVolume": 1317545,
+      "marketCapitalisation": 485565388,
+      "grossDebt": 385546000,
+      "cashAndEquivalents": 348803000,
+      "shortTermInvestments": 0,
+      "netDebt": 36743000,
+      "enterpriseValue": 522308388,
+      "trailingEbit": 536376000,
+      "multiple": 0.9737728533715155,
+      "earningsYield": 1.026933536437864,
+      "netDebtToEbit": 0.0685023192685728,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 2,
+      "ticker": "RIAA3",
+      "tickers": [
+        "RIAA3"
+      ],
+      "name": "RIACHUELO",
+      "sector": "Distribution Services",
+      "cnpj": "08.402.943/0001-52",
+      "price": 6.98,
+      "medianDailyVolume": 5000472,
+      "marketCapitalisation": 3539544378,
+      "grossDebt": 2432173000,
+      "cashAndEquivalents": 918437000,
+      "shortTermInvestments": 218014000,
+      "netDebt": 1295722000,
+      "enterpriseValue": 4835266378,
+      "trailingEbit": 2374389000,
+      "multiple": 2.0364255301047973,
+      "earningsYield": 0.49105650327833916,
+      "netDebtToEbit": 0.5457075483419103,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 3,
+      "ticker": "WIZC3",
+      "tickers": [
+        "WIZC3"
+      ],
+      "name": "WIZ CO",
+      "sector": "Finance",
+      "cnpj": "42.278.473/0001-03",
+      "price": 7.97,
+      "medianDailyVolume": 2140742,
+      "marketCapitalisation": 1258470335,
+      "grossDebt": 368086000,
+      "cashAndEquivalents": 11547000,
+      "shortTermInvestments": 374528000,
+      "netDebt": -17989000,
+      "enterpriseValue": 1240481335,
+      "trailingEbit": 558905000,
+      "multiple": 2.2194851271683023,
+      "earningsYield": 0.45055494527049855,
+      "netDebtToEbit": -0.03218614970343797,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 4,
+      "ticker": "CEAB3",
+      "tickers": [
+        "CEAB3"
+      ],
+      "name": "CEA MODAS",
+      "sector": "Retail Trade",
+      "cnpj": "45.242.914/0001-05",
+      "price": 9.26,
+      "medianDailyVolume": 52492162,
+      "marketCapitalisation": 2882091393,
+      "grossDebt": 949383000,
+      "cashAndEquivalents": 540690000,
+      "shortTermInvestments": 241286000,
+      "netDebt": 167407000,
+      "enterpriseValue": 3049498393,
+      "trailingEbit": 964443000,
+      "multiple": 3.1619270324944035,
+      "earningsYield": 0.3162628326723634,
+      "netDebtToEbit": 0.17357894660441311,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 5,
+      "ticker": "PLPL3",
+      "tickers": [
+        "PLPL3"
+      ],
+      "name": "PLANOEPLANO",
+      "sector": "Finance",
+      "cnpj": "24.230.275/0001-80",
+      "price": 6.71,
+      "medianDailyVolume": 15804063,
+      "marketCapitalisation": 1368165486,
+      "grossDebt": 1047496000,
+      "cashAndEquivalents": 876613000,
+      "shortTermInvestments": 7727000,
+      "netDebt": 163156000,
+      "enterpriseValue": 1531321486,
+      "trailingEbit": 460925000,
+      "multiple": 3.3222790822801973,
+      "earningsYield": 0.3009981928771814,
+      "netDebtToEbit": 0.35397515864837015,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 6,
+      "ticker": "MLAS3",
+      "tickers": [
+        "MLAS3"
+      ],
+      "name": "MULTILASER",
+      "sector": "Electronic Technology",
+      "cnpj": "59.717.553/0001-02",
+      "price": 1.81,
+      "medianDailyVolume": 2840071,
+      "marketCapitalisation": 1503397596,
+      "grossDebt": 371503000,
+      "cashAndEquivalents": 777450000,
+      "shortTermInvestments": 0,
+      "netDebt": -405947000,
+      "enterpriseValue": 1097450596,
+      "trailingEbit": 285977000,
+      "multiple": 3.8375484601908547,
+      "earningsYield": 0.2605830285594013,
+      "netDebtToEbit": -1.419509261234295,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 7,
+      "ticker": "JHSF3",
+      "tickers": [
+        "JHSF3"
+      ],
+      "name": "JHSF PART",
+      "sector": "Finance",
+      "cnpj": "08.294.224/0001-65",
+      "price": 11.56,
+      "medianDailyVolume": 37731840,
+      "marketCapitalisation": 8032050797,
+      "grossDebt": 6272048000,
+      "cashAndEquivalents": 2386339000,
+      "shortTermInvestments": 1905239000,
+      "netDebt": 1980470000,
+      "enterpriseValue": 10012520797,
+      "trailingEbit": 2566211000,
+      "multiple": 3.9016748026565238,
+      "earningsYield": 0.2563001917328252,
+      "netDebtToEbit": 0.7717486987624946,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 8,
+      "ticker": "MGLU3",
+      "tickers": [
+        "MGLU3"
+      ],
+      "name": "MAGAZ LUIZA",
+      "sector": "Retail Trade",
+      "cnpj": "47.960.950/0001-21",
+      "price": 5.57,
+      "medianDailyVolume": 107122240,
+      "marketCapitalisation": 3926074319,
+      "grossDebt": 4946057000,
+      "cashAndEquivalents": 904972000,
+      "shortTermInvestments": 857246000,
+      "netDebt": 3183839000,
+      "enterpriseValue": 7109913319,
+      "trailingEbit": 1808322000,
+      "multiple": 3.9317739423620353,
+      "earningsYield": 0.2543381218400477,
+      "netDebtToEbit": 1.7606593294778252,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 9,
+      "ticker": "QUAL3",
+      "tickers": [
+        "QUAL3"
+      ],
+      "name": "QUALICORP",
+      "sector": "Health Services",
+      "cnpj": "11.992.680/0001-93",
+      "price": 1.59,
+      "medianDailyVolume": 6940191,
+      "marketCapitalisation": 416428802,
+      "grossDebt": 1210528000,
+      "cashAndEquivalents": 306515000,
+      "shortTermInvestments": 107807000,
+      "netDebt": 796206000,
+      "enterpriseValue": 1212634802,
+      "trailingEbit": 297971000,
+      "multiple": 4.0696403408385375,
+      "earningsYield": 0.24572195974299607,
+      "netDebtToEbit": 2.6720922505881446,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 10,
+      "ticker": "EUCA4",
+      "tickers": [
+        "EUCA3",
+        "EUCA4"
+      ],
+      "name": "EUCATEX",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "56.643.018/0001-66",
+      "price": 20.46,
+      "medianDailyVolume": 1865952,
+      "marketCapitalisation": 1943981527,
+      "grossDebt": 957524000,
+      "cashAndEquivalents": 479381000,
+      "shortTermInvestments": 0,
+      "netDebt": 478143000,
+      "enterpriseValue": 2422124527,
+      "trailingEbit": 585351000,
+      "multiple": 4.137901066197888,
+      "earningsYield": 0.2416684169104242,
+      "netDebtToEbit": 0.8168483525269453,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 11,
+      "ticker": "CSED3",
+      "tickers": [
+        "CSED3"
+      ],
+      "name": "CRUZEIRO EDU",
+      "sector": "Consumer Services",
+      "cnpj": "62.984.091/0001-02",
+      "price": 5.55,
+      "medianDailyVolume": 2243310,
+      "marketCapitalisation": 1983111613,
+      "grossDebt": 1355411000,
+      "cashAndEquivalents": 865947000,
+      "shortTermInvestments": 0,
+      "netDebt": 489464000,
+      "enterpriseValue": 2472575613,
+      "trailingEbit": 592450000,
+      "multiple": 4.173475589501224,
+      "earningsYield": 0.23960844589952687,
+      "netDebtToEbit": 0.8261692969870875,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 12,
+      "ticker": "CVCB3",
+      "tickers": [
+        "CVCB3"
+      ],
+      "name": "CVC BRASIL",
+      "sector": "Consumer Services",
+      "cnpj": "10.760.260/0001-19",
+      "price": 1.57,
+      "medianDailyVolume": 13887278,
+      "marketCapitalisation": 846188060,
+      "grossDebt": 398197000,
+      "cashAndEquivalents": 175763000,
+      "shortTermInvestments": 15139000,
+      "netDebt": 207295000,
+      "enterpriseValue": 1053483060,
+      "trailingEbit": 245330000,
+      "multiple": 4.294146904169893,
+      "earningsYield": 0.232875125680711,
+      "netDebtToEbit": 0.8449639261403008,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 13,
+      "ticker": "PGMN3",
+      "tickers": [
+        "PGMN3"
+      ],
+      "name": "PAGUE MENOS",
+      "sector": "Retail Trade",
+      "cnpj": "06.626.253/0001-51",
+      "price": 3.9,
+      "medianDailyVolume": 16135470,
+      "marketCapitalisation": 2736561013,
+      "grossDebt": 1581399000,
+      "cashAndEquivalents": 110437000,
+      "shortTermInvestments": 740000,
+      "netDebt": 1470222000,
+      "enterpriseValue": 4206783013,
+      "trailingEbit": 952602000,
+      "multiple": 4.416097187492783,
+      "earningsYield": 0.22644429176789585,
+      "netDebtToEbit": 1.5433748826897278,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 14,
+      "ticker": "GOAU4",
+      "tickers": [
+        "GOAU3",
+        "GOAU4"
+      ],
+      "name": "GERDAU MET",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "92.690.783/0001-09",
+      "price": 11.61,
+      "medianDailyVolume": 95621121,
+      "marketCapitalisation": 14168147194,
+      "grossDebt": 13558089000,
+      "cashAndEquivalents": 5185953000,
+      "shortTermInvestments": 285262000,
+      "netDebt": 8086874000,
+      "enterpriseValue": 22255021194,
+      "trailingEbit": 5023634000,
+      "multiple": 4.430064211286093,
+      "earningsYield": 0.2257303624295978,
+      "netDebtToEbit": 1.6097657592093693,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 15,
+      "ticker": "SEER3",
+      "tickers": [
+        "SEER3"
+      ],
+      "name": "SER EDUCA",
+      "sector": "Consumer Services",
+      "cnpj": "04.986.320/0001-13",
+      "price": 14.04,
+      "medianDailyVolume": 9865908,
+      "marketCapitalisation": 1785367989,
+      "grossDebt": 671041000,
+      "cashAndEquivalents": 269034000,
+      "shortTermInvestments": 0,
+      "netDebt": 402007000,
+      "enterpriseValue": 2187374989,
+      "trailingEbit": 490445000,
+      "multiple": 4.459980199614636,
+      "earningsYield": 0.22421624205560486,
+      "netDebtToEbit": 0.8196780474874859,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 16,
+      "ticker": "POSI3",
+      "tickers": [
+        "POSI3"
+      ],
+      "name": "POSITIVO TEC",
+      "sector": "Electronic Technology",
+      "cnpj": "81.243.735/0001-48",
+      "price": 3.46,
+      "medianDailyVolume": 2880796,
+      "marketCapitalisation": 486397228,
+      "grossDebt": 1175581000,
+      "cashAndEquivalents": 489759000,
+      "shortTermInvestments": 0,
+      "netDebt": 685822000,
+      "enterpriseValue": 1172219228,
+      "trailingEbit": 255049000,
+      "multiple": 4.596054985512588,
+      "earningsYield": 0.21757790173358255,
+      "netDebtToEbit": 2.688981332998757,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 17,
+      "ticker": "BEEF3",
+      "tickers": [
+        "BEEF3"
+      ],
+      "name": "MINERVA",
+      "sector": "Distribution Services",
+      "cnpj": "67.620.377/0001-14",
+      "price": 4.04,
+      "medianDailyVolume": 75845748,
+      "marketCapitalisation": 4004863328,
+      "grossDebt": 29297526000,
+      "cashAndEquivalents": 12260644000,
+      "shortTermInvestments": 2674304000,
+      "netDebt": 14362578000,
+      "enterpriseValue": 18367441328,
+      "trailingEbit": 3889523000,
+      "multiple": 4.722286338967529,
+      "earningsYield": 0.2117618306514293,
+      "netDebtToEbit": 3.692632232795641,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 18,
+      "ticker": "VLID3",
+      "tickers": [
+        "VLID3"
+      ],
+      "name": "VALID",
+      "sector": "Commercial Services",
+      "cnpj": "33.113.309/0001-47",
+      "price": 17.7,
+      "medianDailyVolume": 2621370,
+      "marketCapitalisation": 1324184413,
+      "grossDebt": 710481000,
+      "cashAndEquivalents": 491110000,
+      "shortTermInvestments": 78193000,
+      "netDebt": 141178000,
+      "enterpriseValue": 1465362413,
+      "trailingEbit": 292984000,
+      "multiple": 5.001510024438194,
+      "earningsYield": 0.19993961725835532,
+      "netDebtToEbit": 0.4818624907844797,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 19,
+      "ticker": "ANIM3",
+      "tickers": [
+        "ANIM3"
+      ],
+      "name": "ANIMA",
+      "sector": "Consumer Services",
+      "cnpj": "09.288.252/0001-32",
+      "price": 2.93,
+      "medianDailyVolume": 16006883,
+      "marketCapitalisation": 1155394093,
+      "grossDebt": 5971102000,
+      "cashAndEquivalents": 105305000,
+      "shortTermInvestments": 1671602000,
+      "netDebt": 4194195000,
+      "enterpriseValue": 5349589093,
+      "trailingEbit": 1068412000,
+      "multiple": 5.007046994043496,
+      "earningsYield": 0.19971851696012122,
+      "netDebtToEbit": 3.925634493060729,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 20,
+      "ticker": "MDNE3",
+      "tickers": [
+        "MDNE3"
+      ],
+      "name": "MOURA DUBEUX",
+      "sector": "Finance",
+      "cnpj": "12.049.631/0001-84",
+      "price": 25.35,
+      "medianDailyVolume": 26701155,
+      "marketCapitalisation": 2567072774,
+      "grossDebt": 1086968000,
+      "cashAndEquivalents": 548320000,
+      "shortTermInvestments": 335380000,
+      "netDebt": 203268000,
+      "enterpriseValue": 2770340774,
+      "trailingEbit": 552726000,
+      "multiple": 5.012141230917308,
+      "earningsYield": 0.19951552718257756,
+      "netDebtToEbit": 0.36775545206847515,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    }
+  ],
+  "eligible": [
+    {
+      "rank": 1,
+      "ticker": "ALLD3",
+      "tickers": [
+        "ALLD3"
+      ],
+      "name": "ALLIED",
+      "sector": "Technology Services",
+      "cnpj": "20.247.322/0001-47",
+      "price": 5.05,
+      "medianDailyVolume": 1317545,
+      "marketCapitalisation": 485565388,
+      "grossDebt": 385546000,
+      "cashAndEquivalents": 348803000,
+      "shortTermInvestments": 0,
+      "netDebt": 36743000,
+      "enterpriseValue": 522308388,
+      "trailingEbit": 536376000,
+      "multiple": 0.9737728533715155,
+      "earningsYield": 1.026933536437864,
+      "netDebtToEbit": 0.0685023192685728,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 2,
+      "ticker": "RIAA3",
+      "tickers": [
+        "RIAA3"
+      ],
+      "name": "RIACHUELO",
+      "sector": "Distribution Services",
+      "cnpj": "08.402.943/0001-52",
+      "price": 6.98,
+      "medianDailyVolume": 5000472,
+      "marketCapitalisation": 3539544378,
+      "grossDebt": 2432173000,
+      "cashAndEquivalents": 918437000,
+      "shortTermInvestments": 218014000,
+      "netDebt": 1295722000,
+      "enterpriseValue": 4835266378,
+      "trailingEbit": 2374389000,
+      "multiple": 2.0364255301047973,
+      "earningsYield": 0.49105650327833916,
+      "netDebtToEbit": 0.5457075483419103,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 3,
+      "ticker": "WIZC3",
+      "tickers": [
+        "WIZC3"
+      ],
+      "name": "WIZ CO",
+      "sector": "Finance",
+      "cnpj": "42.278.473/0001-03",
+      "price": 7.97,
+      "medianDailyVolume": 2140742,
+      "marketCapitalisation": 1258470335,
+      "grossDebt": 368086000,
+      "cashAndEquivalents": 11547000,
+      "shortTermInvestments": 374528000,
+      "netDebt": -17989000,
+      "enterpriseValue": 1240481335,
+      "trailingEbit": 558905000,
+      "multiple": 2.2194851271683023,
+      "earningsYield": 0.45055494527049855,
+      "netDebtToEbit": -0.03218614970343797,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 4,
+      "ticker": "CEAB3",
+      "tickers": [
+        "CEAB3"
+      ],
+      "name": "CEA MODAS",
+      "sector": "Retail Trade",
+      "cnpj": "45.242.914/0001-05",
+      "price": 9.26,
+      "medianDailyVolume": 52492162,
+      "marketCapitalisation": 2882091393,
+      "grossDebt": 949383000,
+      "cashAndEquivalents": 540690000,
+      "shortTermInvestments": 241286000,
+      "netDebt": 167407000,
+      "enterpriseValue": 3049498393,
+      "trailingEbit": 964443000,
+      "multiple": 3.1619270324944035,
+      "earningsYield": 0.3162628326723634,
+      "netDebtToEbit": 0.17357894660441311,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 5,
+      "ticker": "PLPL3",
+      "tickers": [
+        "PLPL3"
+      ],
+      "name": "PLANOEPLANO",
+      "sector": "Finance",
+      "cnpj": "24.230.275/0001-80",
+      "price": 6.71,
+      "medianDailyVolume": 15804063,
+      "marketCapitalisation": 1368165486,
+      "grossDebt": 1047496000,
+      "cashAndEquivalents": 876613000,
+      "shortTermInvestments": 7727000,
+      "netDebt": 163156000,
+      "enterpriseValue": 1531321486,
+      "trailingEbit": 460925000,
+      "multiple": 3.3222790822801973,
+      "earningsYield": 0.3009981928771814,
+      "netDebtToEbit": 0.35397515864837015,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 6,
+      "ticker": "MLAS3",
+      "tickers": [
+        "MLAS3"
+      ],
+      "name": "MULTILASER",
+      "sector": "Electronic Technology",
+      "cnpj": "59.717.553/0001-02",
+      "price": 1.81,
+      "medianDailyVolume": 2840071,
+      "marketCapitalisation": 1503397596,
+      "grossDebt": 371503000,
+      "cashAndEquivalents": 777450000,
+      "shortTermInvestments": 0,
+      "netDebt": -405947000,
+      "enterpriseValue": 1097450596,
+      "trailingEbit": 285977000,
+      "multiple": 3.8375484601908547,
+      "earningsYield": 0.2605830285594013,
+      "netDebtToEbit": -1.419509261234295,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 7,
+      "ticker": "JHSF3",
+      "tickers": [
+        "JHSF3"
+      ],
+      "name": "JHSF PART",
+      "sector": "Finance",
+      "cnpj": "08.294.224/0001-65",
+      "price": 11.56,
+      "medianDailyVolume": 37731840,
+      "marketCapitalisation": 8032050797,
+      "grossDebt": 6272048000,
+      "cashAndEquivalents": 2386339000,
+      "shortTermInvestments": 1905239000,
+      "netDebt": 1980470000,
+      "enterpriseValue": 10012520797,
+      "trailingEbit": 2566211000,
+      "multiple": 3.9016748026565238,
+      "earningsYield": 0.2563001917328252,
+      "netDebtToEbit": 0.7717486987624946,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 8,
+      "ticker": "MGLU3",
+      "tickers": [
+        "MGLU3"
+      ],
+      "name": "MAGAZ LUIZA",
+      "sector": "Retail Trade",
+      "cnpj": "47.960.950/0001-21",
+      "price": 5.57,
+      "medianDailyVolume": 107122240,
+      "marketCapitalisation": 3926074319,
+      "grossDebt": 4946057000,
+      "cashAndEquivalents": 904972000,
+      "shortTermInvestments": 857246000,
+      "netDebt": 3183839000,
+      "enterpriseValue": 7109913319,
+      "trailingEbit": 1808322000,
+      "multiple": 3.9317739423620353,
+      "earningsYield": 0.2543381218400477,
+      "netDebtToEbit": 1.7606593294778252,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 9,
+      "ticker": "QUAL3",
+      "tickers": [
+        "QUAL3"
+      ],
+      "name": "QUALICORP",
+      "sector": "Health Services",
+      "cnpj": "11.992.680/0001-93",
+      "price": 1.59,
+      "medianDailyVolume": 6940191,
+      "marketCapitalisation": 416428802,
+      "grossDebt": 1210528000,
+      "cashAndEquivalents": 306515000,
+      "shortTermInvestments": 107807000,
+      "netDebt": 796206000,
+      "enterpriseValue": 1212634802,
+      "trailingEbit": 297971000,
+      "multiple": 4.0696403408385375,
+      "earningsYield": 0.24572195974299607,
+      "netDebtToEbit": 2.6720922505881446,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 10,
+      "ticker": "EUCA4",
+      "tickers": [
+        "EUCA3",
+        "EUCA4"
+      ],
+      "name": "EUCATEX",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "56.643.018/0001-66",
+      "price": 20.46,
+      "medianDailyVolume": 1865952,
+      "marketCapitalisation": 1943981527,
+      "grossDebt": 957524000,
+      "cashAndEquivalents": 479381000,
+      "shortTermInvestments": 0,
+      "netDebt": 478143000,
+      "enterpriseValue": 2422124527,
+      "trailingEbit": 585351000,
+      "multiple": 4.137901066197888,
+      "earningsYield": 0.2416684169104242,
+      "netDebtToEbit": 0.8168483525269453,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 11,
+      "ticker": "CSED3",
+      "tickers": [
+        "CSED3"
+      ],
+      "name": "CRUZEIRO EDU",
+      "sector": "Consumer Services",
+      "cnpj": "62.984.091/0001-02",
+      "price": 5.55,
+      "medianDailyVolume": 2243310,
+      "marketCapitalisation": 1983111613,
+      "grossDebt": 1355411000,
+      "cashAndEquivalents": 865947000,
+      "shortTermInvestments": 0,
+      "netDebt": 489464000,
+      "enterpriseValue": 2472575613,
+      "trailingEbit": 592450000,
+      "multiple": 4.173475589501224,
+      "earningsYield": 0.23960844589952687,
+      "netDebtToEbit": 0.8261692969870875,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 12,
+      "ticker": "CVCB3",
+      "tickers": [
+        "CVCB3"
+      ],
+      "name": "CVC BRASIL",
+      "sector": "Consumer Services",
+      "cnpj": "10.760.260/0001-19",
+      "price": 1.57,
+      "medianDailyVolume": 13887278,
+      "marketCapitalisation": 846188060,
+      "grossDebt": 398197000,
+      "cashAndEquivalents": 175763000,
+      "shortTermInvestments": 15139000,
+      "netDebt": 207295000,
+      "enterpriseValue": 1053483060,
+      "trailingEbit": 245330000,
+      "multiple": 4.294146904169893,
+      "earningsYield": 0.232875125680711,
+      "netDebtToEbit": 0.8449639261403008,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 13,
+      "ticker": "PGMN3",
+      "tickers": [
+        "PGMN3"
+      ],
+      "name": "PAGUE MENOS",
+      "sector": "Retail Trade",
+      "cnpj": "06.626.253/0001-51",
+      "price": 3.9,
+      "medianDailyVolume": 16135470,
+      "marketCapitalisation": 2736561013,
+      "grossDebt": 1581399000,
+      "cashAndEquivalents": 110437000,
+      "shortTermInvestments": 740000,
+      "netDebt": 1470222000,
+      "enterpriseValue": 4206783013,
+      "trailingEbit": 952602000,
+      "multiple": 4.416097187492783,
+      "earningsYield": 0.22644429176789585,
+      "netDebtToEbit": 1.5433748826897278,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 14,
+      "ticker": "GOAU4",
+      "tickers": [
+        "GOAU3",
+        "GOAU4"
+      ],
+      "name": "GERDAU MET",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "92.690.783/0001-09",
+      "price": 11.61,
+      "medianDailyVolume": 95621121,
+      "marketCapitalisation": 14168147194,
+      "grossDebt": 13558089000,
+      "cashAndEquivalents": 5185953000,
+      "shortTermInvestments": 285262000,
+      "netDebt": 8086874000,
+      "enterpriseValue": 22255021194,
+      "trailingEbit": 5023634000,
+      "multiple": 4.430064211286093,
+      "earningsYield": 0.2257303624295978,
+      "netDebtToEbit": 1.6097657592093693,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 15,
+      "ticker": "SEER3",
+      "tickers": [
+        "SEER3"
+      ],
+      "name": "SER EDUCA",
+      "sector": "Consumer Services",
+      "cnpj": "04.986.320/0001-13",
+      "price": 14.04,
+      "medianDailyVolume": 9865908,
+      "marketCapitalisation": 1785367989,
+      "grossDebt": 671041000,
+      "cashAndEquivalents": 269034000,
+      "shortTermInvestments": 0,
+      "netDebt": 402007000,
+      "enterpriseValue": 2187374989,
+      "trailingEbit": 490445000,
+      "multiple": 4.459980199614636,
+      "earningsYield": 0.22421624205560486,
+      "netDebtToEbit": 0.8196780474874859,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 16,
+      "ticker": "POSI3",
+      "tickers": [
+        "POSI3"
+      ],
+      "name": "POSITIVO TEC",
+      "sector": "Electronic Technology",
+      "cnpj": "81.243.735/0001-48",
+      "price": 3.46,
+      "medianDailyVolume": 2880796,
+      "marketCapitalisation": 486397228,
+      "grossDebt": 1175581000,
+      "cashAndEquivalents": 489759000,
+      "shortTermInvestments": 0,
+      "netDebt": 685822000,
+      "enterpriseValue": 1172219228,
+      "trailingEbit": 255049000,
+      "multiple": 4.596054985512588,
+      "earningsYield": 0.21757790173358255,
+      "netDebtToEbit": 2.688981332998757,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 17,
+      "ticker": "BEEF3",
+      "tickers": [
+        "BEEF3"
+      ],
+      "name": "MINERVA",
+      "sector": "Distribution Services",
+      "cnpj": "67.620.377/0001-14",
+      "price": 4.04,
+      "medianDailyVolume": 75845748,
+      "marketCapitalisation": 4004863328,
+      "grossDebt": 29297526000,
+      "cashAndEquivalents": 12260644000,
+      "shortTermInvestments": 2674304000,
+      "netDebt": 14362578000,
+      "enterpriseValue": 18367441328,
+      "trailingEbit": 3889523000,
+      "multiple": 4.722286338967529,
+      "earningsYield": 0.2117618306514293,
+      "netDebtToEbit": 3.692632232795641,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 18,
+      "ticker": "VLID3",
+      "tickers": [
+        "VLID3"
+      ],
+      "name": "VALID",
+      "sector": "Commercial Services",
+      "cnpj": "33.113.309/0001-47",
+      "price": 17.7,
+      "medianDailyVolume": 2621370,
+      "marketCapitalisation": 1324184413,
+      "grossDebt": 710481000,
+      "cashAndEquivalents": 491110000,
+      "shortTermInvestments": 78193000,
+      "netDebt": 141178000,
+      "enterpriseValue": 1465362413,
+      "trailingEbit": 292984000,
+      "multiple": 5.001510024438194,
+      "earningsYield": 0.19993961725835532,
+      "netDebtToEbit": 0.4818624907844797,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 19,
+      "ticker": "ANIM3",
+      "tickers": [
+        "ANIM3"
+      ],
+      "name": "ANIMA",
+      "sector": "Consumer Services",
+      "cnpj": "09.288.252/0001-32",
+      "price": 2.93,
+      "medianDailyVolume": 16006883,
+      "marketCapitalisation": 1155394093,
+      "grossDebt": 5971102000,
+      "cashAndEquivalents": 105305000,
+      "shortTermInvestments": 1671602000,
+      "netDebt": 4194195000,
+      "enterpriseValue": 5349589093,
+      "trailingEbit": 1068412000,
+      "multiple": 5.007046994043496,
+      "earningsYield": 0.19971851696012122,
+      "netDebtToEbit": 3.925634493060729,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 20,
+      "ticker": "MDNE3",
+      "tickers": [
+        "MDNE3"
+      ],
+      "name": "MOURA DUBEUX",
+      "sector": "Finance",
+      "cnpj": "12.049.631/0001-84",
+      "price": 25.35,
+      "medianDailyVolume": 26701155,
+      "marketCapitalisation": 2567072774,
+      "grossDebt": 1086968000,
+      "cashAndEquivalents": 548320000,
+      "shortTermInvestments": 335380000,
+      "netDebt": 203268000,
+      "enterpriseValue": 2770340774,
+      "trailingEbit": 552726000,
+      "multiple": 5.012141230917308,
+      "earningsYield": 0.19951552718257756,
+      "netDebtToEbit": 0.36775545206847515,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 21,
+      "ticker": "DIRR3",
+      "tickers": [
+        "DIRR3"
+      ],
+      "name": "DIRECIONAL",
+      "sector": "Finance",
+      "cnpj": "16.614.075/0001-00",
+      "price": 10.27,
+      "medianDailyVolume": 128937796,
+      "marketCapitalisation": 5267732373,
+      "grossDebt": 3041410000,
+      "cashAndEquivalents": 1529554000,
+      "shortTermInvestments": 924653000,
+      "netDebt": 587203000,
+      "enterpriseValue": 5854935373,
+      "trailingEbit": 1163075000,
+      "multiple": 5.034013604453711,
+      "earningsYield": 0.19864864868765478,
+      "netDebtToEbit": 0.5048711390065129,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 22,
+      "ticker": "VTRU3",
+      "tickers": [
+        "VTRU3"
+      ],
+      "name": "VITRUEDUCA",
+      "sector": "Commercial Services",
+      "cnpj": "20.512.706/0001-40",
+      "price": 14.81,
+      "medianDailyVolume": 10328494,
+      "marketCapitalisation": 2188876265,
+      "grossDebt": 1861192000,
+      "cashAndEquivalents": 98222000,
+      "shortTermInvestments": 599710000,
+      "netDebt": 1163260000,
+      "enterpriseValue": 3352136265,
+      "trailingEbit": 663283000,
+      "multiple": 5.05385523976945,
+      "earningsYield": 0.19786874624561243,
+      "netDebtToEbit": 1.7537913680887345,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 23,
+      "ticker": "PETR4",
+      "tickers": [
+        "PETR3",
+        "PETR4"
+      ],
+      "name": "PETROBRAS",
+      "sector": "Energy Minerals",
+      "cnpj": "33.000.167/0001-01",
+      "price": 50.43,
+      "medianDailyVolume": 2348000628,
+      "marketCapitalisation": 663642668672,
+      "grossDebt": 366533000000,
+      "cashAndEquivalents": 33560000000,
+      "shortTermInvestments": 20204000000,
+      "netDebt": 312769000000,
+      "enterpriseValue": 976411668672,
+      "trailingEbit": 185746000000,
+      "multiple": 5.256703609617435,
+      "earningsYield": 0.19023328577446214,
+      "netDebtToEbit": 1.6838532189118474,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 24,
+      "ticker": "SYNE3",
+      "tickers": [
+        "SYNE3"
+      ],
+      "name": "SYN PROP TEC",
+      "sector": "Finance",
+      "cnpj": "08.801.621/0001-86",
+      "price": 3.61,
+      "medianDailyVolume": 1270359,
+      "marketCapitalisation": 549519968,
+      "grossDebt": 473123000,
+      "cashAndEquivalents": 177310000,
+      "shortTermInvestments": 62921000,
+      "netDebt": 232892000,
+      "enterpriseValue": 782411968,
+      "trailingEbit": 148023000,
+      "multiple": 5.285745917864116,
+      "earningsYield": 0.18918805700068228,
+      "netDebtToEbit": 1.5733500874864041,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 25,
+      "ticker": "HAPV3",
+      "tickers": [
+        "HAPV3"
+      ],
+      "name": "HAPVIDA",
+      "sector": "Health Services",
+      "cnpj": "05.197.443/0001-38",
+      "price": 6.63,
+      "medianDailyVolume": 55821948,
+      "marketCapitalisation": 3343268014,
+      "grossDebt": 12911686000,
+      "cashAndEquivalents": 1001996000,
+      "shortTermInvestments": 6885424000,
+      "netDebt": 5024266000,
+      "enterpriseValue": 8367534014,
+      "trailingEbit": 1544196000,
+      "multiple": 5.418699448774637,
+      "earningsYield": 0.18454612761852587,
+      "netDebtToEbit": 3.2536452626480057,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 26,
+      "ticker": "POMO4",
+      "tickers": [
+        "POMO3",
+        "POMO4"
+      ],
+      "name": "MARCOPOLO",
+      "sector": "Producer Manufacturing",
+      "cnpj": "88.611.835/0001-29",
+      "price": 4.43,
+      "medianDailyVolume": 43976167,
+      "marketCapitalisation": 5404899471,
+      "grossDebt": 3400431000,
+      "cashAndEquivalents": 1587320000,
+      "shortTermInvestments": 1127000,
+      "netDebt": 1811984000,
+      "enterpriseValue": 7216883471,
+      "trailingEbit": 1324165000,
+      "multiple": 5.450139122390336,
+      "earningsYield": 0.1834815547903697,
+      "netDebtToEbit": 1.368397442916857,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 27,
+      "ticker": "TEND3",
+      "tickers": [
+        "TEND3"
+      ],
+      "name": "TENDA",
+      "sector": "Finance",
+      "cnpj": "71.476.527/0001-35",
+      "price": 31.15,
+      "medianDailyVolume": 60540025,
+      "marketCapitalisation": 3602827730,
+      "grossDebt": 1168681000,
+      "cashAndEquivalents": 68222000,
+      "shortTermInvestments": 797217000,
+      "netDebt": 303242000,
+      "enterpriseValue": 3906069730,
+      "trailingEbit": 710407000,
+      "multiple": 5.498354788170725,
+      "earningsYield": 0.18187258525976185,
+      "netDebtToEbit": 0.42685671734653513,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 28,
+      "ticker": "PSSA3",
+      "tickers": [
+        "PSSA3"
+      ],
+      "name": "PORTO SEGURO",
+      "sector": "Finance",
+      "cnpj": "02.149.205/0001-69",
+      "price": 50.45,
+      "medianDailyVolume": 40571890,
+      "marketCapitalisation": 32136996396,
+      "grossDebt": 0,
+      "cashAndEquivalents": 1821756000,
+      "shortTermInvestments": 12664589000,
+      "netDebt": -14486345000,
+      "enterpriseValue": 17650651396,
+      "trailingEbit": 3154672000,
+      "multiple": 5.595082910679779,
+      "earningsYield": 0.17872836130653588,
+      "netDebtToEbit": -4.592028901895348,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 29,
+      "ticker": "ASAI3",
+      "tickers": [
+        "ASAI3"
+      ],
+      "name": "ASSAI",
+      "sector": "Retail Trade",
+      "cnpj": "06.057.223/0001-71",
+      "price": 9.65,
+      "medianDailyVolume": 75264210,
+      "marketCapitalisation": 13042808911,
+      "grossDebt": 16282000000,
+      "cashAndEquivalents": 4473000000,
+      "shortTermInvestments": 0,
+      "netDebt": 11809000000,
+      "enterpriseValue": 24851808911,
+      "trailingEbit": 4393000000,
+      "multiple": 5.6571383817436836,
+      "earningsYield": 0.176767816609742,
+      "netDebtToEbit": 2.688140223082176,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 30,
+      "ticker": "LREN3",
+      "tickers": [
+        "LREN3"
+      ],
+      "name": "LOJAS RENNER",
+      "sector": "Retail Trade",
+      "cnpj": "92.754.738/0001-62",
+      "price": 11.15,
+      "medianDailyVolume": 94302240,
+      "marketCapitalisation": 11251318440,
+      "grossDebt": 757830000,
+      "cashAndEquivalents": 1215940000,
+      "shortTermInvestments": 701045000,
+      "netDebt": -1159155000,
+      "enterpriseValue": 10092163440,
+      "trailingEbit": 1782323000,
+      "multiple": 5.662365037089237,
+      "earningsYield": 0.1766046507863531,
+      "netDebtToEbit": -0.6503619153206237,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 31,
+      "ticker": "LEVE3",
+      "tickers": [
+        "LEVE3"
+      ],
+      "name": "METAL LEVE",
+      "sector": "Producer Manufacturing",
+      "cnpj": "60.476.884/0001-87",
+      "price": 32.43,
+      "medianDailyVolume": 9174447,
+      "marketCapitalisation": 4428058930,
+      "grossDebt": 1598769000,
+      "cashAndEquivalents": 488594000,
+      "shortTermInvestments": 11091000,
+      "netDebt": 1099084000,
+      "enterpriseValue": 5527142930,
+      "trailingEbit": 945983000,
+      "multiple": 5.842750799961522,
+      "earningsYield": 0.17115225931021835,
+      "netDebtToEbit": 1.1618432889385961,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 32,
+      "ticker": "LAVV3",
+      "tickers": [
+        "LAVV3"
+      ],
+      "name": "LAVVI",
+      "sector": "Finance",
+      "cnpj": "26.462.693/0001-28",
+      "price": 10.98,
+      "medianDailyVolume": 4605012,
+      "marketCapitalisation": 2075296691,
+      "grossDebt": 1471530000,
+      "cashAndEquivalents": 192713000,
+      "shortTermInvestments": 744680000,
+      "netDebt": 534137000,
+      "enterpriseValue": 2609433691,
+      "trailingEbit": 438154000,
+      "multiple": 5.955517217690583,
+      "earningsYield": 0.16791152866279138,
+      "netDebtToEbit": 1.2190622475202784,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 33,
+      "ticker": "MATD3",
+      "tickers": [
+        "MATD3"
+      ],
+      "name": "MATER DEI",
+      "sector": "Health Services",
+      "cnpj": "16.676.520/0001-59",
+      "price": 5.13,
+      "medianDailyVolume": 1246590,
+      "marketCapitalisation": 1664408424,
+      "grossDebt": 1364884000,
+      "cashAndEquivalents": 599902000,
+      "shortTermInvestments": 27928000,
+      "netDebt": 737054000,
+      "enterpriseValue": 2401462424,
+      "trailingEbit": 401148000,
+      "multiple": 5.986474877102715,
+      "earningsYield": 0.16704321333157782,
+      "netDebtToEbit": 1.8373617717151773,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 34,
+      "ticker": "MULT3",
+      "tickers": [
+        "MULT3"
+      ],
+      "name": "MULTIPLAN",
+      "sector": "Finance",
+      "cnpj": "07.816.890/0001-53",
+      "price": 30.19,
+      "medianDailyVolume": 145651655,
+      "marketCapitalisation": 8996955744,
+      "grossDebt": 5058114000,
+      "cashAndEquivalents": 81836000,
+      "shortTermInvestments": 424981000,
+      "netDebt": 4551297000,
+      "enterpriseValue": 13548252744,
+      "trailingEbit": 2223107000,
+      "multiple": 6.094287294313769,
+      "earningsYield": 0.16408809622956944,
+      "netDebtToEbit": 2.0472685300347666,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 35,
+      "ticker": "GMAT3",
+      "tickers": [
+        "GMAT3"
+      ],
+      "name": "GRUPO MATEUS",
+      "sector": "Retail Trade",
+      "cnpj": "24.990.777/0001-09",
+      "price": 4.85,
+      "medianDailyVolume": 12449465,
+      "marketCapitalisation": 11242019092,
+      "grossDebt": 2724376000,
+      "cashAndEquivalents": 1631590000,
+      "shortTermInvestments": 0,
+      "netDebt": 1092786000,
+      "enterpriseValue": 12334805092,
+      "trailingEbit": 2006464000,
+      "multiple": 6.14753371702657,
+      "earningsYield": 0.16266685894383,
+      "netDebtToEbit": 0.5446327469618194,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 36,
+      "ticker": "LOGG3",
+      "tickers": [
+        "LOGG3"
+      ],
+      "name": "LOG COM PROP",
+      "sector": "Industrial Services",
+      "cnpj": "09.041.168/0001-10",
+      "price": 23.4,
+      "medianDailyVolume": 9612720,
+      "marketCapitalisation": 2029836602,
+      "grossDebt": 2130316000,
+      "cashAndEquivalents": 250199000,
+      "shortTermInvestments": 179372000,
+      "netDebt": 1700745000,
+      "enterpriseValue": 3730581602,
+      "trailingEbit": 599921000,
+      "multiple": 6.218454766544261,
+      "earningsYield": 0.16081165458983035,
+      "netDebtToEbit": 2.834948268188645,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 37,
+      "ticker": "CURY3",
+      "tickers": [
+        "CURY3"
+      ],
+      "name": "CURY S/A",
+      "sector": "Finance",
+      "cnpj": "08.797.760/0001-83",
+      "price": 31.25,
+      "medianDailyVolume": 75478125,
+      "marketCapitalisation": 9487866074,
+      "grossDebt": 1343155000,
+      "cashAndEquivalents": 1375239000,
+      "shortTermInvestments": 258467000,
+      "netDebt": -290551000,
+      "enterpriseValue": 9197315074,
+      "trailingEbit": 1456159000,
+      "multiple": 6.316147531965946,
+      "earningsYield": 0.15832435751999335,
+      "netDebtToEbit": -0.1995324686383836,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 38,
+      "ticker": "SAPR4",
+      "tickers": [
+        "SAPR3",
+        "SAPR4"
+      ],
+      "name": "SANEPAR",
+      "sector": "Utilities",
+      "cnpj": "76.484.013/0001-45",
+      "price": 6.77,
+      "medianDailyVolume": 5942706,
+      "marketCapitalisation": 10714447546,
+      "grossDebt": 7250028000,
+      "cashAndEquivalents": 4662453000,
+      "shortTermInvestments": 0,
+      "netDebt": 2587575000,
+      "enterpriseValue": 13302022546,
+      "trailingEbit": 2027336000,
+      "multiple": 6.561331000879973,
+      "earningsYield": 0.1524081013236316,
+      "netDebtToEbit": 1.2763424513746118,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 39,
+      "ticker": "TGMA3",
+      "tickers": [
+        "TGMA3"
+      ],
+      "name": "TEGMA",
+      "sector": "Transportation",
+      "cnpj": "02.351.144/0001-18",
+      "price": 35.82,
+      "medianDailyVolume": 10459440,
+      "marketCapitalisation": 2324306557,
+      "grossDebt": 224258000,
+      "cashAndEquivalents": 196923000,
+      "shortTermInvestments": 0,
+      "netDebt": 27335000,
+      "enterpriseValue": 2351641557,
+      "trailingEbit": 356632000,
+      "multiple": 6.594028457906189,
+      "earningsYield": 0.15165236340480268,
+      "netDebtToEbit": 0.07664763677964961,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 40,
+      "ticker": "GGPS3",
+      "tickers": [
+        "GGPS3"
+      ],
+      "name": "GPS",
+      "sector": "Commercial Services",
+      "cnpj": "09.229.201/0001-30",
+      "price": 12.83,
+      "medianDailyVolume": 22650082,
+      "marketCapitalisation": 9630086862,
+      "grossDebt": 6123444000,
+      "cashAndEquivalents": 4077675000,
+      "shortTermInvestments": 0,
+      "netDebt": 2045769000,
+      "enterpriseValue": 11675855862,
+      "trailingEbit": 1727821000,
+      "multiple": 6.75756103323203,
+      "earningsYield": 0.1479823852248237,
+      "netDebtToEbit": 1.1840167471051688,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 41,
+      "ticker": "VBBR3",
+      "tickers": [
+        "VBBR3"
+      ],
+      "name": "VIBRA",
+      "sector": "Retail Trade",
+      "cnpj": "34.274.233/0001-02",
+      "price": 38.76,
+      "medianDailyVolume": 376313088,
+      "marketCapitalisation": 43297208322,
+      "grossDebt": 21926000000,
+      "cashAndEquivalents": 5784000000,
+      "shortTermInvestments": 0,
+      "netDebt": 16142000000,
+      "enterpriseValue": 59439208322,
+      "trailingEbit": 8771000000,
+      "multiple": 6.776788088245354,
+      "earningsYield": 0.1475625306529129,
+      "netDebtToEbit": 1.8403830806065442,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 42,
+      "ticker": "CYRE3",
+      "tickers": [
+        "CYRE3",
+        "CYRE4"
+      ],
+      "name": "CYRELA REALT",
+      "sector": "Finance",
+      "cnpj": "73.178.600/0001-18",
+      "price": 25.9,
+      "medianDailyVolume": 153441960,
+      "marketCapitalisation": 11012039674,
+      "grossDebt": 8873618000,
+      "cashAndEquivalents": 230669000,
+      "shortTermInvestments": 3844939000,
+      "netDebt": 4798010000,
+      "enterpriseValue": 15810049674,
+      "trailingEbit": 2332893000,
+      "multiple": 6.777014494020943,
+      "earningsYield": 0.14755760089966685,
+      "netDebtToEbit": 2.0566781245432173,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 43,
+      "ticker": "FIQE3",
+      "tickers": [
+        "FIQE3"
+      ],
+      "name": "UNIFIQUE",
+      "sector": "Communications",
+      "cnpj": "02.255.187/0001-08",
+      "price": 5.2,
+      "medianDailyVolume": 3162640,
+      "marketCapitalisation": 2067268881.9999998,
+      "grossDebt": 1039509000,
+      "cashAndEquivalents": 661310000,
+      "shortTermInvestments": 14228000,
+      "netDebt": 363971000,
+      "enterpriseValue": 2431239882,
+      "trailingEbit": 357432000,
+      "multiple": 6.801964798898812,
+      "earningsYield": 0.14701634447768572,
+      "netDebtToEbit": 1.0182943888627767,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 44,
+      "ticker": "MILS3",
+      "tickers": [
+        "MILS3"
+      ],
+      "name": "MILLS",
+      "sector": "Finance",
+      "cnpj": "27.093.558/0001-15",
+      "price": 15.8,
+      "medianDailyVolume": 4662580,
+      "marketCapitalisation": 3625749742,
+      "grossDebt": 1862545000,
+      "cashAndEquivalents": 470253000,
+      "shortTermInvestments": 171868000,
+      "netDebt": 1220424000,
+      "enterpriseValue": 4846173742,
+      "trailingEbit": 710798000,
+      "multiple": 6.817933846184148,
+      "earningsYield": 0.14667200101386707,
+      "netDebtToEbit": 1.716977256548274,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 45,
+      "ticker": "BRAV3",
+      "tickers": [
+        "BRAV3"
+      ],
+      "name": "BRAVA",
+      "sector": "Energy Minerals",
+      "cnpj": "12.091.809/0001-55",
+      "price": 17.91,
+      "medianDailyVolume": 48892509,
+      "marketCapitalisation": 8245891747,
+      "grossDebt": 15069680000,
+      "cashAndEquivalents": 984183000,
+      "shortTermInvestments": 3630303000,
+      "netDebt": 10455194000,
+      "enterpriseValue": 18701085747,
+      "trailingEbit": 2739694000,
+      "multiple": 6.825976093315531,
+      "earningsYield": 0.1464991945956666,
+      "netDebtToEbit": 3.8161904212660245,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 46,
+      "ticker": "CPFE3",
+      "tickers": [
+        "CPFE3"
+      ],
+      "name": "CPFL ENERGIA",
+      "sector": "Utilities",
+      "cnpj": "02.429.144/0001-93",
+      "price": 44.72,
+      "medianDailyVolume": 95240184,
+      "marketCapitalisation": 51540344000,
+      "grossDebt": 31552149000,
+      "cashAndEquivalents": 2164836000,
+      "shortTermInvestments": 1823430000,
+      "netDebt": 27563883000,
+      "enterpriseValue": 79104227000,
+      "trailingEbit": 11529382000,
+      "multiple": 6.861098626101555,
+      "earningsYield": 0.14574925307088837,
+      "netDebtToEbit": 2.3907511261228054,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 47,
+      "ticker": "COGN3",
+      "tickers": [
+        "COGN3"
+      ],
+      "name": "COGNA ON",
+      "sector": "Commercial Services",
+      "cnpj": "02.800.026/0001-40",
+      "price": 2.39,
+      "medianDailyVolume": 67643453,
+      "marketCapitalisation": 4823300258,
+      "grossDebt": 6686831000,
+      "cashAndEquivalents": 72401000,
+      "shortTermInvestments": 1359084000,
+      "netDebt": 5255346000,
+      "enterpriseValue": 10078646258,
+      "trailingEbit": 1464594000,
+      "multiple": 6.881529118649946,
+      "earningsYield": 0.14531653979198522,
+      "netDebtToEbit": 3.588261320202049,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 48,
+      "ticker": "UGPA3",
+      "tickers": [
+        "UGPA3"
+      ],
+      "name": "ULTRAPAR",
+      "sector": "Retail Trade",
+      "cnpj": "33.256.439/0001-39",
+      "price": 38.43,
+      "medianDailyVolume": 245460096,
+      "marketCapitalisation": 41865898340,
+      "grossDebt": 19563366000,
+      "cashAndEquivalents": 4644834000,
+      "shortTermInvestments": 4605932000,
+      "netDebt": 10312600000,
+      "enterpriseValue": 52178498340,
+      "trailingEbit": 7432515000,
+      "multiple": 7.020301787483779,
+      "earningsYield": 0.14244401882877183,
+      "netDebtToEbit": 1.3874980407035842,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 49,
+      "ticker": "VULC3",
+      "tickers": [
+        "VULC3"
+      ],
+      "name": "VULCABRAS",
+      "sector": "Consumer Non-Durables",
+      "cnpj": "50.926.955/0001-42",
+      "price": 13.43,
+      "medianDailyVolume": 37589227,
+      "marketCapitalisation": 4174561440.0000005,
+      "grossDebt": 935334000,
+      "cashAndEquivalents": 355578000,
+      "shortTermInvestments": 0,
+      "netDebt": 579756000,
+      "enterpriseValue": 4754317440,
+      "trailingEbit": 671171000,
+      "multiple": 7.083615710452329,
+      "earningsYield": 0.14117084281187586,
+      "netDebtToEbit": 0.8637977504987552,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 50,
+      "ticker": "AZZA3",
+      "tickers": [
+        "AZZA3"
+      ],
+      "name": "AZZAS 2154",
+      "sector": "Consumer Non-Durables",
+      "cnpj": "16.590.234/0001-76",
+      "price": 15.3,
+      "medianDailyVolume": 40266540,
+      "marketCapitalisation": 3253902188,
+      "grossDebt": 3267884000,
+      "cashAndEquivalents": 244064000,
+      "shortTermInvestments": 892063000,
+      "netDebt": 2131757000,
+      "enterpriseValue": 5385659188,
+      "trailingEbit": 759830000,
+      "multiple": 7.087979137438637,
+      "earningsYield": 0.1410839367060224,
+      "netDebtToEbit": 2.8055709829830358,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 51,
+      "ticker": "VIVA3",
+      "tickers": [
+        "VIVA3"
+      ],
+      "name": "VIVARA S.A.",
+      "sector": "Consumer Durables",
+      "cnpj": "33.839.910/0001-11",
+      "price": 22.44,
+      "medianDailyVolume": 30188532,
+      "marketCapitalisation": 5290830281,
+      "grossDebt": 518331322,
+      "cashAndEquivalents": 416659228,
+      "shortTermInvestments": 0,
+      "netDebt": 101672094,
+      "enterpriseValue": 5392502375,
+      "trailingEbit": 751302362,
+      "multiple": 7.17753949374646,
+      "earningsYield": 0.13932351063637685,
+      "netDebtToEbit": 0.13532779762510583,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 52,
+      "ticker": "ISAE4",
+      "tickers": [
+        "ISAE3",
+        "ISAE4"
+      ],
+      "name": "ISA ENERGIA",
+      "sector": "Utilities",
+      "cnpj": "02.998.611/0001-04",
+      "price": 27.39,
+      "medianDailyVolume": 70584030,
+      "marketCapitalisation": 20525296916,
+      "grossDebt": 17725699000,
+      "cashAndEquivalents": 468699000,
+      "shortTermInvestments": 1288565000,
+      "netDebt": 15968435000,
+      "enterpriseValue": 36493731916,
+      "trailingEbit": 5004663000,
+      "multiple": 7.291945914440193,
+      "earningsYield": 0.13713760520627374,
+      "netDebtToEbit": 3.1907113426018894,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 53,
+      "ticker": "KEPL3",
+      "tickers": [
+        "KEPL3"
+      ],
+      "name": "KEPLER WEBER",
+      "sector": "Producer Manufacturing",
+      "cnpj": "91.983.056/0001-69",
+      "price": 6.48,
+      "medianDailyVolume": 11131992,
+      "marketCapitalisation": 1182459702,
+      "grossDebt": 341390000,
+      "cashAndEquivalents": 354218000,
+      "shortTermInvestments": 0,
+      "netDebt": -12828000,
+      "enterpriseValue": 1169631702,
+      "trailingEbit": 159404000,
+      "multiple": 7.337530438382976,
+      "earningsYield": 0.13628563566414004,
+      "netDebtToEbit": -0.08047476851270985,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 54,
+      "ticker": "ALOS3",
+      "tickers": [
+        "ALOS3"
+      ],
+      "name": "ALLOS",
+      "sector": "Finance",
+      "cnpj": "05.878.397/0001-32",
+      "price": 28.53,
+      "medianDailyVolume": 81883953,
+      "marketCapitalisation": 14320886413,
+      "grossDebt": 0,
+      "cashAndEquivalents": 44899000,
+      "shortTermInvestments": 3157493000,
+      "netDebt": -3202392000,
+      "enterpriseValue": 11118494413,
+      "trailingEbit": 1511087000,
+      "multiple": 7.357944587571728,
+      "earningsYield": 0.13590751983768615,
+      "netDebtToEbit": -2.1192638147241025,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 55,
+      "ticker": "EVEN3",
+      "tickers": [
+        "EVEN3"
+      ],
+      "name": "EVEN",
+      "sector": "Finance",
+      "cnpj": "43.470.988/0001-65",
+      "price": 4.12,
+      "medianDailyVolume": 2973404,
+      "marketCapitalisation": 787723492,
+      "grossDebt": 1485643000,
+      "cashAndEquivalents": 1056000,
+      "shortTermInvestments": 785935000,
+      "netDebt": 698652000,
+      "enterpriseValue": 1486375492,
+      "trailingEbit": 201923000,
+      "multiple": 7.361100478895421,
+      "earningsYield": 0.135849252821238,
+      "netDebtToEbit": 3.459992175235114,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 56,
+      "ticker": "RECV3",
+      "tickers": [
+        "RECV3"
+      ],
+      "name": "PETRORECSA",
+      "sector": "Energy Minerals",
+      "cnpj": "03.342.704/0001-30",
+      "price": 11.37,
+      "medianDailyVolume": 21175488,
+      "marketCapitalisation": 3336294819,
+      "grossDebt": 3162517000,
+      "cashAndEquivalents": 320992000,
+      "shortTermInvestments": 1299125000,
+      "netDebt": 1542400000,
+      "enterpriseValue": 4878694819,
+      "trailingEbit": 656559000,
+      "multiple": 7.430702829448686,
+      "earningsYield": 0.13457677193560896,
+      "netDebtToEbit": 2.3492176636067743,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 57,
+      "ticker": "AUAU3",
+      "tickers": [
+        "AUAU3"
+      ],
+      "name": "PETZCOBASI",
+      "sector": "Process Industries",
+      "cnpj": "53.153.938/0001-08",
+      "price": 3.97,
+      "medianDailyVolume": 8583934,
+      "marketCapitalisation": 3430742866,
+      "grossDebt": 348974000,
+      "cashAndEquivalents": 193215000,
+      "shortTermInvestments": 444021000,
+      "netDebt": -288262000,
+      "enterpriseValue": 3142480866,
+      "trailingEbit": 422497000,
+      "multiple": 7.437877348241526,
+      "earningsYield": 0.13444696022534192,
+      "netDebtToEbit": -0.6822817676811906,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 58,
+      "ticker": "CMIN3",
+      "tickers": [
+        "CMIN3"
+      ],
+      "name": "CSNMINERACAO",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "08.902.291/0001-15",
+      "price": 6.2,
+      "medianDailyVolume": 48846700,
+      "marketCapitalisation": 33815601188,
+      "grossDebt": 8964506000,
+      "cashAndEquivalents": 7920160000,
+      "shortTermInvestments": 19242000,
+      "netDebt": 1025104000,
+      "enterpriseValue": 34840705188,
+      "trailingEbit": 4642024000,
+      "multiple": 7.50549871952407,
+      "earningsYield": 0.13323564993738496,
+      "netDebtToEbit": 0.22083125808914386,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 59,
+      "ticker": "MDIA3",
+      "tickers": [
+        "MDIA3"
+      ],
+      "name": "M.DIASBRANCO",
+      "sector": "Consumer Non-Durables",
+      "cnpj": "07.206.816/0001-15",
+      "price": 16.93,
+      "medianDailyVolume": 10676058,
+      "marketCapitalisation": 5756990415,
+      "grossDebt": 1451143000,
+      "cashAndEquivalents": 2086741000,
+      "shortTermInvestments": 15564000,
+      "netDebt": -651162000,
+      "enterpriseValue": 5105828415,
+      "trailingEbit": 663812000,
+      "multiple": 7.691678389363253,
+      "earningsYield": 0.13001063608989297,
+      "netDebtToEbit": -0.9809433996372466,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 60,
+      "ticker": "BLAU3",
+      "tickers": [
+        "BLAU3"
+      ],
+      "name": "BLAU",
+      "sector": "Health Technology",
+      "cnpj": "58.430.828/0001-60",
+      "price": 10.37,
+      "medianDailyVolume": 2008668.9999999998,
+      "marketCapitalisation": 2437066690,
+      "grossDebt": 853093000,
+      "cashAndEquivalents": 46773000,
+      "shortTermInvestments": 838097000,
+      "netDebt": -31777000,
+      "enterpriseValue": 2405289690,
+      "trailingEbit": 308710000,
+      "multiple": 7.7914213663308605,
+      "earningsYield": 0.1283462866379309,
+      "netDebtToEbit": -0.10293479317158498,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 61,
+      "ticker": "MOTV3",
+      "tickers": [
+        "MOTV3"
+      ],
+      "name": "MOTIVA SA",
+      "sector": "Transportation",
+      "cnpj": "02.846.056/0001-97",
+      "price": 16.36,
+      "medianDailyVolume": 130349936,
+      "marketCapitalisation": 33087566313.000004,
+      "grossDebt": 43524000000,
+      "cashAndEquivalents": 4812000000,
+      "shortTermInvestments": 5838000000,
+      "netDebt": 32874000000,
+      "enterpriseValue": 65961566313,
+      "trailingEbit": 8464199000,
+      "multiple": 7.79300750289543,
+      "earningsYield": 0.12832016389416512,
+      "netDebtToEbit": 3.883887890632061,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 62,
+      "ticker": "TRIS3",
+      "tickers": [
+        "TRIS3"
+      ],
+      "name": "TRISUL",
+      "sector": "Consumer Durables",
+      "cnpj": "08.811.643/0001-27",
+      "price": 4.93,
+      "medianDailyVolume": 1214259,
+      "marketCapitalisation": 1113105565,
+      "grossDebt": 854217000,
+      "cashAndEquivalents": 408816000,
+      "shortTermInvestments": 3797000,
+      "netDebt": 441604000,
+      "enterpriseValue": 1554709565,
+      "trailingEbit": 198068000,
+      "multiple": 7.849372765918775,
+      "earningsYield": 0.12739871449880738,
+      "netDebtToEbit": 2.229557525698245,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 63,
+      "ticker": "SMFT3",
+      "tickers": [
+        "SMFT3"
+      ],
+      "name": "SMART FIT",
+      "sector": "Consumer Services",
+      "cnpj": "07.594.978/0001-78",
+      "price": 17.1,
+      "medianDailyVolume": 62695440.00000001,
+      "marketCapitalisation": 10529659791,
+      "grossDebt": 7136242000,
+      "cashAndEquivalents": 1540185000,
+      "shortTermInvestments": 1087016000,
+      "netDebt": 4509041000,
+      "enterpriseValue": 15038700791,
+      "trailingEbit": 1914537000,
+      "multiple": 7.855006610475535,
+      "earningsYield": 0.1273073403485603,
+      "netDebtToEbit": 2.355160020412246,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 64,
+      "ticker": "RDOR3",
+      "tickers": [
+        "RDOR3"
+      ],
+      "name": "REDE D OR",
+      "sector": "Health Services",
+      "cnpj": "06.047.087/0001-39",
+      "price": 36.94,
+      "medianDailyVolume": 124794401.99999999,
+      "marketCapitalisation": 81561077752,
+      "grossDebt": 50939017000,
+      "cashAndEquivalents": 3014917000,
+      "shortTermInvestments": 40305218000,
+      "netDebt": 7618882000,
+      "enterpriseValue": 89179959752,
+      "trailingEbit": 11009076000,
+      "multiple": 8.100585349033834,
+      "earningsYield": 0.12344786912457767,
+      "netDebtToEbit": 0.6920546283811648,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 65,
+      "ticker": "PASS3",
+      "tickers": [
+        "PASS3"
+      ],
+      "name": "COMPASS",
+      "sector": "Utilities",
+      "cnpj": "21.389.501/0001-81",
+      "price": 23.86,
+      "medianDailyVolume": 20078190,
+      "marketCapitalisation": 16997724418.000002,
+      "grossDebt": 17889056000,
+      "cashAndEquivalents": 2785113000,
+      "shortTermInvestments": 1815873000,
+      "netDebt": 13288070000,
+      "enterpriseValue": 30285794418,
+      "trailingEbit": 3730816000,
+      "multiple": 8.117740038104264,
+      "earningsYield": 0.12318699481703653,
+      "netDebtToEbit": 3.5617060718084192,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 66,
+      "ticker": "RENT3",
+      "tickers": [
+        "RENT3",
+        "RENT4"
+      ],
+      "name": "LOCALIZA",
+      "sector": "Finance",
+      "cnpj": "16.670.085/0001-55",
+      "price": 35.68,
+      "medianDailyVolume": 204243024,
+      "marketCapitalisation": 38307130705,
+      "grossDebt": 44636144000,
+      "cashAndEquivalents": 1799120000,
+      "shortTermInvestments": 8350240000,
+      "netDebt": 34486784000,
+      "enterpriseValue": 72793914705,
+      "trailingEbit": 8784646000,
+      "multiple": 8.286493810336808,
+      "earningsYield": 0.12067830169046546,
+      "netDebtToEbit": 3.925802360163403,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 67,
+      "ticker": "TAEE4",
+      "tickers": [
+        "TAEE3",
+        "TAEE4"
+      ],
+      "name": "TAESA",
+      "sector": "Industrial Services",
+      "cnpj": "07.859.971/0001-30",
+      "price": 13.72,
+      "medianDailyVolume": 1677956,
+      "marketCapitalisation": 13955650439,
+      "grossDebt": 10957895000,
+      "cashAndEquivalents": 208359000,
+      "shortTermInvestments": 335801000,
+      "netDebt": 10413735000,
+      "enterpriseValue": 24369385439,
+      "trailingEbit": 2909886000,
+      "multiple": 8.374687337923204,
+      "earningsYield": 0.11940744288705409,
+      "netDebtToEbit": 3.578743290974286,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 68,
+      "ticker": "CMIG4",
+      "tickers": [
+        "CMIG3",
+        "CMIG4"
+      ],
+      "name": "CEMIG",
+      "sector": "Utilities",
+      "cnpj": "17.155.730/0001-64",
+      "price": 11.1,
+      "medianDailyVolume": 151660410,
+      "marketCapitalisation": 37803237180,
+      "grossDebt": 22352709000,
+      "cashAndEquivalents": 2162396000,
+      "shortTermInvestments": 919713000,
+      "netDebt": 19270600000,
+      "enterpriseValue": 57073837180,
+      "trailingEbit": 6805099000,
+      "multiple": 8.386922391577256,
+      "earningsYield": 0.1192332483014593,
+      "netDebtToEbit": 2.8317883398904264,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 69,
+      "ticker": "ITSA4",
+      "tickers": [
+        "ITSA3",
+        "ITSA4"
+      ],
+      "name": "ITAUSA",
+      "sector": "Finance",
+      "cnpj": "61.532.644/0001-15",
+      "price": 14.16,
+      "medianDailyVolume": 237320184,
+      "marketCapitalisation": 158089400673,
+      "grossDebt": 10618000000,
+      "cashAndEquivalents": 4709000000,
+      "shortTermInvestments": 1823000000,
+      "netDebt": 4086000000,
+      "enterpriseValue": 162175400673,
+      "trailingEbit": 19157000000,
+      "multiple": 8.465594856866941,
+      "earningsYield": 0.11812518989009274,
+      "netDebtToEbit": 0.21329018113483322,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 70,
+      "ticker": "INTB3",
+      "tickers": [
+        "INTB3"
+      ],
+      "name": "INTELBRAS",
+      "sector": "Technology Services",
+      "cnpj": "82.901.000/0001-27",
+      "price": 14.78,
+      "medianDailyVolume": 10028230,
+      "marketCapitalisation": 4943651768,
+      "grossDebt": 875652000,
+      "cashAndEquivalents": 1445232000,
+      "shortTermInvestments": 10000,
+      "netDebt": -569590000,
+      "enterpriseValue": 4374061768,
+      "trailingEbit": 514393000,
+      "multiple": 8.50334621194301,
+      "earningsYield": 0.11760076269686551,
+      "netDebtToEbit": -1.1073051149607402,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 71,
+      "ticker": "DESK3",
+      "tickers": [
+        "DESK3"
+      ],
+      "name": "DESKTOP",
+      "sector": "Communications",
+      "cnpj": "08.170.849/0001-15",
+      "price": 19.45,
+      "medianDailyVolume": 5941975,
+      "marketCapitalisation": 2255180539,
+      "grossDebt": 1684744000,
+      "cashAndEquivalents": 491870000,
+      "shortTermInvestments": 31000,
+      "netDebt": 1192843000,
+      "enterpriseValue": 3448023539,
+      "trailingEbit": 404471000,
+      "multiple": 8.52477319511164,
+      "earningsYield": 0.11730517365241223,
+      "netDebtToEbit": 2.9491434490977104,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 72,
+      "ticker": "MELK3",
+      "tickers": [
+        "MELK3"
+      ],
+      "name": "MELNICK",
+      "sector": "Industrial Services",
+      "cnpj": "12.181.987/0001-77",
+      "price": 2.94,
+      "medianDailyVolume": 1290366,
+      "marketCapitalisation": 583409726,
+      "grossDebt": 818320000,
+      "cashAndEquivalents": 56274000,
+      "shortTermInvestments": 254837000,
+      "netDebt": 507209000,
+      "enterpriseValue": 1090618726,
+      "trailingEbit": 127156000,
+      "multiple": 8.577013479505489,
+      "earningsYield": 0.11659069936050227,
+      "netDebtToEbit": 3.9888719368334957,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 73,
+      "ticker": "RAIL3",
+      "tickers": [
+        "RAIL3"
+      ],
+      "name": "RUMO S.A.",
+      "sector": "Transportation",
+      "cnpj": "02.387.241/0001-60",
+      "price": 14.7,
+      "medianDailyVolume": 102963210,
+      "marketCapitalisation": 27014627717,
+      "grossDebt": 22909847000,
+      "cashAndEquivalents": 5455578000,
+      "shortTermInvestments": 0,
+      "netDebt": 17454269000,
+      "enterpriseValue": 44468896717,
+      "trailingEbit": 5102072000,
+      "multiple": 8.715850485253835,
+      "earningsYield": 0.11473349636869967,
+      "netDebtToEbit": 3.4210158147513403,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 74,
+      "ticker": "HYPE3",
+      "tickers": [
+        "HYPE3"
+      ],
+      "name": "HYPERA",
+      "sector": "Health Technology",
+      "cnpj": "02.932.074/0001-91",
+      "price": 23.38,
+      "medianDailyVolume": 73291624,
+      "marketCapitalisation": 16552785328.999998,
+      "grossDebt": 7462792000,
+      "cashAndEquivalents": 1578512000,
+      "shortTermInvestments": 0,
+      "netDebt": 5884280000,
+      "enterpriseValue": 22437065329,
+      "trailingEbit": 2515212000,
+      "multiple": 8.920546390920526,
+      "earningsYield": 0.11210075663277934,
+      "netDebtToEbit": 2.3394767518602806,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 75,
+      "ticker": "RANI3",
+      "tickers": [
+        "RANI3"
+      ],
+      "name": "IRANI",
+      "sector": "Process Industries",
+      "cnpj": "92.791.243/0001-03",
+      "price": 7.96,
+      "medianDailyVolume": 5106340,
+      "marketCapitalisation": 1818157162,
+      "grossDebt": 1918123000,
+      "cashAndEquivalents": 832600000,
+      "shortTermInvestments": 0,
+      "netDebt": 1085523000,
+      "enterpriseValue": 2903680162,
+      "trailingEbit": 324611000,
+      "multiple": 8.94510710357936,
+      "earningsYield": 0.11179295992999934,
+      "netDebtToEbit": 3.3440733678156316,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 76,
+      "ticker": "EZTC3",
+      "tickers": [
+        "EZTC3"
+      ],
+      "name": "EZTEC",
+      "sector": "Finance",
+      "cnpj": "08.312.229/0001-73",
+      "price": 13.1,
+      "medianDailyVolume": 13973770,
+      "marketCapitalisation": 3545713204,
+      "grossDebt": 1792189000,
+      "cashAndEquivalents": 72863000,
+      "shortTermInvestments": 1720711000,
+      "netDebt": -1385000,
+      "enterpriseValue": 3544328204,
+      "trailingEbit": 394101000,
+      "multiple": 8.993451435038226,
+      "earningsYield": 0.11119201646033568,
+      "netDebtToEbit": -0.003514327545476921,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 77,
+      "ticker": "TFCO4",
+      "tickers": [
+        "TFCO4"
+      ],
+      "name": "TRACK FIELD",
+      "sector": "Retail Trade",
+      "cnpj": "59.418.806/0001-47",
+      "price": 13.1,
+      "medianDailyVolume": 6006350,
+      "marketCapitalisation": 1943656484,
+      "grossDebt": 171758000,
+      "cashAndEquivalents": 50313000,
+      "shortTermInvestments": 0,
+      "netDebt": 121445000,
+      "enterpriseValue": 2065101484,
+      "trailingEbit": 224647000,
+      "multiple": 9.192651065894493,
+      "earningsYield": 0.10878254736656806,
+      "netDebtToEbit": 0.5406037026980106,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 78,
+      "ticker": "OPCT3",
+      "tickers": [
+        "OPCT3"
+      ],
+      "name": "OCEANPACT",
+      "sector": "Commercial Services",
+      "cnpj": "09.114.805/0001-30",
+      "price": 11.24,
+      "medianDailyVolume": 6728264,
+      "marketCapitalisation": 2239664317,
+      "grossDebt": 1979003000,
+      "cashAndEquivalents": 340212000,
+      "shortTermInvestments": 15294000,
+      "netDebt": 1623497000,
+      "enterpriseValue": 3863161317,
+      "trailingEbit": 420190000,
+      "multiple": 9.193844015802375,
+      "earningsYield": 0.10876843225545271,
+      "netDebtToEbit": 3.86372117375473,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 79,
+      "ticker": "ABEV3",
+      "tickers": [
+        "ABEV3"
+      ],
+      "name": "AMBEV S/A",
+      "sector": "Consumer Non-Durables",
+      "cnpj": "07.526.557/0001-00",
+      "price": 15.73,
+      "medianDailyVolume": 327163551,
+      "marketCapitalisation": 245673394498,
+      "grossDebt": 2948960000,
+      "cashAndEquivalents": 16610779000,
+      "shortTermInvestments": 1735617000,
+      "netDebt": -15397436000,
+      "enterpriseValue": 230275958498,
+      "trailingEbit": 24130315000,
+      "multiple": 9.543015020649337,
+      "earningsYield": 0.10478868552927803,
+      "netDebtToEbit": -0.6380951098234731,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 80,
+      "ticker": "SBSP3",
+      "tickers": [
+        "SBSP3"
+      ],
+      "name": "SABESP",
+      "sector": "Utilities",
+      "cnpj": "43.776.517/0001-80",
+      "price": 26.93,
+      "medianDailyVolume": 365394319,
+      "marketCapitalisation": 94598491368,
+      "grossDebt": 51657802000,
+      "cashAndEquivalents": 4243477000,
+      "shortTermInvestments": 13197409000,
+      "netDebt": 34216916000,
+      "enterpriseValue": 128815407368,
+      "trailingEbit": 12960705000,
+      "multiple": 9.938919786230764,
+      "earningsYield": 0.1006145558580104,
+      "netDebtToEbit": 2.6400505219430577,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 81,
+      "ticker": "EGIE3",
+      "tickers": [
+        "EGIE3"
+      ],
+      "name": "ENGIE BRASIL",
+      "sector": "Utilities",
+      "cnpj": "02.474.103/0001-19",
+      "price": 30.52,
+      "medianDailyVolume": 63408352,
+      "marketCapitalisation": 43142978271,
+      "grossDebt": 31288448000,
+      "cashAndEquivalents": 6448868000,
+      "shortTermInvestments": 0,
+      "netDebt": 24839580000,
+      "enterpriseValue": 67982558271,
+      "trailingEbit": 6631861000,
+      "multiple": 10.250902163208789,
+      "earningsYield": 0.09755238944617681,
+      "netDebtToEbit": 3.745491650081327,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 82,
+      "ticker": "VIVT3",
+      "tickers": [
+        "VIVT3"
+      ],
+      "name": "TELEF BRASIL",
+      "sector": "Communications",
+      "cnpj": "02.558.157/0001-62",
+      "price": 30.77,
+      "medianDailyVolume": 119719916,
+      "marketCapitalisation": 98085911473,
+      "grossDebt": 19716509000,
+      "cashAndEquivalents": 8484361000,
+      "shortTermInvestments": 91807000,
+      "netDebt": 11140341000,
+      "enterpriseValue": 109226252473,
+      "trailingEbit": 10550797000,
+      "multiple": 10.352417212936615,
+      "earningsYield": 0.09659579781525587,
+      "netDebtToEbit": 1.055876726658659,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 83,
+      "ticker": "FRAS3",
+      "tickers": [
+        "FRAS3"
+      ],
+      "name": "FRAS-LE",
+      "sector": "Producer Manufacturing",
+      "cnpj": "88.610.126/0001-29",
+      "price": 23.34,
+      "medianDailyVolume": 3818424,
+      "marketCapitalisation": 6434174137,
+      "grossDebt": 2557819000,
+      "cashAndEquivalents": 1349043000,
+      "shortTermInvestments": 87000,
+      "netDebt": 1208689000,
+      "enterpriseValue": 7642863137,
+      "trailingEbit": 725045000,
+      "multiple": 10.54122590597825,
+      "earningsYield": 0.0948656265333304,
+      "netDebtToEbit": 1.6670537690764022,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 84,
+      "ticker": "CBAV3",
+      "tickers": [
+        "CBAV3"
+      ],
+      "name": "CBA",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "61.409.892/0001-73",
+      "price": 11.2,
+      "medianDailyVolume": 19481280,
+      "marketCapitalisation": 7272482029,
+      "grossDebt": 4716752000,
+      "cashAndEquivalents": 1755418000,
+      "shortTermInvestments": 54596000,
+      "netDebt": 2906738000,
+      "enterpriseValue": 10179220029,
+      "trailingEbit": 963716000,
+      "multiple": 10.562468641176446,
+      "earningsYield": 0.09467483729150462,
+      "netDebtToEbit": 3.016176964997987,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 85,
+      "ticker": "ALPA4",
+      "tickers": [
+        "ALPA3",
+        "ALPA4"
+      ],
+      "name": "ALPARGATAS",
+      "sector": "Consumer Non-Durables",
+      "cnpj": "61.079.117/0001-05",
+      "price": 12.99,
+      "medianDailyVolume": 8674722,
+      "marketCapitalisation": 7716446389,
+      "grossDebt": 1265870000,
+      "cashAndEquivalents": 717700000,
+      "shortTermInvestments": 0,
+      "netDebt": 548170000,
+      "enterpriseValue": 8264616389,
+      "trailingEbit": 773209000,
+      "multiple": 10.688722439857788,
+      "earningsYield": 0.09355655043216791,
+      "netDebtToEbit": 0.7089545000122864,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 86,
+      "ticker": "GRND3",
+      "tickers": [
+        "GRND3"
+      ],
+      "name": "GRENDENE",
+      "sector": "Consumer Non-Durables",
+      "cnpj": "89.850.341/0001-60",
+      "price": 3.71,
+      "medianDailyVolume": 11544778,
+      "marketCapitalisation": 3392121490,
+      "grossDebt": 96582000,
+      "cashAndEquivalents": 87313000,
+      "shortTermInvestments": 365337000,
+      "netDebt": -356068000,
+      "enterpriseValue": 3036053490,
+      "trailingEbit": 282998000,
+      "multiple": 10.728180022473657,
+      "earningsYield": 0.09321245522587944,
+      "netDebtToEbit": -1.2581997045915518,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 87,
+      "ticker": "PNVL3",
+      "tickers": [
+        "PNVL3"
+      ],
+      "name": "DIMED",
+      "sector": "Retail Trade",
+      "cnpj": "92.665.611/0001-77",
+      "price": 12.94,
+      "medianDailyVolume": 3250528,
+      "marketCapitalisation": 1925465750,
+      "grossDebt": 1403750000,
+      "cashAndEquivalents": 59995000,
+      "shortTermInvestments": 235203000,
+      "netDebt": 1108552000,
+      "enterpriseValue": 3034017750,
+      "trailingEbit": 280915000,
+      "multiple": 10.800483242261894,
+      "earningsYield": 0.09258844975445513,
+      "netDebtToEbit": 3.9462186070519554,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 88,
+      "ticker": "GGBR4",
+      "tickers": [
+        "GGBR3",
+        "GGBR4"
+      ],
+      "name": "GERDAU",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "33.611.500/0001-19",
+      "price": 25.85,
+      "medianDailyVolume": 253456665,
+      "marketCapitalisation": 46401503793,
+      "grossDebt": 13558089000,
+      "cashAndEquivalents": 5155232000,
+      "shortTermInvestments": 285262000,
+      "netDebt": 8117595000,
+      "enterpriseValue": 54519098793,
+      "trailingEbit": 5034141000,
+      "multiple": 10.82987123185465,
+      "earningsYield": 0.09233720130103032,
+      "netDebtToEbit": 1.612508469667417,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 89,
+      "ticker": "BMOB3",
+      "tickers": [
+        "BMOB3"
+      ],
+      "name": "BEMOBI TECH",
+      "sector": "Technology Services",
+      "cnpj": "09.042.817/0001-05",
+      "price": 27.65,
+      "medianDailyVolume": 11983510,
+      "marketCapitalisation": 2247720599,
+      "grossDebt": 41200000,
+      "cashAndEquivalents": 297100000,
+      "shortTermInvestments": 30865000,
+      "netDebt": -286765000,
+      "enterpriseValue": 1960955599,
+      "trailingEbit": 175080000,
+      "multiple": 11.20034041009824,
+      "earningsYield": 0.08928300063973045,
+      "netDebtToEbit": -1.6379083847384053,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 90,
+      "ticker": "VALE3",
+      "tickers": [
+        "VALE3"
+      ],
+      "name": "VALE",
+      "sector": "Non-Energy Minerals",
+      "cnpj": "33.592.510/0001-54",
+      "price": 74.6,
+      "medianDailyVolume": 1350304760,
+      "marketCapitalisation": 314670938279,
+      "grossDebt": 98034000000,
+      "cashAndEquivalents": 28871000000,
+      "shortTermInvestments": 971000000,
+      "netDebt": 68192000000,
+      "enterpriseValue": 382862938279,
+      "trailingEbit": 34110000000,
+      "multiple": 11.22436054761067,
+      "earningsYield": 0.08909193497110798,
+      "netDebtToEbit": 1.9991791263559073,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 91,
+      "ticker": "FLRY3",
+      "tickers": [
+        "FLRY3"
+      ],
+      "name": "FLEURY",
+      "sector": "Health Services",
+      "cnpj": "60.840.055/0001-31",
+      "price": 21.28,
+      "medianDailyVolume": 70996464,
+      "marketCapitalisation": 11689018346,
+      "grossDebt": 5408985000,
+      "cashAndEquivalents": 19060000,
+      "shortTermInvestments": 1880069000,
+      "netDebt": 3509856000,
+      "enterpriseValue": 15198874346,
+      "trailingEbit": 1340600000,
+      "multiple": 11.337367108757272,
+      "earningsYield": 0.08820390046535358,
+      "netDebtToEbit": 2.618123228405192,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 92,
+      "ticker": "B3SA3",
+      "tickers": [
+        "B3SA3"
+      ],
+      "name": "B3",
+      "sector": "Finance",
+      "cnpj": "09.346.601/0001-25",
+      "price": 17.42,
+      "medianDailyVolume": 500271044.00000006,
+      "marketCapitalisation": 84392030337,
+      "grossDebt": 14933316000,
+      "cashAndEquivalents": 1163233000,
+      "shortTermInvestments": 15339419000,
+      "netDebt": -1569336000,
+      "enterpriseValue": 82822694337,
+      "trailingEbit": 7247056000,
+      "multiple": 11.428460651746033,
+      "earningsYield": 0.08750084814329047,
+      "netDebtToEbit": -0.21654807138236548,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 93,
+      "ticker": "CXSE3",
+      "tickers": [
+        "CXSE3"
+      ],
+      "name": "CAIXA SEGURI",
+      "sector": "Finance",
+      "cnpj": "22.543.331/0001-00",
+      "price": 20.17,
+      "medianDailyVolume": 115108173.00000001,
+      "marketCapitalisation": 60179998398,
+      "grossDebt": 9660000,
+      "cashAndEquivalents": 248000,
+      "shortTermInvestments": 1299772000,
+      "netDebt": -1290360000,
+      "enterpriseValue": 58889638398,
+      "trailingEbit": 4886070000,
+      "multiple": 12.052557249077479,
+      "earningsYield": 0.08296994399894192,
+      "netDebtToEbit": -0.26408954435773535,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 94,
+      "ticker": "CPLE3",
+      "tickers": [
+        "CPLE3"
+      ],
+      "name": "COPEL",
+      "sector": "Utilities",
+      "cnpj": "76.483.817/0001-20",
+      "price": 15.94,
+      "medianDailyVolume": 162677264,
+      "marketCapitalisation": 47283531278,
+      "grossDebt": 23284700000,
+      "cashAndEquivalents": 3272606000,
+      "shortTermInvestments": 170000,
+      "netDebt": 20011924000,
+      "enterpriseValue": 67295455278,
+      "trailingEbit": 5534280000,
+      "multiple": 12.159748924521347,
+      "earningsYield": 0.08223854013822607,
+      "netDebtToEbit": 3.6159941311245545,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 95,
+      "ticker": "RADL3",
+      "tickers": [
+        "RADL3"
+      ],
+      "name": "RAIADROGASIL",
+      "sector": "Retail Trade",
+      "cnpj": "61.585.865/0001-51",
+      "price": 19.45,
+      "medianDailyVolume": 166204140,
+      "marketCapitalisation": 34148047876.999996,
+      "grossDebt": 3452649000,
+      "cashAndEquivalents": 536501000,
+      "shortTermInvestments": 116449000,
+      "netDebt": 2799699000,
+      "enterpriseValue": 36947746877,
+      "trailingEbit": 2906853000,
+      "multiple": 12.710565989061022,
+      "earningsYield": 0.0786747026733995,
+      "netDebtToEbit": 0.9631374548351774,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 96,
+      "ticker": "PRIO3",
+      "tickers": [
+        "PRIO3"
+      ],
+      "name": "PRIO",
+      "sector": "Energy Minerals",
+      "cnpj": "10.629.105/0001-68",
+      "price": 65.68,
+      "medianDailyVolume": 548119304,
+      "marketCapitalisation": 53263722752,
+      "grossDebt": 25462675000,
+      "cashAndEquivalents": 3693426000,
+      "shortTermInvestments": 0,
+      "netDebt": 21769249000,
+      "enterpriseValue": 75032971752,
+      "trailingEbit": 5895528000,
+      "multiple": 12.72709954935334,
+      "earningsYield": 0.07857249769455993,
+      "netDebtToEbit": 3.6925020116942875,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 97,
+      "ticker": "TIMS3",
+      "tickers": [
+        "TIMS3"
+      ],
+      "name": "TIM",
+      "sector": "Communications",
+      "cnpj": "02.421.421/0001-11",
+      "price": 19.64,
+      "medianDailyVolume": 98581016,
+      "marketCapitalisation": 46885430795,
+      "grossDebt": 2649163000,
+      "cashAndEquivalents": 2677384000,
+      "shortTermInvestments": 1852469000,
+      "netDebt": -1880690000,
+      "enterpriseValue": 45004740795,
+      "trailingEbit": 3215307000,
+      "multiple": 13.997027591766509,
+      "earningsYield": 0.07144373999721422,
+      "netDebtToEbit": -0.5849177077025616,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 98,
+      "ticker": "UNIP6",
+      "tickers": [
+        "UNIP3",
+        "UNIP5",
+        "UNIP6"
+      ],
+      "name": "UNIPAR",
+      "sector": "Process Industries",
+      "cnpj": "33.958.695/0001-78",
+      "price": 57.48,
+      "medianDailyVolume": 10783248,
+      "marketCapitalisation": 6378927430,
+      "grossDebt": 3702547000,
+      "cashAndEquivalents": 635751000,
+      "shortTermInvestments": 735544000,
+      "netDebt": 2331252000,
+      "enterpriseValue": 8710179430,
+      "trailingEbit": 611515000,
+      "multiple": 14.24360715599781,
+      "earningsYield": 0.0702069348759673,
+      "netDebtToEbit": 3.812256445058584,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 99,
+      "ticker": "AXIA3",
+      "tickers": [
+        "AXIA3",
+        "AXIA7"
+      ],
+      "name": "AXIA ENERGIA",
+      "sector": "Utilities",
+      "cnpj": "00.001.180/0001-26",
+      "price": 54.94,
+      "medianDailyVolume": 457869960,
+      "marketCapitalisation": 126376453040,
+      "grossDebt": 70972602000,
+      "cashAndEquivalents": 11039660000,
+      "shortTermInvestments": 15189665000,
+      "netDebt": 44743277000,
+      "enterpriseValue": 171119730040,
+      "trailingEbit": 11502251000,
+      "multiple": 14.877064501548436,
+      "earningsYield": 0.06721756162957537,
+      "netDebtToEbit": 3.889958322071045,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    },
+    {
+      "rank": 100,
+      "ticker": "BRAP4",
+      "tickers": [
+        "BRAP3",
+        "BRAP4"
+      ],
+      "name": "BRADESPAR",
+      "sector": "Finance",
+      "cnpj": "03.847.461/0001-92",
+      "price": 21.48,
+      "medianDailyVolume": 21576660,
+      "marketCapitalisation": 8111959370,
+      "grossDebt": 0,
+      "cashAndEquivalents": 254451000,
+      "shortTermInvestments": 0,
+      "netDebt": -254451000,
+      "enterpriseValue": 7857508370,
+      "trailingEbit": 526026000,
+      "multiple": 14.937490485261185,
+      "earningsYield": 0.06694564933692843,
+      "netDebtToEbit": -0.48372323801485095,
+      "earningsThrough": "2026-06-30",
+      "interimAdjusted": true,
+      "balanceSheetAt": "2026-06-30"
+    }
+  ],
+  "tally": {
+    "financial-statement-shape": 17,
+    "issuer-not-in-good-standing": 18,
+    "no-recent-statement": 8,
+    "no-operating-profit": 45,
+    "illiquid": 72,
+    "over-leveraged": 35
+  },
+  "excluded": [
+    {
+      "ticker": "AALR3",
+      "name": "ALLIAR",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "ABCB4",
+      "name": "ABC BRASIL",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "AERI3",
+      "name": "AERIS",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "AFLT3",
+      "name": "AFLUENTE T",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "AGRO3",
+      "name": "BRASILAGRO",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "AGXY3",
+      "name": "AGROGALAXY",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "AHEB3",
+      "name": "SPTURIS",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ALPK3",
+      "name": "ESTAPAR",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ALUP4",
+      "name": "ALUPAR",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "AMAR3",
+      "name": "LOJAS MARISA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "AMBP3",
+      "name": "AMBIPAR",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "AMER3",
+      "name": "AMERICANAS",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "AMOB3",
+      "name": "AUTOMOB",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ARML3",
+      "name": "ARMAC",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "ARND3",
+      "name": "ARANDU",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "ATED3",
+      "name": "ATOM EDUC",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "AURE3",
+      "name": "AUREN",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "AVLL3",
+      "name": "ALPHAVILLE",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "AZEV3",
+      "name": "AZEVEDO",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "AZTE3",
+      "name": "AZT ENERGIA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "AZUL3",
+      "name": "AZUL",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "B1003",
+      "name": "B100 S.A.",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "BALM4",
+      "name": "BAUMER",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "BAUH4",
+      "name": "EXCELSIOR",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "BAZA3",
+      "name": "AMAZONIA",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BBAS3",
+      "name": "BRASIL",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BBDC4",
+      "name": "BRADESCO",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BBSE3",
+      "name": "BBSEGURIDADE",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BDLL4",
+      "name": "BARDELLA",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "BEES3",
+      "name": "BANESTES",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BGIP3",
+      "name": "BANESE",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BHIA3",
+      "name": "CASAS BAHIA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "BIED3",
+      "name": "BIOMA EDUC",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "BIOM3",
+      "name": "BIOMM",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "BMEB4",
+      "name": "MERCANTIL",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BMGB4",
+      "name": "BANCO BMG",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BMIN4",
+      "name": "MERC INVEST",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BMKS3",
+      "name": "BIC MONARK",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "BNBR3",
+      "name": "NORD BRASIL",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BOBR4",
+      "name": "BOMBRIL",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "BPAC3",
+      "name": "BTGP BANCO",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BRKM5",
+      "name": "BRASKEM",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "BRSR6",
+      "name": "BANRISUL",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "BRST3",
+      "name": "BRISANET",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "BSLI4",
+      "name": "BRB BANCO",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "CAMB3",
+      "name": "CAMBUCI",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CAML3",
+      "name": "CAMIL",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "CASH3",
+      "name": "MELIUZ",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "CBEE3",
+      "name": "AMPLA ENERG",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CCTY3",
+      "name": "RDVC CITY",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "CEBR3",
+      "name": "CEB",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CEDO4",
+      "name": "CEDRO",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "CEEB3",
+      "name": "COELBA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CEED3",
+      "name": "CEEE-D",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CEGR3",
+      "name": "CEG",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CGAS5",
+      "name": "COMGAS",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CGRA4",
+      "name": "GRAZZIOTIN",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CLSC4",
+      "name": "CELESC",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "COCE5",
+      "name": "COELCE",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CRPG5",
+      "name": "CRISTAL",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "CSAN3",
+      "name": "COSAN",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "CSMG3",
+      "name": "COPASA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "CSNA3",
+      "name": "SID NACIONAL",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "CSUD3",
+      "name": "CSU DIGITAL",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "CTAX3",
+      "name": "CONTAX",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "CTKA4",
+      "name": "KARSTEN",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "DASA3",
+      "name": "DASA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "DEXP3",
+      "name": "DEXXOS PAR",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "DMVF3",
+      "name": "D1000VFARMA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "DOHL4",
+      "name": "DOHLER",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "DOTZ3",
+      "name": "DOTZ SA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "DTCY3",
+      "name": "DTCOM-DIRECT",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "DXCO3",
+      "name": "DEXCO",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "EALT4",
+      "name": "ACO ALTONA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ECOM3",
+      "name": "ECONOMATICA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "ECOR3",
+      "name": "ECORODOVIAS",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "EKTR4",
+      "name": "ELEKTRO",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "EMAE4",
+      "name": "EMAE",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "ENEV3",
+      "name": "ENEVA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "ENGI3",
+      "name": "ENERGISA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ENJU3",
+      "name": "ENJOEI",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "ENMT3",
+      "name": "ENERGISA MT",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "EPAR3",
+      "name": "EMBPAR S/A",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "EQMA3B",
+      "name": "EQTLMARANHAO",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "EQPA3",
+      "name": "EQTL PARA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "EQTL3",
+      "name": "EQUATORIAL",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "ESPA3",
+      "name": "ESPACOLASER",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ESTR4",
+      "name": "ESTRELA",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "ETER3",
+      "name": "ETERNIT",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "FASA3",
+      "name": "FASA",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "FHER3",
+      "name": "FER HERINGER",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "FIEI3",
+      "name": "FICA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "GEPA3",
+      "name": "GER PARANAP",
+      "reason": "no-recent-statement"
+    },
+    {
+      "ticker": "GFSA3",
+      "name": "GAFISA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "GSHP3",
+      "name": "GENERALSHOPP",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "HAGA4",
+      "name": "HAGA S/A",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "HBOR3",
+      "name": "HELBOR",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "HBRE3",
+      "name": "HBR REALTY",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "HBSA3",
+      "name": "HIDROVIAS",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "HBTS5",
+      "name": "HABITASUL",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "HETA4",
+      "name": "HERCULES",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "HOOT4",
+      "name": "HOTEIS OTHON",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "IFCM3",
+      "name": "INFRACOMM",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "IGTI3",
+      "name": "IGUATEMI S.A",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "INEP3",
+      "name": "INEPAR",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "IRBR3",
+      "name": "IRBBRASIL RE",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "ITUB4",
+      "name": "ITAUUNIBANCO",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "JALL3",
+      "name": "JALLESMACHAD",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "JFEN3",
+      "name": "JOAO FORTES",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "JOPA4",
+      "name": "JOSAPAR",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "JSLG3",
+      "name": "JSL",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "KLBN4",
+      "name": "KLABIN S/A",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "LAND3",
+      "name": "TERRASANTAPA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "LIGT3",
+      "name": "LIGHT S/A",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "LJQQ3",
+      "name": "QUERO-QUERO",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "LOGN3",
+      "name": "LOG-IN",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "LPSB3",
+      "name": "LOPES BRASIL",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "LUPA3",
+      "name": "LUPATECH",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "LUXM4",
+      "name": "TREVISA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "LWSA3",
+      "name": "LWSA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "MAPT3",
+      "name": "CEMEPE",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "MBRF3",
+      "name": "MARFRIG",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "MEAL3",
+      "name": "IMC S/A",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MGEL4",
+      "name": "MANGELS INDL",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MNDL3",
+      "name": "MUNDIAL",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MNPR3",
+      "name": "MINUPAR",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MOVI3",
+      "name": "MOVIDA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "MRSA3B",
+      "name": "MRS LOGIST",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MRVE3",
+      "name": "MRV",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "MSPA4",
+      "name": "MELHOR SP",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "MTRE3",
+      "name": "MITRE REALTY",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MTSA4",
+      "name": "METISA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "MWET4",
+      "name": "WETZEL S/A",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "MYPK3",
+      "name": "IOCHP-MAXION",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "NATU3",
+      "name": "NATURA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "NEXP3",
+      "name": "NEXPE",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "NORD3",
+      "name": "NORDON MET",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "NUTR3",
+      "name": "NUTRIPLANT",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "OBTC3",
+      "name": "ORANJEBTC",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "OFSA3",
+      "name": "OUROFINO S/A",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ONCO3",
+      "name": "ONCOCLINICAS",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "ORVR3",
+      "name": "ORIZON",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "OSXB3",
+      "name": "OSX BRASIL",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "PATI4",
+      "name": "PANATLANTICA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "PCAR3",
+      "name": "P.ACUCAR-CBD",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "PDGR3",
+      "name": "PDG REALT",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "PDTC3",
+      "name": "PADTEC",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "PEAB3",
+      "name": "PAR AL BAHIA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "PFRM3",
+      "name": "PROFARMA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "PINE4",
+      "name": "PINE",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "PLAS3",
+      "name": "PLASCAR PART",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "PMAM3",
+      "name": "PARANAPANEMA",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "PRNR3",
+      "name": "PRINER",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "PTBL3",
+      "name": "PORTOBELLO",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "RAIZ4",
+      "name": "RAIZEN",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "RAPT4",
+      "name": "RANDON PART",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "RCSL4",
+      "name": "RECRUSUL",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "REDE3",
+      "name": "REDE ENERGIA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "RNEW3",
+      "name": "RENOVA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "ROMI3",
+      "name": "ROMI",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "RPAD3",
+      "name": "ALFA HOLDING",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "RSUL4",
+      "name": "RIOSULENSE",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "RVEE3",
+      "name": "REVEE",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "SANB4",
+      "name": "SANTANDER BR",
+      "reason": "financial-statement-shape"
+    },
+    {
+      "ticker": "SBFG3",
+      "name": "GRUPO SBF",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "SCAR3",
+      "name": "SAO CARLOS",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "SEQL3",
+      "name": "SEQUOIA LOG",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "SIMH3",
+      "name": "SIMPAR",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "SLCE3",
+      "name": "SLC AGRICOLA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "SMTO3",
+      "name": "SAO MARTINHO",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "SNSY5",
+      "name": "SANSUY",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "SOJA3",
+      "name": "BOA SAFRA",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "SOND6",
+      "name": "SONDOTECNICA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "SUZB3",
+      "name": "SUZANO S.A.",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "TASA4",
+      "name": "TAURUS ARMAS",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "TCSA3",
+      "name": "TECNISA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "TECN3",
+      "name": "TECHNOS",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "TELB4",
+      "name": "TELEBRAS",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "TOKY3",
+      "name": "GRUPO TOKY",
+      "reason": "issuer-not-in-good-standing"
+    },
+    {
+      "ticker": "TPIS3",
+      "name": "TRIUNFO PART",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "TTEN3",
+      "name": "3TENTOS",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "TUPY3",
+      "name": "TUPY",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "TXRX4",
+      "name": "TEX RENAUX",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "UCAS3",
+      "name": "UNICASA",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "USIM5",
+      "name": "USIMINAS",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "VAMO3",
+      "name": "VAMOS",
+      "reason": "over-leveraged"
+    },
+    {
+      "ticker": "VITT3",
+      "name": "VITTIA",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "VIVR3",
+      "name": "VIVER",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "VSTE3",
+      "name": "VESTE",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "VVEO3",
+      "name": "VIVEO",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "WDCN3",
+      "name": "WDC NETWORKS",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "WEST3",
+      "name": "WESTWING",
+      "reason": "no-operating-profit"
+    },
+    {
+      "ticker": "WHRL4",
+      "name": "WHIRLPOOL",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "WLMM4",
+      "name": "WLM IND COM",
+      "reason": "illiquid"
+    },
+    {
+      "ticker": "YDUQ3",
+      "name": "YDUQS PART",
+      "reason": "over-leveraged"
+    }
+  ]
+}
