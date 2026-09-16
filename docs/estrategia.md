@@ -1,8 +1,12 @@
 # A estratégia das empresas mais baratas
 
-O que o Clube do Valor chama de *As 20 Ações Mais Baratas da Bolsa*, reconstruída a partir do
-material público deles e da literatura de que descende, escrita em detalhe suficiente para ser
-implementada.
+Uma tela de valor profundo sobre a B3, derivada da literatura que a fundamenta e escrita em detalhe
+suficiente para ser implementada.
+
+Este documento é a especificação **deste** projeto. Cada regra abaixo foi pesquisada e decidida
+aqui, e é defendida aqui — nenhuma delas é a descrição do método de terceiros. Produtos comerciais
+brasileiros vendem telas da mesma família e descrevem publicamente o que fazem em termos gerais;
+essa descrição não é uma implementação, e o que não dá para verificar não entra como premissa.
 
 Nada aqui é recomendação de investimento. É a especificação de uma tela.
 
@@ -24,24 +28,16 @@ resultado, porque ROIC alto é exatamente o que impede uma ação de ficar barat
 único sobre as 30 menores EV/EBIT acima de USD 1 bi de valor de mercado rendeu 17,9% ao ano desde
 1973.
 
-O produto do Clube do Valor é essa tela, rodada na B3, com filtros de segurança e rebalanceamento
-trimestral. O backtest brasileiro do analista deles, Gabriel Roman (2000–2020), reporta:
+Esse é um número americano, de um livro, sobre um universo de grandes capitalizações — e é a única
+evidência de desempenho que este documento cita, porque é a única que dá para conferir abrindo a
+fonte.
 
-| variante | retorno anual |
-| --- | --- |
-| Só earnings yield | 29,17% |
-| Earnings yield + momentum | 30,66% |
-| Ibovespa | 9,68% |
-
-Índice de Sharpe de 0,80 na variante com momentum. O rebalanceamento trimestral testou melhor que o
-anual na B3 — o oposto do resultado americano, que é o que se esperaria de um mercado onde a
-distorção é maior e reverte mais rápido. A página de vendas deles cita 3.643% acumulados entre 2004
-e 2025, algo como seis vezes o Ibovespa, com as quedas de 2008, 2015 e 2020 recuperadas em todos os
-casos. O fundo construído sobre a estratégia carrega 20 nomes a 5% cada e é revisado trimestralmente.
-
-Esses números são deles, brutos de impostos e custos de transação, e este projeto não os reproduz.
-Estão registrados aqui porque o *formato* da estratégia só é defensável se você souber contra o que
-ela foi ajustada.
+**Nenhum número de desempenho na B3 aparece aqui.** Existem telas comerciais brasileiras da mesma
+família que divulgam retornos de backtest, e elas podem até estar certas; mas são resultados
+próprios, não auditados, sobre implementações que não são publicadas. Repetir esses números daria a
+esta especificação uma credibilidade emprestada que ela não construiu. Este projeto não rodou
+backtest nenhum, e enquanto não rodar a resposta honesta sobre quanto a estratégia rende é que não
+se sabe.
 
 ## 2. A métrica
 
@@ -172,11 +168,10 @@ com prejuízo sejam maus investimentos; é que a função de ordenação não te
 **Excluídos:** valor negociado mediano diário abaixo de **R$ 1.000.000** ao longo dos pregões
 registrados.
 
-O piso publicado pelo Clube do Valor é de R$ 200 mil por dia. Esse é um piso para um investidor
-pessoa física com posição pequena, e é baixo demais para ser honesto aqui: uma tela que cita um
-preço que ninguém consegue executar está citando uma ficção. O piso mais alto custa alguns micro
-caps genuinamente baratos e compra uma lista que de fato pode ser comprada. É um parâmetro, e está
-exposto como tal.
+Pisos da ordem de R$ 200 mil por dia circulam no meio, e servem a um investidor pessoa física com
+posição pequena. São baixos demais para serem honestos aqui: uma tela que cita um preço que ninguém
+consegue executar está citando uma ficção. O piso mais alto custa alguns micro caps genuinamente
+baratos e compra uma lista que de fato pode ser comprada. É um parâmetro, e está exposto como tal.
 
 Mediana e não média, porque um único negócio em bloco não deve qualificar uma ação por dois meses.
 
@@ -215,9 +210,9 @@ Atraso no arquivamento se correlaciona com tudo o que os outros filtros tentam e
 
 | decisão | valor | por quê |
 | --- | --- | --- |
-| posições | 20 | Greenblatt usou 30, Carlisle 30, Clube do Valor 20. Abaixo de ~15 um único desastre domina; acima de ~30 a tela se dilui no índice. |
+| posições | 20 | Greenblatt usou 30 e Carlisle 30. Abaixo de ~15 um único desastre domina; acima de ~30 a tela se dilui no índice. Vinte é a escolha deste projeto, no meio da faixa. |
 | pesos | iguais, 5% cada | A tela não tem opinião sobre qual das escolhas é a melhor. Qualquer outro peso contrabandeia uma. |
-| rebalanceamento | trimestral | Segue o backtest brasileiro, e acompanha o calendário dos ITRs, de modo que os fundamentos de fato mudam entre um rebalanceamento e outro. |
+| rebalanceamento | trimestral | Acompanha o calendário dos ITRs, de modo que os fundamentos de fato mudam entre um rebalanceamento e outro. Carlisle rebalanceia uma vez ao ano; a escolha por trimestral aqui é do projeto, e não foi testada contra a anual. |
 | giro | rotação total | A tela é recalculada do zero e a carteira vira as novas vinte do topo. Um nome que continua no topo é simplesmente mantido. |
 | gatilho de venda | sair das vinte primeiras | Sem stop, sem preço-alvo, sem saída discricionária. Acrescentar uma tornaria a estratégia discricionária, que é justamente o que ela foi construída para evitar. |
 
@@ -226,15 +221,15 @@ cheguem antes de a tela os ler.
 
 ### A sobreposição de momentum
 
-A variante brasileira melhor ordena as candidatas baratas por momentum de doze meses (excluindo o
-mês mais recente) e leva as 20 primeiras das ~40 mais baratas. Ela captura a interação documentada
-entre valor e momentum: barato-e-ainda-caindo é onde moram as armadilhas de valor, barato-e-se-
-recuperando é onde estão os retornos.
+Uma variante conhecida ordena as candidatas baratas por momentum de doze meses (excluindo o mês mais
+recente) e leva as 20 primeiras das ~40 mais baratas. Ela tenta capturar a interação entre valor e
+momentum que a literatura de fatores documenta: barato-e-ainda-caindo é onde moram as armadilhas de
+valor, barato-e-se-recuperando é onde estão os retornos.
 
-Valeu 1,5 ponto percentual de retorno anual no teste deles. Este projeto a implementa como um
-segundo critério **opcional e desligado por padrão**, porque uma vantagem de 1,5 p.p. medida uma vez,
-em um mercado, sobre um período, está dentro da faixa em que a resposta honesta é que pode ser o
-ajuste e não o efeito.
+Este projeto a implementa como um segundo critério **opcional e desligado por padrão**. Não porque
+tenha sido testada e reprovada — não foi testada aqui de forma alguma —, mas porque ligá-la por
+padrão seria afirmar uma vantagem que este projeto não mediu. O código está pronto para quem quiser
+medir.
 
 ## 5. O que a tela não consegue fazer
 
@@ -322,10 +317,17 @@ porta que ela não havia pensado em vigiar. O layout passou a ser lido pela desc
 
 ## Fontes
 
-- [As 20 Ações Mais Baratas da Bolsa — Clube do Valor](https://clubedovalor.com.br/20-acoes-mais-baratas/)
-- [Como Comprar Ações Baratas e Vender as Caras — Clube do Valor](https://clubedovalor.com.br/blog/acoes-baratas/)
-- [Magic Formula: o método dos maiores investidores do mundo — Clube do Valor](https://clubedovalor.com.br/blog/magic-formula/)
-- [Magic Formula de Joel Greenblatt: como aplicar no Brasil — brapi.dev](https://brapi.dev/blog/magic-formula-joel-greenblatt-brasil-2026)
-- [Clube do Valor Ações Baratas FIF — Mais Retorno](https://maisretorno.com/fundo/clube-do-valor-acoes-baratas-fif)
-- [The Acquirer's Multiple — Tobias Carlisle](https://acquirersmultiple.com/)
-- [Portal de Dados Abertos da CVM](https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr)
+A literatura de que a tela descende:
+
+- Joel Greenblatt, *The Little Book That Beats the Market* (2005) — a Magic Formula.
+- Wesley Gray e Tobias Carlisle, *Quantitative Value* (2012) — o teste que separa os dois fatores.
+- Tobias Carlisle, *Deep Value* (2014) e [The Acquirer's Multiple](https://acquirersmultiple.com/) —
+  o resultado de que o fator de barateza carrega o retorno sozinho.
+
+Os dados que a tela lê:
+
+- [Portal de Dados Abertos da CVM](https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr) — ITR, DFP e
+  o cadastro de companhias abertas.
+- [B3 — empresas listadas](https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm)
+  — a ponte entre o código de negociação e o CNPJ.
+- [brapi](https://brapi.dev) — preço de fechamento, volume e valor de mercado.

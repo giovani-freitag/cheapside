@@ -1,11 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/img/hero-dark.png">
-  <img alt="Cheapside — as 20 empresas mais baratas da B3 por EV/EBIT, com a conta à mostra" src="docs/img/hero-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/img/logo-dark.png">
+  <img alt="Cheapside" src="docs/img/logo-light.png" width="340">
 </picture>
-
-<br>
 
 **As vinte empresas mais baratas da B3, e a conta inteira de por que elas estão nessa lista.**
 
