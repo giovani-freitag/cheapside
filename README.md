@@ -106,4 +106,4 @@ and system themes, TypeScript, Vitest, ESLint, release-please, GitHub Pages.
 
 ## Licence
 
-GPL-3.0-or-later.
+MIT.
