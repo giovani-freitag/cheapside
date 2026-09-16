@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/giovani-freitag/cheapside/compare/v0.2.0...v0.3.0) (2026-09-16)
+
+
+### Added
+
+* rebuild the interface around the phone, with search and charts ([#2](https://github.com/giovani-freitag/cheapside/issues/2)) ([4adafb2](https://github.com/giovani-freitag/cheapside/commit/4adafb2774dfcf81d3866b1c13adfae7a5c46ba2))
+
 ## [0.2.0](https://github.com/giovani-freitag/cheapside/compare/v0.1.0...v0.2.0) (2026-09-16)
 
 
