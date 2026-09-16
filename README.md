@@ -57,8 +57,9 @@ declarado, e o motivo fica publicado ao lado do resultado:
 
 | filtro | por quê |
 | --- | --- |
-| Bancos e seguradoras | Para eles, dívida é matéria-prima. Somá-la ao valor de mercado produz um número sem significado — e a demonstração deles nem tem a linha de EBIT que o múltiplo precisa. |
-| Recuperação judicial | Estão baratas porque o capital próprio pode valer zero. Incluí-las seria pôr os piores desfechos da tela no topo da própria lista. |
+| Bancos e seguradoras | Para eles, dívida é matéria-prima. Somá-la ao valor de mercado produz um número sem significado. E a linha que o múltiplo precisa não está lá: eles arquivam uma 3.05 como todo mundo, mas guardando um resultado apurado *depois* da conta de juros, não antes. |
+| Emissor irregular | Recuperação judicial, falência, liquidação, registro suspenso, ou empresa que ainda não opera. Estão baratas porque o capital próprio pode valer zero. Incluí-las seria pôr os piores desfechos da tela no topo da própria lista. |
+| Sem demonstração recente | Um múltiplo calculado sobre números de mais de oito meses atrás é um múltiplo sobre outra empresa. |
 | Prejuízo operacional | Denominador negativo ordena *abaixo* de tudo que é barato de verdade. A conta não tem sentido, não é juízo de valor. |
 | Iliquidez | Um preço que ninguém consegue executar é uma ficção. |
 | Alavancagem | Barato porque o mercado está precificando o capital próprio como opção de sobrevivência é outro tipo de barato. |
@@ -99,8 +100,6 @@ CNPJ, senão a Tupy simplesmente some do universo sem avisar.
 `src/services` é dono de cada capacidade que toca o mundo externo, uma pasta por domínio.
 `src/react` só exibe. Um teste de arquitetura reprova quem furar isso.
 
-Documentação em português; código e comentários inteiramente em inglês.
-
 ## Rodando
 
 ```bash
@@ -113,9 +112,8 @@ npm run data:verdicts  # escreve os briefings de leitura da carteira
 npm test
 ```
 
-A separação é o ponto. `data:capture` lê as três fontes, faz o join e grava **tudo que elas
-disseram** em `snapshot.json` — sem aplicar um único filtro. `data:screen` recalcula a tela só a
-partir desse arquivo. Mudar um limiar, acrescentar um filtro ou publicar trinta posições vira um
+A separação é o ponto: `data:capture` grava **tudo que as fontes disseram** em `snapshot.json` — sem
+aplicar um único filtro. Mudar um limiar, acrescentar um filtro ou publicar trinta posições vira um
 segundo de aritmética em vez de outra viagem a serviços públicos que não devem nada a este projeto.
 
 Toda requisição também passa por um cache em disco com prazo de validade por fonte — um dia para
@@ -152,6 +150,13 @@ Vite 8 (Rolldown) · React 19 · Radix · TypeScript · Vitest · ESLint · rele
 Paleta própria, temas claro, escuro e do sistema. Três vozes tipográficas, como uma página de
 mercado impressa: serifa para prosa, sem serifa para os rótulos, monoespaçada para todo número.
 
+## Contribuindo
+
+Documentação em português; código e comentários inteiramente em inglês — inclusive as mensagens de
+commit. O teste que reprova quem furar as camadas é
+[`tests/arch/layering.test.ts`](tests/arch/layering.test.ts). O resto das regras está em
+[CLAUDE.md](CLAUDE.md).
+
 ## Licença
 
-MIT.
+MIT — ver [LICENSE](LICENSE).

@@ -9,6 +9,16 @@ Uma tela quantitativa sobre a B3. O projeto é exclusivo da bolsa brasileira.
   inline, mensagens de commit. Sem exceção.
 - Strings voltadas ao usuário na interface são português, porque são conteúdo e não código.
 
+## Aviso de não recomendação
+
+- O aviso de que isto não é recomendação de investimento é repetido de propósito em quatro
+  superfícies: o bloco de citação do README, a abertura de `docs/estrategia.md`, a seção *O que isto
+  não é* de `method-view.tsx`, e o rodapé do `app-shell.tsx`.
+- Tirar o aviso de qualquer uma delas nunca é deduplicação. Um leitor do repositório e um visitante
+  do site são pessoas diferentes, e cada um precisa do seu.
+- A forma longa canônica é a de `method-view.tsx`, e o bloco do README acompanha essa redação:
+  mexer em uma é mexer na outra.
+
 ## Camadas
 
 - `src/domain` é puro: objetos de valor, entidades e regras. Sem I/O, sem React, sem `node:`.

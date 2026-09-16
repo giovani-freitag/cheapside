@@ -98,9 +98,9 @@ P/L e P/VP não ordenam nada, mas aparecem ao lado de cada posição. Não é co
 transparente sobre o que calcula, e o lugar mais honesto de mostrar que uma métrica foi rejeitada é
 ao lado do número que a substituiu, onde o leitor pode ver onde as duas discordam.
 
-A discordância é informativa. `MGLU3` sai a 3,93× de EV/EBIT e 44× de P/L: a operação é barata e o
-resultado financeiro come quase todo o lucro. Ler só o P/L esconderia a operação; ler só o EV/EBIT
-esconderia a conta de juros. As duas colunas juntas dizem onde a empresa dói.
+A discordância é informativa. Na apuração de 15 de setembro de 2026, `MGLU3` saiu a 3,93× de EV/EBIT
+e 44× de P/L: a operação é barata e o resultado financeiro come quase todo o lucro. Ler só o P/L
+esconderia a operação; ler só o EV/EBIT esconderia a conta de juros. As duas colunas juntas dizem onde a empresa dói.
 
 ### O que EV/EBIT ainda erra
 
@@ -143,8 +143,8 @@ Depósitos e linhas de captação não são uma reivindicação sobre a firma do
 de uma fábrica são — são o estoque dela. Somá-los ao valor de mercado produz um valor de firma que
 não significa nada.
 
-A detecção é estrutural, e não pelo rótulo de setor — mas não do jeito que este documento supunha
-antes da primeira execução. Ver §8.
+A detecção é estrutural — pela descrição da linha 3.05, e não pelo rótulo de setor nem pela ausência
+da conta —, mas não do jeito que este documento supunha antes da primeira execução. Ver §8.
 
 Bancos ainda podem estar baratos. Ordená-los pede P/VP contra ROE, que é outra tela, e misturar as
 duas numa lista só seria desonesto sobre o que o número quer dizer.
@@ -240,8 +240,7 @@ ajuste e não o efeito.
 
 O escopo inicial estava certo ao dizer que as mais baratas conterão empresas que estão baratas por
 merecerem estar, e que separá-las é trabalho mais difícil. Errou ao concluir que seria trabalho de
-outro projeto: é deste, e é a segunda camada descrita abaixo. O limite não é de escopo, é de
-matéria — a tela lê números, e a resposta está escrita em prosa.
+outro projeto: é deste, e é a segunda camada descrita abaixo. O limite não é de escopo, é de matéria.
 
 A tela responde *o que está estatisticamente barato*. Ela não responde *por quê*. O porquê mora no
 comentário da administração, nos fatores de risco, nas notas sobre contingências, nas transações com
