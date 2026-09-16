@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isOperatingResult, scaleFactor } from '@/services/cvm/accounts.ts';
+import { isNetIncome, isOperatingResult, scaleFactor } from '@/services/cvm/accounts.ts';
 
 describe('isOperatingResult', () => {
     it('recognises the line an industrial company files at 3.05', () => {
@@ -30,5 +30,27 @@ describe('scaleFactor', () => {
 
     it('reads a figure filed in units as units', () => {
         expect(scaleFactor('UNIDADE')).toBe(1);
+    });
+});
+
+describe('isNetIncome', () => {
+    it('recognises the bottom line an industrial files at 3.11', () => {
+        expect(isNetIncome('Lucro/Prejuízo Consolidado do Período')).toBe(true);
+    });
+
+    it('recognises the wordier form a bank files', () => {
+        expect(isNetIncome('Lucro ou Prejuízo Líquido Consolidado do Período')).toBe(true);
+    });
+
+    it('rejects the subtotal that sits above it', () => {
+        expect(isNetIncome('Resultado Líquido das Operações Continuadas')).toBe(false);
+    });
+
+    it('rejects the operating line entirely', () => {
+        expect(isNetIncome('Resultado Antes do Resultado Financeiro e dos Tributos')).toBe(false);
+    });
+
+    it('reads the line with its accents stripped', () => {
+        expect(isNetIncome('LUCRO/PREJUIZO CONSOLIDADO DO PERIODO')).toBe(true);
     });
 });

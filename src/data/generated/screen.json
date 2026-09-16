@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "builtAt": "2026-09-16T00:53:59.540Z",
+  "builtAt": "2026-09-16T02:54:11.778Z",
   "parameters": {
     "positions": 20,
     "liquidityFloor": 1000000,
@@ -13,25 +13,25 @@
     {
       "name": "CVM — Dados Abertos (ITR e DFP)",
       "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr",
-      "retrievedAt": "2026-09-16T00:53:59.540Z",
-      "provides": "Lucro operacional, caixa, dívida e patrimônio líquido, das demonstrações padronizadas."
+      "retrievedAt": "2026-09-16T02:54:11.778Z",
+      "provides": "Lucro operacional, lucro líquido, caixa, dívida e patrimônio líquido."
     },
     {
       "name": "CVM — Cadastro de companhias abertas",
       "url": "https://dados.cvm.gov.br/dataset/cia_aberta-cad",
-      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "retrievedAt": "2026-09-16T02:54:11.778Z",
       "provides": "Situação do emissor, incluindo recuperação judicial, e o setor de atividade."
     },
     {
       "name": "B3 — Empresas listadas",
       "url": "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm",
-      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "retrievedAt": "2026-09-16T02:54:11.778Z",
       "provides": "A ponte entre o código de negociação e o CNPJ da companhia."
     },
     {
       "name": "brapi",
       "url": "https://brapi.dev",
-      "retrievedAt": "2026-09-16T00:53:59.540Z",
+      "retrievedAt": "2026-09-16T02:54:11.778Z",
       "provides": "Preço de fechamento, volume negociado e valor de mercado."
     }
   ],
@@ -58,6 +58,8 @@
       "multiple": 0.9737728533715155,
       "earningsYield": 1.026933536437864,
       "netDebtToEbit": 0.0685023192685728,
+      "priceToEarnings": 1.3373693809818907,
+      "priceToBook": 0.30845490177145524,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -83,6 +85,8 @@
       "multiple": 2.0364255301047973,
       "earningsYield": 0.49105650327833916,
       "netDebtToEbit": 0.5457075483419103,
+      "priceToEarnings": 2.311062257845891,
+      "priceToBook": 0.6551037164523825,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -108,6 +112,8 @@
       "multiple": 2.2194851271683023,
       "earningsYield": 0.45055494527049855,
       "netDebtToEbit": -0.03218614970343797,
+      "priceToEarnings": 3.632431246283778,
+      "priceToBook": 0.9370939610558844,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -133,6 +139,8 @@
       "multiple": 3.1619270324944035,
       "earningsYield": 0.3162628326723634,
       "netDebtToEbit": 0.17357894660441311,
+      "priceToEarnings": 5.125567792465548,
+      "priceToBook": 0.7578238872608375,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -158,6 +166,8 @@
       "multiple": 3.3222790822801973,
       "earningsYield": 0.3009981928771814,
       "netDebtToEbit": 0.35397515864837015,
+      "priceToEarnings": 3.9033899066209803,
+      "priceToBook": 1.1230184249601696,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -183,6 +193,8 @@
       "multiple": 3.8375484601908547,
       "earningsYield": 0.2605830285594013,
       "netDebtToEbit": -1.419509261234295,
+      "priceToEarnings": 4.959531281648649,
+      "priceToBook": 0.46529605057912954,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -208,6 +220,8 @@
       "multiple": 3.9016748026565238,
       "earningsYield": 0.2563001917328252,
       "netDebtToEbit": 0.7717486987624946,
+      "priceToEarnings": 3.826903647160953,
+      "priceToBook": 1.0169639963849386,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -233,6 +247,8 @@
       "multiple": 3.9317739423620353,
       "earningsYield": 0.2543381218400477,
       "netDebtToEbit": 1.7606593294778252,
+      "priceToEarnings": 44.357910709645346,
+      "priceToBook": 0.3515876010134773,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -258,6 +274,8 @@
       "multiple": 4.0696403408385375,
       "earningsYield": 0.24572195974299607,
       "netDebtToEbit": 2.6720922505881446,
+      "priceToEarnings": 12.031341788974922,
+      "priceToBook": 0.30763652790736673,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -284,6 +302,8 @@
       "multiple": 4.137901066197888,
       "earningsYield": 0.2416684169104242,
       "netDebtToEbit": 0.8168483525269453,
+      "priceToEarnings": 4.847858410765141,
+      "priceToBook": 0.6436556035653032,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -309,6 +329,8 @@
       "multiple": 4.173475589501224,
       "earningsYield": 0.23960844589952687,
       "netDebtToEbit": 0.8261692969870875,
+      "priceToEarnings": 6.3983932741604,
+      "priceToBook": 1.1833806219350496,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -334,6 +356,7 @@
       "multiple": 4.294146904169893,
       "earningsYield": 0.232875125680711,
       "netDebtToEbit": 0.8449639261403008,
+      "priceToBook": 2.6205480249609017,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -359,6 +382,8 @@
       "multiple": 4.416097187492783,
       "earningsYield": 0.22644429176789585,
       "netDebtToEbit": 1.5433748826897278,
+      "priceToEarnings": 8.323127263602908,
+      "priceToBook": 0.7987671306408296,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -385,6 +410,8 @@
       "multiple": 4.430064211286093,
       "earningsYield": 0.2257303624295978,
       "netDebtToEbit": 1.6097657592093693,
+      "priceToEarnings": 6.238182313475091,
+      "priceToBook": 0.263363557754872,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -410,6 +437,8 @@
       "multiple": 4.459980199614636,
       "earningsYield": 0.22421624205560486,
       "netDebtToEbit": 0.8196780474874859,
+      "priceToEarnings": 6.571947026668875,
+      "priceToBook": 1.1717281160067072,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -435,6 +464,8 @@
       "multiple": 4.596054985512588,
       "earningsYield": 0.21757790173358255,
       "netDebtToEbit": 2.688981332998757,
+      "priceToEarnings": 37.813669283992844,
+      "priceToBook": 0.3116288904179977,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -460,6 +491,8 @@
       "multiple": 4.722286338967529,
       "earningsYield": 0.2117618306514293,
       "netDebtToEbit": 3.692632232795641,
+      "priceToEarnings": 8.187091813037648,
+      "priceToBook": 1.8351478446472569,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -485,6 +518,8 @@
       "multiple": 5.001510024438194,
       "earningsYield": 0.19993961725835532,
       "netDebtToEbit": 0.4818624907844797,
+      "priceToEarnings": 5.671681149426272,
+      "priceToBook": 0.7684414261075854,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -510,6 +545,8 @@
       "multiple": 5.007046994043496,
       "earningsYield": 0.19971851696012122,
       "netDebtToEbit": 3.925634493060729,
+      "priceToEarnings": 4.055294980871152,
+      "priceToBook": 0.38782910357782063,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -535,6 +572,8 @@
       "multiple": 5.012141230917308,
       "earningsYield": 0.19951552718257756,
       "netDebtToEbit": 0.36775545206847515,
+      "priceToEarnings": 4.592949162307037,
+      "priceToBook": 1.1201159503131175,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -562,6 +601,8 @@
       "multiple": 0.9737728533715155,
       "earningsYield": 1.026933536437864,
       "netDebtToEbit": 0.0685023192685728,
+      "priceToEarnings": 1.3373693809818907,
+      "priceToBook": 0.30845490177145524,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -587,6 +628,8 @@
       "multiple": 2.0364255301047973,
       "earningsYield": 0.49105650327833916,
       "netDebtToEbit": 0.5457075483419103,
+      "priceToEarnings": 2.311062257845891,
+      "priceToBook": 0.6551037164523825,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -612,6 +655,8 @@
       "multiple": 2.2194851271683023,
       "earningsYield": 0.45055494527049855,
       "netDebtToEbit": -0.03218614970343797,
+      "priceToEarnings": 3.632431246283778,
+      "priceToBook": 0.9370939610558844,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -637,6 +682,8 @@
       "multiple": 3.1619270324944035,
       "earningsYield": 0.3162628326723634,
       "netDebtToEbit": 0.17357894660441311,
+      "priceToEarnings": 5.125567792465548,
+      "priceToBook": 0.7578238872608375,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -662,6 +709,8 @@
       "multiple": 3.3222790822801973,
       "earningsYield": 0.3009981928771814,
       "netDebtToEbit": 0.35397515864837015,
+      "priceToEarnings": 3.9033899066209803,
+      "priceToBook": 1.1230184249601696,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -687,6 +736,8 @@
       "multiple": 3.8375484601908547,
       "earningsYield": 0.2605830285594013,
       "netDebtToEbit": -1.419509261234295,
+      "priceToEarnings": 4.959531281648649,
+      "priceToBook": 0.46529605057912954,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -712,6 +763,8 @@
       "multiple": 3.9016748026565238,
       "earningsYield": 0.2563001917328252,
       "netDebtToEbit": 0.7717486987624946,
+      "priceToEarnings": 3.826903647160953,
+      "priceToBook": 1.0169639963849386,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -737,6 +790,8 @@
       "multiple": 3.9317739423620353,
       "earningsYield": 0.2543381218400477,
       "netDebtToEbit": 1.7606593294778252,
+      "priceToEarnings": 44.357910709645346,
+      "priceToBook": 0.3515876010134773,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -762,6 +817,8 @@
       "multiple": 4.0696403408385375,
       "earningsYield": 0.24572195974299607,
       "netDebtToEbit": 2.6720922505881446,
+      "priceToEarnings": 12.031341788974922,
+      "priceToBook": 0.30763652790736673,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -788,6 +845,8 @@
       "multiple": 4.137901066197888,
       "earningsYield": 0.2416684169104242,
       "netDebtToEbit": 0.8168483525269453,
+      "priceToEarnings": 4.847858410765141,
+      "priceToBook": 0.6436556035653032,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -813,6 +872,8 @@
       "multiple": 4.173475589501224,
       "earningsYield": 0.23960844589952687,
       "netDebtToEbit": 0.8261692969870875,
+      "priceToEarnings": 6.3983932741604,
+      "priceToBook": 1.1833806219350496,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -838,6 +899,7 @@
       "multiple": 4.294146904169893,
       "earningsYield": 0.232875125680711,
       "netDebtToEbit": 0.8449639261403008,
+      "priceToBook": 2.6205480249609017,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -863,6 +925,8 @@
       "multiple": 4.416097187492783,
       "earningsYield": 0.22644429176789585,
       "netDebtToEbit": 1.5433748826897278,
+      "priceToEarnings": 8.323127263602908,
+      "priceToBook": 0.7987671306408296,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -889,6 +953,8 @@
       "multiple": 4.430064211286093,
       "earningsYield": 0.2257303624295978,
       "netDebtToEbit": 1.6097657592093693,
+      "priceToEarnings": 6.238182313475091,
+      "priceToBook": 0.263363557754872,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -914,6 +980,8 @@
       "multiple": 4.459980199614636,
       "earningsYield": 0.22421624205560486,
       "netDebtToEbit": 0.8196780474874859,
+      "priceToEarnings": 6.571947026668875,
+      "priceToBook": 1.1717281160067072,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -939,6 +1007,8 @@
       "multiple": 4.596054985512588,
       "earningsYield": 0.21757790173358255,
       "netDebtToEbit": 2.688981332998757,
+      "priceToEarnings": 37.813669283992844,
+      "priceToBook": 0.3116288904179977,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -964,6 +1034,8 @@
       "multiple": 4.722286338967529,
       "earningsYield": 0.2117618306514293,
       "netDebtToEbit": 3.692632232795641,
+      "priceToEarnings": 8.187091813037648,
+      "priceToBook": 1.8351478446472569,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -989,6 +1061,8 @@
       "multiple": 5.001510024438194,
       "earningsYield": 0.19993961725835532,
       "netDebtToEbit": 0.4818624907844797,
+      "priceToEarnings": 5.671681149426272,
+      "priceToBook": 0.7684414261075854,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1014,6 +1088,8 @@
       "multiple": 5.007046994043496,
       "earningsYield": 0.19971851696012122,
       "netDebtToEbit": 3.925634493060729,
+      "priceToEarnings": 4.055294980871152,
+      "priceToBook": 0.38782910357782063,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1039,6 +1115,8 @@
       "multiple": 5.012141230917308,
       "earningsYield": 0.19951552718257756,
       "netDebtToEbit": 0.36775545206847515,
+      "priceToEarnings": 4.592949162307037,
+      "priceToBook": 1.1201159503131175,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1064,6 +1142,8 @@
       "multiple": 5.034013604453711,
       "earningsYield": 0.19864864868765478,
       "netDebtToEbit": 0.5048711390065129,
+      "priceToEarnings": 4.830309229770448,
+      "priceToBook": 1.9245374821620507,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1089,6 +1169,8 @@
       "multiple": 5.05385523976945,
       "earningsYield": 0.19786874624561243,
       "netDebtToEbit": 1.7537913680887345,
+      "priceToEarnings": 2.0023091112501556,
+      "priceToBook": 0.5452594039521959,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1115,6 +1197,8 @@
       "multiple": 5.256703609617435,
       "earningsYield": 0.19023328577446214,
       "netDebtToEbit": 1.6838532189118474,
+      "priceToEarnings": 4.961591769131852,
+      "priceToBook": 1.3772691908171355,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1140,6 +1224,8 @@
       "multiple": 5.285745917864116,
       "earningsYield": 0.18918805700068228,
       "netDebtToEbit": 1.5733500874864041,
+      "priceToEarnings": 7.665438678718893,
+      "priceToBook": 0.3736416244082806,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1165,6 +1251,7 @@
       "multiple": 5.418699448774637,
       "earningsYield": 0.18454612761852587,
       "netDebtToEbit": 3.2536452626480057,
+      "priceToBook": 0.06955943040823764,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1191,6 +1278,8 @@
       "multiple": 5.450139122390336,
       "earningsYield": 0.1834815547903697,
       "netDebtToEbit": 1.368397442916857,
+      "priceToEarnings": 4.477330840726658,
+      "priceToBook": 1.2573454816955707,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1216,6 +1305,8 @@
       "multiple": 5.498354788170725,
       "earningsYield": 0.18187258525976185,
       "netDebtToEbit": 0.42685671734653513,
+      "priceToEarnings": 6.492423755874636,
+      "priceToBook": 2.3476941126947057,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1241,6 +1332,8 @@
       "multiple": 5.595082910679779,
       "earningsYield": 0.17872836130653588,
       "netDebtToEbit": -4.592028901895348,
+      "priceToEarnings": 8.645522093068301,
+      "priceToBook": 1.9809052471095898,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1266,6 +1359,7 @@
       "multiple": 5.6571383817436836,
       "earningsYield": 0.176767816609742,
       "netDebtToEbit": 2.688140223082176,
+      "priceToBook": 2.055280320044122,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1291,6 +1385,8 @@
       "multiple": 5.662365037089237,
       "earningsYield": 0.1766046507863531,
       "netDebtToEbit": -0.6503619153206237,
+      "priceToEarnings": 7.531340722776724,
+      "priceToBook": 1.0852192175299948,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1316,6 +1412,8 @@
       "multiple": 5.842750799961522,
       "earningsYield": 0.17115225931021835,
       "netDebtToEbit": 1.1618432889385961,
+      "priceToEarnings": 6.352606470735074,
+      "priceToBook": 4.581976691004214,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1341,6 +1439,8 @@
       "multiple": 5.955517217690583,
       "earningsYield": 0.16791152866279138,
       "netDebtToEbit": 1.2190622475202784,
+      "priceToEarnings": 4.895895563655237,
+      "priceToBook": 1.2079527755077333,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1366,6 +1466,8 @@
       "multiple": 5.986474877102715,
       "earningsYield": 0.16704321333157782,
       "netDebtToEbit": 1.8373617717151773,
+      "priceToEarnings": 11.704289047501845,
+      "priceToBook": 1.1042404795898328,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1391,6 +1493,8 @@
       "multiple": 6.094287294313769,
       "earningsYield": 0.16408809622956944,
       "netDebtToEbit": 2.0472685300347666,
+      "priceToEarnings": 6.489643168132861,
+      "priceToBook": 1.331711018619623,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1416,6 +1520,8 @@
       "multiple": 6.14753371702657,
       "earningsYield": 0.16266685894383,
       "netDebtToEbit": 0.5446327469618194,
+      "priceToEarnings": 6.947825326949569,
+      "priceToBook": 0.910635854901496,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1441,6 +1547,8 @@
       "multiple": 6.218454766544261,
       "earningsYield": 0.16081165458983035,
       "netDebtToEbit": 2.834948268188645,
+      "priceToEarnings": 5.302575749343003,
+      "priceToBook": 0.5724519050928067,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1466,6 +1574,8 @@
       "multiple": 6.316147531965946,
       "earningsYield": 0.15832435751999335,
       "netDebtToEbit": -0.1995324686383836,
+      "priceToEarnings": 7.634413662639124,
+      "priceToBook": 4.630845475075909,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1492,6 +1602,7 @@
       "multiple": 6.561331000879973,
       "earningsYield": 0.1524081013236316,
       "netDebtToEbit": 1.2763424513746118,
+      "priceToBook": 0.8852080466792659,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1517,6 +1628,8 @@
       "multiple": 6.594028457906189,
       "earningsYield": 0.15165236340480268,
       "netDebtToEbit": 0.07664763677964961,
+      "priceToEarnings": 9.150416938636516,
+      "priceToBook": 2.3380213904765355,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1542,6 +1655,8 @@
       "multiple": 6.75756103323203,
       "earningsYield": 0.1479823852248237,
       "netDebtToEbit": 1.1840167471051688,
+      "priceToEarnings": 10.414822940955084,
+      "priceToBook": 2.1281372032816774,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1567,6 +1682,8 @@
       "multiple": 6.776788088245354,
       "earningsYield": 0.1475625306529129,
       "netDebtToEbit": 1.8403830806065442,
+      "priceToEarnings": 8.572007191051277,
+      "priceToBook": 1.83113589858321,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1593,6 +1710,8 @@
       "multiple": 6.777014494020943,
       "earningsYield": 0.14755760089966685,
       "netDebtToEbit": 2.0566781245432173,
+      "priceToEarnings": 4.584913089729823,
+      "priceToBook": 0.8843941989025264,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1618,6 +1737,8 @@
       "multiple": 6.801964798898812,
       "earningsYield": 0.14701634447768572,
       "netDebtToEbit": 1.0182943888627767,
+      "priceToEarnings": 9.195504183476933,
+      "priceToBook": 1.7014432666753907,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1643,6 +1764,8 @@
       "multiple": 6.817933846184148,
       "earningsYield": 0.14667200101386707,
       "netDebtToEbit": 1.716977256548274,
+      "priceToEarnings": 8.069361555050598,
+      "priceToBook": 1.9191364994037352,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1668,6 +1791,8 @@
       "multiple": 6.825976093315531,
       "earningsYield": 0.1464991945956666,
       "netDebtToEbit": 3.8161904212660245,
+      "priceToEarnings": 151.4202351763777,
+      "priceToBook": 0.6713541370360392,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1693,6 +1818,8 @@
       "multiple": 6.861098626101555,
       "earningsYield": 0.14574925307088837,
       "netDebtToEbit": 2.3907511261228054,
+      "priceToEarnings": 8.195500010415245,
+      "priceToBook": 2.1770208576551697,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1718,6 +1845,8 @@
       "multiple": 6.881529118649946,
       "earningsYield": 0.14531653979198522,
       "netDebtToEbit": 3.588261320202049,
+      "priceToEarnings": 7.134479085281523,
+      "priceToBook": 0.3509313586651731,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1743,6 +1872,8 @@
       "multiple": 7.020301787483779,
       "earningsYield": 0.14244401882877183,
       "netDebtToEbit": 1.3874980407035842,
+      "priceToEarnings": 11.566481693496607,
+      "priceToBook": 2.0905371848725753,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1768,6 +1899,8 @@
       "multiple": 7.083615710452329,
       "earningsYield": 0.14117084281187586,
       "netDebtToEbit": 0.8637977504987552,
+      "priceToEarnings": 4.489615734556788,
+      "priceToBook": 1.5739069114402442,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1793,6 +1926,8 @@
       "multiple": 7.087979137438637,
       "earningsYield": 0.1410839367060224,
       "netDebtToEbit": 2.8055709829830358,
+      "priceToEarnings": 10.03745554266818,
+      "priceToBook": 0.40469703809825974,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1818,6 +1953,8 @@
       "multiple": 7.17753949374646,
       "earningsYield": 0.13932351063637685,
       "netDebtToEbit": 0.13532779762510583,
+      "priceToEarnings": 8.742386974114924,
+      "priceToBook": 1.661543655703635,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1844,6 +1981,8 @@
       "multiple": 7.291945914440193,
       "earningsYield": 0.13713760520627374,
       "netDebtToEbit": 3.1907113426018894,
+      "priceToEarnings": 7.57328711179855,
+      "priceToBook": 0.9130089602581957,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1869,6 +2008,8 @@
       "multiple": 7.337530438382976,
       "earningsYield": 0.13628563566414004,
       "netDebtToEbit": -0.08047476851270985,
+      "priceToEarnings": 8.460160422986664,
+      "priceToBook": 1.4823939528802046,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1894,6 +2035,8 @@
       "multiple": 7.357944587571728,
       "earningsYield": 0.13590751983768615,
       "netDebtToEbit": -2.1192638147241025,
+      "priceToEarnings": 13.902895849291065,
+      "priceToBook": 1.1059486867710853,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1919,6 +2062,8 @@
       "multiple": 7.361100478895421,
       "earningsYield": 0.135849252821238,
       "netDebtToEbit": 3.459992175235114,
+      "priceToEarnings": 3.1576386842295143,
+      "priceToBook": 0.34178795807202106,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1944,6 +2089,8 @@
       "multiple": 7.430702829448686,
       "earningsYield": 0.13457677193560896,
       "netDebtToEbit": 2.3492176636067743,
+      "priceToEarnings": 6.68376489290093,
+      "priceToBook": 0.7525183949226639,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1969,6 +2116,8 @@
       "multiple": 7.437877348241526,
       "earningsYield": 0.13444696022534192,
       "netDebtToEbit": -0.6822817676811906,
+      "priceToEarnings": 17.826115403001207,
+      "priceToBook": 1.076840194793679,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -1994,6 +2143,8 @@
       "multiple": 7.50549871952407,
       "earningsYield": 0.13323564993738496,
       "netDebtToEbit": 0.22083125808914386,
+      "priceToEarnings": 14.499430661666528,
+      "priceToBook": 4.60728058487103,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2019,6 +2170,8 @@
       "multiple": 7.691678389363253,
       "earningsYield": 0.13001063608989297,
       "netDebtToEbit": -0.9809433996372466,
+      "priceToEarnings": 8.867822573937154,
+      "priceToBook": 0.6784050155390006,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2044,6 +2197,8 @@
       "multiple": 7.7914213663308605,
       "earningsYield": 0.1283462866379309,
       "netDebtToEbit": -0.10293479317158498,
+      "priceToEarnings": 10.38264645862179,
+      "priceToBook": 1.0521164100197422,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2069,6 +2224,8 @@
       "multiple": 7.79300750289543,
       "earningsYield": 0.12832016389416512,
       "netDebtToEbit": 3.883887890632061,
+      "priceToEarnings": 8.041703837188361,
+      "priceToBook": 1.8329030751717263,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2094,6 +2251,8 @@
       "multiple": 7.849372765918775,
       "earningsYield": 0.12739871449880738,
       "netDebtToEbit": 2.229557525698245,
+      "priceToEarnings": 5.756469932666549,
+      "priceToBook": 0.7273711750471962,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2119,6 +2278,8 @@
       "multiple": 7.855006610475535,
       "earningsYield": 0.1273073403485603,
       "netDebtToEbit": 2.355160020412246,
+      "priceToEarnings": 15.332706886835725,
+      "priceToBook": 1.728303232474636,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2144,6 +2305,8 @@
       "multiple": 8.100585349033834,
       "earningsYield": 0.12344786912457767,
       "netDebtToEbit": 0.6920546283811648,
+      "priceToEarnings": 16.22421540603765,
+      "priceToBook": 3.5557119757900892,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2169,6 +2332,8 @@
       "multiple": 8.117740038104264,
       "earningsYield": 0.12318699481703653,
       "netDebtToEbit": 3.5617060718084192,
+      "priceToEarnings": 12.534335342782539,
+      "priceToBook": 2.098741527110481,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2195,6 +2360,8 @@
       "multiple": 8.286493810336808,
       "earningsYield": 0.12067830169046546,
       "netDebtToEbit": 3.925802360163403,
+      "priceToEarnings": 11.19589035476767,
+      "priceToBook": 1.4134144705445755,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2221,6 +2388,8 @@
       "multiple": 8.374687337923204,
       "earningsYield": 0.11940744288705409,
       "netDebtToEbit": 3.578743290974286,
+      "priceToEarnings": 8.531824538719105,
+      "priceToBook": 1.7291286600094289,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2247,6 +2416,8 @@
       "multiple": 8.386922391577256,
       "earningsYield": 0.1192332483014593,
       "netDebtToEbit": 2.8317883398904264,
+      "priceToEarnings": 8.223424175536364,
+      "priceToBook": 1.2952456317213166,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2273,6 +2444,8 @@
       "multiple": 8.465594856866941,
       "earningsYield": 0.11812518989009274,
       "netDebtToEbit": 0.21329018113483322,
+      "priceToEarnings": 8.672887901744568,
+      "priceToBook": 1.6036335301880669,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2298,6 +2471,8 @@
       "multiple": 8.50334621194301,
       "earningsYield": 0.11760076269686551,
       "netDebtToEbit": -1.1073051149607402,
+      "priceToEarnings": 8.277551534066935,
+      "priceToBook": 1.486740125142775,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2323,6 +2498,8 @@
       "multiple": 8.52477319511164,
       "earningsYield": 0.11730517365241223,
       "netDebtToEbit": 2.9491434490977104,
+      "priceToEarnings": 33.68203329101635,
+      "priceToBook": 1.537433012145771,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2348,6 +2525,8 @@
       "multiple": 8.577013479505489,
       "earningsYield": 0.11659069936050227,
       "netDebtToEbit": 3.9888719368334957,
+      "priceToEarnings": 3.5345526508702947,
+      "priceToBook": 0.4778420035284694,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2373,6 +2552,8 @@
       "multiple": 8.715850485253835,
       "earningsYield": 0.11473349636869967,
       "netDebtToEbit": 3.4210158147513403,
+      "priceToEarnings": 21.671915423412408,
+      "priceToBook": 1.8393951174570229,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2398,6 +2579,8 @@
       "multiple": 8.920546390920526,
       "earningsYield": 0.11210075663277934,
       "netDebtToEbit": 2.3394767518602806,
+      "priceToEarnings": 9.497064626547028,
+      "priceToBook": 1.1470194278631975,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2423,6 +2606,8 @@
       "multiple": 8.94510710357936,
       "earningsYield": 0.11179295992999934,
       "netDebtToEbit": 3.3440733678156316,
+      "priceToEarnings": 14.045029524456941,
+      "priceToBook": 1.268696239108333,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2448,6 +2633,8 @@
       "multiple": 8.993451435038226,
       "earningsYield": 0.11119201646033568,
       "netDebtToEbit": -0.003514327545476921,
+      "priceToEarnings": 6.450985472282716,
+      "priceToBook": 0.6670968599133795,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2473,6 +2660,8 @@
       "multiple": 9.192651065894493,
       "earningsYield": 0.10878254736656806,
       "netDebtToEbit": 0.5406037026980106,
+      "priceToEarnings": 13.398983069074866,
+      "priceToBook": 3.157039271803501,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2498,6 +2687,8 @@
       "multiple": 9.193844015802375,
       "earningsYield": 0.10876843225545271,
       "netDebtToEbit": 3.86372117375473,
+      "priceToEarnings": 13.355661603873722,
+      "priceToBook": 2.165048099305534,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2523,6 +2714,8 @@
       "multiple": 9.543015020649337,
       "earningsYield": 0.10478868552927803,
       "netDebtToEbit": -0.6380951098234731,
+      "priceToEarnings": 14.664038343957705,
+      "priceToBook": 2.7636927372087605,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2548,6 +2741,8 @@
       "multiple": 9.938919786230764,
       "earningsYield": 0.1006145558580104,
       "netDebtToEbit": 2.6400505219430577,
+      "priceToEarnings": 11.740470813791426,
+      "priceToBook": 2.0877928549822,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2573,6 +2768,8 @@
       "multiple": 10.250902163208789,
       "earningsYield": 0.09755238944617681,
       "netDebtToEbit": 3.745491650081327,
+      "priceToEarnings": 10.228110538233162,
+      "priceToBook": 2.6806343053265325,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2598,6 +2795,8 @@
       "multiple": 10.352417212936615,
       "earningsYield": 0.09659579781525587,
       "netDebtToEbit": 1.055876726658659,
+      "priceToEarnings": 14.84670227556501,
+      "priceToBook": 1.492862763391525,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2623,6 +2822,8 @@
       "multiple": 10.54122590597825,
       "earningsYield": 0.0948656265333304,
       "netDebtToEbit": 1.6670537690764022,
+      "priceToEarnings": 21.807728881748638,
+      "priceToBook": 2.5339255394980804,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2648,6 +2849,8 @@
       "multiple": 10.562468641176446,
       "earningsYield": 0.09467483729150462,
       "netDebtToEbit": 3.016176964997987,
+      "priceToEarnings": 10.108854849134785,
+      "priceToBook": 1.3743669635949183,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2674,6 +2877,8 @@
       "multiple": 10.688722439857788,
       "earningsYield": 0.09355655043216791,
       "netDebtToEbit": 0.7089545000122864,
+      "priceToEarnings": 11.007314089716688,
+      "priceToBook": 2.1320096230517804,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2699,6 +2904,8 @@
       "multiple": 10.728180022473657,
       "earningsYield": 0.09321245522587944,
       "netDebtToEbit": -1.2581997045915518,
+      "priceToEarnings": 5.85439018665378,
+      "priceToBook": 1.0563391281465992,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2724,6 +2931,8 @@
       "multiple": 10.800483242261894,
       "earningsYield": 0.09258844975445513,
       "netDebtToEbit": 3.9462186070519554,
+      "priceToEarnings": 13.988025877036854,
+      "priceToBook": 1.4619878300920488,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2750,6 +2959,8 @@
       "multiple": 10.82987123185465,
       "earningsYield": 0.09233720130103032,
       "netDebtToEbit": 1.612508469667417,
+      "priceToEarnings": 20.391443163331044,
+      "priceToBook": 0.863528824830443,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2775,6 +2986,8 @@
       "multiple": 11.20034041009824,
       "earningsYield": 0.08928300063973045,
       "netDebtToEbit": -1.6379083847384053,
+      "priceToEarnings": 13.080843603964315,
+      "priceToBook": 2.320601406781376,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2800,6 +3013,8 @@
       "multiple": 11.22436054761067,
       "earningsYield": 0.08909193497110798,
       "netDebtToEbit": 1.9991791263559073,
+      "priceToEarnings": 36.20652839477621,
+      "priceToBook": 1.5618981683302973,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2825,6 +3040,8 @@
       "multiple": 11.337367108757272,
       "earningsYield": 0.08820390046535358,
       "netDebtToEbit": 2.618123228405192,
+      "priceToEarnings": 16.86053099410481,
+      "priceToBook": 2.1182005029744277,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2850,6 +3067,8 @@
       "multiple": 11.428460651746033,
       "earningsYield": 0.08750084814329047,
       "netDebtToEbit": -0.21654807138236548,
+      "priceToEarnings": 15.827109323141514,
+      "priceToBook": 4.505858240268429,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2875,6 +3094,8 @@
       "multiple": 12.052557249077479,
       "earningsYield": 0.08296994399894192,
       "netDebtToEbit": -0.26408954435773535,
+      "priceToEarnings": 13.305442695172477,
+      "priceToBook": 4.362580023080064,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2900,6 +3121,8 @@
       "multiple": 12.159748924521347,
       "earningsYield": 0.08223854013822607,
       "netDebtToEbit": 3.6159941311245545,
+      "priceToEarnings": 14.816798788296982,
+      "priceToBook": 1.9580439772489633,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2925,6 +3148,8 @@
       "multiple": 12.710565989061022,
       "earningsYield": 0.0786747026733995,
       "netDebtToEbit": 0.9631374548351774,
+      "priceToEarnings": 25.56536976600547,
+      "priceToBook": 4.683730393318684,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2950,6 +3175,8 @@
       "multiple": 12.72709954935334,
       "earningsYield": 0.07857249769455993,
       "netDebtToEbit": 3.6925020116942875,
+      "priceToEarnings": 13.76717390530056,
+      "priceToBook": 1.8878407751982988,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -2975,6 +3202,8 @@
       "multiple": 13.997027591766509,
       "earningsYield": 0.07144373999721422,
       "netDebtToEbit": -0.5849177077025616,
+      "priceToEarnings": 26.2418847612086,
+      "priceToBook": 1.8742643343226715,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -3002,6 +3231,8 @@
       "multiple": 14.24360715599781,
       "earningsYield": 0.0702069348759673,
       "netDebtToEbit": 3.812256445058584,
+      "priceToEarnings": 24.491194088874213,
+      "priceToBook": 3.1722274173279486,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -3028,6 +3259,8 @@
       "multiple": 14.877064501548436,
       "earningsYield": 0.06721756162957537,
       "netDebtToEbit": 3.889958322071045,
+      "priceToEarnings": 10.479139562042924,
+      "priceToBook": 1.0334315497566118,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"
@@ -3054,6 +3287,7 @@
       "multiple": 14.937490485261185,
       "earningsYield": 0.06694564933692843,
       "netDebtToEbit": -0.48372323801485095,
+      "priceToBook": 1.0077455134167352,
       "earningsThrough": "2026-06-30",
       "interimAdjusted": true,
       "balanceSheetAt": "2026-06-30"

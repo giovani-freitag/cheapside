@@ -29,6 +29,14 @@ export function WorkingSheet({ row }: WorkingSheetProps) {
                 <Line label="EV / EBIT" value={format.multiple(row.multiple)} emphasis />
                 <Line label="Earnings yield" value={format.percent(row.earningsYield)} />
                 <Line label="Dívida líquida / EBIT" value={format.multiple(row.netDebtToEbit)} />
+                <Line
+                    label="P/L"
+                    value={row.priceToEarnings === undefined ? '—' : format.multiple(row.priceToEarnings)}
+                />
+                <Line
+                    label="P/VP"
+                    value={row.priceToBook === undefined ? '—' : format.multiple(row.priceToBook)}
+                />
                 <Line label="Preço" value={format.price(row.price)} />
                 <Line label="Giro típico" value={format.amount(row.medianDailyVolume)} />
             </div>

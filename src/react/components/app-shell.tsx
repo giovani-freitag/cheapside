@@ -1,6 +1,7 @@
 import { ExclusionsView } from '@/react/components/exclusions-view.tsx';
 import { MethodView } from '@/react/components/method-view.tsx';
 import { RankTable } from '@/react/components/rank-table.tsx';
+import { SectorPicker } from '@/react/components/sector-picker.tsx';
 import { TabPanel, Tabs } from '@/react/ui/tabs.tsx';
 import { ThemePicker } from '@/react/components/theme-picker.tsx';
 import { Wordmark } from '@/react/components/wordmark.tsx';
@@ -60,6 +61,13 @@ export function AppShell() {
                     ]}
                 >
                     <TabPanel value="portfolio">
+                        <SectorPicker
+                            sectors={view.sectors}
+                            value={view.sector}
+                            onChange={view.chooseSector}
+                            showing={view.portfolio.length}
+                            noun="na carteira"
+                        />
                         <RankTable
                             label="As empresas mais baratas por EV/EBIT"
                             rows={view.portfolio}
@@ -79,6 +87,13 @@ export function AppShell() {
                             Passaram por todos os filtros e ficaram fora da carteira só por ordem. É aqui que
                             se vê onde a linha caiu.
                         </p>
+                        <SectorPicker
+                            sectors={view.sectors}
+                            value={view.sector}
+                            onChange={view.chooseSector}
+                            showing={view.runnersUp.length}
+                            noun="nesta lista"
+                        />
                         <RankTable
                             label="Empresas elegíveis fora da carteira"
                             rows={view.runnersUp}

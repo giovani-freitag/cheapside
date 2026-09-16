@@ -1,8 +1,12 @@
+import type { HttpCacheService } from '@/services/http/http-cache-service.ts';
 import { DomainError } from '@/domain/errors/domain-error.ts';
 
 export interface QuotesServiceConfig {
     /** The quote-list endpoint, without a trailing slash. */
     baseUrl: string;
+    http: HttpCacheService;
+    /** How long a closing quote stays good. Prices move, so: an hour. */
+    ttlMinutes?: number;
 }
 
 /** One share class as the market closed it. */
@@ -34,9 +38,13 @@ export interface Quote {
  */
 export class QuotesService {
     private readonly baseUrl: string;
+    private readonly http: HttpCacheService;
+    private readonly ttlMinutes: number;
 
     constructor(config: QuotesServiceConfig) {
         this.baseUrl = config.baseUrl;
+        this.http = config.http;
+        this.ttlMinutes = config.ttlMinutes ?? 60;
     }
 
     /**
@@ -50,12 +58,13 @@ export class QuotesService {
      * @throws DomainError when the provider refuses or answers with nothing.
      */
     public async fetchQuotes(): Promise<Map<string, Quote>> {
-        const response = await fetch(`${this.baseUrl}/quote/list`);
-        if (!response.ok) {
-            throw new DomainError(`O provedor de cotações respondeu ${String(response.status)}.`);
+        const payload = await this.http.fetchJson<QuoteListPayload>(`${this.baseUrl}/quote/list`, {
+            ttlMinutes: this.ttlMinutes,
+        });
+        if (!payload) {
+            throw new DomainError('O provedor de cotações não respondeu.');
         }
 
-        const payload = (await response.json()) as QuoteListPayload;
         const quotes = new Map<string, Quote>();
 
         for (const record of payload.stocks ?? []) {

@@ -27,6 +27,13 @@ export interface UniverseSources {
 
 export interface Universe {
     candidates: readonly Candidate[];
+    /**
+     * Listed companies whose filings could not be read into a valuation.
+     *
+     * They are kept whole rather than reduced to an exclusion, because a capture of the universe
+     * has to be able to say what was on the exchange, not only what could be ranked.
+     */
+    unreadable: readonly Company[];
     /** Companies that could not be valued at all, with the reason already settled. */
     preExcluded: readonly ExcludedCompany[];
     /** How many operating companies were listed before anything was removed. */
@@ -56,7 +63,7 @@ export class UniverseService {
      */
     public assemble(sources: UniverseSources): Universe {
         const candidates: Candidate[] = [];
-        const preExcluded: ExcludedCompany[] = [];
+        const unreadable: Company[] = [];
         const byRoot = groupByRoot(sources.quotes);
 
         for (const [root, quotes] of byRoot) {
@@ -69,18 +76,19 @@ export class UniverseService {
 
             const financials = filings ? buildFinancials(filings) : undefined;
             if (!financials) {
-                preExcluded.push({
-                    ticker: company.primaryListing.ticker,
-                    name: company.tradingName,
-                    reason: 'no-recent-statement',
-                });
+                unreadable.push(company);
                 continue;
             }
 
             candidates.push(new Candidate({ company, financials }));
         }
 
-        return { candidates, preExcluded, size: candidates.length + preExcluded.length };
+        return {
+            candidates,
+            unreadable,
+            preExcluded: unreadable.map(asExclusion),
+            size: candidates.length + unreadable.length,
+        };
     }
 
     private buildCompany(parts: {
@@ -113,6 +121,15 @@ export class UniverseService {
             listings,
         });
     }
+}
+
+/** A company with no readable filings, stated as the exclusion the screen will report. */
+export function asExclusion(company: Company): ExcludedCompany {
+    return {
+        ticker: company.primaryListing.ticker,
+        name: company.tradingName,
+        reason: 'no-recent-statement',
+    };
 }
 
 function groupByRoot(quotes: ReadonlyMap<string, Quote>): Map<string, Quote[]> {

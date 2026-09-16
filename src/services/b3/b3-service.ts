@@ -1,9 +1,11 @@
+import type { HttpCacheService } from '@/services/http/http-cache-service.ts';
 import { Cnpj } from '@/domain/values/cnpj.ts';
 import { DomainError } from '@/domain/errors/domain-error.ts';
 
 export interface B3ServiceConfig {
     /** The listed-companies endpoint, without a trailing slash. */
     baseUrl: string;
+    http: HttpCacheService;
     /**
      * How many records a page asks for.
      *
@@ -32,10 +34,12 @@ export interface ListedIssuer {
  */
 export class B3Service {
     private readonly baseUrl: string;
+    private readonly http: HttpCacheService;
     private readonly pageSize: number;
 
     constructor(config: B3ServiceConfig) {
         this.baseUrl = config.baseUrl;
+        this.http = config.http;
         this.pageSize = config.pageSize ?? 120;
     }
 
@@ -63,13 +67,14 @@ export class B3Service {
     private async page(number: number): Promise<B3Page> {
         const query = { language: 'pt-br', pageNumber: number, pageSize: this.pageSize };
         const encoded = base64(JSON.stringify(query));
-        const response = await fetch(`${this.baseUrl}/${encoded}`);
+        // The registry changes when a company lists or delists, which is a matter of weeks.
+        const page = await this.http.fetchJson<B3Page>(`${this.baseUrl}/${encoded}`, { ttlMinutes: 7 * 24 * 60 });
 
-        if (!response.ok) {
-            throw new DomainError(`A B3 respondeu ${String(response.status)} para a página ${String(number)}.`);
+        if (!page) {
+            throw new DomainError(`A B3 não devolveu a página ${String(number)} do registro.`);
         }
 
-        return (await response.json()) as B3Page;
+        return page;
     }
 }
 

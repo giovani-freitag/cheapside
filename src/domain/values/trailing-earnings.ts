@@ -1,11 +1,13 @@
 import { FiscalPeriod } from '@/domain/values/fiscal-period.ts';
 import { DomainError } from '@/domain/errors/domain-error.ts';
 
-/** One reported figure and the window it covers. */
+/** The figures one filing reports, and the window they cover. */
 export interface ReportedFigure {
     period: FiscalPeriod;
     /** Operating profit for the window, in BRL. */
     ebit: number;
+    /** The period's consolidated profit, in BRL. Absent when the filing did not carry it. */
+    netIncome?: number;
 }
 
 export interface TrailingEarningsConfig {
@@ -18,28 +20,44 @@ export interface TrailingEarningsConfig {
 }
 
 /**
- * Twelve months of operating profit, assembled from filings that never report twelve months.
+ * Twelve months of results, assembled from filings that never report twelve months.
  *
  * A CVM quarterly statement reports the year to date, not the quarter, and carries the previous
  * year's matching window beside it. That comparative is what makes the arithmetic possible: the
  * closed year, minus the part of it already superseded, plus the part of this year that replaced
- * it. Using the closed year alone instead would leave the multiple reading a figure up to
- * fifteen months old, which on a cyclical is the difference between cheap and expensive.
+ * it. Using the closed year alone instead would leave the multiple reading a figure up to fifteen
+ * months old, which on a cyclical is the difference between cheap and expensive.
+ *
+ * Operating profit and the bottom line travel together because they come off the same filing and
+ * the same window; splitting them would mean matching the windows twice and risking two answers.
  */
 export class TrailingEarnings {
     public readonly ebit: number;
+    /** Undefined when any window in the sum was missing its bottom line. */
+    public readonly netIncome?: number;
     public readonly through: FiscalPeriod;
     /** Whether a quarterly filing contributed, or the figure is simply the last closed year. */
     public readonly isInterimAdjusted: boolean;
+    /**
+     * The windows the sum was built from.
+     *
+     * Kept because the sum is lossy: two different sets of filings can produce the same twelve
+     * months, and a capture that stored only the total could not be re-read against the filings
+     * that made it.
+     */
+    public readonly source: TrailingEarningsConfig;
 
     constructor(config: TrailingEarningsConfig) {
         if (!config.annual.period.isFullYear) {
             throw new DomainError('A base de um cálculo de doze meses precisa ser um exercício completo.');
         }
 
+        this.source = config;
+
         const interim = readInterim(config);
         if (!interim) {
             this.ebit = config.annual.ebit;
+            this.netIncome = config.annual.netIncome;
             this.through = config.annual.period;
             this.isInterimAdjusted = false;
 
@@ -47,6 +65,7 @@ export class TrailingEarnings {
         }
 
         this.ebit = config.annual.ebit - interim.prior.ebit + interim.current.ebit;
+        this.netIncome = roll(config.annual.netIncome, interim.prior.netIncome, interim.current.netIncome);
         this.through = new FiscalPeriod({
             start: shiftYears(interim.current.period.end, -1),
             end: interim.current.period.end,
@@ -59,9 +78,9 @@ export class TrailingEarnings {
 /**
  * The quarterly pair, once it has been checked for the assumptions the subtraction rests on.
  *
- * A pair that does not line up is discarded rather than repaired: falling back to the closed
- * year gives a figure that is merely old, while subtracting mismatched windows gives one that is
- * wrong, and only the second kind is invisible downstream.
+ * A pair that does not line up is discarded rather than repaired: falling back to the closed year
+ * gives a figure that is merely old, while subtracting mismatched windows gives one that is wrong,
+ * and only the second kind is invisible downstream.
  */
 function readInterim(config: TrailingEarningsConfig): { current: ReportedFigure; prior: ReportedFigure } | undefined {
     const { annual, currentToDate, priorToDate } = config;
@@ -75,6 +94,13 @@ function readInterim(config: TrailingEarningsConfig): { current: ReportedFigure;
     if (currentToDate.period.isFullYear) return undefined;
 
     return { current: currentToDate, prior: priorToDate };
+}
+
+/** The same roll-forward, for a figure any one of the three filings may have left out. */
+function roll(annual?: number, prior?: number, current?: number): number | undefined {
+    if (annual === undefined || prior === undefined || current === undefined) return undefined;
+
+    return annual - prior + current;
 }
 
 function shiftYears(date: Date, years: number): Date {

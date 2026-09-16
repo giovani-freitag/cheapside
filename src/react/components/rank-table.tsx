@@ -15,9 +15,10 @@ export interface RankTableProps {
 /**
  * The ranking, with each row's working one click below it.
  *
- * Four figures rather than twelve: the rank, the company, the multiple, what it earns and what it
- * costs. Everything else is in the fold, because a table wide enough to hold every input of every
- * multiple is one nobody reads a row of.
+ * The multiple is the only column that ranks. The two beside it are its numerator and
+ * denominator, and P/L and P/VP are there to disagree with it — a company cheap on one and dear
+ * on the other is telling the reader where its debt is. Both context pairs drop out as the page
+ * narrows, because everything they hold is repeated in the fold.
  */
 export function RankTable({ rows, label, openTicker, onToggle }: RankTableProps) {
     const format = useFormat();
@@ -40,6 +41,12 @@ export function RankTable({ rows, label, openTicker, onToggle }: RankTableProps)
                         </th>
                         <th scope="col" className="rank-table__number rank-table__wide">
                             Valor da firma
+                        </th>
+                        <th scope="col" className="rank-table__number rank-table__extra">
+                            P/L
+                        </th>
+                        <th scope="col" className="rank-table__number rank-table__extra">
+                            P/VP
                         </th>
                         <th scope="col">
                             <span className="visually-hidden">Abrir a conta</span>
@@ -66,6 +73,12 @@ export function RankTable({ rows, label, openTicker, onToggle }: RankTableProps)
                                     <td className="rank-table__number figure rank-table__wide">
                                         {format.amount(row.enterpriseValue)}
                                     </td>
+                                    <td className="rank-table__number figure rank-table__extra">
+                                        {row.priceToEarnings === undefined ? '—' : format.multiple(row.priceToEarnings)}
+                                    </td>
+                                    <td className="rank-table__number figure rank-table__extra">
+                                        {row.priceToBook === undefined ? '—' : format.multiple(row.priceToBook)}
+                                    </td>
                                     <td className="rank-table__toggle">
                                         <button
                                             type="button"
@@ -83,7 +96,7 @@ export function RankTable({ rows, label, openTicker, onToggle }: RankTableProps)
                                 </tr>
                                 {open ? (
                                     <tr className="rank-table__working">
-                                        <td colSpan={6}>
+                                        <td colSpan={8}>
                                             <WorkingSheet row={row} />
                                         </td>
                                     </tr>

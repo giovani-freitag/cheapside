@@ -51,4 +51,9 @@ export class Financials {
     public get trailingEbit(): number {
         return this.earnings.ebit;
     }
+
+    /** Trailing bottom line. Context only — nothing is ranked on it. */
+    public get trailingNetIncome(): number | undefined {
+        return this.earnings.netIncome;
+    }
 }

@@ -621,3 +621,40 @@
         padding: 14px;
     }
 }
+
+/* ---- sector picker ---- */
+
+.sector-picker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0 2px;
+}
+
+.sector-picker__select {
+    padding: 5px 9px;
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    color: var(--ink);
+    font: inherit;
+    font-size: var(--step-0);
+    max-width: 22rem;
+}
+
+.sector-picker__count {
+    font-size: var(--step--1);
+}
+
+/* P/L and P/VP are commentary on the rank, so they are set quieter than the rank itself. */
+.rank-table td.rank-table__extra {
+    width: 88px;
+    color: var(--ink-soft);
+}
+
+/* The second context pair goes first as the page narrows; the fold keeps both either way. */
+@media (max-width: 980px) {
+    .rank-table__extra {
+        display: none;
+    }
+}

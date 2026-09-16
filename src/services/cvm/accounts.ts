@@ -8,6 +8,10 @@
 export const ACCOUNTS = {
     /** Resultado Antes do Resultado Financeiro e dos Tributos. Operating profit, i.e. EBIT. */
     operatingResult: '3.05',
+    /** Lucro/Prejuízo Consolidado do Período, where an industrial or a bank files it. */
+    netIncome: '3.11',
+    /** The same line, where the insurance layout pushes it one row down. */
+    netIncomeAlternate: '3.13',
     /** Caixa e Equivalentes de Caixa. */
     cash: '1.01.01',
     /** Aplicações Financeiras, current. */
@@ -23,7 +27,11 @@ export const ACCOUNTS = {
 } as const;
 
 /** The codes wanted from the income statement. */
-export const INCOME_ACCOUNTS: ReadonlySet<string> = new Set([ACCOUNTS.operatingResult]);
+export const INCOME_ACCOUNTS: ReadonlySet<string> = new Set([
+    ACCOUNTS.operatingResult,
+    ACCOUNTS.netIncome,
+    ACCOUNTS.netIncomeAlternate,
+]);
 
 /** The codes wanted from the asset side of the balance sheet. */
 export const ASSET_ACCOUNTS: ReadonlySet<string> = new Set([
@@ -52,12 +60,30 @@ export const LIABILITY_ACCOUNTS: ReadonlySet<string> = new Set([
  * @returns True when the figure is the operating profit the multiple needs.
  */
 export function isOperatingResult(description: string): boolean {
-    const normalised = description
+    return normalise(description).includes('ANTES DO RESULTADO FINANCEIRO');
+}
+
+/**
+ * Whether a line is the bottom line rather than a subtotal above it.
+ *
+ * The same ambiguity as the operating result, one code further down: an industrial and a bank
+ * both file the consolidated profit at 3.11, while the insurance layout puts a subtotal there and
+ * the real figure at 3.13. Reading the description settles it for all three.
+ *
+ * @param description - `DS_CONTA` as filed.
+ * @returns True when the figure is the period's consolidated profit.
+ */
+export function isNetIncome(description: string): boolean {
+    const text = normalise(description);
+
+    return text.includes('LUCRO') && text.includes('CONSOLIDADO DO PERIODO');
+}
+
+function normalise(description: string): string {
+    return description
         .normalize('NFD')
         .replace(/[̀-ͯ]/g, '')
         .toUpperCase();
-
-    return normalised.includes('ANTES DO RESULTADO FINANCEIRO');
 }
 
 /**

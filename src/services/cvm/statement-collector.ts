@@ -1,16 +1,26 @@
 import type { StatementRecord } from '@/services/cvm/types.ts';
 import type { StatementKind } from '@/domain/enums/statement-kind.ts';
 import type { ReportedFigure } from '@/domain/values/trailing-earnings.ts';
-import { ACCOUNTS, isOperatingResult, scaleFactor } from '@/services/cvm/accounts.ts';
+import { ACCOUNTS, isNetIncome, isOperatingResult, scaleFactor } from '@/services/cvm/accounts.ts';
 import { FiscalPeriod } from '@/domain/values/fiscal-period.ts';
 
-/** One income statement as filed, reduced to the operating-profit line and its comparative. */
+/** Which of the two income-statement lines the screen reads a row is. */
+type IncomeLine = 'ebit' | 'netIncome';
+
+/** The figures of one window, while they are still arriving one row at a time. */
+interface WindowFigures {
+    period: FiscalPeriod;
+    ebit?: number;
+    netIncome?: number;
+}
+
+/** One income statement as filed, reduced to the two lines and their comparative. */
 interface IncomeFiling {
     version: number;
     kind: StatementKind;
-    current?: ReportedFigure;
+    current?: WindowFigures;
     /** The same window a year earlier, which every quarterly filing carries beside the current one. */
-    comparative?: ReportedFigure;
+    comparative?: WindowFigures;
 }
 
 /** One balance sheet as filed, reduced to what an enterprise value is built from. */
@@ -66,10 +76,12 @@ interface FilingLookup<T> {
 /**
  * Folds hundreds of thousands of filing rows into one record per company.
  *
- * Two things make this more than a group-by. Companies refile, so a reference date can appear at
+ * Three things make this more than a group-by. Companies refile, so a reference date can appear at
  * several versions and only the highest counts — a later version does not amend the earlier one,
- * it replaces it. And a quarterly filing reports the year to date beside the same months of the
- * year before, which is the only place the comparative needed for a trailing sum exists.
+ * it replaces it. A quarterly filing reports the year to date beside the same months of the year
+ * before, which is the only place the comparative needed for a trailing sum exists. And from the
+ * second quarter on it reports every account twice, once for the quarter and once cumulatively, of
+ * which only the cumulative figure can be subtracted from a closed year.
  */
 export class StatementCollector {
     private readonly income = new Map<string, Map<string, IncomeFiling>>();
@@ -83,10 +95,15 @@ export class StatementCollector {
      * @param row - The fields read off the CVM table.
      */
     public addIncome(row: IncomeRow): void {
-        if (row.account !== ACCOUNTS.operatingResult) return;
+        const line = classify(row);
+        if (!line) return;
 
         this.cvmCodes.set(row.cnpj, row.cvmCode);
-        if (isOperatingResult(row.description)) this.sawOperatingResult.add(row.cnpj);
+
+        // The operating slot is filled for every filer, including the banks whose 3.05 holds a
+        // pre-tax profit, so that such a company still assembles and can be excluded by name.
+        // Only a genuine operating line marks it as one the multiple can be defined on.
+        if (line === 'ebit' && isOperatingResult(row.description)) this.sawOperatingResult.add(row.cnpj);
 
         const filing = this.filingFor({
             store: this.income,
@@ -97,17 +114,18 @@ export class StatementCollector {
         });
         if (!filing) return;
 
-        const figure: ReportedFigure = {
+        const arriving = {
             period: new FiscalPeriod({
                 start: parseDate(row.periodStart),
                 end: parseDate(row.periodEnd),
                 kind: row.kind,
             }),
-            ebit: parseAmount(row.amount, row.scale),
+            line,
+            amount: parseAmount(row.amount, row.scale),
         };
 
-        if (row.order === 'ÚLTIMO') filing.current = cumulative(filing.current, figure);
-        else if (row.order === 'PENÚLTIMO') filing.comparative = cumulative(filing.comparative, figure);
+        if (row.order === 'ÚLTIMO') filing.current = merge(filing.current, arriving);
+        else if (row.order === 'PENÚLTIMO') filing.comparative = merge(filing.comparative, arriving);
     }
 
     /**
@@ -155,8 +173,8 @@ export class StatementCollector {
             records.set(cnpj, {
                 cvmCode: this.cvmCodes.get(cnpj) ?? '',
                 annual: latestAnnual(this.income.get(cnpj)),
-                currentToDate: interim?.current,
-                priorToDate: interim?.comparative,
+                currentToDate: settle(interim?.current),
+                priorToDate: settle(interim?.comparative),
                 balanceSheetAt: sheet?.at,
                 cashAndEquivalents: sheet?.cashAndEquivalents ?? 0,
                 shortTermInvestments: sheet?.shortTermInvestments ?? 0,
@@ -171,11 +189,11 @@ export class StatementCollector {
     }
 
     /**
-     * The filing a row belongs to, created on first sight and replaced when a later version of
-     * the same reference date arrives.
+     * The filing a row belongs to, created on first sight and replaced when a later version of the
+     * same reference date arrives.
      *
-     * Nothing comes back for a row belonging to a superseded version, which is the signal to
-     * drop it rather than let it overwrite a field of the version that replaced it.
+     * Nothing comes back for a row belonging to a superseded version, which is the signal to drop
+     * it rather than let it overwrite a field of the version that replaced it.
      */
     private filingFor<T extends { version: number }>(lookup: FilingLookup<T>): T | undefined {
         let byReference = lookup.store.get(lookup.cnpj);
@@ -196,16 +214,40 @@ export class StatementCollector {
 }
 
 /**
- * Whichever of two figures for the same slot covers the longer window.
+ * Which line a row is, or nothing when it is neither.
  *
- * From the second quarter on, a filing reports the same account twice: once for the quarter and
- * once for the year to date. Only the cumulative figure can be subtracted from a closed year, so
- * the three-month row is discarded rather than allowed to overwrite the nine-month one.
+ * Account 3.05 always answers for the operating slot, even where its description shows it holds a
+ * bank's pre-tax profit. The bottom line is the opposite case: its code moves between layouts —
+ * 3.11 for an industrial or a bank, 3.13 for an insurer — so only the description identifies it.
  */
-function cumulative(existing: ReportedFigure | undefined, arriving: ReportedFigure): ReportedFigure {
-    if (!existing) return arriving;
+function classify(row: IncomeRow): IncomeLine | undefined {
+    if (row.account === ACCOUNTS.operatingResult) return 'ebit';
+    if (isNetIncome(row.description)) return 'netIncome';
 
-    return arriving.period.months > existing.period.months ? arriving : existing;
+    return undefined;
+}
+
+/** Folds one line into the figures already held for a window, keeping the longer window. */
+function merge(
+    existing: WindowFigures | undefined,
+    arriving: { period: FiscalPeriod; line: IncomeLine; amount: number },
+): WindowFigures {
+    const { period, line, amount } = arriving;
+
+    if (existing && existing.period.months > period.months) return existing;
+
+    const base = existing && existing.period.months === period.months ? existing : { period };
+
+    return line === 'ebit' ? { ...base, period, ebit: amount } : { ...base, period, netIncome: amount };
+}
+
+/** A window becomes a reported figure only once the line the ranking needs has arrived. */
+function settle(figures: WindowFigures | undefined): ReportedFigure | undefined {
+    if (figures?.ebit === undefined) return undefined;
+
+    const netIncome = figures.netIncome;
+
+    return { period: figures.period, ebit: figures.ebit, ...(netIncome === undefined ? {} : { netIncome }) };
 }
 
 function emptyBalance(row: BalanceRow): BalanceFiling {
@@ -228,7 +270,7 @@ function latestAnnual(filings: Map<string, IncomeFiling> | undefined): ReportedF
 
     let best: ReportedFigure | undefined;
     for (const filing of filings.values()) {
-        const figure = filing.current;
+        const figure = settle(filing.current);
         if (filing.kind !== 'annual' || !figure?.period.isFullYear) continue;
         if (!best || figure.period.end.getTime() > best.period.end.getTime()) best = figure;
     }

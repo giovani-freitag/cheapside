@@ -14,6 +14,8 @@ export interface CandidateOverrides {
     marketCapitalisation?: number;
     tradedValue?: number;
     annualEbit?: number;
+    annualNetIncome?: number;
+    equity?: number;
     grossDebt?: number;
     cash?: number;
     hasOperatingResultLine?: boolean;
@@ -54,12 +56,13 @@ export function aCandidate(overrides: CandidateOverrides = {}): Candidate {
                     kind: 'annual',
                 }),
                 ebit: overrides.annualEbit ?? 200_000_000,
+                netIncome: overrides.annualNetIncome ?? 120_000_000,
             },
         }),
         cashAndEquivalents: overrides.cash ?? 100_000_000,
         shortTermInvestments: 0,
         grossDebt: overrides.grossDebt ?? 200_000_000,
-        shareholdersEquity: 800_000_000,
+        shareholdersEquity: overrides.equity ?? 800_000_000,
         totalAssets: 2_000_000_000,
         hasOperatingResultLine: overrides.hasOperatingResultLine ?? true,
     });

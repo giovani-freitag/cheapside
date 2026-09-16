@@ -37,6 +37,9 @@ export interface RankedRow {
     multiple: number;
     earningsYield: number;
     netDebtToEbit: number;
+    /** Context beside the rank, never a key of it. Absent on a loss or on negative equity. */
+    priceToEarnings?: number;
+    priceToBook?: number;
     /** Close of the twelve-month window the EBIT covers, `YYYY-MM-DD`. */
     earningsThrough: string;
     /** Whether a quarterly filing contributed, or the figure is the last closed year alone. */

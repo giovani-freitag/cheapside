@@ -1,36 +1,37 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
 import { unzipSync } from 'fflate';
+import type { HttpCacheService } from '@/services/http/http-cache-service.ts';
 import { DomainError } from '@/domain/errors/domain-error.ts';
 
 export interface CvmSourceConfig {
     /** Root of the CVM open-data tree, without a trailing slash. */
     baseUrl: string;
-    /** Where downloaded files are kept between runs. */
-    cacheDirectory?: string;
+    http: HttpCacheService;
+    /** How long a downloaded archive stays good. Filings are settled history, so: a day. */
+    ttlMinutes?: number;
 }
 
+const DEFAULT_TTL = 24 * 60;
+
 /**
- * The CVM's open-data tree, fetched once and decompressed a member at a time.
+ * The CVM's open-data tree, decompressed a member at a time.
  *
  * A year of statements is nineteen files, of which three matter; the shareholders' equity
- * movement alone is two hundred megabytes. Inflating one member per call keeps the peak memory
- * to the size of the file actually being read rather than the size of the archive.
+ * movement alone is two hundred megabytes. Inflating one member per call keeps the peak memory to
+ * the size of the file actually being read rather than the size of the archive.
  *
- * Downloads are cached on disk because a rebuilt screen usually differs only in its prices, and
- * re-fetching a hundred megabytes of unchanged filings to discover that is rude to a public
- * service. A file that is not there yet — a financial year that has not closed — comes back as
- * nothing rather than as an error, because its absence is a date on the calendar, not a fault.
+ * A file that is not there yet — a financial year that has not closed — comes back as nothing
+ * rather than as an error, because its absence is a date on the calendar and not a fault.
  */
 export class CvmSource {
     private readonly baseUrl: string;
-    private readonly cacheDirectory: string;
+    private readonly http: HttpCacheService;
+    private readonly ttlMinutes: number;
     private readonly decoder = new TextDecoder('latin1');
 
     constructor(config: CvmSourceConfig) {
         this.baseUrl = config.baseUrl;
-        this.cacheDirectory = config.cacheDirectory ?? join(tmpdir(), 'cheapside-cvm');
+        this.http = config.http;
+        this.ttlMinutes = config.ttlMinutes ?? DEFAULT_TTL;
     }
 
     /**
@@ -67,29 +68,7 @@ export class CvmSource {
         return bytes ? this.decoder.decode(bytes) : undefined;
     }
 
-    private async bytes(path: string): Promise<Uint8Array | undefined> {
-        const cached = join(this.cacheDirectory, path.replace(/[\\/]/g, '_'));
-
-        try {
-            return new Uint8Array(await readFile(cached));
-        } catch {
-            const downloaded = await this.download(`${this.baseUrl}/${path}`);
-            if (!downloaded) return undefined;
-
-            await mkdir(this.cacheDirectory, { recursive: true });
-            await writeFile(cached, downloaded);
-
-            return downloaded;
-        }
-    }
-
-    private async download(url: string): Promise<Uint8Array | undefined> {
-        const response = await fetch(url);
-        if (response.status === 404) return undefined;
-        if (!response.ok) {
-            throw new DomainError(`A CVM respondeu ${String(response.status)} para ${url}.`);
-        }
-
-        return new Uint8Array(await response.arrayBuffer());
+    private bytes(path: string): Promise<Uint8Array | undefined> {
+        return this.http.fetchBytes(`${this.baseUrl}/${path}`, { ttlMinutes: this.ttlMinutes });
     }
 }

@@ -82,3 +82,49 @@ describe('TrailingEarnings', () => {
         );
     });
 });
+
+describe('TrailingEarnings, on the bottom line', () => {
+    it('rolls the bottom line forward with the same windows as the operating one', () => {
+        const earnings = new TrailingEarnings({
+            annual: { period: aYear(2025), ebit: 503_782_000, netIncome: 332_712_000 },
+            currentToDate: { period: aYearToDate(2026, 6), ebit: 111_661_000, netIncome: 61_281_000 },
+            priorToDate: { period: aYearToDate(2025, 6), ebit: 79_067_000, netIncome: 30_918_000 },
+        });
+
+        expect(earnings.netIncome).toBe(363_075_000);
+    });
+
+    it('falls back to the closed year when no quarter superseded it', () => {
+        const earnings = new TrailingEarnings({
+            annual: { period: aYear(2025), ebit: 503_782_000, netIncome: 332_712_000 },
+        });
+
+        expect(earnings.netIncome).toBe(332_712_000);
+    });
+
+    it('reports nothing when one window of the sum never carried a bottom line', () => {
+        const earnings = new TrailingEarnings({
+            annual: { period: aYear(2025), ebit: 503_782_000, netIncome: 332_712_000 },
+            currentToDate: { period: aYearToDate(2026, 6), ebit: 111_661_000 },
+            priorToDate: { period: aYearToDate(2025, 6), ebit: 79_067_000, netIncome: 30_918_000 },
+        });
+
+        expect(earnings.netIncome).toBeUndefined();
+    });
+
+    it('still reports the operating figure when the bottom line is missing', () => {
+        const earnings = new TrailingEarnings({
+            annual: { period: aYear(2025), ebit: 503_782_000 },
+            currentToDate: { period: aYearToDate(2026, 6), ebit: 111_661_000 },
+            priorToDate: { period: aYearToDate(2025, 6), ebit: 79_067_000 },
+        });
+
+        expect(earnings.ebit).toBe(536_376_000);
+    });
+
+    it('keeps the windows it was built from, so a capture can write them back', () => {
+        const earnings = new TrailingEarnings({ annual: { period: aYear(2025), ebit: 1 } });
+
+        expect(earnings.source.annual.period.closeKey).toBe('2025-12-31');
+    });
+});

@@ -92,6 +92,16 @@ manutenção parece ótima, então a tela estaria ordenando pelo calendário de 
 EV/EBIT é o meio-termo a que a literatura convergiu: neutro à estrutura de capital como o
 EV/EBITDA, honesto quanto à depreciação como o P/L, e estável o bastante para ordenar.
 
+### Os múltiplos rejeitados, exibidos assim mesmo
+
+P/L e P/VP não ordenam nada, mas aparecem ao lado de cada posição. Não é contradição: a tela é
+transparente sobre o que calcula, e o lugar mais honesto de mostrar que uma métrica foi rejeitada é
+ao lado do número que a substituiu, onde o leitor pode ver onde as duas discordam.
+
+A discordância é informativa. `MGLU3` sai a 3,93× de EV/EBIT e 44× de P/L: a operação é barata e o
+resultado financeiro come quase todo o lucro. Ler só o P/L esconderia a operação; ler só o EV/EBIT
+esconderia a conta de juros. As duas colunas juntas dizem onde a empresa dói.
+
 ### O que EV/EBIT ainda erra
 
 Vale dizer, porque a tela vai trazer esses casos e a interface precisa mostrá-los.

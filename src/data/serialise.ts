@@ -61,6 +61,8 @@ function toRow(entry: RankedCandidate): RankedRow {
         multiple: multiple.value,
         earningsYield: multiple.earningsYield,
         netDebtToEbit: multiple.netDebtToEbit,
+        ...(candidate.priceToEarnings === undefined ? {} : { priceToEarnings: candidate.priceToEarnings }),
+        ...(candidate.priceToBook === undefined ? {} : { priceToBook: candidate.priceToBook }),
         earningsThrough: financials.earnings.through.closeKey,
         interimAdjusted: financials.earnings.isInterimAdjusted,
         balanceSheetAt: financials.balanceSheetAt.closeKey,

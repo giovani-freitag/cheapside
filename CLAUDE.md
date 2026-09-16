@@ -19,6 +19,15 @@ Uma tela quantitativa sobre a B3. O projeto é exclusivo da bolsa brasileira.
 
 ## Dados
 
-O pipeline (`npm run data:build`) roda no CI e o resultado é commitado em `src/data/generated/`. O
-site nunca chama uma API e nunca carrega um token — é o que permite ele ser estático e forkável.
+O pipeline tem duas metades, e a separação é deliberada:
+
+- `npm run data:capture` lê as fontes, faz o join e grava `snapshot.json` — **sem aplicar filtro
+  nenhum**. É a metade que custa rede.
+- `npm run data:screen` recalcula `screen.json` só a partir do snapshot. É a metade que decide, e
+  não toca na rede.
+
+Mexer em filtro, limiar ou ordenação é trabalho da segunda metade: rode `data:screen`, nunca
+`data:capture`. Toda requisição passa pelo `HttpCacheService`, com prazo por fonte.
+
+O site nunca chama uma API e nunca carrega um token — é o que permite ele ser estático e forkável.
 Nenhuma fonte nova deve exigir autenticação.

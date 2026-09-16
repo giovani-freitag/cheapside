@@ -70,13 +70,18 @@ site é uma página estática em cima dele. Sem servidor, sem chave de API, sem 
 precise confiar — e por isso forkável por qualquer um.
 
 ```
-scripts/build-screen.ts        buscar, juntar, ordenar, escrever
-  ├─ services/cvm/             dados abertos da CVM — EBIT, caixa, dívida, situação do emissor
+scripts/capture-market.ts      buscar e juntar                          ← a metade que custa rede
+  ├─ services/http/            cache em disco, prazo por fonte
+  ├─ services/cvm/             EBIT, lucro líquido, caixa, dívida, situação do emissor
   ├─ services/b3/              registro de listadas — a ponte do ticker até o CNPJ
   ├─ services/quotes/          preço, giro, valor de mercado
   ├─ services/liquidity/       mediana móvel do giro, um pregão por execução
-  ├─ services/universe/        o join — e o que não consegue atravessá-lo
-  └─ services/screen/          os filtros e o ranking
+  └─ services/universe/        o join — e o que não consegue atravessá-lo
+       ↓
+src/data/generated/snapshot.json  o que as fontes disseram, sem filtro nenhum
+       ↓
+scripts/build-screen.ts        filtrar, ordenar, cortar                 ← a metade que decide
+  └─ services/screen/
        ↓
 src/data/generated/screen.json    commitado, versionado, datado
        ↓
@@ -101,13 +106,21 @@ Documentação em português; código e comentários inteiramente em inglês.
 ```bash
 npm install
 npm run dev            # o site, sobre os dados commitados
-npm run data:build     # reconstrói tudo das fontes (~2 min a frio, cacheado depois)
+npm run data:capture   # lê as fontes e congela tudo em snapshot.json  (custa rede)
+npm run data:screen    # recalcula a tela a partir do snapshot         (custa nada)
+npm run data:build     # os dois, em ordem
 npm run data:verdicts  # escreve os briefings de leitura da carteira
 npm test
 ```
 
-`data:build` baixa uns 150 MB de arquivos da CVM na primeira vez e guarda no temp do sistema; da
-segunda em diante só rebusca preços.
+A separação é o ponto. `data:capture` lê as três fontes, faz o join e grava **tudo que elas
+disseram** em `snapshot.json` — sem aplicar um único filtro. `data:screen` recalcula a tela só a
+partir desse arquivo. Mudar um limiar, acrescentar um filtro ou publicar trinta posições vira um
+segundo de aritmética em vez de outra viagem a serviços públicos que não devem nada a este projeto.
+
+Toda requisição também passa por um cache em disco com prazo de validade por fonte — um dia para
+os arquivos da CVM, uma semana para o registro da B3, uma hora para cotações. `--fresh` ignora o
+cache no dia em que se suspeita de uma fonte.
 
 ## A parte que números não respondem
 

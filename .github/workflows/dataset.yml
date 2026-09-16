@@ -30,7 +30,11 @@ jobs:
 
             - run: npm ci
 
-            - run: npm run data:build
+            # Capture and screen are separate jobs of work on purpose: the first costs network,
+            # the second is arithmetic. A failure in the second can be retried without the first.
+            - run: npm run data:capture
+
+            - run: npm run data:screen
 
             - run: npm test
 
@@ -44,7 +48,8 @@ jobs:
                   body: |
                       Rebuilt from CVM open data, the B3 listed-companies registry and brapi quotes.
 
-                      Review the excluded-companies count before merging: a jump usually means a
-                      source changed shape rather than that the market did.
+                      `snapshot.json` is what the sources said; `screen.json` is what the filters
+                      made of it. Review the excluded-companies count before merging: a jump
+                      usually means a source changed shape rather than that the market did.
                   add-paths: |
                       src/data/generated/**

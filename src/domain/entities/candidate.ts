@@ -42,6 +42,28 @@ export class Candidate {
         });
     }
 
+    /**
+     * Price against the bottom line, shown beside the rank and never used to produce it.
+     *
+     * It answers a different question from the rank — how the *equity* is priced rather than the
+     * enterprise — and the gap between the two is informative: a company cheap on one and dear on
+     * the other is telling you where its debt is. Undefined on a loss, where the ratio is noise.
+     */
+    public get priceToEarnings(): number | undefined {
+        const netIncome = this.financials.trailingNetIncome;
+        if (netIncome === undefined || netIncome <= 0) return undefined;
+
+        return this.company.marketCapitalisation / netIncome;
+    }
+
+    /** Price against book equity, on the same terms: context beside the rank, never inside it. */
+    public get priceToBook(): number | undefined {
+        const equity = this.financials.shareholdersEquity;
+        if (equity <= 0) return undefined;
+
+        return this.company.marketCapitalisation / equity;
+    }
+
     /** The rank key, or nothing when operating profit will not support one. */
     public get multiple(): AcquirersMultiple | undefined {
         if (this.financials.trailingEbit <= 0) return undefined;

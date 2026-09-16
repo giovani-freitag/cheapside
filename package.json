@@ -23,8 +23,10 @@
         "test": "vitest run",
         "test:watch": "vitest",
         "test:coverage": "vitest run --coverage",
-        "data:build": "vite-node scripts/build-screen.ts",
-        "data:verdicts": "vite-node scripts/build-verdicts.ts"
+        "data:build": "npm run data:capture && npm run data:screen",
+        "data:verdicts": "vite-node scripts/build-verdicts.ts",
+        "data:capture": "vite-node scripts/capture-market.ts",
+        "data:screen": "vite-node scripts/build-screen.ts"
     },
     "dependencies": {
         "lucide-react": "^1.32.0",

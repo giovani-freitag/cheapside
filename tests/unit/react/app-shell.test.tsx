@@ -81,3 +81,41 @@ describe('the page', () => {
         expect(screen.getAllByRole('radio')).toHaveLength(3);
     });
 });
+
+describe('the sector filter', () => {
+    it('offers every sector present in the eligible list', () => {
+        render(<App />);
+
+        const present = new Set(dataset.eligible.map((row) => row.sector).filter(Boolean));
+
+        expect(screen.getByLabelText('Setor').querySelectorAll('option')).toHaveLength(present.size + 1);
+    });
+
+    it('opens on every sector', () => {
+        render(<App />);
+
+        expect(screen.getByLabelText<HTMLSelectElement>('Setor').value).toBe('todos');
+    });
+
+    it('narrows the table to the chosen sector', async () => {
+        render(<App />);
+        const sector = dataset.portfolio[0]?.sector ?? '';
+
+        await userEvent.selectOptions(screen.getByLabelText('Setor'), sector);
+
+        const kept = dataset.portfolio.filter((row) => row.sector === sector);
+        expect(screen.getAllByRole('row')).toHaveLength(kept.length + 1);
+    });
+
+    it('never renumbers what it narrows', async () => {
+        render(<App />);
+        const sector = dataset.portfolio[0]?.sector ?? '';
+        const ranks = dataset.portfolio.filter((row) => row.sector === sector).map((row) => String(row.rank));
+
+        await userEvent.selectOptions(screen.getByLabelText('Setor'), sector);
+
+        expect(
+            screen.getAllByRole('row').slice(1).map((row) => row.querySelector('td')?.textContent),
+        ).toEqual(ranks);
+    });
+});

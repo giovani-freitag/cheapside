@@ -4,11 +4,12 @@ export interface WordmarkProps {
 }
 
 /**
- * The mark: a fraction, drawn as what the screen is looking for.
+ * The mark: four towers, with the one the screen picked lit.
  *
- * A short bar over a long one — a small price above large earnings, which is a low multiple and
- * the whole thesis in one glyph. It is also just a division sign, which is all the project does.
- * Four rectangles survive being sixteen pixels wide in a browser tab.
+ * A skyline is the rare silhouette that reads as companies and as a sorted bar chart at once,
+ * which is the entire product in one glyph — a market of listed firms, and one of them at the top
+ * of the ranking. The dimmed towers are the market the lit one came out of, so the mark says
+ * "chosen from many" without a caption. Four bars survive being sixteen pixels wide in a tab.
  */
 export function Wordmark({ size = 32 }: WordmarkProps) {
     return (
@@ -21,9 +22,12 @@ export function Wordmark({ size = 32 }: WordmarkProps) {
                 fill="none"
                 aria-hidden
             >
-                <rect x="2" y="3" width="7.5" height="5.4" rx="0.6" fill="currentColor" />
-                <rect x="2" y="11.1" width="20" height="1.5" rx="0.6" fill="currentColor" />
-                <rect x="2" y="15.2" width="20" height="5.4" rx="0.6" fill="currentColor" />
+                <g fill="currentColor">
+                    <rect x="1.9" y="12.4" width="4" height="8.6" rx="0.7" opacity="0.35" />
+                    <rect x="7.3" y="7.6" width="4" height="13.4" rx="0.7" opacity="0.35" />
+                    <rect x="12.7" y="3.4" width="4" height="17.6" rx="0.7" />
+                    <rect x="18.1" y="10" width="4" height="11" rx="0.7" opacity="0.35" />
+                </g>
             </svg>
             <span className="wordmark__text">Cheapside</span>
         </span>
