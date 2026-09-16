@@ -1,0 +1,66 @@
+/*
+ * One palette, defined twice.
+ *
+ * The surface is stamped on the root element by the theme service before React mounts, so every
+ * colour below is selected rather than computed and nothing has to be repainted on load. Colour
+ * carries no verdict here: a cheap company is not painted green, because the whole argument of
+ * the project is that cheap and good are different questions. Amber and red are spent only on
+ * exclusions and cautions, where they mean what they look like.
+ */
+
+:root {
+    --ink: #17191c;
+    --ink-soft: #4a4f57;
+    --ink-faint: #767c86;
+    --paper: #fbfaf7;
+    --paper-raised: #ffffff;
+    --paper-sunken: #f2f0eb;
+    --rule: #e2ded6;
+    --rule-strong: #cfc9bd;
+
+    --accent: #1f4f8f;
+    --accent-soft: #e8eef7;
+    --caution: #8a5a00;
+    --caution-soft: #fbf2df;
+    --flag: #9b2c2c;
+    --flag-soft: #fbeaea;
+
+    --shadow-raised: 0 1px 2px rgb(23 25 28 / 6%), 0 4px 16px rgb(23 25 28 / 5%);
+
+    --font-text: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-figure: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+
+    --step-0: 0.875rem;
+    --step-1: 1rem;
+    --step-2: 1.25rem;
+    --step-3: 1.75rem;
+    --step-4: 2.5rem;
+    --step--1: 0.78rem;
+
+    --gap: 1rem;
+    --radius: 6px;
+
+    color-scheme: light;
+}
+
+:root[data-surface='dark'] {
+    --ink: #e8e6e1;
+    --ink-soft: #a8a59e;
+    --ink-faint: #76736d;
+    --paper: #131416;
+    --paper-raised: #1b1d20;
+    --paper-sunken: #0e0f11;
+    --rule: #2b2e32;
+    --rule-strong: #3d4147;
+
+    --accent: #7fa8e0;
+    --accent-soft: #1a2635;
+    --caution: #d9a441;
+    --caution-soft: #2a2314;
+    --flag: #e08585;
+    --flag-soft: #2d1a1a;
+
+    --shadow-raised: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 16px rgb(0 0 0 / 30%);
+
+    color-scheme: dark;
+}
