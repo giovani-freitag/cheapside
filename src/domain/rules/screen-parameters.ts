@@ -25,7 +25,7 @@ export interface ScreenParameters {
     momentumShortlist: number;
 }
 
-/** The published defaults, matching what `docs/strategy.md` argues for. */
+/** The published defaults, each argued for in the strategy document. */
 export const DEFAULT_PARAMETERS: ScreenParameters = {
     positions: 20,
     liquidityFloor: 1_000_000,

@@ -19,8 +19,8 @@ export function MethodView() {
                 <h3>Os parâmetros</h3>
                 <p className="muted">
                     Escolhas, não descobertas. Cada uma muda a lista, e a defesa de cada uma está em{' '}
-                    <a href="https://github.com/giovani-freitag/cheapside/blob/main/docs/strategy.md">
-                        docs/strategy.md
+                    <a href="https://github.com/giovani-freitag/cheapside/blob/main/docs/estrategia.md">
+                        docs/estrategia.md
                     </a>
                     .
                 </p>

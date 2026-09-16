@@ -1,109 +1,112 @@
 # Cheapside
 
-The twenty cheapest companies on B3, ranked by EV/EBIT, with every input of every rank on the page
-next to it.
+As vinte empresas mais baratas da B3 por EV/EBIT, com cada número que entrou em cada posição na
+mesma página que ela.
 
 **[giovani-freitag.github.io/cheapside](https://giovani-freitag.github.io/cheapside/)**
 
-## What it is
+## O que é
 
-A quantitative screener. It reads every company listed on B3 out of the CVM's public filings,
-ranks them by what the whole enterprise costs against what it earns, and publishes the twenty at
-the top — along with the two hundred and eighty it removed and the reason for each removal.
+Uma tela quantitativa. Lê todas as companhias listadas na B3 a partir das demonstrações públicas da
+CVM, ordena pelo que a empresa inteira custa contra o que ela opera, e publica as vinte do topo —
+junto com as quase trezentas que removeu e o motivo de cada remoção.
 
-The strategy is the one Clube do Valor publishes as *As 20 Ações Mais Baratas da Bolsa*, which is
-in turn a Brazilian implementation of Carlisle's Acquirer's Multiple. The complete rules, the
-argument for each threshold, and what the metric still gets wrong are in
-**[docs/strategy.md](docs/strategy.md)**.
+A estratégia é a que o Clube do Valor publica como *As 20 Ações Mais Baratas da Bolsa*, que por sua
+vez é uma implementação brasileira do Acquirer's Multiple de Carlisle. As regras completas, o
+argumento de cada limiar e o que a métrica ainda erra estão em
+**[docs/estrategia.md](docs/estrategia.md)**.
 
-Not investment advice, and not a claim that cheap means good. The twenty cheapest on any metric
-include companies that are cheap because they deserve to be.
+Não é recomendação de investimento, e não é a afirmação de que barato é bom. As vinte mais baratas
+de qualquer métrica incluem empresas que estão baratas por merecerem estar.
 
-## The decisions the brief left open
+## As decisões que o escopo deixou em aberto
 
-The first version of this README listed five things that had to be decided before any code was
-written. They are decided; each is argued in `docs/strategy.md`.
+A primeira versão deste README listava cinco coisas que precisavam ser decididas antes de qualquer
+linha de código. Estão decididas, e cada uma é defendida em `docs/estrategia.md`.
 
-| | decided | where |
+| | decidido | onde |
 | --- | --- | --- |
-| Which exchange | B3 | — |
-| What "cheap" means | EV/EBIT on trailing twelve months, and not P/E, P/B, EV/EBITDA or P/FCF | §2 |
-| What is excluded | Financials, judicial recovery, illiquid, loss-making, over-levered, stale filers | §3 |
-| Where the data comes from | CVM open data, B3's listing registry, brapi quotes — all free, none needing a token | §6 |
-| What the output is | A static site over a dataset rebuilt in CI and committed | below |
+| Qual bolsa | B3 | — |
+| O que "barato" quer dizer | EV/EBIT sobre doze meses, e não P/L, P/VP, EV/EBITDA ou P/FCF | §2 |
+| O que fica de fora | Financeiras, recuperação judicial, iliquidez, prejuízo, alavancagem, demonstração velha | §3 |
+| De onde vêm os dados | Dados abertos da CVM, registro de listadas da B3, cotações da brapi — tudo gratuito, nada exigindo token | §6 |
+| Qual é a saída | Um site estático sobre um conjunto de dados reconstruído no CI e commitado | abaixo |
 
-## How it is built
+## Como é construído
 
-Nothing runs at page load. The pipeline runs in CI, the result is committed as JSON, and the site
-is a static page over it. That is what lets the whole thing live on GitHub Pages and be forked by
-anyone: there is no server, no API key, and no request the reader has to trust.
+Nada roda no carregamento da página. O pipeline roda no CI, o resultado é commitado como JSON, e o
+site é uma página estática sobre ele. É isso que permite a coisa inteira viver no GitHub Pages e ser
+forkada por qualquer um: não há servidor, não há chave de API, e não há requisição que o leitor
+precise confiar.
 
 ```
-scripts/build-screen.ts        the pipeline: fetch, join, rank, write
-  └─ src/services/cvm/         CVM open data — EBIT, cash, debt, issuer standing
-  └─ src/services/b3/          the listing registry — the bridge from ticker to CNPJ
-  └─ src/services/quotes/      prices, turnover, market capitalisation
-  └─ src/services/liquidity/   a rolling median of traded value, one session per run
-  └─ src/services/universe/    the join, and what fails to cross it
-  └─ src/services/screen/      the filters and the ranking
+scripts/build-screen.ts        o pipeline: buscar, juntar, ordenar, escrever
+  └─ src/services/cvm/         dados abertos da CVM — EBIT, caixa, dívida, situação do emissor
+  └─ src/services/b3/          o registro de listadas — a ponte do ticker até o CNPJ
+  └─ src/services/quotes/      preço, giro e valor de mercado
+  └─ src/services/liquidity/   a mediana móvel do valor negociado, um pregão por execução
+  └─ src/services/universe/    o join, e o que não consegue atravessá-lo
+  └─ src/services/screen/      os filtros e o ranking
        ↓
-src/data/generated/screen.json  committed, versioned, timestamped
+src/data/generated/screen.json  commitado, versionado, datado
        ↓
-src/react/                      the interface, which only reads it
+src/react/                      a interface, que só lê
 ```
 
-The three joins are the hard part, and none of the sources share a key: quotes arrive under a
-ticker, the listing registry under a four-letter root, and filings under a CNPJ — under whichever
-*establishment* of the company happened to file, which is why the join runs on the CNPJ root and
-not the full number.
+Os três joins são a parte difícil, e nenhuma das fontes compartilha chave: as cotações chegam sob um
+ticker, o registro de listadas sob uma raiz de quatro letras, e as demonstrações sob um CNPJ — sob
+qualquer *estabelecimento* da empresa que tenha arquivado, que é o motivo de o join rodar na raiz do
+CNPJ e não no número inteiro.
 
-### Layers
+### Camadas
 
-`src/domain` is pure: value objects, entities and the filter rules, with no I/O, no React, and no
-Node. `src/services` owns every capability that touches the outside world, one folder each.
-`src/react` is the interface, and holds no logic that is not about display — the hooks read
-services, the components read hooks. An arch test enforces all of it.
+`src/domain` é puro: objetos de valor, entidades e as regras de filtro, sem I/O, sem React e sem
+Node. `src/services` é dono de toda capacidade que toca o mundo externo, uma pasta cada.
+`src/react` é a interface, e não guarda lógica que não seja de exibição — os hooks leem serviços, os
+componentes leem hooks. Um teste de arquitetura garante tudo isso.
 
-## Running it
+Documentação em português; código e comentários inteiramente em inglês.
+
+## Rodando
 
 ```bash
 npm install
-npm run dev          # the site, against the committed dataset
-npm run data:build   # rebuild the dataset from the sources (~2 min cold, cached after)
-npm run data:verdicts # write the reading briefs for the current portfolio
+npm run dev           # o site, sobre o conjunto de dados commitado
+npm run data:build    # reconstrói os dados a partir das fontes (~2 min a frio, cacheado depois)
+npm run data:verdicts # escreve os briefings de leitura da carteira atual
 npm test
 npm run build
 ```
 
-`data:build` downloads about 150 MB of CVM archives on a cold run and caches them in the system
-temp directory, so a second run only refetches prices.
+`data:build` baixa cerca de 150 MB de arquivos da CVM numa execução fria e os guarda no diretório
+temporário do sistema, de modo que a segunda execução só rebusca preços.
 
-## The part that is not arithmetic
+## A parte que não é aritmética
 
-The screen answers *what is statistically cheap*. It cannot answer *why*, and the difference
-between a bargain and a value trap lives entirely in the second question.
+A tela responde *o que está estatisticamente barato*. Ela não responde *por quê*, e a diferença entre
+uma pechincha e uma armadilha de valor mora inteira na segunda pergunta.
 
-The first run made this concrete at rank one: a company at 0.97× EV/EBIT, whose figures reconcile
-exactly to its filing, and whose operating profit tripled in a year because a single
-operating-expense line moved by R$ 340 million. That is the shape of a provision reversal, not of
-a business that got three times better, and a trailing multiple has no way to tell.
+A primeira execução tornou isso concreto já na primeira posição: uma empresa a 0,97× EV/EBIT, cujos
+números batem exatamente com o arquivo, e cujo lucro operacional triplicou em um ano porque uma única
+linha de despesa operacional se moveu R$ 340 milhões. É o formato de uma reversão de provisão, não o
+de um negócio três vezes melhor, e um múltiplo de doze meses não tem como distinguir.
 
-So there is a second, optional layer: a reading of the filings behind each published company,
-answering three narrow questions — is the EBIT repeatable, is the balance sheet as stated, is
-there a structural reason for the discount. It is produced away from this repository by a language
-model, committed as JSON under `src/data/verdicts/`, and shown beside the rank as context. It
-never moves the ranking, and a company nobody has read is shown as unread rather than as passing.
+Por isso existe uma segunda camada, opcional: uma leitura das demonstrações de cada empresa
+publicada, respondendo três perguntas estreitas — o EBIT se repete, o balanço é o que diz ser, há
+motivo estrutural para o desconto. Ela é produzida fora deste repositório por um modelo de
+linguagem, commitada como JSON em `src/data/verdicts/`, e exibida ao lado da posição como contexto.
+Nunca move o ranking, e uma empresa que ninguém leu aparece como não lida, não como aprovada.
 
-`npm run data:verdicts` writes one brief per portfolio company into `docs/briefs/`, each carrying
-the numbers, the filing links, the three questions and the exact JSON to write back. The reading
-itself is a separate step on purpose: the screen must stay reproducible by anyone with a network
-connection and an account nowhere.
+`npm run data:verdicts` escreve um briefing por empresa da carteira em `docs/briefs/`, cada um
+carregando os números, os links das demonstrações, as três perguntas e o JSON exato a devolver. A
+leitura em si é um passo à parte de propósito: a tela precisa continuar reproduzível por qualquer um
+com conexão de rede e conta em lugar nenhum.
 
 ## Stack
 
-Vite 8 (Rolldown), React 19, Radix primitives on a palette of this project's own with light, dark
-and system themes, TypeScript, Vitest, ESLint, release-please, GitHub Pages.
+Vite 8 (Rolldown), React 19, primitivos do Radix sobre uma paleta própria do projeto com temas
+claro, escuro e do sistema, TypeScript, Vitest, ESLint, release-please, GitHub Pages.
 
-## Licence
+## Licença
 
 MIT.
