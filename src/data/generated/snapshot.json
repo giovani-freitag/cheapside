@@ -1,29 +1,29 @@
 {
  "snapshotVersion": 1,
- "capturedAt": "2026-09-16T02:54:11.778Z",
+ "capturedAt": "2026-10-26T15:42:30.556Z",
  "sources": [
   {
    "name": "CVM — Dados Abertos (ITR e DFP)",
    "url": "https://dados.cvm.gov.br/dataset/cia_aberta-doc-itr",
-   "retrievedAt": "2026-09-16T02:54:11.778Z",
+   "retrievedAt": "2026-10-26T15:42:30.556Z",
    "provides": "Lucro operacional, lucro líquido, caixa, dívida e patrimônio líquido."
   },
   {
    "name": "CVM — Cadastro de companhias abertas",
    "url": "https://dados.cvm.gov.br/dataset/cia_aberta-cad",
-   "retrievedAt": "2026-09-16T02:54:11.778Z",
+   "retrievedAt": "2026-10-26T15:42:30.556Z",
    "provides": "Situação do emissor, incluindo recuperação judicial, e o setor de atividade."
   },
   {
    "name": "B3 — Empresas listadas",
    "url": "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm",
-   "retrievedAt": "2026-09-16T02:54:11.778Z",
+   "retrievedAt": "2026-10-26T15:42:30.556Z",
    "provides": "A ponte entre o código de negociação e o CNPJ da companhia."
   },
   {
    "name": "brapi",
    "url": "https://brapi.dev",
-   "retrievedAt": "2026-09-16T02:54:11.778Z",
+   "retrievedAt": "2026-10-26T15:42:30.556Z",
    "provides": "Preço de fechamento, volume negociado e valor de mercado."
   }
  ],
@@ -35,13 +35,13 @@
    "tradingName": "BRASIL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 126500223706,
+   "marketCapitalisation": 141369137636,
    "listings": [
     {
      "ticker": "BBAS3",
-     "price": 22.04,
-     "typicalTradedValue": 484648580,
-     "observations": 1
+     "price": 17.65,
+     "typicalTradedValue": 1380030935,
+     "observations": 2
     }
    ],
    "financials": {
@@ -82,19 +82,19 @@
    "tradingName": "BRB BANCO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 1247464772,
+   "marketCapitalisation": 1180940057,
    "listings": [
     {
      "ticker": "BSLI4",
-     "price": 2.5,
-     "typicalTradedValue": 32000,
-     "observations": 1
+     "price": 2.35,
+     "typicalTradedValue": 45845,
+     "observations": 2
     },
     {
      "ticker": "BSLI3",
-     "price": 2.6,
-     "typicalTradedValue": 22100,
-     "observations": 1
+     "price": 2.47,
+     "typicalTradedValue": 38961,
+     "observations": 2
     }
    ]
   },
@@ -105,19 +105,19 @@
    "tradingName": "AXIA ENERGIA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 126376453040,
+   "marketCapitalisation": 140619470703,
    "listings": [
     {
      "ticker": "AXIA3",
-     "price": 54.94,
-     "typicalTradedValue": 457869960,
-     "observations": 1
+     "price": 49.33,
+     "typicalTradedValue": 507005723.5,
+     "observations": 2
     },
     {
      "ticker": "AXIA7",
-     "price": 54.96,
-     "typicalTradedValue": 111805128,
-     "observations": 1
+     "price": 49.7,
+     "typicalTradedValue": 81386239,
+     "observations": 2
     }
    ],
    "financials": {
@@ -158,25 +158,25 @@
    "tradingName": "CEB",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 1803490061,
+   "marketCapitalisation": 1904471210,
    "listings": [
     {
-     "ticker": "CEBR3",
-     "price": 23.61,
-     "typicalTradedValue": 219573,
-     "observations": 1
+     "ticker": "CEBR5",
+     "price": 23.1,
+     "typicalTradedValue": 370451,
+     "observations": 2
     },
     {
-     "ticker": "CEBR5",
-     "price": 23.69,
-     "typicalTradedValue": 161092,
-     "observations": 1
+     "ticker": "CEBR3",
+     "price": 24.65,
+     "typicalTradedValue": 234269,
+     "observations": 2
     },
     {
      "ticker": "CEBR6",
-     "price": 27.05,
-     "typicalTradedValue": 94675,
-     "observations": 1
+     "price": 25,
+     "typicalTradedValue": 111087.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -217,13 +217,13 @@
    "tradingName": "ARMAC",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 1282028111,
+   "marketCapitalisation": 2446248182,
    "listings": [
     {
      "ticker": "ARML3",
-     "price": 3.76,
-     "typicalTradedValue": 3774288,
-     "observations": 1
+     "price": 3.4,
+     "typicalTradedValue": 4238754,
+     "observations": 2
     }
    ],
    "financials": {
@@ -264,19 +264,19 @@
    "tradingName": "TELEBRAS",
    "sector": "Communications",
    "status": "operational",
-   "marketCapitalisation": 1566206441,
+   "marketCapitalisation": 2652132876,
    "listings": [
     {
      "ticker": "TELB4",
-     "price": 8.2,
-     "typicalTradedValue": 49199.99999999999,
-     "observations": 1
+     "price": 8.1,
+     "typicalTradedValue": 100740,
+     "observations": 2
     },
     {
      "ticker": "TELB3",
-     "price": 16.52,
-     "typicalTradedValue": 14868,
-     "observations": 1
+     "price": 14.9,
+     "typicalTradedValue": 33509,
+     "observations": 2
     }
    ],
    "financials": {
@@ -314,13 +314,13 @@
    "tradingName": "FASA",
    "sector": "Commercial Services",
    "status": "distressed",
-   "marketCapitalisation": 10965550,
+   "marketCapitalisation": 14035904,
    "listings": [
     {
      "ticker": "FASA3",
-     "price": 0.33,
-     "typicalTradedValue": 257697,
-     "observations": 1
+     "price": 0.26,
+     "typicalTradedValue": 132852.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -361,13 +361,13 @@
    "tradingName": "AMERICANAS",
    "sector": "Retail Trade",
    "status": "distressed",
-   "marketCapitalisation": 999223622,
+   "marketCapitalisation": 1327625858,
    "listings": [
     {
      "ticker": "AMER3",
-     "price": 4.98,
-     "typicalTradedValue": 5585568.000000001,
-     "observations": 1
+     "price": 4.85,
+     "typicalTradedValue": 8165614,
+     "observations": 2
     }
    ],
    "financials": {
@@ -408,19 +408,19 @@
    "tradingName": "ENERGISA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 19674336565,
+   "marketCapitalisation": 25467442093,
    "listings": [
+    {
+     "ticker": "ENGI3",
+     "price": 10.5,
+     "typicalTradedValue": 157719,
+     "observations": 2
+    },
     {
      "ticker": "ENGI4",
      "price": 9.77,
-     "typicalTradedValue": 42988,
-     "observations": 1
-    },
-    {
-     "ticker": "ENGI3",
-     "price": 12.08,
-     "typicalTradedValue": 43488,
-     "observations": 1
+     "typicalTradedValue": 122613.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -461,13 +461,13 @@
    "tradingName": "MRS LOGIST",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 13844847151,
+   "marketCapitalisation": 13048433424,
    "listings": [
     {
      "ticker": "MRSA3B",
-     "price": 44.5,
-     "typicalTradedValue": 4450,
-     "observations": 1
+     "price": 40.39,
+     "typicalTradedValue": 6264,
+     "observations": 2
     }
    ],
    "financials": {
@@ -508,13 +508,13 @@
    "tradingName": "GAFISA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 42489179,
+   "marketCapitalisation": 61373254,
    "listings": [
     {
      "ticker": "GFSA3",
      "price": 0.26,
-     "typicalTradedValue": 2345122,
-     "observations": 1
+     "typicalTradedValue": 1872533,
+     "observations": 2
     }
    ],
    "financials": {
@@ -549,19 +549,63 @@
    }
   },
   {
+   "cnpj": "01548981000179",
+   "cvmCode": "6041",
+   "legalName": "INVESTIMENTOS BEMGE S.A.",
+   "tradingName": "INVEST BEMGE",
+   "sector": "Finance",
+   "status": "operational",
+   "marketCapitalisation": 35523437,
+   "listings": [
+    {
+     "ticker": "FIGE3",
+     "price": 32.94,
+     "typicalTradedValue": 3294,
+     "observations": 1
+    }
+   ],
+   "financials": {
+    "balanceSheetAt": "2026-06-30",
+    "annual": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "kind": "annual",
+     "ebit": 23054000
+    },
+    "currentToDate": {
+     "start": "2026-01-01",
+     "end": "2026-06-30",
+     "kind": "quarterly",
+     "ebit": 11872000
+    },
+    "priorToDate": {
+     "start": "2025-01-01",
+     "end": "2025-06-30",
+     "kind": "quarterly",
+     "ebit": 10383000
+    },
+    "cashAndEquivalents": 2000,
+    "shortTermInvestments": 0,
+    "grossDebt": 0,
+    "shareholdersEquity": 0,
+    "totalAssets": 196929000,
+    "hasOperatingResultLine": false
+   }
+  },
+  {
    "cnpj": "01599101000193",
    "cvmCode": "25160",
    "legalName": "SEQUOIA LOGÍSTICA E TRANSPORTES S.A.",
    "tradingName": "SEQUOIA LOG",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 441912360,
+   "marketCapitalisation": 382229288,
    "listings": [
     {
      "ticker": "SEQL3",
-     "price": 0.07,
-     "typicalTradedValue": 302610,
-     "observations": 1
+     "price": 0.05,
+     "typicalTradedValue": 258970,
+     "observations": 2
     }
    ],
    "financials": {
@@ -602,13 +646,13 @@
    "tradingName": "CSU DIGITAL",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 580953128,
+   "marketCapitalisation": 737300296,
    "listings": [
     {
      "ticker": "CSUD3",
-     "price": 14.2,
-     "typicalTradedValue": 163300,
-     "observations": 1
+     "price": 14.98,
+     "typicalTradedValue": 518317,
+     "observations": 2
     }
    ],
    "financials": {
@@ -649,19 +693,13 @@
    "tradingName": "PAR AL BAHIA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 697382036,
+   "marketCapitalisation": 670646460,
    "listings": [
     {
      "ticker": "PEAB3",
-     "price": 38.86,
-     "typicalTradedValue": 116580,
-     "observations": 1
-    },
-    {
-     "ticker": "PEAB4",
-     "price": 38,
-     "typicalTradedValue": 114000,
-     "observations": 1
+     "price": 35.57,
+     "typicalTradedValue": 60068.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -702,13 +740,13 @@
    "tradingName": "PORTO SEGURO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 32136996396,
+   "marketCapitalisation": 33126025232,
    "listings": [
     {
      "ticker": "PSSA3",
-     "price": 50.45,
-     "typicalTradedValue": 40571890,
-     "observations": 1
+     "price": 46.82,
+     "typicalTradedValue": 75484384,
+     "observations": 2
     }
    ],
    "financials": {
@@ -749,19 +787,19 @@
    "tradingName": "DEXXOS PAR",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 919973899,
+   "marketCapitalisation": 998148889,
    "listings": [
     {
      "ticker": "DEXP3",
-     "price": 7.52,
-     "typicalTradedValue": 419616,
-     "observations": 1
+     "price": 7.09,
+     "typicalTradedValue": 820611.5,
+     "observations": 2
     },
     {
      "ticker": "DEXP4",
-     "price": 7.41,
-     "typicalTradedValue": 57798,
-     "observations": 1
+     "price": 7.23,
+     "typicalTradedValue": 34321.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -802,13 +840,13 @@
    "tradingName": "UNIFIQUE",
    "sector": "Communications",
    "status": "operational",
-   "marketCapitalisation": 2067268881.9999998,
+   "marketCapitalisation": 2474337277,
    "listings": [
     {
      "ticker": "FIQE3",
-     "price": 5.2,
-     "typicalTradedValue": 3162640,
-     "observations": 1
+     "price": 5.1,
+     "typicalTradedValue": 6363080,
+     "observations": 2
     }
    ],
    "financials": {
@@ -843,70 +881,23 @@
    }
   },
   {
-   "cnpj": "02302101000142",
-   "cvmCode": "16993",
-   "legalName": "EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.",
-   "tradingName": "EMAE",
-   "sector": "Utilities",
-   "status": "operational",
-   "marketCapitalisation": 3006503660,
-   "listings": [
-    {
-     "ticker": "EMAE4",
-     "price": 34.97,
-     "typicalTradedValue": 125892,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": -344895000,
-     "netIncome": -133356000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": 46948000,
-     "netIncome": 76729000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": 16240000,
-     "netIncome": 39430000
-    },
-    "cashAndEquivalents": 455068000,
-    "shortTermInvestments": 0,
-    "grossDebt": 0,
-    "shareholdersEquity": 671551000,
-    "totalAssets": 1881486000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "02328280000197",
    "cvmCode": "17485",
    "legalName": "ELEKTRO REDES S.A.",
    "tradingName": "ELEKTRO",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 7650749302,
+   "marketCapitalisation": 7191315588,
    "listings": [
     {
      "ticker": "EKTR4",
-     "price": 38.03,
-     "typicalTradedValue": 22818,
-     "observations": 1
+     "price": 36.55,
+     "typicalTradedValue": 18719,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -915,21 +906,21 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": 1073000000
+     "ebit": 1577000000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 1190000000
+     "ebit": 1688000000
     },
-    "cashAndEquivalents": 1442000000,
-    "shortTermInvestments": 24000000,
-    "grossDebt": 9537000000,
-    "shareholdersEquity": 2179000000,
-    "totalAssets": 15090000000,
+    "cashAndEquivalents": 2425000000,
+    "shortTermInvestments": 28000000,
+    "grossDebt": 10991000000,
+    "shareholdersEquity": 2320000000,
+    "totalAssets": 16518000000,
     "hasOperatingResultLine": true
    }
   },
@@ -940,13 +931,13 @@
    "tradingName": "TEGMA",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 2324306557,
+   "marketCapitalisation": 3416236196,
    "listings": [
     {
      "ticker": "TGMA3",
-     "price": 35.82,
-     "typicalTradedValue": 10459440,
-     "observations": 1
+     "price": 38.21,
+     "typicalTradedValue": 8913164,
+     "observations": 2
     }
    ],
    "financials": {
@@ -987,13 +978,13 @@
    "tradingName": "LWSA",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 2289865846,
+   "marketCapitalisation": 2935002147,
    "listings": [
     {
      "ticker": "LWSA3",
-     "price": 4,
-     "typicalTradedValue": 7772000,
-     "observations": 1
+     "price": 3.7,
+     "typicalTradedValue": 9235460,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1034,13 +1025,13 @@
    "tradingName": "PADTEC",
    "sector": "Electronic Technology",
    "status": "operational",
-   "marketCapitalisation": 138277152,
+   "marketCapitalisation": 154171082,
    "listings": [
     {
      "ticker": "PDTC3",
-     "price": 1.71,
-     "typicalTradedValue": 8379,
-     "observations": 1
+     "price": 1.73,
+     "typicalTradedValue": 27025.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1081,13 +1072,13 @@
    "tradingName": "RUMO S.A.",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 27014627717,
+   "marketCapitalisation": 34595075109,
    "listings": [
     {
      "ticker": "RAIL3",
-     "price": 14.7,
-     "typicalTradedValue": 102963210,
-     "observations": 1
+     "price": 15.21,
+     "typicalTradedValue": 138822748.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1128,13 +1119,13 @@
    "tradingName": "TIM",
    "sector": "Communications",
    "status": "operational",
-   "marketCapitalisation": 46885430795,
+   "marketCapitalisation": 45665452225,
    "listings": [
     {
      "ticker": "TIMS3",
-     "price": 19.64,
-     "typicalTradedValue": 98581016,
-     "observations": 1
+     "price": 17.88,
+     "typicalTradedValue": 83379622,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1175,13 +1166,13 @@
    "tradingName": "CPFL ENERGIA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 51540344000,
+   "marketCapitalisation": 57370753437,
    "listings": [
     {
      "ticker": "CPFE3",
-     "price": 44.72,
-     "typicalTradedValue": 95240184,
-     "observations": 1
+     "price": 43.06,
+     "typicalTradedValue": 94699743,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1222,13 +1213,13 @@
    "tradingName": "ENGIE BRASIL",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 43142978271,
+   "marketCapitalisation": 43610386750,
    "listings": [
     {
      "ticker": "EGIE3",
-     "price": 30.52,
-     "typicalTradedValue": 63408352,
-     "observations": 1
+     "price": 27.25,
+     "typicalTradedValue": 65381088.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1269,13 +1260,13 @@
    "tradingName": "TELEF BRASIL",
    "sector": "Communications",
    "status": "operational",
-   "marketCapitalisation": 98085911473,
+   "marketCapitalisation": 104258476406,
    "listings": [
     {
      "ticker": "VIVT3",
-     "price": 30.77,
-     "typicalTradedValue": 119719916,
-     "observations": 1
+     "price": 30.15,
+     "typicalTradedValue": 173870675.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1316,13 +1307,13 @@
    "tradingName": "JALLESMACHAD",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 737606765,
+   "marketCapitalisation": 919731858,
    "listings": [
     {
      "ticker": "JALL3",
-     "price": 2.38,
-     "typicalTradedValue": 1400630,
-     "observations": 1
+     "price": 2.46,
+     "typicalTradedValue": 2146303,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1363,13 +1354,13 @@
    "tradingName": "COGNA ON",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 4823300258,
+   "marketCapitalisation": 6389842259,
    "listings": [
     {
      "ticker": "COGN3",
-     "price": 2.39,
-     "typicalTradedValue": 67643453,
-     "observations": 1
+     "price": 1.99,
+     "typicalTradedValue": 77086814,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1410,13 +1401,13 @@
    "tradingName": "MOTIVA SA",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 33087566313.000004,
+   "marketCapitalisation": 40803962088,
    "listings": [
     {
      "ticker": "MOTV3",
-     "price": 16.36,
-     "typicalTradedValue": 130349936,
-     "observations": 1
+     "price": 13.34,
+     "typicalTradedValue": 185403052,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1457,13 +1448,13 @@
    "tradingName": "HYPERA",
    "sector": "Health Technology",
    "status": "operational",
-   "marketCapitalisation": 16552785328.999998,
+   "marketCapitalisation": 19169714706,
    "listings": [
     {
      "ticker": "HYPE3",
-     "price": 23.38,
-     "typicalTradedValue": 73291624,
-     "observations": 1
+     "price": 19.93,
+     "typicalTradedValue": 73978688,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1504,13 +1495,13 @@
    "tradingName": "PDG REALT",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3747734,
+   "marketCapitalisation": 7342627,
    "listings": [
     {
      "ticker": "PDGR3",
-     "price": 1.16,
-     "typicalTradedValue": 53939.99999999999,
-     "observations": 1
+     "price": 0.21,
+     "typicalTradedValue": 189730.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1551,19 +1542,19 @@
    "tradingName": "GER PARANAP",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 3355529202,
+   "marketCapitalisation": 3490883667,
    "listings": [
     {
-     "ticker": "GEPA3",
-     "price": 33.38,
-     "typicalTradedValue": 6676.000000000001,
-     "observations": 1
+     "ticker": "GEPA4",
+     "price": 34.02,
+     "typicalTradedValue": 13756.500000000002,
+     "observations": 2
     },
     {
-     "ticker": "GEPA4",
-     "price": 36.99,
-     "typicalTradedValue": 3699,
-     "observations": 1
+     "ticker": "GEPA3",
+     "price": 34.02,
+     "typicalTradedValue": 6740.000000000001,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1604,19 +1595,19 @@
    "tradingName": "ISA ENERGIA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 20525296916,
+   "marketCapitalisation": 22033191320,
    "listings": [
     {
      "ticker": "ISAE4",
-     "price": 27.39,
-     "typicalTradedValue": 70584030,
-     "observations": 1
+     "price": 25.79,
+     "typicalTradedValue": 73583717.5,
+     "observations": 2
     },
     {
      "ticker": "ISAE3",
-     "price": 33.25,
-     "typicalTradedValue": 53200,
-     "observations": 1
+     "price": 36.05,
+     "typicalTradedValue": 53637.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1657,13 +1648,13 @@
    "tradingName": "TRIUNFO PART",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 437894672,
+   "marketCapitalisation": 496418976,
    "listings": [
     {
      "ticker": "TPIS3",
-     "price": 10.7,
-     "typicalTradedValue": 182970,
-     "observations": 1
+     "price": 8.99,
+     "typicalTradedValue": 273083,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1704,13 +1695,13 @@
    "tradingName": "EQUATORIAL",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 48580809324,
+   "marketCapitalisation": 60150188687,
    "listings": [
     {
      "ticker": "EQTL3",
-     "price": 39.54,
-     "typicalTradedValue": 188499042,
-     "observations": 1
+     "price": 35,
+     "typicalTradedValue": 407266771,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1757,7 +1748,7 @@
      "ticker": "DTCY3",
      "price": 2,
      "typicalTradedValue": 200,
-     "observations": 1
+     "observations": 2
     }
    ],
    "financials": {
@@ -1795,13 +1786,13 @@
    "tradingName": "PETRORECSA",
    "sector": "Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 3336294819,
+   "marketCapitalisation": 3755899275,
    "listings": [
     {
      "ticker": "RECV3",
-     "price": 11.37,
-     "typicalTradedValue": 21175488,
-     "observations": 1
+     "price": 11.18,
+     "typicalTradedValue": 17979960,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1842,13 +1833,13 @@
    "tradingName": "LIGHT S/A",
    "sector": "Utilities",
    "status": "distressed",
-   "marketCapitalisation": 6040059814,
+   "marketCapitalisation": 5911205328,
    "listings": [
     {
      "ticker": "LIGT3",
-     "price": 3.7,
-     "typicalTradedValue": 7199460,
-     "observations": 1
+     "price": 2.75,
+     "typicalTradedValue": 9509755,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1889,19 +1880,19 @@
    "tradingName": "ENERGISA MT",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 8573479297,
+   "marketCapitalisation": 8260909007,
    "listings": [
     {
      "ticker": "ENMT3",
-     "price": 37.99,
-     "typicalTradedValue": 75980,
-     "observations": 1
+     "price": 37.79,
+     "typicalTradedValue": 66332.5,
+     "observations": 2
     },
     {
      "ticker": "ENMT4",
-     "price": 41.94,
-     "typicalTradedValue": 4194,
-     "observations": 1
+     "price": 37.7,
+     "typicalTradedValue": 20947,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1939,19 +1930,19 @@
    "tradingName": "BRADESPAR",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 8111959370,
+   "marketCapitalisation": 7297519305,
    "listings": [
     {
      "ticker": "BRAP4",
-     "price": 21.48,
-     "typicalTradedValue": 21576660,
-     "observations": 1
+     "price": 19.62,
+     "typicalTradedValue": 59910924,
+     "observations": 2
     },
     {
      "ticker": "BRAP3",
-     "price": 18.7,
-     "typicalTradedValue": 822800,
-     "observations": 1
+     "price": 17.64,
+     "typicalTradedValue": 1708822,
+     "observations": 2
     }
    ],
    "financials": {
@@ -1989,13 +1980,13 @@
    "tradingName": "MARFRIG",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 23747034044,
+   "marketCapitalisation": 25651213829,
    "listings": [
     {
      "ticker": "MBRF3",
-     "price": 17.35,
-     "typicalTradedValue": 63277185.00000001,
-     "observations": 1
+     "price": 16.52,
+     "typicalTradedValue": 66694858.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2036,13 +2027,13 @@
    "tradingName": "CONTAX",
    "sector": "Commercial Services",
    "status": "distressed",
-   "marketCapitalisation": 15941483,
+   "marketCapitalisation": 8171011,
    "listings": [
     {
      "ticker": "CTAX3",
-     "price": 1.51,
-     "typicalTradedValue": 7097,
-     "observations": 1
+     "price": 0.97,
+     "typicalTradedValue": 10920.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2083,13 +2074,13 @@
    "tradingName": "ECORODOVIAS",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 5453670917,
+   "marketCapitalisation": 9147419525,
    "listings": [
     {
      "ticker": "ECOR3",
-     "price": 8.09,
-     "typicalTradedValue": 49598981,
-     "observations": 1
+     "price": 5.07,
+     "typicalTradedValue": 65283694,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2130,13 +2121,13 @@
    "tradingName": "ENEVA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 51413741361,
+   "marketCapitalisation": 60078118872,
    "listings": [
     {
      "ticker": "ENEV3",
-     "price": 26.98,
-     "typicalTradedValue": 191048078,
-     "observations": 1
+     "price": 25.56,
+     "typicalTradedValue": 167973859,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2177,13 +2168,13 @@
    "tradingName": "BRISANET",
    "sector": "Communications",
    "status": "operational",
-   "marketCapitalisation": 1243941370,
+   "marketCapitalisation": 1524266240,
    "listings": [
     {
      "ticker": "BRST3",
-     "price": 2.84,
-     "typicalTradedValue": 692676,
-     "observations": 1
+     "price": 2.55,
+     "typicalTradedValue": 1881693,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2224,13 +2215,13 @@
    "tradingName": "BIOMM",
    "sector": "Health Technology",
    "status": "operational",
-   "marketCapitalisation": 893646645,
+   "marketCapitalisation": 807429633,
    "listings": [
     {
      "ticker": "BIOM3",
-     "price": 6.5,
-     "typicalTradedValue": 133900,
-     "observations": 1
+     "price": 5.54,
+     "typicalTradedValue": 214314,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2271,25 +2262,19 @@
    "tradingName": "EQTL PARA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 12275198163,
+   "marketCapitalisation": 11892703751,
    "listings": [
     {
      "ticker": "EQPA3",
-     "price": 5.51,
-     "typicalTradedValue": 54549,
-     "observations": 1
-    },
-    {
-     "ticker": "EQPA7",
-     "price": 8.01,
-     "typicalTradedValue": 4005,
-     "observations": 1
+     "price": 4.93,
+     "typicalTradedValue": 168272.5,
+     "observations": 2
     },
     {
      "ticker": "EQPA5",
-     "price": 9.78,
-     "typicalTradedValue": 977.9999999999999,
-     "observations": 1
+     "price": 7,
+     "typicalTradedValue": 5039,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2298,7 +2283,7 @@
      "start": "2025-01-01",
      "end": "2025-12-31",
      "kind": "annual",
-     "ebit": 20028209000
+     "ebit": 2335099000
     },
     "currentToDate": {
      "start": "2026-01-01",
@@ -2327,13 +2312,13 @@
    "tradingName": "AMAZONIA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3870266138,
+   "marketCapitalisation": 4327701768,
    "listings": [
     {
      "ticker": "BAZA3",
-     "price": 69.97,
-     "typicalTradedValue": 279880,
-     "observations": 1
+     "price": 66,
+     "typicalTradedValue": 502940,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2371,13 +2356,13 @@
    "tradingName": "SER EDUCA",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 1785367989,
+   "marketCapitalisation": 2350455672,
    "listings": [
     {
      "ticker": "SEER3",
-     "price": 14.04,
-     "typicalTradedValue": 9865908,
-     "observations": 1
+     "price": 11.33,
+     "typicalTradedValue": 11846520,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2418,13 +2403,13 @@
    "tradingName": "HAPVIDA",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 3343268014,
+   "marketCapitalisation": 4393014157,
    "listings": [
     {
      "ticker": "HAPV3",
-     "price": 6.63,
-     "typicalTradedValue": 55821948,
-     "observations": 1
+     "price": 5.14,
+     "typicalTradedValue": 54868989,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2465,13 +2450,13 @@
    "tradingName": "ALLOS",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 14320886413,
+   "marketCapitalisation": 17694652966,
    "listings": [
     {
      "ticker": "ALOS3",
-     "price": 28.53,
-     "typicalTradedValue": 81883953,
-     "observations": 1
+     "price": 27.16,
+     "typicalTradedValue": 171281458.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2512,13 +2497,13 @@
    "tradingName": "WDC NETWORKS",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 180865166,
+   "marketCapitalisation": 195461304,
    "listings": [
     {
      "ticker": "WDCN3",
-     "price": 3.17,
-     "typicalTradedValue": 93515,
-     "observations": 1
+     "price": 2.64,
+     "typicalTradedValue": 65369.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2559,13 +2544,13 @@
    "tradingName": "REDE D OR",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 81561077752,
+   "marketCapitalisation": 96266287886,
    "listings": [
     {
      "ticker": "RDOR3",
-     "price": 36.94,
-     "typicalTradedValue": 124794401.99999999,
-     "observations": 1
+     "price": 35.21,
+     "typicalTradedValue": 184482594.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2606,13 +2591,13 @@
    "tradingName": "ASSAI",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 13042808911,
+   "marketCapitalisation": 18690629628,
    "listings": [
     {
      "ticker": "ASAI3",
-     "price": 9.65,
-     "typicalTradedValue": 75264210,
-     "observations": 1
+     "price": 8.34,
+     "typicalTradedValue": 108712674,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2650,13 +2635,13 @@
    "tradingName": "EQTLMARANHAO",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 4741163525,
+   "marketCapitalisation": 5160592828,
    "listings": [
     {
      "ticker": "EQMA3B",
-     "price": 29.39,
-     "typicalTradedValue": 14695,
-     "observations": 1
+     "price": 30.17,
+     "typicalTradedValue": 48077,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2694,13 +2679,13 @@
    "tradingName": "PAGUE MENOS",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 2736561013,
+   "marketCapitalisation": 3910401584,
    "listings": [
     {
      "ticker": "PGMN3",
-     "price": 3.9,
-     "typicalTradedValue": 16135470,
-     "observations": 1
+     "price": 2.95,
+     "typicalTradedValue": 21933030,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2741,12 +2726,18 @@
    "tradingName": "COELCE",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 2517364136,
+   "marketCapitalisation": 3013853619,
    "listings": [
     {
      "ticker": "COCE5",
-     "price": 30.8,
-     "typicalTradedValue": 190960,
+     "price": 28.8,
+     "typicalTradedValue": 138680,
+     "observations": 2
+    },
+    {
+     "ticker": "COCE3",
+     "price": 34.1,
+     "typicalTradedValue": 57970,
      "observations": 1
     }
    ],
@@ -2785,13 +2776,13 @@
    "tradingName": "M.DIASBRANCO",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 5756990415,
+   "marketCapitalisation": 6452556907,
    "listings": [
     {
      "ticker": "MDIA3",
-     "price": 16.93,
-     "typicalTradedValue": 10676058,
-     "observations": 1
+     "price": 16.21,
+     "typicalTradedValue": 12947003,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2832,13 +2823,13 @@
    "tradingName": "NORD BRASIL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 10782947994,
+   "marketCapitalisation": 11252759028,
    "listings": [
     {
      "ticker": "BNBR3",
-     "price": 109.25,
-     "typicalTradedValue": 10925,
-     "observations": 1
+     "price": 94.61,
+     "typicalTradedValue": 76420,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2876,13 +2867,13 @@
    "tradingName": "SIMPAR",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 4286275144.9999995,
+   "marketCapitalisation": 9490223367,
    "listings": [
     {
      "ticker": "SIMH3",
-     "price": 7.5,
-     "typicalTradedValue": 15162750,
-     "observations": 1
+     "price": 6.72,
+     "typicalTradedValue": 25333599,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2923,13 +2914,13 @@
    "tradingName": "AMBEV S/A",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 245673394498,
+   "marketCapitalisation": 258212496834,
    "listings": [
     {
      "ticker": "ABEV3",
-     "price": 15.73,
-     "typicalTradedValue": 327163551,
-     "observations": 1
+     "price": 15.29,
+     "typicalTradedValue": 363699589,
+     "observations": 2
     }
    ],
    "financials": {
@@ -2970,13 +2961,13 @@
    "tradingName": "SMART FIT",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 10529659791,
+   "marketCapitalisation": 15353956727,
    "listings": [
     {
      "ticker": "SMFT3",
-     "price": 17.1,
-     "typicalTradedValue": 62695440.00000001,
-     "observations": 1
+     "price": 16.55,
+     "typicalTradedValue": 104293500,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3017,13 +3008,13 @@
    "tradingName": "BRASILAGRO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 1812763446,
+   "marketCapitalisation": 1897008721,
    "listings": [
     {
      "ticker": "AGRO3",
-     "price": 18.21,
-     "typicalTradedValue": 3560055,
-     "observations": 1
+     "price": 17.42,
+     "typicalTradedValue": 4448771.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3064,13 +3055,13 @@
    "tradingName": "EMBRAER",
    "sector": "Electronic Technology",
    "status": "operational",
-   "marketCapitalisation": 69761382828,
+   "marketCapitalisation": 63856385006,
    "listings": [
     {
      "ticker": "EMBJ3",
-     "price": 96.22,
-     "typicalTradedValue": 599287026,
-     "observations": 1
+     "price": 94.95,
+     "typicalTradedValue": 493730808,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3111,13 +3102,13 @@
    "tradingName": "MULTIPLAN",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 8996955744,
+   "marketCapitalisation": 11319334192,
    "listings": [
     {
      "ticker": "MULT3",
-     "price": 30.19,
-     "typicalTradedValue": 145651655,
-     "observations": 1
+     "price": 27.33,
+     "typicalTradedValue": 154415443,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3158,17 +3149,17 @@
    "tradingName": "FICA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 16955071,
+   "marketCapitalisation": 14411810,
    "listings": [
     {
      "ticker": "FIEI3",
-     "price": 7,
-     "typicalTradedValue": 5600,
-     "observations": 1
+     "price": 5.79,
+     "typicalTradedValue": 4247.5,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-03-31",
+    "balanceSheetAt": "2026-06-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -3178,23 +3169,23 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-03-31",
+     "end": "2026-06-30",
      "kind": "quarterly",
-     "ebit": -346000,
-     "netIncome": -1120000
+     "ebit": -2108000,
+     "netIncome": -3541000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-03-31",
+     "end": "2025-06-30",
      "kind": "quarterly",
-     "ebit": -1238000,
-     "netIncome": -1336000
+     "ebit": -2651000,
+     "netIncome": -3248000
     },
-    "cashAndEquivalents": 90000,
-    "shortTermInvestments": 3971000,
-    "grossDebt": 23640000,
-    "shareholdersEquity": 70025000,
-    "totalAssets": 109616000,
+    "cashAndEquivalents": 121000,
+    "shortTermInvestments": 223000,
+    "grossDebt": 20852000,
+    "shareholdersEquity": 67604000,
+    "totalAssets": 105805000,
     "hasOperatingResultLine": true
    }
   },
@@ -3205,19 +3196,19 @@
    "tradingName": "TAESA",
    "sector": "Industrial Services",
    "status": "operational",
-   "marketCapitalisation": 13955650439,
+   "marketCapitalisation": 15416325775,
    "listings": [
     {
      "ticker": "TAEE4",
-     "price": 13.72,
-     "typicalTradedValue": 1677956,
-     "observations": 1
+     "price": 13.92,
+     "typicalTradedValue": 5685922,
+     "observations": 2
     },
     {
      "ticker": "TAEE3",
-     "price": 13.42,
-     "typicalTradedValue": 712602,
-     "observations": 1
+     "price": 13.27,
+     "typicalTradedValue": 3051438,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3258,13 +3249,13 @@
    "tradingName": "MITRE REALTY",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 353287859,
+   "marketCapitalisation": 442138691,
    "listings": [
     {
      "ticker": "MTRE3",
-     "price": 3.34,
-     "typicalTradedValue": 889776,
-     "observations": 1
+     "price": 3.29,
+     "typicalTradedValue": 3206349.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3305,13 +3296,13 @@
    "tradingName": "TECNISA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 47116308,
+   "marketCapitalisation": 62576349,
    "listings": [
     {
      "ticker": "TCSA3",
-     "price": 0.64,
-     "typicalTradedValue": 28288,
-     "observations": 1
+     "price": 0.66,
+     "typicalTradedValue": 107501,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3352,13 +3343,13 @@
    "tradingName": "LOPES BRASIL",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 187753475,
+   "marketCapitalisation": 235783442,
    "listings": [
     {
      "ticker": "LPSB3",
-     "price": 1.32,
-     "typicalTradedValue": 61248,
-     "observations": 1
+     "price": 1.21,
+     "typicalTradedValue": 225010.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3399,13 +3390,13 @@
    "tradingName": "DESKTOP",
    "sector": "Communications",
    "status": "operational",
-   "marketCapitalisation": 2255180539,
+   "marketCapitalisation": 2236581129,
    "listings": [
     {
      "ticker": "DESK3",
-     "price": 19.45,
-     "typicalTradedValue": 5941975,
-     "observations": 1
+     "price": 18.93,
+     "typicalTradedValue": 6773078,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3446,13 +3437,13 @@
    "tradingName": "JHSF PART",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 8032050797,
+   "marketCapitalisation": 9430700680,
    "listings": [
     {
      "ticker": "JHSF3",
-     "price": 11.56,
-     "typicalTradedValue": 37731840,
-     "observations": 1
+     "price": 10.75,
+     "typicalTradedValue": 40684657.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3493,13 +3484,13 @@
    "tradingName": "EZTEC",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3545713204,
+   "marketCapitalisation": 5362684787,
    "listings": [
     {
      "ticker": "EZTC3",
-     "price": 13.1,
-     "typicalTradedValue": 13973770,
-     "observations": 1
+     "price": 12.32,
+     "typicalTradedValue": 39212309,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3540,13 +3531,13 @@
    "tradingName": "MRV",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 3123731092,
+   "marketCapitalisation": 4632126950,
    "listings": [
     {
      "ticker": "MRVE3",
-     "price": 5.69,
-     "typicalTradedValue": 43937042,
-     "observations": 1
+     "price": 4.8,
+     "typicalTradedValue": 49720681,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3587,19 +3578,19 @@
    "tradingName": "ALUPAR",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 11009537124,
+   "marketCapitalisation": 12749966945,
    "listings": [
     {
      "ticker": "ALUP4",
-     "price": 10.92,
-     "typicalTradedValue": 22932,
-     "observations": 1
+     "price": 10.25,
+     "typicalTradedValue": 317428.5,
+     "observations": 2
     },
     {
      "ticker": "ALUP3",
-     "price": 11.7,
-     "typicalTradedValue": 17550,
-     "observations": 1
+     "price": 10.85,
+     "typicalTradedValue": 155250,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3640,13 +3631,13 @@
    "tradingName": "RIACHUELO",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 3539544378,
+   "marketCapitalisation": 5798827963,
    "listings": [
     {
      "ticker": "RIAA3",
-     "price": 6.98,
-     "typicalTradedValue": 5000472,
-     "observations": 1
+     "price": 6.91,
+     "typicalTradedValue": 10913852,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3681,69 +3672,25 @@
    }
   },
   {
-   "cnpj": "08467115000100",
-   "cvmCode": "20648",
-   "legalName": "CIA ESTADUAL DE DISTRIBUIÇÃO DE ENERGIA ELETRICA",
-   "tradingName": "CEEE-D",
-   "sector": "Utilities",
-   "status": "operational",
-   "marketCapitalisation": 684189399,
-   "listings": [
-    {
-     "ticker": "CEED3",
-     "price": 10,
-     "typicalTradedValue": 1000,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": 360367000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": 597525000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": 301216000
-    },
-    "cashAndEquivalents": 1333566000,
-    "shortTermInvestments": 123468000,
-    "grossDebt": 9247271000,
-    "shareholdersEquity": -4251350000,
-    "totalAssets": 10997561000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "08534605000174",
    "cvmCode": "21636",
    "legalName": "RENOVA ENERGIA S.A.",
    "tradingName": "RENOVA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 341395073,
+   "marketCapitalisation": 380577734,
    "listings": [
     {
-     "ticker": "RNEW3",
-     "price": 0.9,
-     "typicalTradedValue": 61650,
-     "observations": 1
+     "ticker": "RNEW4",
+     "price": 0.87,
+     "typicalTradedValue": 34211.5,
+     "observations": 2
     },
     {
-     "ticker": "RNEW4",
-     "price": 0.92,
-     "typicalTradedValue": 27968,
-     "observations": 1
+     "ticker": "RNEW3",
+     "price": 0.88,
+     "typicalTradedValue": 49789,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3784,13 +3731,13 @@
    "tradingName": "NEXPE",
    "sector": "Finance",
    "status": "distressed",
-   "marketCapitalisation": 4749826,
+   "marketCapitalisation": 5390020,
    "listings": [
     {
      "ticker": "NEXP3",
-     "price": 2.3,
-     "typicalTradedValue": 229.99999999999997,
-     "observations": 1
+     "price": 2.61,
+     "typicalTradedValue": 1420,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3831,13 +3778,13 @@
    "tradingName": "GENERALSHOPP",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 5175933,
+   "marketCapitalisation": 7126284,
    "listings": [
     {
      "ticker": "GSHP3",
-     "price": 2.76,
-     "typicalTradedValue": 1380,
-     "observations": 1
+     "price": 3.75,
+     "typicalTradedValue": 1440,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3878,13 +3825,13 @@
    "tradingName": "CURY S/A",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 9487866074,
+   "marketCapitalisation": 10011547241,
    "listings": [
     {
      "ticker": "CURY3",
-     "price": 31.25,
-     "typicalTradedValue": 75478125,
-     "observations": 1
+     "price": 27.9,
+     "typicalTradedValue": 51038992.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3925,13 +3872,13 @@
    "tradingName": "SYN PROP TEC",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 549519968,
+   "marketCapitalisation": 599892658,
    "listings": [
     {
      "ticker": "SYNE3",
-     "price": 3.61,
-     "typicalTradedValue": 1270359,
-     "observations": 1
+     "price": 3.21,
+     "typicalTradedValue": 1783717.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -3972,13 +3919,13 @@
    "tradingName": "YDUQS PART",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 2579490645,
+   "marketCapitalisation": 3650811318,
    "listings": [
     {
      "ticker": "YDUQ3",
-     "price": 10.15,
-     "typicalTradedValue": 60801545,
-     "observations": 1
+     "price": 8.58,
+     "typicalTradedValue": 46071713.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4019,13 +3966,13 @@
    "tradingName": "TRISUL",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 1113105565,
+   "marketCapitalisation": 1570915100,
    "listings": [
     {
      "ticker": "TRIS3",
-     "price": 4.93,
-     "typicalTradedValue": 1214259,
-     "observations": 1
+     "price": 4.81,
+     "typicalTradedValue": 3158594,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4066,13 +4013,13 @@
    "tradingName": "CSNMINERACAO",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 33815601188,
+   "marketCapitalisation": 26955245370,
    "listings": [
     {
      "ticker": "CMIN3",
-     "price": 6.2,
-     "typicalTradedValue": 48846700,
-     "observations": 1
+     "price": 4.64,
+     "typicalTradedValue": 41163774,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4113,13 +4060,13 @@
    "tradingName": "LOG COM PROP",
    "sector": "Industrial Services",
    "status": "operational",
-   "marketCapitalisation": 2029836602,
+   "marketCapitalisation": 2663076335,
    "listings": [
     {
      "ticker": "LOGG3",
-     "price": 23.4,
-     "typicalTradedValue": 9612720,
-     "observations": 1
+     "price": 23.06,
+     "typicalTradedValue": 16952062,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4160,13 +4107,13 @@
    "tradingName": "BEMOBI TECH",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 2247720599,
+   "marketCapitalisation": 2828451298,
    "listings": [
     {
      "ticker": "BMOB3",
-     "price": 27.65,
-     "typicalTradedValue": 11983510,
-     "observations": 1
+     "price": 25.71,
+     "typicalTradedValue": 13411661,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4207,13 +4154,13 @@
    "tradingName": "OSX BRASIL",
    "sector": "Industrial Services",
    "status": "distressed",
-   "marketCapitalisation": 3305440,
+   "marketCapitalisation": 7051605,
    "listings": [
     {
      "ticker": "OSXB3",
-     "price": 1,
-     "typicalTradedValue": 2000,
-     "observations": 1
+     "price": 2.24,
+     "typicalTradedValue": 1448,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4254,13 +4201,13 @@
    "tradingName": "OCEANPACT",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 2239664317,
+   "marketCapitalisation": 4801377865,
    "listings": [
     {
      "ticker": "OPCT3",
-     "price": 11.24,
-     "typicalTradedValue": 6728264,
-     "observations": 1
+     "price": 7.89,
+     "typicalTradedValue": 8557724.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4301,13 +4248,13 @@
    "tradingName": "GPS",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 9630086862,
+   "marketCapitalisation": 12421307338,
    "listings": [
     {
      "ticker": "GGPS3",
-     "price": 12.83,
-     "typicalTradedValue": 22650082,
-     "observations": 1
+     "price": 11.64,
+     "typicalTradedValue": 55393499,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4348,13 +4295,13 @@
    "tradingName": "ANIMA",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 1155394093,
+   "marketCapitalisation": 2007995170,
    "listings": [
     {
      "ticker": "ANIM3",
-     "price": 2.93,
-     "typicalTradedValue": 16006883,
-     "observations": 1
+     "price": 2.76,
+     "typicalTradedValue": 16109699.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4395,13 +4342,13 @@
    "tradingName": "TECHNOS",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 572394842,
+   "marketCapitalisation": 567901069,
    "listings": [
     {
      "ticker": "TECN3",
-     "price": 9.93,
-     "typicalTradedValue": 519339,
-     "observations": 1
+     "price": 8.66,
+     "typicalTradedValue": 432869.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4442,24 +4389,24 @@
    "tradingName": "AZUL",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 6376051776,
+   "marketCapitalisation": 5550482465,
    "listings": [
     {
      "ticker": "AZUL3",
-     "price": 17,
-     "typicalTradedValue": 1113500,
-     "observations": 1
+     "price": 12.9,
+     "typicalTradedValue": 1865455,
+     "observations": 2
     },
     {
      "ticker": "AZUL97",
-     "price": 6.8,
-     "typicalTradedValue": 244.79999999999998,
-     "observations": 1
+     "price": 1.64,
+     "typicalTradedValue": 10938.199999999999,
+     "observations": 2
     },
     {
-     "ticker": "AZUL98",
-     "price": 7.51,
-     "typicalTradedValue": 97.63,
+     "ticker": "AZUL99",
+     "price": 1.92,
+     "typicalTradedValue": 681.6,
      "observations": 1
     }
    ],
@@ -4501,13 +4448,13 @@
    "tradingName": "B3",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 84392030337,
+   "marketCapitalisation": 114903361477,
    "listings": [
     {
      "ticker": "B3SA3",
-     "price": 17.42,
-     "typicalTradedValue": 500271044.00000006,
-     "observations": 1
+     "price": 14.7,
+     "typicalTradedValue": 793773127,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4548,17 +4495,17 @@
    "tradingName": "AFLUENTE T",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 472504372,
+   "marketCapitalisation": 491429793,
    "listings": [
     {
      "ticker": "AFLT3",
-     "price": 7.32,
-     "typicalTradedValue": 732,
-     "observations": 1
+     "price": 6.04,
+     "typicalTradedValue": 11540,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -4567,21 +4514,21 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": 26000000
+     "ebit": 49558000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 13905000
+     "ebit": 36321000
     },
-    "cashAndEquivalents": 54986000,
+    "cashAndEquivalents": 72288000,
     "shortTermInvestments": 0,
-    "grossDebt": 26371000,
-    "shareholdersEquity": 243660000,
-    "totalAssets": 369183000,
+    "grossDebt": 26712000,
+    "shareholdersEquity": 249788000,
+    "totalAssets": 392271000,
     "hasOperatingResultLine": true
    }
   },
@@ -4592,13 +4539,13 @@
    "tradingName": "PRIO",
    "sector": "Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 53263722752,
+   "marketCapitalisation": 61506226115,
    "listings": [
     {
      "ticker": "PRIO3",
-     "price": 65.68,
-     "typicalTradedValue": 548119304,
-     "observations": 1
+     "price": 70.3,
+     "typicalTradedValue": 496260377,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4639,13 +4586,13 @@
    "tradingName": "CVC BRASIL",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 846188060,
+   "marketCapitalisation": 825164712,
    "listings": [
     {
      "ticker": "CVCB3",
-     "price": 1.57,
-     "typicalTradedValue": 13887278,
-     "observations": 1
+     "price": 1.06,
+     "typicalTradedValue": 17101778,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4686,13 +4633,13 @@
    "tradingName": "BOA SAFRA",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 1060013099.9999999,
+   "marketCapitalisation": 1186306479,
    "listings": [
     {
      "ticker": "SOJA3",
-     "price": 7.66,
-     "typicalTradedValue": 5775640,
-     "observations": 1
+     "price": 6.8,
+     "typicalTradedValue": 5573480,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4733,13 +4680,13 @@
    "tradingName": "ORIZON",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 9612686768,
+   "marketCapitalisation": 11447336783,
    "listings": [
     {
      "ticker": "ORVR3",
-     "price": 17.08,
-     "typicalTradedValue": 48978607.99999999,
-     "observations": 1
+     "price": 15.54,
+     "typicalTradedValue": 53440324,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4780,13 +4727,13 @@
    "tradingName": "QUALICORP",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 416428802,
+   "marketCapitalisation": 619090825,
    "listings": [
     {
      "ticker": "QUAL3",
-     "price": 1.59,
-     "typicalTradedValue": 6940191,
-     "observations": 1
+     "price": 1.48,
+     "typicalTradedValue": 7057245.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4827,13 +4774,13 @@
    "tradingName": "MOURA DUBEUX",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 2567072774,
+   "marketCapitalisation": 3145729188,
    "listings": [
     {
      "ticker": "MDNE3",
-     "price": 25.35,
-     "typicalTradedValue": 26701155,
-     "observations": 1
+     "price": 19,
+     "typicalTradedValue": 27878927.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4874,13 +4821,13 @@
    "tradingName": "BRAVA",
    "sector": "Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 8245891747,
+   "marketCapitalisation": 10076247684,
    "listings": [
     {
      "ticker": "BRAV3",
-     "price": 17.91,
-     "typicalTradedValue": 48892509,
-     "observations": 1
+     "price": 19.87,
+     "typicalTradedValue": 49741758,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4921,19 +4868,19 @@
    "tradingName": "ONCOCLINICAS",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 1198796607,
+   "marketCapitalisation": 1263035154,
    "listings": [
     {
      "ticker": "ONCO3",
-     "price": 1.05,
-     "typicalTradedValue": 5266485,
-     "observations": 1
+     "price": 0.83,
+     "typicalTradedValue": 4213728.5,
+     "observations": 2
     },
     {
      "ticker": "ONCO11",
-     "price": 0.23,
-     "typicalTradedValue": 148718,
-     "observations": 1
+     "price": 0.14,
+     "typicalTradedValue": 81954,
+     "observations": 2
     }
    ],
    "financials": {
@@ -4974,13 +4921,13 @@
    "tradingName": "D1000VFARMA",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 309689401,
+   "marketCapitalisation": 352701838,
    "listings": [
     {
      "ticker": "DMVF3",
-     "price": 6.24,
-     "typicalTradedValue": 211536,
-     "observations": 1
+     "price": 5.2,
+     "typicalTradedValue": 126828,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5021,13 +4968,13 @@
    "tradingName": "MELNICK",
    "sector": "Industrial Services",
    "status": "operational",
-   "marketCapitalisation": 583409726,
+   "marketCapitalisation": 679642211,
    "listings": [
     {
      "ticker": "MELK3",
-     "price": 2.94,
-     "typicalTradedValue": 1290366,
-     "observations": 1
+     "price": 2.71,
+     "typicalTradedValue": 2037174.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5068,13 +5015,13 @@
    "tradingName": "VIVEO",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 246330480,
+   "marketCapitalisation": 281069399,
    "listings": [
     {
      "ticker": "VVEO3",
-     "price": 0.77,
-     "typicalTradedValue": 187803,
-     "observations": 1
+     "price": 0.75,
+     "typicalTradedValue": 2221426.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5115,13 +5062,13 @@
    "tradingName": "AERIS",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 136043227,
+   "marketCapitalisation": 136664429,
    "listings": [
     {
      "ticker": "AERI3",
-     "price": 2.2,
-     "typicalTradedValue": 40480,
-     "observations": 1
+     "price": 2.02,
+     "typicalTradedValue": 128916,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5158,17 +5105,17 @@
   {
    "cnpj": "12648266000124",
    "cvmCode": "24961",
-   "legalName": "AMBIPAR PARTICIPAÇÕES E EMPREENDIMENTOS S.A.",
+   "legalName": "AMBIPAR PARTICIPAÇÕES E EMPREENDIMENTOS S.A. - EM RECUPERAÇÃO JUDICIAL",
    "tradingName": "AMBIPAR",
    "sector": "Commercial Services",
-   "status": "operational",
-   "marketCapitalisation": 233858619,
+   "status": "distressed",
+   "marketCapitalisation": 250562815,
    "listings": [
     {
      "ticker": "AMBP3",
      "price": 0.15,
-     "typicalTradedValue": 544470,
-     "observations": 1
+     "typicalTradedValue": 329917.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5209,13 +5156,13 @@
    "tradingName": "HIDROVIAS",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 4462054785,
+   "marketCapitalisation": 5618380163,
    "listings": [
     {
      "ticker": "HBSA3",
-     "price": 3.27,
-     "typicalTradedValue": 5533167,
-     "observations": 1
+     "price": 3.29,
+     "typicalTradedValue": 5885997,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5256,19 +5203,19 @@
    "tradingName": "BANESE",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 974049421,
+   "marketCapitalisation": 1004055665,
    "listings": [
     {
-     "ticker": "BGIP3",
-     "price": 49.9,
-     "typicalTradedValue": 344310,
-     "observations": 1
+     "ticker": "BGIP4",
+     "price": 32.5,
+     "typicalTradedValue": 19590,
+     "observations": 2
     },
     {
-     "ticker": "BGIP4",
-     "price": 34.3,
-     "typicalTradedValue": 3429.9999999999995,
-     "observations": 1
+     "ticker": "BGIP3",
+     "price": 49.46,
+     "typicalTradedValue": 177101,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5306,13 +5253,13 @@
    "tradingName": "GRUPO SBF",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 2016003320,
+   "marketCapitalisation": 2620342977,
    "listings": [
     {
      "ticker": "SBFG3",
-     "price": 8.6,
-     "typicalTradedValue": 9322400,
-     "observations": 1
+     "price": 5.95,
+     "typicalTradedValue": 19134872.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5353,13 +5300,13 @@
    "tradingName": "MELIUZ",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 552629477,
+   "marketCapitalisation": 522647694,
    "listings": [
     {
      "ticker": "CASH3",
-     "price": 5.29,
-     "typicalTradedValue": 7093890,
-     "observations": 1
+     "price": 4.35,
+     "typicalTradedValue": 6898837.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5400,13 +5347,13 @@
    "tradingName": "ARANDU",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 67676065,
+   "marketCapitalisation": 97284346,
    "listings": [
     {
      "ticker": "ARND3",
-     "price": 0.5,
-     "typicalTradedValue": 200,
-     "observations": 1
+     "price": 0.69,
+     "typicalTradedValue": 73205.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5447,13 +5394,13 @@
    "tradingName": "WESTWING",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 32360630,
+   "marketCapitalisation": 49486183,
    "listings": [
     {
      "ticker": "WEST3",
-     "price": 3.14,
-     "typicalTradedValue": 186202,
-     "observations": 1
+     "price": 3.61,
+     "typicalTradedValue": 109346,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5491,13 +5438,13 @@
    "tradingName": "HBR REALTY",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 273450827,
+   "marketCapitalisation": 361161457,
    "listings": [
     {
      "ticker": "HBRE3",
-     "price": 2.7,
-     "typicalTradedValue": 779490,
-     "observations": 1
+     "price": 2.38,
+     "typicalTradedValue": 1389345,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5538,13 +5485,13 @@
    "tradingName": "SANSUY",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 35571891,
+   "marketCapitalisation": 38635720,
    "listings": [
     {
      "ticker": "SNSY5",
-     "price": 2.43,
-     "typicalTradedValue": 12636,
-     "observations": 1
+     "price": 2,
+     "typicalTradedValue": 14818,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5585,19 +5532,19 @@
    "tradingName": "CRISTAL",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 355183392,
+   "marketCapitalisation": 261277765,
    "listings": [
     {
      "ticker": "CRPG5",
-     "price": 8.82,
-     "typicalTradedValue": 84672,
-     "observations": 1
+     "price": 8.02,
+     "typicalTradedValue": 54366,
+     "observations": 2
     },
     {
      "ticker": "CRPG6",
-     "price": 9.99,
-     "typicalTradedValue": 999,
-     "observations": 1
+     "price": 8.99,
+     "typicalTradedValue": 1848,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5635,17 +5582,17 @@
    "tradingName": "COELBA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 8178797978,
+   "marketCapitalisation": 7978302434,
    "listings": [
     {
      "ticker": "CEEB3",
-     "price": 46.45,
-     "typicalTradedValue": 4645,
-     "observations": 1
+     "price": 44.5,
+     "typicalTradedValue": 4547.5,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -5654,21 +5601,21 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": 2287000000
+     "ebit": 3140000000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 2212000000
+     "ebit": 3099000000
     },
-    "cashAndEquivalents": 1524000000,
-    "shortTermInvestments": 250000000,
-    "grossDebt": 21294000000,
-    "shareholdersEquity": 8315000000,
-    "totalAssets": 37966000000,
+    "cashAndEquivalents": 4182000000,
+    "shortTermInvestments": 778000000,
+    "grossDebt": 24573000000,
+    "shareholdersEquity": 8367000000,
+    "totalAssets": 41680000000,
     "hasOperatingResultLine": true
    }
   },
@@ -5679,19 +5626,19 @@
    "tradingName": "FERBASA",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 2612632960,
+   "marketCapitalisation": 2764410825,
    "listings": [
     {
      "ticker": "FESA4",
-     "price": 5.76,
-     "typicalTradedValue": 4366656,
-     "observations": 1
+     "price": 5.55,
+     "typicalTradedValue": 5326015.5,
+     "observations": 2
     },
     {
      "ticker": "FESA3",
-     "price": 10.99,
-     "typicalTradedValue": 12089,
-     "observations": 1
+     "price": 7.6,
+     "typicalTradedValue": 55824.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5732,13 +5679,13 @@
    "tradingName": "SUZANO S.A.",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 59223178879,
+   "marketCapitalisation": 53914380655,
    "listings": [
     {
      "ticker": "SUZB3",
-     "price": 47.56,
-     "typicalTradedValue": 127869816,
-     "observations": 1
+     "price": 46.29,
+     "typicalTradedValue": 349736311.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5779,13 +5726,13 @@
    "tradingName": "AZZAS 2154",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 3253902188,
+   "marketCapitalisation": 5265667908,
    "listings": [
     {
      "ticker": "AZZA3",
-     "price": 15.3,
-     "typicalTradedValue": 40266540,
-     "observations": 1
+     "price": 16.33,
+     "typicalTradedValue": 45443137,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5826,13 +5773,13 @@
    "tradingName": "DIRECIONAL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 5267732373,
+   "marketCapitalisation": 6011351209,
    "listings": [
     {
      "ticker": "DIRR3",
-     "price": 10.27,
-     "typicalTradedValue": 128937796,
-     "observations": 1
+     "price": 8.74,
+     "typicalTradedValue": 94930420,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5873,19 +5820,19 @@
    "tradingName": "LOCALIZA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 38307130705,
+   "marketCapitalisation": 56422020590,
    "listings": [
     {
      "ticker": "RENT3",
-     "price": 35.68,
-     "typicalTradedValue": 204243024,
-     "observations": 1
+     "price": 31.97,
+     "typicalTradedValue": 417070770,
+     "observations": 2
     },
     {
      "ticker": "RENT4",
-     "price": 34.59,
-     "typicalTradedValue": 6381855.000000001,
-     "observations": 1
+     "price": 31.86,
+     "typicalTradedValue": 4997389.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5926,13 +5873,13 @@
    "tradingName": "MATER DEI",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 1664408424,
+   "marketCapitalisation": 2104692893.9999998,
    "listings": [
     {
      "ticker": "MATD3",
-     "price": 5.13,
-     "typicalTradedValue": 1246590,
-     "observations": 1
+     "price": 4.66,
+     "typicalTradedValue": 1015434,
+     "observations": 2
     }
    ],
    "financials": {
@@ -5973,13 +5920,13 @@
    "tradingName": "ALPHAVILLE",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 47893122,
+   "marketCapitalisation": 46721185,
    "listings": [
     {
      "ticker": "AVLL3",
-     "price": 6.02,
-     "typicalTradedValue": 4214,
-     "observations": 1
+     "price": 5,
+     "typicalTradedValue": 3107,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6020,13 +5967,13 @@
    "tradingName": "ENJOEI",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 155813671,
+   "marketCapitalisation": 180415832,
    "listings": [
     {
      "ticker": "ENJU3",
-     "price": 0.75,
-     "typicalTradedValue": 334650,
-     "observations": 1
+     "price": 6.73,
+     "typicalTradedValue": 492720.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6067,19 +6014,19 @@
    "tradingName": "CEMIG",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 37803237180,
+   "marketCapitalisation": 39224670157,
    "listings": [
     {
      "ticker": "CMIG4",
-     "price": 11.1,
-     "typicalTradedValue": 151660410,
-     "observations": 1
+     "price": 10.29,
+     "typicalTradedValue": 213522753,
+     "observations": 2
     },
     {
      "ticker": "CMIG3",
-     "price": 16.94,
-     "typicalTradedValue": 1394162,
-     "observations": 1
+     "price": 16.7,
+     "typicalTradedValue": 2573326,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6120,12 +6067,18 @@
    "tradingName": "ALFA HOLDING",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 604083842,
+   "marketCapitalisation": 642273952,
    "listings": [
     {
-     "ticker": "RPAD3",
-     "price": 7,
-     "typicalTradedValue": 700,
+     "ticker": "RPAD5",
+     "price": 8,
+     "typicalTradedValue": 112000,
+     "observations": 1
+    },
+    {
+     "ticker": "RPAD6",
+     "price": 7.5,
+     "typicalTradedValue": 1500,
      "observations": 1
     }
    ],
@@ -6164,19 +6117,19 @@
    "tradingName": "MERCANTIL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 6492502692,
+   "marketCapitalisation": 8588397687.999999,
    "listings": [
     {
      "ticker": "BMEB4",
-     "price": 59.49,
-     "typicalTradedValue": 2944755,
-     "observations": 1
+     "price": 63.02,
+     "typicalTradedValue": 1935574.5,
+     "observations": 2
     },
     {
      "ticker": "BMEB3",
-     "price": 49.52,
-     "typicalTradedValue": 673472,
-     "observations": 1
+     "price": 53.71,
+     "typicalTradedValue": 358220,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6217,12 +6170,18 @@
    "tradingName": "CEDRO",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 73815783,
+   "marketCapitalisation": 63646514,
    "listings": [
     {
      "ticker": "CEDO4",
-     "price": 5.39,
-     "typicalTradedValue": 12397,
+     "price": 5,
+     "typicalTradedValue": 7198.5,
+     "observations": 2
+    },
+    {
+     "ticker": "CEDO3",
+     "price": 7,
+     "typicalTradedValue": 700,
      "observations": 1
     }
    ],
@@ -6264,13 +6223,13 @@
    "tradingName": "COPASA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 21564026522,
+   "marketCapitalisation": 24487513600,
    "listings": [
     {
      "ticker": "CSMG3",
-     "price": 57.25,
-     "typicalTradedValue": 137027875,
-     "observations": 1
+     "price": 51.33,
+     "typicalTradedValue": 175406096,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6311,13 +6270,13 @@
    "tradingName": "IMC S/A",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 251460025,
+   "marketCapitalisation": 265747529.99999997,
    "listings": [
     {
      "ticker": "MEAL3",
-     "price": 0.88,
-     "typicalTradedValue": 204072,
-     "observations": 1
+     "price": 0.7,
+     "typicalTradedValue": 312141,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6358,13 +6317,13 @@
    "tradingName": "BBSEGURIDADE",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 77077702895,
+   "marketCapitalisation": 84655621002,
    "listings": [
     {
      "ticker": "BBSE3",
-     "price": 40.16,
-     "typicalTradedValue": 219510543.99999997,
-     "observations": 1
+     "price": 41.41,
+     "typicalTradedValue": 245257074,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6405,13 +6364,13 @@
    "tradingName": "DOTZ SA",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 140946522,
+   "marketCapitalisation": 173185709,
    "listings": [
     {
      "ticker": "DOTZ3",
-     "price": 10.84,
-     "typicalTradedValue": 634140,
-     "observations": 1
+     "price": 9.3,
+     "typicalTradedValue": 510975,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6452,13 +6411,13 @@
    "tradingName": "PRINER",
    "sector": "Industrial Services",
    "status": "operational",
-   "marketCapitalisation": 1013361677,
+   "marketCapitalisation": 1403287153,
    "listings": [
     {
      "ticker": "PRNR3",
-     "price": 17.89,
-     "typicalTradedValue": 7107697,
-     "observations": 1
+     "price": 14.21,
+     "typicalTradedValue": 7161767.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6499,13 +6458,13 @@
    "tradingName": "ALLIED",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 485565388,
+   "marketCapitalisation": 710115407,
    "listings": [
     {
      "ticker": "ALLD3",
-     "price": 5.05,
-     "typicalTradedValue": 1317545,
-     "observations": 1
+     "price": 5.16,
+     "typicalTradedValue": 6071612.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6546,13 +6505,13 @@
    "tradingName": "OUROFINO S/A",
    "sector": "Health Technology",
    "status": "operational",
-   "marketCapitalisation": 1440438580,
+   "marketCapitalisation": 1698854279,
    "listings": [
     {
      "ticker": "OFSA3",
-     "price": 25.68,
-     "typicalTradedValue": 53928,
-     "observations": 1
+     "price": 26.99,
+     "typicalTradedValue": 45857,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6593,13 +6552,13 @@
    "tradingName": "VITRUEDUCA",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 2188876265,
+   "marketCapitalisation": 3101156991,
    "listings": [
     {
      "ticker": "VTRU3",
-     "price": 14.81,
-     "typicalTradedValue": 10328494,
-     "observations": 1
+     "price": 13.06,
+     "typicalTradedValue": 9459681,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6640,13 +6599,13 @@
    "tradingName": "AGROGALAXY",
    "sector": "Distribution Services",
    "status": "distressed",
-   "marketCapitalisation": 15677458,
+   "marketCapitalisation": 11562125,
    "listings": [
     {
      "ticker": "AGXY3",
-     "price": 0.65,
-     "typicalTradedValue": 210015,
-     "observations": 1
+     "price": 0.59,
+     "typicalTradedValue": 108252.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6687,13 +6646,13 @@
    "tradingName": "MOVIDA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3316188600,
+   "marketCapitalisation": 7936398357,
    "listings": [
     {
      "ticker": "MOVI3",
-     "price": 7.84,
-     "typicalTradedValue": 39568480,
-     "observations": 1
+     "price": 8.29,
+     "typicalTradedValue": 38869063.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6734,13 +6693,13 @@
    "tradingName": "COMPASS",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 16997724418.000002,
+   "marketCapitalisation": 19483107087,
    "listings": [
     {
      "ticker": "PASS3",
-     "price": 23.86,
-     "typicalTradedValue": 20078190,
-     "observations": 1
+     "price": 20.78,
+     "typicalTradedValue": 22043701,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6781,13 +6740,13 @@
    "tradingName": "FER HERINGER",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 163187571,
+   "marketCapitalisation": 149723249,
    "listings": [
     {
      "ticker": "FHER3",
-     "price": 3,
-     "typicalTradedValue": 2100,
-     "observations": 1
+     "price": 2.68,
+     "typicalTradedValue": 15120,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6825,13 +6784,13 @@
    "tradingName": "CAIXA SEGURI",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 60179998398,
+   "marketCapitalisation": 64229999542,
    "listings": [
     {
      "ticker": "CXSE3",
-     "price": 20.17,
-     "typicalTradedValue": 115108173.00000001,
-     "observations": 1
+     "price": 20.57,
+     "typicalTradedValue": 127033375.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6872,13 +6831,13 @@
    "tradingName": "VAMOS",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3903213219,
+   "marketCapitalisation": 7722097552,
    "listings": [
     {
      "ticker": "VAMO3",
-     "price": 3.31,
-     "typicalTradedValue": 26872566,
-     "observations": 1
+     "price": 2.87,
+     "typicalTradedValue": 58460843,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6919,13 +6878,13 @@
    "tradingName": "ATOM EDUC",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 28089783,
+   "marketCapitalisation": 23566850,
    "listings": [
     {
      "ticker": "ATED3",
-     "price": 1.17,
-     "typicalTradedValue": 117,
-     "observations": 1
+     "price": 0.95,
+     "typicalTradedValue": 818.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -6966,13 +6925,13 @@
    "tradingName": "PLANOEPLANO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 1368165486,
+   "marketCapitalisation": 1724989567,
    "listings": [
     {
      "ticker": "PLPL3",
-     "price": 6.71,
-     "typicalTradedValue": 15804063,
-     "observations": 1
+     "price": 5.58,
+     "typicalTradedValue": 15067588.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7013,13 +6972,13 @@
    "tradingName": "GRUPO MATEUS",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 11242019092,
+   "marketCapitalisation": 12209570068,
    "listings": [
     {
      "ticker": "GMAT3",
-     "price": 4.85,
-     "typicalTradedValue": 12449465,
-     "observations": 1
+     "price": 3.66,
+     "typicalTradedValue": 27028538.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7060,13 +7019,13 @@
    "tradingName": "ECONOMATICA",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 48792565,
+   "marketCapitalisation": 56662336,
    "listings": [
     {
      "ticker": "ECOM3",
-     "price": 1.43,
-     "typicalTradedValue": 146718,
-     "observations": 1
+     "price": 1.1,
+     "typicalTradedValue": 77869,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7107,13 +7066,13 @@
    "tradingName": "LAVVI",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 2075296691,
+   "marketCapitalisation": 3080972593,
    "listings": [
     {
      "ticker": "LAVV3",
-     "price": 10.98,
-     "typicalTradedValue": 4605012,
-     "observations": 1
+     "price": 10.05,
+     "typicalTradedValue": 9200323.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7154,13 +7113,13 @@
    "tradingName": "ESPACOLASER",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 255164660,
+   "marketCapitalisation": 281187111,
    "listings": [
     {
      "ticker": "ESPA3",
-     "price": 7.03,
-     "typicalTradedValue": 400710,
-     "observations": 1
+     "price": 5.64,
+     "typicalTradedValue": 509709,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7201,13 +7160,13 @@
    "tradingName": "MILLS",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3625749742,
+   "marketCapitalisation": 3731309552,
    "listings": [
     {
      "ticker": "MILS3",
-     "price": 15.8,
-     "typicalTradedValue": 4662580,
-     "observations": 1
+     "price": 15.84,
+     "typicalTradedValue": 7238522,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7248,19 +7207,19 @@
    "tradingName": "BANESTES",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3082993036,
+   "marketCapitalisation": 3538374700,
    "listings": [
     {
      "ticker": "BEES3",
-     "price": 8.83,
-     "typicalTradedValue": 80353,
-     "observations": 1
+     "price": 9.6,
+     "typicalTradedValue": 90096.5,
+     "observations": 2
     },
     {
      "ticker": "BEES4",
-     "price": 9.13,
-     "typicalTradedValue": 19173,
-     "observations": 1
+     "price": 9.99,
+     "typicalTradedValue": 27069,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7301,19 +7260,19 @@
    "tradingName": "ABC BRASIL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 6505142427,
+   "marketCapitalisation": 7655275399,
    "listings": [
     {
      "ticker": "ABCB4",
-     "price": 24.69,
-     "typicalTradedValue": 10125369,
-     "observations": 1
+     "price": 24.53,
+     "typicalTradedValue": 15540674,
+     "observations": 2
     },
     {
      "ticker": "ABCB10",
-     "price": 25.2,
-     "typicalTradedValue": 25200,
-     "observations": 1
+     "price": 28.36,
+     "typicalTradedValue": 33870,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7351,13 +7310,13 @@
    "tradingName": "AUREN",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 12110858656,
+   "marketCapitalisation": 16007761268,
    "listings": [
     {
      "ticker": "AURE3",
-     "price": 11.58,
-     "typicalTradedValue": 23491188,
-     "observations": 1
+     "price": 10.31,
+     "typicalTradedValue": 45311861,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7398,13 +7357,13 @@
    "tradingName": "SAO CARLOS",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 716142140,
+   "marketCapitalisation": 761961685,
    "listings": [
     {
      "ticker": "SCAR3",
-     "price": 12.73,
-     "typicalTradedValue": 103113,
-     "observations": 1
+     "price": 11.29,
+     "typicalTradedValue": 247437.99999999997,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7445,19 +7404,19 @@
    "tradingName": "BTGP BANCO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 235268482176,
+   "marketCapitalisation": 310501492184,
    "listings": [
     {
-     "ticker": "BPAC3",
-     "price": 23.55,
-     "typicalTradedValue": 134235,
-     "observations": 1
+     "ticker": "BPAC5",
+     "price": 18.6,
+     "typicalTradedValue": 882727.0000000001,
+     "observations": 2
     },
     {
-     "ticker": "BPAC5",
-     "price": 20.17,
-     "typicalTradedValue": 4034.0000000000005,
-     "observations": 1
+     "ticker": "BPAC3",
+     "price": 23.35,
+     "typicalTradedValue": 970762.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7495,19 +7454,19 @@
    "tradingName": "HAGA S/A",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 23998333,
+   "marketCapitalisation": 26775000,
    "listings": [
     {
      "ticker": "HAGA4",
-     "price": 1.75,
-     "typicalTradedValue": 14700,
-     "observations": 1
+     "price": 1.97,
+     "typicalTradedValue": 22223.5,
+     "observations": 2
     },
     {
      "ticker": "HAGA3",
-     "price": 2.57,
-     "typicalTradedValue": 514,
-     "observations": 1
+     "price": 2.67,
+     "typicalTradedValue": 3861.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7548,13 +7507,13 @@
    "tradingName": "GRUPO TOKY",
    "sector": "Technology Services",
    "status": "distressed",
-   "marketCapitalisation": 28670080,
+   "marketCapitalisation": 26068636,
    "listings": [
     {
      "ticker": "TOKY3",
-     "price": 10.1,
-     "typicalTradedValue": 23230,
-     "observations": 1
+     "price": 9,
+     "typicalTradedValue": 18365,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7595,19 +7554,19 @@
    "tradingName": "PETROBRAS",
    "sector": "Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 663642668672,
+   "marketCapitalisation": 797196315489,
    "listings": [
     {
      "ticker": "PETR4",
-     "price": 50.43,
-     "typicalTradedValue": 2348000628,
-     "observations": 1
+     "price": 51.86,
+     "typicalTradedValue": 2434480951,
+     "observations": 2
     },
     {
      "ticker": "PETR3",
-     "price": 56.23,
-     "typicalTradedValue": 535337715,
-     "observations": 1
+     "price": 59.12,
+     "typicalTradedValue": 751926689.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7648,13 +7607,13 @@
    "tradingName": "JOAO FORTES",
    "sector": "Consumer Durables",
    "status": "distressed",
-   "marketCapitalisation": 5249125,
+   "marketCapitalisation": 7681647,
    "listings": [
     {
      "ticker": "JFEN3",
-     "price": 0.41,
-     "typicalTradedValue": 4715,
-     "observations": 1
+     "price": 2.53,
+     "typicalTradedValue": 8176.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7691,17 +7650,17 @@
   {
    "cnpj": "33041260065290",
    "cvmCode": "6505",
-   "legalName": "GRUPO CASAS BAHIA S.A.",
+   "legalName": "GRUPO CASAS BAHIA S.A. - EM RECUPERAÇÃO JUDICIAL",
    "tradingName": "CASAS BAHIA",
    "sector": "Retail Trade",
-   "status": "operational",
-   "marketCapitalisation": 761162810,
+   "status": "distressed",
+   "marketCapitalisation": 1405223757,
    "listings": [
     {
      "ticker": "BHIA3",
-     "price": 0.77,
-     "typicalTradedValue": 5084926,
-     "observations": 1
+     "price": 0.88,
+     "typicalTradedValue": 7755275,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7742,13 +7701,13 @@
    "tradingName": "SID NACIONAL",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 8373646121,
+   "marketCapitalisation": 8004414827,
    "listings": [
     {
      "ticker": "CSNA3",
-     "price": 6.21,
-     "typicalTradedValue": 132423282,
-     "observations": 1
+     "price": 4.98,
+     "typicalTradedValue": 90063600,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7789,13 +7748,13 @@
    "tradingName": "AMPLA ENERG",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 3992903084,
+   "marketCapitalisation": 3689243011,
    "listings": [
     {
      "ticker": "CBEE3",
-     "price": 8.81,
-     "typicalTradedValue": 1762,
-     "observations": 1
+     "price": 8.01,
+     "typicalTradedValue": 4886,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7833,13 +7792,13 @@
    "tradingName": "VALID",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 1324184413,
+   "marketCapitalisation": 1496253510,
    "listings": [
     {
      "ticker": "VLID3",
-     "price": 17.7,
-     "typicalTradedValue": 2621370,
-     "observations": 1
+     "price": 15.78,
+     "typicalTradedValue": 6525186,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7880,13 +7839,13 @@
    "tradingName": "HOTEIS OTHON",
    "sector": "Consumer Services",
    "status": "distressed",
-   "marketCapitalisation": 69260553,
+   "marketCapitalisation": 67050089,
    "listings": [
     {
      "ticker": "HOOT4",
-     "price": 8.5,
-     "typicalTradedValue": 1700,
-     "observations": 1
+     "price": 7.99,
+     "typicalTradedValue": 2048.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -7927,12 +7886,18 @@
    "tradingName": "WLM IND COM",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 647354344,
+   "marketCapitalisation": 609133043,
    "listings": [
     {
      "ticker": "WLMM4",
-     "price": 16.16,
-     "typicalTradedValue": 6464,
+     "price": 14.7,
+     "typicalTradedValue": 65707,
+     "observations": 2
+    },
+    {
+     "ticker": "WLMM3",
+     "price": 16.21,
+     "typicalTradedValue": 3242,
      "observations": 1
     }
    ],
@@ -7974,13 +7939,13 @@
    "tradingName": "ULTRAPAR",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 41865898340,
+   "marketCapitalisation": 42062298514,
    "listings": [
     {
      "ticker": "UGPA3",
-     "price": 38.43,
-     "typicalTradedValue": 245460096,
-     "observations": 1
+     "price": 34.97,
+     "typicalTradedValue": 340028382.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8021,13 +7986,13 @@
    "tradingName": "IRBBRASIL RE",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 5016493095,
+   "marketCapitalisation": 5481448036,
    "listings": [
     {
      "ticker": "IRBR3",
-     "price": 60.97,
-     "typicalTradedValue": 30674007,
-     "observations": 1
+     "price": 58.59,
+     "typicalTradedValue": 41474002.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8068,19 +8033,19 @@
    "tradingName": "SONDOTECNICA",
    "sector": "Industrial Services",
    "status": "operational",
-   "marketCapitalisation": 163653477,
+   "marketCapitalisation": 161342397,
    "listings": [
     {
      "ticker": "SOND6",
-     "price": 77,
-     "typicalTradedValue": 15400,
-     "observations": 1
+     "price": 90,
+     "typicalTradedValue": 21200,
+     "observations": 2
     },
     {
      "ticker": "SOND5",
-     "price": 83.75,
-     "typicalTradedValue": 8375,
-     "observations": 1
+     "price": 82,
+     "typicalTradedValue": 8287.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8121,13 +8086,13 @@
    "tradingName": "RAIZEN",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 2795177669,
+   "marketCapitalisation": 4451579148,
    "listings": [
     {
      "ticker": "RAIZ4",
-     "price": 0.27,
-     "typicalTradedValue": 1750626,
-     "observations": 1
+     "price": 0.33,
+     "typicalTradedValue": 4887997.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8168,13 +8133,13 @@
    "tradingName": "VALE",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 314670938279,
+   "marketCapitalisation": 246704557435,
    "listings": [
     {
      "ticker": "VALE3",
-     "price": 74.6,
-     "typicalTradedValue": 1350304760,
-     "observations": 1
+     "price": 65.55,
+     "typicalTradedValue": 1685740007.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8215,19 +8180,19 @@
    "tradingName": "GERDAU",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 46401503793,
+   "marketCapitalisation": 46598688565,
    "listings": [
     {
      "ticker": "GGBR4",
-     "price": 25.85,
-     "typicalTradedValue": 253456665,
-     "observations": 1
+     "price": 25.39,
+     "typicalTradedValue": 246736706.5,
+     "observations": 2
     },
     {
      "ticker": "GGBR3",
-     "price": 22.22,
-     "typicalTradedValue": 748814,
-     "observations": 1
+     "price": 21.5,
+     "typicalTradedValue": 1154857,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8268,13 +8233,13 @@
    "tradingName": "VIVARA S.A.",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 5290830281,
+   "marketCapitalisation": 6384426275,
    "listings": [
     {
      "ticker": "VIVA3",
-     "price": 22.44,
-     "typicalTradedValue": 30188532,
-     "observations": 1
+     "price": 19.46,
+     "typicalTradedValue": 44802875,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8309,75 +8274,31 @@
    }
   },
   {
-   "cnpj": "33938119000169",
-   "cvmCode": "16616",
-   "legalName": "CIA. DISTRIB. DE GÁS DO RIO DE JANEIRO",
-   "tradingName": "CEG",
-   "sector": "Utilities",
-   "status": "operational",
-   "marketCapitalisation": 14103608734,
-   "listings": [
-    {
-     "ticker": "CEGR3",
-     "price": 57,
-     "typicalTradedValue": 17100,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": 1043875000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": 526708000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": 386830000
-    },
-    "cashAndEquivalents": 77998000,
-    "shortTermInvestments": 306697000,
-    "grossDebt": 497914000,
-    "shareholdersEquity": 2347190000,
-    "totalAssets": 4746101000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "33958695000178",
    "cvmCode": "11592",
    "legalName": "UNIPAR CARBOCLORO S.A.",
    "tradingName": "UNIPAR",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 6378927430,
+   "marketCapitalisation": 6590001581,
    "listings": [
     {
      "ticker": "UNIP6",
-     "price": 57.48,
-     "typicalTradedValue": 10783248,
-     "observations": 1
+     "price": 54.58,
+     "typicalTradedValue": 17557506,
+     "observations": 2
     },
     {
      "ticker": "UNIP3",
-     "price": 55.4,
-     "typicalTradedValue": 60940,
-     "observations": 1
+     "price": 53.56,
+     "typicalTradedValue": 169726,
+     "observations": 2
     },
     {
      "ticker": "UNIP5",
-     "price": 59,
-     "typicalTradedValue": 17700,
-     "observations": 1
+     "price": 60,
+     "typicalTradedValue": 11850,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8418,13 +8339,13 @@
    "tradingName": "MERC INVEST",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 94446472,
+   "marketCapitalisation": 94794442,
    "listings": [
     {
      "ticker": "BMIN4",
-     "price": 20,
-     "typicalTradedValue": 2000,
-     "observations": 1
+     "price": 19.76,
+     "typicalTradedValue": 1988,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8462,13 +8383,13 @@
    "tradingName": "VIBRA",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 43297208322,
+   "marketCapitalisation": 41138089059,
    "listings": [
     {
      "ticker": "VBBR3",
-     "price": 38.76,
-     "typicalTradedValue": 376313088,
-     "observations": 1
+     "price": 31.48,
+     "typicalTradedValue": 287348450,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8509,13 +8430,13 @@
    "tradingName": "AUTOMOB",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 456527016,
+   "marketCapitalisation": 663384898,
    "listings": [
     {
      "ticker": "AMOB3",
-     "price": 12.25,
-     "typicalTradedValue": 213150,
-     "observations": 1
+     "price": 10.6,
+     "typicalTradedValue": 869775,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8556,13 +8477,13 @@
    "tradingName": "INFRACOMM",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 45196347,
+   "marketCapitalisation": 38582247,
    "listings": [
     {
      "ticker": "IFCM3",
-     "price": 1.62,
-     "typicalTradedValue": 84402,
-     "observations": 1
+     "price": 1.3,
+     "typicalTradedValue": 78796,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8603,13 +8524,13 @@
    "tradingName": "TERRASANTAPA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 928590120,
+   "marketCapitalisation": 1020005805,
    "listings": [
     {
      "ticker": "LAND3",
-     "price": 9.76,
-     "typicalTradedValue": 191296,
-     "observations": 1
+     "price": 9.5,
+     "typicalTradedValue": 270923,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8650,25 +8571,25 @@
    "tradingName": "BRASKEM",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 3721080463,
+   "marketCapitalisation": 3313405548,
    "listings": [
     {
      "ticker": "BRKM5",
-     "price": 5.34,
-     "typicalTradedValue": 26604414,
-     "observations": 1
+     "price": 3.38,
+     "typicalTradedValue": 21334946,
+     "observations": 2
     },
     {
      "ticker": "BRKM3",
-     "price": 4.35,
-     "typicalTradedValue": 163560,
-     "observations": 1
+     "price": 3.56,
+     "typicalTradedValue": 200862,
+     "observations": 2
     },
     {
      "ticker": "BRKM6",
-     "price": 7,
-     "typicalTradedValue": 700,
-     "observations": 1
+     "price": 2.98,
+     "typicalTradedValue": 797,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8709,13 +8630,13 @@
    "tradingName": "LOG-IN",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 2970455811,
+   "marketCapitalisation": 3303571147,
    "listings": [
     {
      "ticker": "LOGN3",
-     "price": 27.75,
-     "typicalTradedValue": 385725,
-     "observations": 1
+     "price": 25,
+     "typicalTradedValue": 266612.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8756,13 +8677,13 @@
    "tradingName": "WIZ CO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 1258470335,
+   "marketCapitalisation": 1130544551,
    "listings": [
     {
      "ticker": "WIZC3",
-     "price": 7.97,
-     "typicalTradedValue": 2140742,
-     "observations": 1
+     "price": 6.21,
+     "typicalTradedValue": 4564738,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8803,13 +8724,13 @@
    "tradingName": "EMBPAR S/A",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 19913162,
+   "marketCapitalisation": 17238258,
    "listings": [
     {
      "ticker": "EPAR3",
-     "price": 1.32,
-     "typicalTradedValue": 1188,
-     "observations": 1
+     "price": 1.13,
+     "typicalTradedValue": 6413.499999999999,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8850,13 +8771,13 @@
    "tradingName": "ALLIAR",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 525326889.00000006,
+   "marketCapitalisation": 420261504,
    "listings": [
     {
      "ticker": "AALR3",
-     "price": 3.39,
-     "typicalTradedValue": 185094,
-     "observations": 1
+     "price": 2.57,
+     "typicalTradedValue": 323461.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8897,13 +8818,13 @@
    "tradingName": "EVEN",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 787723492,
+   "marketCapitalisation": 1171978864,
    "listings": [
     {
      "ticker": "EVEN3",
-     "price": 4.12,
-     "typicalTradedValue": 2973404,
-     "observations": 1
+     "price": 4.17,
+     "typicalTradedValue": 8188517.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8944,13 +8865,13 @@
    "tradingName": "SABESP",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 94598491368,
+   "marketCapitalisation": 112714593645,
    "listings": [
     {
      "ticker": "SBSP3",
-     "price": 26.93,
-     "typicalTradedValue": 365394319,
-     "observations": 1
+     "price": 25.86,
+     "typicalTradedValue": 523225518.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -8991,13 +8912,13 @@
    "tradingName": "CEA MODAS",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 2882091393,
+   "marketCapitalisation": 4266111624,
    "listings": [
     {
      "ticker": "CEAB3",
-     "price": 9.26,
-     "typicalTradedValue": 52492162,
-     "observations": 1
+     "price": 7.37,
+     "typicalTradedValue": 58167025,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9038,13 +8959,13 @@
    "tradingName": "VITTIA",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 497984354,
+   "marketCapitalisation": 557868527,
    "listings": [
     {
      "ticker": "VITT3",
-     "price": 3.15,
-     "typicalTradedValue": 312795,
-     "observations": 1
+     "price": 3.01,
+     "typicalTradedValue": 441143.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9085,13 +9006,13 @@
    "tradingName": "PROFARMA",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 960042329,
+   "marketCapitalisation": 1175837314,
    "listings": [
     {
      "ticker": "PFRM3",
-     "price": 7.61,
-     "typicalTradedValue": 314293,
-     "observations": 1
+     "price": 6.95,
+     "typicalTradedValue": 1029024,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9132,13 +9053,13 @@
    "tradingName": "BIOMA EDUC",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 155781592,
+   "marketCapitalisation": 150315577,
    "listings": [
     {
      "ticker": "BIED3",
-     "price": 5.98,
-     "typicalTradedValue": 11362,
-     "observations": 1
+     "price": 5.5,
+     "typicalTradedValue": 20806,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9178,14 +9099,14 @@
    "legalName": "COMPANHIA BRASILEIRA DE DISTRIBUIÇÃO",
    "tradingName": "P.ACUCAR-CBD",
    "sector": "Retail Trade",
-   "status": "operational",
-   "marketCapitalisation": 1514282602,
+   "status": "distressed",
+   "marketCapitalisation": 1489700115,
    "listings": [
     {
      "ticker": "PCAR3",
-     "price": 3.17,
-     "typicalTradedValue": 14802315,
-     "observations": 1
+     "price": 2.23,
+     "typicalTradedValue": 10602545.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9226,13 +9147,13 @@
    "tradingName": "MAGAZ LUIZA",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 3926074319,
+   "marketCapitalisation": 8944682213,
    "listings": [
     {
      "ticker": "MGLU3",
-     "price": 5.57,
-     "typicalTradedValue": 107122240,
-     "observations": 1
+     "price": 5.74,
+     "typicalTradedValue": 149595912,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9273,13 +9194,13 @@
    "tradingName": "HELBOR",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 281311427,
+   "marketCapitalisation": 362254831,
    "listings": [
     {
      "ticker": "HBOR3",
-     "price": 2.22,
-     "typicalTradedValue": 1509378.0000000002,
-     "observations": 1
+     "price": 1.73,
+     "typicalTradedValue": 1573584.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9320,13 +9241,13 @@
    "tradingName": "VESTE",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 291976298,
+   "marketCapitalisation": 439681953,
    "listings": [
     {
      "ticker": "VSTE3",
-     "price": 2.48,
-     "typicalTradedValue": 73408,
-     "observations": 1
+     "price": 2.75,
+     "typicalTradedValue": 317891.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9367,13 +9288,13 @@
    "tradingName": "BOMBRIL",
    "sector": "Consumer Non-Durables",
    "status": "distressed",
-   "marketCapitalisation": 354888747,
+   "marketCapitalisation": 352430845,
    "listings": [
     {
      "ticker": "BOBR4",
-     "price": 1.42,
-     "typicalTradedValue": 86620,
-     "observations": 1
+     "price": 1.5,
+     "typicalTradedValue": 45935,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9414,13 +9335,13 @@
    "tradingName": "COSAN",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 14290821862,
+   "marketCapitalisation": 20585115847,
    "listings": [
     {
      "ticker": "CSAN3",
-     "price": 3.54,
-     "typicalTradedValue": 106192212,
-     "observations": 1
+     "price": 2.87,
+     "typicalTradedValue": 106334749.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9461,13 +9382,13 @@
    "tradingName": "VULCABRAS",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 4174561440.0000005,
+   "marketCapitalisation": 5013243110,
    "listings": [
     {
      "ticker": "VULC3",
-     "price": 13.43,
-     "typicalTradedValue": 37589227,
-     "observations": 1
+     "price": 12.53,
+     "typicalTradedValue": 33998515.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9508,13 +9429,13 @@
    "tradingName": "NUTRIPLANT",
    "sector": "Process Industries",
    "status": "distressed",
-   "marketCapitalisation": 30064539,
+   "marketCapitalisation": 45825245,
    "listings": [
     {
      "ticker": "NUTR3",
-     "price": 2.27,
-     "typicalTradedValue": 18160,
-     "observations": 1
+     "price": 3,
+     "typicalTradedValue": 12380,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9555,13 +9476,13 @@
    "tradingName": "SAO MARTINHO",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 6411534817,
+   "marketCapitalisation": 6837021508,
    "listings": [
     {
      "ticker": "SMTO3",
-     "price": 20,
-     "typicalTradedValue": 22952000,
-     "observations": 1
+     "price": 19.04,
+     "typicalTradedValue": 22242168,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9602,13 +9523,13 @@
    "tradingName": "PLASCAR PART",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 38518794,
+   "marketCapitalisation": 58399462,
    "listings": [
     {
      "ticker": "PLAS3",
-     "price": 3.11,
-     "typicalTradedValue": 4354,
-     "observations": 1
+     "price": 4.7,
+     "typicalTradedValue": 4527,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9649,13 +9570,13 @@
    "tradingName": "AZT ENERGIA",
    "sector": "Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 64418542,
+   "marketCapitalisation": 48814051,
    "listings": [
     {
      "ticker": "AZTE3",
-     "price": 1.46,
-     "typicalTradedValue": 3013586,
-     "observations": 1
+     "price": 1.06,
+     "typicalTradedValue": 1765274,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9696,13 +9617,13 @@
    "tradingName": "B100 S.A.",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 839609485,
+   "marketCapitalisation": 972179403,
    "listings": [
     {
      "ticker": "B1003",
-     "price": 28.5,
-     "typicalTradedValue": 57000,
-     "observations": 1
+     "price": 33,
+     "typicalTradedValue": 31800,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9743,13 +9664,13 @@
    "tradingName": "JSL",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 1725450720,
+   "marketCapitalisation": 3530625160,
    "listings": [
     {
      "ticker": "JSLG3",
-     "price": 6,
-     "typicalTradedValue": 5578800,
-     "observations": 1
+     "price": 6.19,
+     "typicalTradedValue": 6319247.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9790,13 +9711,13 @@
    "tradingName": "RDVC CITY",
    "sector": "Consumer Durables",
    "status": "pre-operational",
-   "marketCapitalisation": 1005189.0000000001,
+   "marketCapitalisation": 721281,
    "listings": [
     {
      "ticker": "CCTY3",
-     "price": 6.55,
-     "typicalTradedValue": 2620,
-     "observations": 1
+     "price": 4.7,
+     "typicalTradedValue": 1545,
+     "observations": 2
     }
    ]
   },
@@ -9807,13 +9728,13 @@
    "tradingName": "REVEE",
    "sector": "Miscellaneous",
    "status": "pre-operational",
-   "marketCapitalisation": 6916382,
+   "marketCapitalisation": 7018094,
    "listings": [
     {
      "ticker": "RVEE3",
-     "price": 0.74,
-     "typicalTradedValue": 74,
-     "observations": 1
+     "price": 0.61,
+     "typicalTradedValue": 98,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9854,13 +9775,13 @@
    "tradingName": "TOTVS",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 20288496670,
+   "marketCapitalisation": 25292657415,
    "listings": [
     {
      "ticker": "TOTS3",
-     "price": 33.83,
-     "typicalTradedValue": 121534275,
-     "observations": 1
+     "price": 36.81,
+     "typicalTradedValue": 107039148,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9901,13 +9822,13 @@
    "tradingName": "PETZCOBASI",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 3430742866,
+   "marketCapitalisation": 4483743372,
    "listings": [
     {
      "ticker": "AUAU3",
-     "price": 3.97,
-     "typicalTradedValue": 8583934,
-     "observations": 1
+     "price": 3.95,
+     "typicalTradedValue": 14709302,
+     "observations": 2
     }
    ],
    "financials": {
@@ -9948,19 +9869,19 @@
    "tradingName": "EUCATEX",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 1943981527,
+   "marketCapitalisation": 2390160037,
    "listings": [
     {
      "ticker": "EUCA4",
-     "price": 20.46,
-     "typicalTradedValue": 1865952,
-     "observations": 1
+     "price": 20.09,
+     "typicalTradedValue": 1320713,
+     "observations": 2
     },
     {
      "ticker": "EUCA3",
-     "price": 21,
-     "typicalTradedValue": 2100,
-     "observations": 1
+     "price": 26.95,
+     "typicalTradedValue": 21262.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10001,17 +9922,17 @@
    "tradingName": "ROMI",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 554365965,
+   "marketCapitalisation": 710892860,
    "listings": [
     {
      "ticker": "ROMI3",
-     "price": 5.95,
-     "typicalTradedValue": 253470,
-     "observations": 1
+     "price": 6.39,
+     "typicalTradedValue": 1235719.5,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -10021,23 +9942,23 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": -3233000,
-     "netIncome": 16290000
+     "ebit": 6271000,
+     "netIncome": 58988000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 12629000,
-     "netIncome": 26462000
+     "ebit": 32917000,
+     "netIncome": 53818000
     },
-    "cashAndEquivalents": 340523000,
-    "shortTermInvestments": 27762000,
-    "grossDebt": 949534000,
-    "shareholdersEquity": 1250909000,
-    "totalAssets": 2672855000,
+    "cashAndEquivalents": 348583000,
+    "shortTermInvestments": 21078000,
+    "grossDebt": 897069000,
+    "shareholdersEquity": 1267545000,
+    "totalAssets": 2783968000,
     "hasOperatingResultLine": true
    }
   },
@@ -10048,13 +9969,13 @@
    "tradingName": "BIC MONARK",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 171436199,
+   "marketCapitalisation": 177343411,
    "listings": [
     {
      "ticker": "BMKS3",
-     "price": 373.01,
-     "typicalTradedValue": 3357.09,
-     "observations": 1
+     "price": 365,
+     "typicalTradedValue": 7153.545,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10092,17 +10013,17 @@
    "tradingName": "BRADSAUDE",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 43910487295,
+   "marketCapitalisation": 48383389420,
    "listings": [
     {
      "ticker": "SAUD3",
-     "price": 14.44,
-     "typicalTradedValue": 100792644,
-     "observations": 1
+     "price": 14.17,
+     "typicalTradedValue": 70059322.5,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -10112,23 +10033,23 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": 751558000,
-     "netIncome": 788587000
+     "ebit": 2203749000,
+     "netIncome": 1969613000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 432195000,
-     "netIncome": 317366000
+     "ebit": 621844000,
+     "netIncome": 459742000
     },
-    "cashAndEquivalents": 61236000,
-    "shortTermInvestments": 13130428000,
+    "cashAndEquivalents": 91249000,
+    "shortTermInvestments": 14235088000,
     "grossDebt": 0,
-    "shareholdersEquity": 18707911000,
-    "totalAssets": 41711977000,
+    "shareholdersEquity": 19658769000,
+    "totalAssets": 43299328000,
     "hasOperatingResultLine": true
    }
   },
@@ -10139,13 +10060,13 @@
    "tradingName": "BLAU",
    "sector": "Health Technology",
    "status": "operational",
-   "marketCapitalisation": 2437066690,
+   "marketCapitalisation": 2875505517,
    "listings": [
     {
      "ticker": "BLAU3",
-     "price": 10.37,
-     "typicalTradedValue": 2008668.9999999998,
-     "observations": 1
+     "price": 9.47,
+     "typicalTradedValue": 2330608,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10186,19 +10107,19 @@
    "tradingName": "WHIRLPOOL",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 5282650071,
+   "marketCapitalisation": 5636162083,
    "listings": [
     {
      "ticker": "WHRL4",
-     "price": 3.63,
-     "typicalTradedValue": 19239,
-     "observations": 1
+     "price": 3.42,
+     "typicalTradedValue": 56302.5,
+     "observations": 2
     },
     {
      "ticker": "WHRL3",
-     "price": 3.47,
-     "typicalTradedValue": 10757,
-     "observations": 1
+     "price": 3.68,
+     "typicalTradedValue": 26538.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10239,13 +10160,13 @@
    "tradingName": "TRACK FIELD",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 1943656484,
+   "marketCapitalisation": 2200507548,
    "listings": [
     {
      "ticker": "TFCO4",
-     "price": 13.1,
-     "typicalTradedValue": 6006350,
-     "observations": 1
+     "price": 10.88,
+     "typicalTradedValue": 10970599,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10286,13 +10207,13 @@
    "tradingName": "ORANJEBTC",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 1114608094,
+   "marketCapitalisation": 974770840,
    "listings": [
     {
      "ticker": "OBTC3",
-     "price": 6.87,
-     "typicalTradedValue": 29723055,
-     "observations": 1
+     "price": 6.93,
+     "typicalTradedValue": 18362910,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10333,13 +10254,13 @@
    "tradingName": "MULTILASER",
    "sector": "Electronic Technology",
    "status": "operational",
-   "marketCapitalisation": 1503397596,
+   "marketCapitalisation": 2072250674.9999998,
    "listings": [
     {
      "ticker": "MLAS3",
-     "price": 1.81,
-     "typicalTradedValue": 2840071,
-     "observations": 1
+     "price": 1.85,
+     "typicalTradedValue": 3030923,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10380,13 +10301,13 @@
    "tradingName": "PARANAPANEMA",
    "sector": "Non-Energy Minerals",
    "status": "distressed",
-   "marketCapitalisation": 190211964,
+   "marketCapitalisation": 152845329,
    "listings": [
     {
      "ticker": "PMAM3",
-     "price": 0.39,
-     "typicalTradedValue": 8297523,
-     "observations": 1
+     "price": 0.35,
+     "typicalTradedValue": 5191324,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10427,13 +10348,13 @@
    "tradingName": "METAL LEVE",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 4428058930,
+   "marketCapitalisation": 5115242143,
    "listings": [
     {
      "ticker": "LEVE3",
      "price": 32.43,
-     "typicalTradedValue": 9174447,
-     "observations": 1
+     "typicalTradedValue": 10959718.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10474,13 +10395,13 @@
    "tradingName": "ESTAPAR",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 947400836,
+   "marketCapitalisation": 1252235786,
    "listings": [
     {
      "ticker": "ALPK3",
-     "price": 4.25,
-     "typicalTradedValue": 945200,
-     "observations": 1
+     "price": 3.89,
+     "typicalTradedValue": 967408,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10521,19 +10442,19 @@
    "tradingName": "IGUATEMI S.A",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 7540491887,
+   "marketCapitalisation": 9166955683,
    "listings": [
     {
      "ticker": "IGTI3",
-     "price": 3.17,
-     "typicalTradedValue": 67838,
-     "observations": 1
+     "price": 3.32,
+     "typicalTradedValue": 160577,
+     "observations": 2
     },
     {
      "ticker": "IGTI4",
-     "price": 11.6,
-     "typicalTradedValue": 5800,
-     "observations": 1
+     "price": 13.99,
+     "typicalTradedValue": 10594.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10578,9 +10499,9 @@
    "listings": [
     {
      "ticker": "MSPA4",
-     "price": 34,
-     "typicalTradedValue": 3400,
-     "observations": 1
+     "price": 33,
+     "typicalTradedValue": 3350,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10621,23 +10542,23 @@
    "tradingName": "BRADESCO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 192645267921,
+   "marketCapitalisation": 214567131120,
    "listings": [
     {
      "ticker": "BBDC4",
-     "price": 18.2,
-     "typicalTradedValue": 437606260,
-     "observations": 1
+     "price": 15.31,
+     "typicalTradedValue": 956446585,
+     "observations": 2
     },
     {
      "ticker": "BBDC3",
-     "price": 16.09,
-     "typicalTradedValue": 80979361,
-     "observations": 1
+     "price": 14.19,
+     "typicalTradedValue": 258942602,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -10647,23 +10568,23 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": 15167326000,
-     "netIncome": 12476353000
+     "ebit": 22769388000,
+     "netIncome": 19912100000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 10392322000,
-     "netIncome": 11814927000
+     "ebit": 15272666000,
+     "netIncome": 17382943000
     },
-    "cashAndEquivalents": 15372519000,
-    "shortTermInvestments": 208934280000,
-    "grossDebt": 782508073000,
-    "shareholdersEquity": 461840839000,
-    "totalAssets": 2468826550000,
+    "cashAndEquivalents": 13705396000,
+    "shortTermInvestments": 256111830000,
+    "grossDebt": 764328170000,
+    "shareholdersEquity": 473452271000,
+    "totalAssets": 2503930379000,
     "hasOperatingResultLine": false
    }
   },
@@ -10674,13 +10595,13 @@
    "tradingName": "FLEURY",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 11689018346,
+   "marketCapitalisation": 15223035371,
    "listings": [
     {
      "ticker": "FLRY3",
-     "price": 21.28,
-     "typicalTradedValue": 70996464,
-     "observations": 1
+     "price": 22.68,
+     "typicalTradedValue": 100123758,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10721,19 +10642,19 @@
    "tradingName": "BARDELLA",
    "sector": "Producer Manufacturing",
    "status": "distressed",
-   "marketCapitalisation": 6119737,
+   "marketCapitalisation": 6292370,
    "listings": [
     {
      "ticker": "BDLL4",
-     "price": 3.25,
-     "typicalTradedValue": 650,
-     "observations": 1
+     "price": 3.28,
+     "typicalTradedValue": 8361,
+     "observations": 2
     },
     {
      "ticker": "BDLL3",
-     "price": 5.4,
-     "typicalTradedValue": 540,
-     "observations": 1
+     "price": 5,
+     "typicalTradedValue": 2270,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10774,19 +10695,19 @@
    "tradingName": "ITAUUNIBANCO",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 487870193443,
+   "marketCapitalisation": 558728825640,
    "listings": [
     {
      "ticker": "ITUB4",
-     "price": 42.67,
-     "typicalTradedValue": 720948053,
-     "observations": 1
+     "price": 41.01,
+     "typicalTradedValue": 1579531135,
+     "observations": 2
     },
     {
      "ticker": "ITUB3",
-     "price": 46.7,
-     "typicalTradedValue": 70993340,
-     "observations": 1
+     "price": 46.33,
+     "typicalTradedValue": 77019932.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10824,13 +10745,13 @@
    "tradingName": "NORDON MET",
    "sector": "Producer Manufacturing",
    "status": "distressed",
-   "marketCapitalisation": 9336295,
+   "marketCapitalisation": 8276857,
    "listings": [
     {
      "ticker": "NORD3",
-     "price": 1.25,
-     "typicalTradedValue": 13000,
-     "observations": 1
+     "price": 1.18,
+     "typicalTradedValue": 7385,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10868,25 +10789,25 @@
    "tradingName": "USIMINAS",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 8377150173,
+   "marketCapitalisation": 8027628519,
    "listings": [
     {
      "ticker": "USIM5",
-     "price": 7.26,
-     "typicalTradedValue": 77979660,
-     "observations": 1
+     "price": 5.98,
+     "typicalTradedValue": 69200491,
+     "observations": 2
     },
     {
      "ticker": "USIM3",
-     "price": 6.8,
-     "typicalTradedValue": 3128680,
-     "observations": 1
+     "price": 5.82,
+     "typicalTradedValue": 4847984,
+     "observations": 2
     },
     {
      "ticker": "USIM6",
-     "price": 6.5,
-     "typicalTradedValue": 650,
-     "observations": 1
+     "price": 6.6,
+     "typicalTradedValue": 1975,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10921,19 +10842,66 @@
    }
   },
   {
+   "cnpj": "61022042000118",
+   "cvmCode": "4723",
+   "legalName": "CONSTRUTORA ADOLPHO LINDENBERG S.A.",
+   "tradingName": "CONST A LIND",
+   "sector": "Industrial Services",
+   "status": "operational",
+   "marketCapitalisation": 220147187,
+   "listings": [
+    {
+     "ticker": "CALI3",
+     "price": 31.5,
+     "typicalTradedValue": 3150,
+     "observations": 1
+    }
+   ],
+   "financials": {
+    "balanceSheetAt": "2026-06-30",
+    "annual": {
+     "start": "2025-01-01",
+     "end": "2025-12-31",
+     "kind": "annual",
+     "ebit": 56424000,
+     "netIncome": 45872000
+    },
+    "currentToDate": {
+     "start": "2026-01-01",
+     "end": "2026-06-30",
+     "kind": "quarterly",
+     "ebit": 32366000,
+     "netIncome": 23617000
+    },
+    "priorToDate": {
+     "start": "2025-01-01",
+     "end": "2025-06-30",
+     "kind": "quarterly",
+     "ebit": 16678000,
+     "netIncome": 13184000
+    },
+    "cashAndEquivalents": 170502000,
+    "shortTermInvestments": 0,
+    "grossDebt": 300587000,
+    "shareholdersEquity": 409635000,
+    "totalAssets": 1049380000,
+    "hasOperatingResultLine": true
+   }
+  },
+  {
    "cnpj": "61065298000102",
    "cvmCode": "8397",
    "legalName": "MANGELS INDUSTRIAL S.A.",
    "tradingName": "MANGELS INDL",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 172592392,
+   "marketCapitalisation": 182662669,
    "listings": [
     {
      "ticker": "MGEL4",
-     "price": 6.2,
-     "typicalTradedValue": 47740,
-     "observations": 1
+     "price": 5.32,
+     "typicalTradedValue": 45682,
+     "observations": 2
     }
    ],
    "financials": {
@@ -10974,19 +10942,19 @@
    "tradingName": "ALPARGATAS",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 7716446389,
+   "marketCapitalisation": 10232979675,
    "listings": [
     {
      "ticker": "ALPA4",
-     "price": 12.99,
-     "typicalTradedValue": 8674722,
-     "observations": 1
+     "price": 13.3,
+     "typicalTradedValue": 16802786,
+     "observations": 2
     },
     {
      "ticker": "ALPA3",
-     "price": 9.77,
-     "typicalTradedValue": 35172,
-     "observations": 1
+     "price": 11.27,
+     "typicalTradedValue": 58721.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11027,13 +10995,13 @@
    "tradingName": "ESTRELA",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 15493375,
+   "marketCapitalisation": 12691094,
    "listings": [
     {
      "ticker": "ESTR4",
-     "price": 1.51,
-     "typicalTradedValue": 151,
-     "observations": 1
+     "price": 2.35,
+     "typicalTradedValue": 1133,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11074,13 +11042,13 @@
    "tradingName": "CAMBUCI",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 356801639,
+   "marketCapitalisation": 363988406,
    "listings": [
     {
      "ticker": "CAMB3",
-     "price": 8.35,
-     "typicalTradedValue": 300600,
-     "observations": 1
+     "price": 7.66,
+     "typicalTradedValue": 269030,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11121,13 +11089,13 @@
    "tradingName": "ETERNIT",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 228537106,
+   "marketCapitalisation": 216183746,
    "listings": [
     {
      "ticker": "ETER3",
-     "price": 3.7,
-     "typicalTradedValue": 109150,
-     "observations": 1
+     "price": 3.01,
+     "typicalTradedValue": 193336,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11168,13 +11136,13 @@
    "tradingName": "IOCHP-MAXION",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 1505413308,
+   "marketCapitalisation": 1797963271,
    "listings": [
     {
      "ticker": "MYPK3",
-     "price": 9.59,
-     "typicalTradedValue": 8881299,
-     "observations": 1
+     "price": 9.01,
+     "typicalTradedValue": 9539408.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11215,13 +11183,13 @@
    "tradingName": "BANCO BMG",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 1421546213,
+   "marketCapitalisation": 1685748088,
    "listings": [
     {
      "ticker": "BMGB4",
-     "price": 6.16,
-     "typicalTradedValue": 8483552,
-     "observations": 1
+     "price": 6.18,
+     "typicalTradedValue": 7156882,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11259,13 +11227,13 @@
    "tradingName": "LOJAS MARISA",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 446747498,
+   "marketCapitalisation": 410802301,
    "listings": [
     {
      "ticker": "AMAR3",
-     "price": 0.85,
-     "typicalTradedValue": 46070,
-     "observations": 1
+     "price": 0.7,
+     "typicalTradedValue": 225545,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11306,19 +11274,19 @@
    "tradingName": "AZEVEDO",
    "sector": "Industrial Services",
    "status": "operational",
-   "marketCapitalisation": 414593222,
+   "marketCapitalisation": 538763762,
    "listings": [
     {
-     "ticker": "AZEV3",
-     "price": 7.93,
-     "typicalTradedValue": 9225762,
-     "observations": 1
+     "ticker": "AZEV4",
+     "price": 0.92,
+     "typicalTradedValue": 1702929.5,
+     "observations": 2
     },
     {
-     "ticker": "AZEV4",
-     "price": 1.33,
-     "typicalTradedValue": 1527771,
-     "observations": 1
+     "ticker": "AZEV3",
+     "price": 10.2,
+     "typicalTradedValue": 4944381,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11359,19 +11327,19 @@
    "tradingName": "BAUMER",
    "sector": "Health Technology",
    "status": "operational",
-   "marketCapitalisation": 199558397,
+   "marketCapitalisation": 187349729,
    "listings": [
     {
      "ticker": "BALM4",
-     "price": 14.9,
-     "typicalTradedValue": 2980,
-     "observations": 1
+     "price": 16.3,
+     "typicalTradedValue": 8825,
+     "observations": 2
     },
     {
      "ticker": "BALM3",
-     "price": 25.9,
-     "typicalTradedValue": 2590,
-     "observations": 1
+     "price": 22,
+     "typicalTradedValue": 2395,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11412,13 +11380,13 @@
    "tradingName": "CBA",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 7272482029,
+   "marketCapitalisation": 7318056919,
    "listings": [
     {
      "ticker": "CBAV3",
-     "price": 11.2,
-     "typicalTradedValue": 19481280,
-     "observations": 1
+     "price": 11.06,
+     "typicalTradedValue": 30571597,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11459,13 +11427,13 @@
    "tradingName": "DASA",
    "sector": "Health Services",
    "status": "operational",
-   "marketCapitalisation": 3536496001,
+   "marketCapitalisation": 6885545689,
    "listings": [
     {
      "ticker": "DASA3",
-     "price": 2.76,
-     "typicalTradedValue": 1339152,
-     "observations": 1
+     "price": 3.3,
+     "typicalTradedValue": 3149526,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11506,19 +11474,19 @@
    "tradingName": "ITAUSA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 158089400673,
+   "marketCapitalisation": 174173415252,
    "listings": [
     {
      "ticker": "ITSA4",
-     "price": 14.16,
-     "typicalTradedValue": 237320184,
-     "observations": 1
+     "price": 13.09,
+     "typicalTradedValue": 416036094,
+     "observations": 2
     },
     {
      "ticker": "ITSA3",
-     "price": 14.01,
-     "typicalTradedValue": 2412522,
-     "observations": 1
+     "price": 13.61,
+     "typicalTradedValue": 6260334.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11559,13 +11527,13 @@
    "tradingName": "REDE ENERGIA",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 13996714525,
+   "marketCapitalisation": 13893986439,
    "listings": [
     {
      "ticker": "REDE3",
-     "price": 5.37,
-     "typicalTradedValue": 22554,
-     "observations": 1
+     "price": 5.47,
+     "typicalTradedValue": 13465,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11606,13 +11574,13 @@
    "tradingName": "RAIADROGASIL",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 34148047876.999996,
+   "marketCapitalisation": 35441269291,
    "listings": [
     {
      "ticker": "RADL3",
-     "price": 19.45,
-     "typicalTradedValue": 166204140,
-     "observations": 1
+     "price": 15.26,
+     "typicalTradedValue": 188907280,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11653,19 +11621,19 @@
    "tradingName": "COMGAS",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 16527838532.000002,
+   "marketCapitalisation": 16432053740,
    "listings": [
     {
      "ticker": "CGAS5",
-     "price": 120.73,
-     "typicalTradedValue": 36219,
-     "observations": 1
+     "price": 116.8,
+     "typicalTradedValue": 134909.5,
+     "observations": 2
     },
     {
      "ticker": "CGAS3",
-     "price": 125.69,
-     "typicalTradedValue": 25138,
-     "observations": 1
+     "price": 123.86,
+     "typicalTradedValue": 24955,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11697,69 +11665,25 @@
    }
   },
   {
-   "cnpj": "62002886000160",
-   "cvmCode": "9415",
-   "legalName": "SÃO PAULO TURISMO S.A.",
-   "tradingName": "SPTURIS",
-   "sector": "Commercial Services",
-   "status": "operational",
-   "marketCapitalisation": 200671076,
-   "listings": [
-    {
-     "ticker": "AHEB3",
-     "price": 23.01,
-     "typicalTradedValue": 4602,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": 31118000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": 27642000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": -2170000
-    },
-    "cashAndEquivalents": 98860000,
-    "shortTermInvestments": 0,
-    "grossDebt": 1968000,
-    "shareholdersEquity": 302080000,
-    "totalAssets": 566355000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "62144175000120",
    "cvmCode": "20567",
    "legalName": "BANCO PINE S/A",
    "tradingName": "PINE",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 2913397764,
+   "marketCapitalisation": 3905935402,
    "listings": [
     {
      "ticker": "PINE4",
-     "price": 11.98,
-     "typicalTradedValue": 8564502,
-     "observations": 1
+     "price": 12.03,
+     "typicalTradedValue": 10610632.5,
+     "observations": 2
     },
     {
      "ticker": "PINE3",
-     "price": 11.15,
-     "typicalTradedValue": 33450,
-     "observations": 1
+     "price": 10.81,
+     "typicalTradedValue": 37264,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11800,13 +11724,13 @@
    "tradingName": "CRUZEIRO EDU",
    "sector": "Consumer Services",
    "status": "operational",
-   "marketCapitalisation": 1983111613,
+   "marketCapitalisation": 2457016852,
    "listings": [
     {
      "ticker": "CSED3",
-     "price": 5.55,
-     "typicalTradedValue": 2243310,
-     "observations": 1
+     "price": 4.59,
+     "typicalTradedValue": 2389183.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11847,17 +11771,17 @@
    "tradingName": "CAMIL",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 1792150603,
+   "marketCapitalisation": 2274389733,
    "listings": [
     {
      "ticker": "CAML3",
-     "price": 5.17,
-     "typicalTradedValue": 3161972,
-     "observations": 1
+     "price": 4.88,
+     "typicalTradedValue": 4883526,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-05-31",
+    "balanceSheetAt": "2026-08-31",
     "annual": {
      "start": "2025-03-01",
      "end": "2026-02-28",
@@ -11867,23 +11791,23 @@
     },
     "currentToDate": {
      "start": "2026-03-01",
-     "end": "2026-05-31",
+     "end": "2026-08-31",
      "kind": "quarterly",
-     "ebit": 139521000,
-     "netIncome": 27971000
+     "ebit": 292186000,
+     "netIncome": 69280000
     },
     "priorToDate": {
      "start": "2025-03-01",
-     "end": "2025-05-31",
+     "end": "2025-08-31",
      "kind": "quarterly",
-     "ebit": 166239000,
-     "netIncome": 66000000
+     "ebit": 349922000,
+     "netIncome": 144708000
     },
-    "cashAndEquivalents": 1430714000,
-    "shortTermInvestments": 25095000,
-    "grossDebt": 5946954000,
-    "shareholdersEquity": 2989107000,
-    "totalAssets": 12021830000,
+    "cashAndEquivalents": 1853717000,
+    "shortTermInvestments": 0,
+    "grossDebt": 6225035000,
+    "shareholdersEquity": 3052281000,
+    "totalAssets": 11656941000,
     "hasOperatingResultLine": true
    }
   },
@@ -11894,13 +11818,13 @@
    "tradingName": "VIVER",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 7417661,
+   "marketCapitalisation": 15811330,
    "listings": [
     {
      "ticker": "VIVR3",
-     "price": 1.55,
-     "typicalTradedValue": 4185,
-     "observations": 1
+     "price": 2.3,
+     "typicalTradedValue": 27392.499999999996,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11941,13 +11865,13 @@
    "tradingName": "MINERVA",
    "sector": "Distribution Services",
    "status": "operational",
-   "marketCapitalisation": 4004863328,
+   "marketCapitalisation": 4191366983,
    "listings": [
     {
      "ticker": "BEEF3",
-     "price": 4.04,
-     "typicalTradedValue": 75845748,
-     "observations": 1
+     "price": 3.26,
+     "typicalTradedValue": 61080936,
+     "observations": 2
     }
    ],
    "financials": {
@@ -11988,13 +11912,13 @@
    "tradingName": "TENDA",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 3602827730,
+   "marketCapitalisation": 3245749622,
    "listings": [
     {
      "ticker": "TEND3",
-     "price": 31.15,
-     "typicalTradedValue": 60540025,
-     "observations": 1
+     "price": 22.43,
+     "typicalTradedValue": 43872686,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12035,13 +11959,13 @@
    "tradingName": "NATURA",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 11036145603,
+   "marketCapitalisation": 10857478732,
    "listings": [
     {
      "ticker": "NATU3",
-     "price": 7.93,
-     "typicalTradedValue": 63948313,
-     "observations": 1
+     "price": 5.7,
+     "typicalTradedValue": 58228071.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12082,19 +12006,19 @@
    "tradingName": "CYRELA REALT",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 11012039674,
+   "marketCapitalisation": 15348497306,
    "listings": [
     {
      "ticker": "CYRE3",
-     "price": 25.9,
-     "typicalTradedValue": 153441960,
-     "observations": 1
+     "price": 20.2,
+     "typicalTradedValue": 326228350,
+     "observations": 2
     },
     {
      "ticker": "CYRE4",
-     "price": 24.79,
-     "typicalTradedValue": 3906904,
-     "observations": 1
+     "price": 19.87,
+     "typicalTradedValue": 19095301,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12135,13 +12059,13 @@
    "tradingName": "COPEL",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 47283531278,
+   "marketCapitalisation": 51501032389,
    "listings": [
     {
      "ticker": "CPLE3",
-     "price": 15.94,
-     "typicalTradedValue": 162677264,
-     "observations": 1
+     "price": 15.04,
+     "typicalTradedValue": 214174168,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12182,19 +12106,19 @@
    "tradingName": "SANEPAR",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 10714447546,
+   "marketCapitalisation": 12935919656,
    "listings": [
     {
      "ticker": "SAPR4",
-     "price": 6.77,
-     "typicalTradedValue": 5942706,
-     "observations": 1
+     "price": 6.84,
+     "typicalTradedValue": 16194783,
+     "observations": 2
     },
     {
      "ticker": "SAPR3",
-     "price": 7.58,
-     "typicalTradedValue": 1404574,
-     "observations": 1
+     "price": 7.65,
+     "typicalTradedValue": 3087557,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12232,19 +12156,19 @@
    "tradingName": "INEPAR",
    "sector": "Producer Manufacturing",
    "status": "distressed",
-   "marketCapitalisation": 77120954,
+   "marketCapitalisation": 66318876,
    "listings": [
     {
      "ticker": "INEP3",
-     "price": 1.34,
-     "typicalTradedValue": 370376,
-     "observations": 1
+     "price": 1.04,
+     "typicalTradedValue": 192624,
+     "observations": 2
     },
     {
      "ticker": "INEP4",
-     "price": 1.37,
-     "typicalTradedValue": 21098,
-     "observations": 1
+     "price": 1.1,
+     "typicalTradedValue": 16764,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12285,13 +12209,13 @@
    "tradingName": "POSITIVO TEC",
    "sector": "Electronic Technology",
    "status": "operational",
-   "marketCapitalisation": 486397228,
+   "marketCapitalisation": 710028123,
    "listings": [
     {
      "ticker": "POSI3",
-     "price": 3.46,
-     "typicalTradedValue": 2880796,
-     "observations": 1
+     "price": 3.69,
+     "typicalTradedValue": 4279484,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12332,19 +12256,19 @@
    "tradingName": "KARSTEN",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 228448135,
+   "marketCapitalisation": 214803389,
    "listings": [
     {
-     "ticker": "CTKA4",
-     "price": 33.01,
-     "typicalTradedValue": 59418,
-     "observations": 1
+     "ticker": "CTKA3",
+     "price": 34.16,
+     "typicalTradedValue": 9417.5,
+     "observations": 2
     },
     {
-     "ticker": "CTKA3",
-     "price": 40.01,
-     "typicalTradedValue": 12003,
-     "observations": 1
+     "ticker": "CTKA4",
+     "price": 32.77,
+     "typicalTradedValue": 31347.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12385,19 +12309,19 @@
    "tradingName": "ACO ALTONA",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 274830066,
+   "marketCapitalisation": 285432733,
    "listings": [
     {
      "ticker": "EALT4",
-     "price": 11.11,
-     "typicalTradedValue": 57772,
-     "observations": 1
+     "price": 10.9,
+     "typicalTradedValue": 81206,
+     "observations": 2
     },
     {
      "ticker": "EALT3",
-     "price": 12.25,
-     "typicalTradedValue": 12250,
-     "observations": 1
+     "price": 12.75,
+     "typicalTradedValue": 9312.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12438,13 +12362,13 @@
    "tradingName": "INTELBRAS",
    "sector": "Technology Services",
    "status": "operational",
-   "marketCapitalisation": 4943651768,
+   "marketCapitalisation": 6460490953,
    "listings": [
     {
      "ticker": "INTB3",
-     "price": 14.78,
-     "typicalTradedValue": 10028230,
-     "observations": 1
+     "price": 14.31,
+     "typicalTradedValue": 15813872,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12485,13 +12409,13 @@
    "tradingName": "TEX RENAUX",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 17873981,
+   "marketCapitalisation": 8686723,
    "listings": [
     {
      "ticker": "TXRX4",
-     "price": 1.75,
-     "typicalTradedValue": 350,
-     "observations": 1
+     "price": 2.06,
+     "typicalTradedValue": 690,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12532,13 +12456,13 @@
    "tradingName": "PORTOBELLO",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 217799380,
+   "marketCapitalisation": 395265548,
    "listings": [
     {
      "ticker": "PTBL3",
-     "price": 1.62,
-     "typicalTradedValue": 164592,
-     "observations": 1
+     "price": 1.9,
+     "typicalTradedValue": 588646,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12579,19 +12503,19 @@
    "tradingName": "CELESC",
    "sector": "Utilities",
    "status": "operational",
-   "marketCapitalisation": 5726559677,
+   "marketCapitalisation": 6951651131,
    "listings": [
     {
      "ticker": "CLSC4",
-     "price": 160,
-     "typicalTradedValue": 624000,
-     "observations": 1
+     "price": 168.9,
+     "typicalTradedValue": 835590,
+     "observations": 2
     },
     {
      "ticker": "CLSC3",
-     "price": 132.03,
-     "typicalTradedValue": 13203,
-     "observations": 1
+     "price": 145.02,
+     "typicalTradedValue": 21103.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12632,17 +12556,17 @@
    "tradingName": "WEG",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 212905641652,
+   "marketCapitalisation": 179295578821,
    "listings": [
     {
      "ticker": "WEGE3",
-     "price": 50.88,
-     "typicalTradedValue": 359151744,
-     "observations": 1
+     "price": 44.86,
+     "typicalTradedValue": 419487152,
+     "observations": 2
     }
    ],
    "financials": {
-    "balanceSheetAt": "2026-06-30",
+    "balanceSheetAt": "2026-09-30",
     "annual": {
      "start": "2025-01-01",
      "end": "2025-12-31",
@@ -12652,23 +12576,23 @@
     },
     "currentToDate": {
      "start": "2026-01-01",
-     "end": "2026-06-30",
+     "end": "2026-09-30",
      "kind": "quarterly",
-     "ebit": 3805395000,
-     "netIncome": 3226245000
+     "ebit": 5887920000,
+     "netIncome": 4988916000
     },
     "priorToDate": {
      "start": "2025-01-01",
-     "end": "2025-06-30",
+     "end": "2025-09-30",
      "kind": "quarterly",
-     "ebit": 3965329000,
-     "netIncome": 3329842000
+     "ebit": 6002174000,
+     "netIncome": 5074596000
     },
-    "cashAndEquivalents": 7750256000,
-    "shortTermInvestments": 1050886000,
-    "grossDebt": 5066346000,
-    "shareholdersEquity": 20191394000,
-    "totalAssets": 46666431000,
+    "cashAndEquivalents": 5484016000,
+    "shortTermInvestments": 855431000,
+    "grossDebt": 3754445000,
+    "shareholdersEquity": 21367143000,
+    "totalAssets": 45635446000,
     "hasOperatingResultLine": true
    }
   },
@@ -12679,13 +12603,13 @@
    "tradingName": "TUPY",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 2091392193.0000002,
+   "marketCapitalisation": 2703313138,
    "listings": [
     {
      "ticker": "TUPY3",
-     "price": 15.8,
-     "typicalTradedValue": 4444540,
-     "observations": 1
+     "price": 15.73,
+     "typicalTradedValue": 8233489.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12726,68 +12650,21 @@
    "tradingName": "DOHLER",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 429795188,
+   "marketCapitalisation": 427253890,
    "listings": [
     {
      "ticker": "DOHL4",
-     "price": 3.68,
-     "typicalTradedValue": 6256,
+     "price": 3.65,
+     "typicalTradedValue": 9515.5,
+     "observations": 2
+    },
+    {
+     "ticker": "DOHL3",
+     "price": 6.46,
+     "typicalTradedValue": 646,
      "observations": 1
     }
    ]
-  },
-  {
-   "cnpj": "84683671000194",
-   "cvmCode": "11991",
-   "legalName": "WETZEL S.A.",
-   "tradingName": "WETZEL S/A",
-   "sector": "Producer Manufacturing",
-   "status": "operational",
-   "marketCapitalisation": 49967485,
-   "listings": [
-    {
-     "ticker": "MWET4",
-     "price": 30.98,
-     "typicalTradedValue": 6196,
-     "observations": 1
-    },
-    {
-     "ticker": "MWET3",
-     "price": 24.5,
-     "typicalTradedValue": 2450,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": -4120000,
-     "netIncome": -28578000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": -18417000,
-     "netIncome": -28150000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": 1082000,
-     "netIncome": -14812000
-    },
-    "cashAndEquivalents": 147000,
-    "shortTermInvestments": 0,
-    "grossDebt": 114871000,
-    "shareholdersEquity": -33248000,
-    "totalAssets": 332402000,
-    "hasOperatingResultLine": true
-   }
   },
   {
    "cnpj": "84693183000168",
@@ -12796,13 +12673,13 @@
    "tradingName": "SCHULZ",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 4949361342,
+   "marketCapitalisation": 4857948856,
    "listings": [
     {
      "ticker": "SHUL4",
-     "price": 4.35,
-     "typicalTradedValue": 2492550,
-     "observations": 1
+     "price": 4.42,
+     "typicalTradedValue": 3201020,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12843,13 +12720,13 @@
    "tradingName": "RIOSULENSE",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 98848412,
+   "marketCapitalisation": 124773800,
    "listings": [
     {
      "ticker": "RSUL4",
-     "price": 38.22,
-     "typicalTradedValue": 324870,
-     "observations": 1
+     "price": 44.02,
+     "typicalTradedValue": 228465,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12890,13 +12767,13 @@
    "tradingName": "METISA",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 449473593,
+   "marketCapitalisation": 351936942,
    "listings": [
     {
      "ticker": "MTSA4",
-     "price": 46.58,
-     "typicalTradedValue": 130424,
-     "observations": 1
+     "price": 48,
+     "typicalTradedValue": 70012,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12937,19 +12814,13 @@
    "tradingName": "JOSAPAR",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 189437404,
+   "marketCapitalisation": 210861953,
    "listings": [
     {
      "ticker": "JOPA4",
      "price": 18,
-     "typicalTradedValue": 5400,
-     "observations": 1
-    },
-    {
-     "ticker": "JOPA3",
-     "price": 17.9,
-     "typicalTradedValue": 1789.9999999999998,
-     "observations": 1
+     "typicalTradedValue": 3600,
+     "observations": 2
     }
    ],
    "financials": {
@@ -12990,13 +12861,13 @@
    "tradingName": "HABITASUL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 205317806,
+   "marketCapitalisation": 211268133,
    "listings": [
     {
      "ticker": "HBTS5",
-     "price": 34.5,
-     "typicalTradedValue": 3450,
-     "observations": 1
+     "price": 34.4,
+     "typicalTradedValue": 5165,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13037,13 +12908,13 @@
    "tradingName": "FRAS-LE",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 6434174137,
+   "marketCapitalisation": 8175838120,
    "listings": [
     {
      "ticker": "FRAS3",
-     "price": 23.34,
-     "typicalTradedValue": 3818424,
-     "observations": 1
+     "price": 22.89,
+     "typicalTradedValue": 3961300.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13084,13 +12955,13 @@
    "tradingName": "MUNDIAL",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 187492900,
+   "marketCapitalisation": 183425595,
    "listings": [
     {
      "ticker": "MNDL3",
-     "price": 18.9,
-     "typicalTradedValue": 1889.9999999999998,
-     "observations": 1
+     "price": 18.49,
+     "typicalTradedValue": 1869.4999999999998,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13131,19 +13002,19 @@
    "tradingName": "MARCOPOLO",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 5404899471,
+   "marketCapitalisation": 5769405989,
    "listings": [
     {
      "ticker": "POMO4",
-     "price": 4.43,
-     "typicalTradedValue": 43976167,
-     "observations": 1
+     "price": 4.1,
+     "typicalTradedValue": 68449283.5,
+     "observations": 2
     },
     {
      "ticker": "POMO3",
-     "price": 4.2,
-     "typicalTradedValue": 7077000,
-     "observations": 1
+     "price": 3.86,
+     "typicalTradedValue": 8442051,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13184,19 +13055,19 @@
    "tradingName": "RANDON PART",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 2126468379.9999998,
+   "marketCapitalisation": 3052434234,
    "listings": [
     {
      "ticker": "RAPT4",
-     "price": 5.09,
-     "typicalTradedValue": 12832399,
-     "observations": 1
+     "price": 4.32,
+     "typicalTradedValue": 27301887.5,
+     "observations": 2
     },
     {
      "ticker": "RAPT3",
-     "price": 8.68,
-     "typicalTradedValue": 512988,
-     "observations": 1
+     "price": 10.97,
+     "typicalTradedValue": 441338.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13237,13 +13108,13 @@
    "tradingName": "SLC AGRICOLA",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 8590073718,
+   "marketCapitalisation": 8659388130,
    "listings": [
     {
      "ticker": "SLCE3",
-     "price": 17.97,
-     "typicalTradedValue": 64931000.99999999,
-     "observations": 1
+     "price": 17.24,
+     "typicalTradedValue": 55907590.49999999,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13284,13 +13155,13 @@
    "tradingName": "LUPATECH",
    "sector": "Producer Manufacturing",
    "status": "distressed",
-   "marketCapitalisation": 17129152,
+   "marketCapitalisation": 23375142,
    "listings": [
     {
      "ticker": "LUPA3",
-     "price": 3.7,
-     "typicalTradedValue": 21090,
-     "observations": 1
+     "price": 4.02,
+     "typicalTradedValue": 21600,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13331,19 +13202,19 @@
    "tradingName": "KLABIN S/A",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 23225720959,
+   "marketCapitalisation": 21850442899,
    "listings": [
     {
      "ticker": "KLBN4",
-     "price": 3.84,
-     "typicalTradedValue": 8416896,
-     "observations": 1
+     "price": 3.64,
+     "typicalTradedValue": 21890476,
+     "observations": 2
     },
     {
      "ticker": "KLBN3",
-     "price": 4.06,
-     "typicalTradedValue": 2035683.9999999998,
-     "observations": 1
+     "price": 3.87,
+     "typicalTradedValue": 5139779,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13384,13 +13255,13 @@
    "tradingName": "GRENDENE",
    "sector": "Consumer Non-Durables",
    "status": "operational",
-   "marketCapitalisation": 3392121490,
+   "marketCapitalisation": 4213087142.9999995,
    "listings": [
     {
      "ticker": "GRND3",
-     "price": 3.71,
-     "typicalTradedValue": 11544778,
-     "observations": 1
+     "price": 3.83,
+     "typicalTradedValue": 9671712,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13431,13 +13302,13 @@
    "tradingName": "MINUPAR",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 279743942,
+   "marketCapitalisation": 276193878,
    "listings": [
     {
      "ticker": "MNPR3",
-     "price": 3.94,
-     "typicalTradedValue": 47280,
-     "observations": 1
+     "price": 3.83,
+     "typicalTradedValue": 37045,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13478,19 +13349,19 @@
    "tradingName": "SANTANDER BR",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 113865196272,
+   "marketCapitalisation": 103217281968,
    "listings": [
     {
      "ticker": "SANB4",
-     "price": 15.02,
-     "typicalTradedValue": 2717118,
-     "observations": 1
+     "price": 13.22,
+     "typicalTradedValue": 3103599,
+     "observations": 2
     },
     {
      "ticker": "SANB3",
-     "price": 15.05,
-     "typicalTradedValue": 741965,
-     "observations": 1
+     "price": 13.26,
+     "typicalTradedValue": 1512668.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13529,13 +13400,13 @@
    "tradingName": "UNICASA",
    "sector": "Consumer Durables",
    "status": "operational",
-   "marketCapitalisation": 77321044,
+   "marketCapitalisation": 81947093,
    "listings": [
     {
      "ticker": "UCAS3",
-     "price": 1.15,
-     "typicalTradedValue": 6094.999999999999,
-     "observations": 1
+     "price": 1.12,
+     "typicalTradedValue": 21359.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13576,19 +13447,19 @@
    "tradingName": "RECRUSUL",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 50076106,
+   "marketCapitalisation": 38990798,
    "listings": [
     {
      "ticker": "RCSL4",
-     "price": 0.38,
-     "typicalTradedValue": 489972,
-     "observations": 1
+     "price": 0.7,
+     "typicalTradedValue": 334166,
+     "observations": 2
     },
     {
      "ticker": "RCSL3",
-     "price": 0.44,
-     "typicalTradedValue": 31372,
-     "observations": 1
+     "price": 1.67,
+     "typicalTradedValue": 30382,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13629,13 +13500,13 @@
    "tradingName": "KEPLER WEBER",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 1182459702,
+   "marketCapitalisation": 1412482298,
    "listings": [
     {
      "ticker": "KEPL3",
-     "price": 6.48,
-     "typicalTradedValue": 11131992,
-     "observations": 1
+     "price": 6.35,
+     "typicalTradedValue": 14242953.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13676,19 +13547,19 @@
    "tradingName": "GRAZZIOTIN",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 591379939,
+   "marketCapitalisation": 647473140,
    "listings": [
     {
      "ticker": "CGRA4",
-     "price": 23.11,
-     "typicalTradedValue": 94751,
-     "observations": 1
+     "price": 22.99,
+     "typicalTradedValue": 101402,
+     "observations": 2
     },
     {
      "ticker": "CGRA3",
-     "price": 23.5,
-     "typicalTradedValue": 14100,
-     "observations": 1
+     "price": 23,
+     "typicalTradedValue": 54200,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13729,13 +13600,13 @@
    "tradingName": "TREVISA",
    "sector": "Transportation",
    "status": "operational",
-   "marketCapitalisation": 85385758,
+   "marketCapitalisation": 97209603,
    "listings": [
     {
      "ticker": "LUXM4",
-     "price": 2.98,
-     "typicalTradedValue": 55130,
-     "observations": 1
+     "price": 3.01,
+     "typicalTradedValue": 28167,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13776,13 +13647,13 @@
    "tradingName": "DIMED",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 1925465750,
+   "marketCapitalisation": 2325427447,
    "listings": [
     {
      "ticker": "PNVL3",
-     "price": 12.94,
-     "typicalTradedValue": 3250528,
-     "observations": 1
+     "price": 10.63,
+     "typicalTradedValue": 5777873.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13823,19 +13694,19 @@
    "tradingName": "GERDAU MET",
    "sector": "Non-Energy Minerals",
    "status": "operational",
-   "marketCapitalisation": 14168147194,
+   "marketCapitalisation": 14496157143,
    "listings": [
     {
      "ticker": "GOAU4",
-     "price": 11.61,
-     "typicalTradedValue": 95621121,
-     "observations": 1
+     "price": 11.26,
+     "typicalTradedValue": 119353222.5,
+     "observations": 2
     },
     {
      "ticker": "GOAU3",
-     "price": 10.38,
-     "typicalTradedValue": 302058,
-     "observations": 1
+     "price": 10,
+     "typicalTradedValue": 509029,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13876,19 +13747,19 @@
    "tradingName": "PANATLANTICA",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 699132736,
+   "marketCapitalisation": 693779648,
    "listings": [
     {
      "ticker": "PATI4",
-     "price": 29.5,
-     "typicalTradedValue": 8850,
-     "observations": 1
+     "price": 35.45,
+     "typicalTradedValue": 7970,
+     "observations": 2
     },
     {
      "ticker": "PATI3",
-     "price": 29.4,
-     "typicalTradedValue": 2940,
-     "observations": 1
+     "price": 27.89,
+     "typicalTradedValue": 2864.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13929,25 +13800,25 @@
    "tradingName": "BANRISUL",
    "sector": "Finance",
    "status": "operational",
-   "marketCapitalisation": 6740304411,
+   "marketCapitalisation": 8177280490,
    "listings": [
     {
      "ticker": "BRSR6",
-     "price": 15.06,
-     "typicalTradedValue": 9947130,
-     "observations": 1
+     "price": 14.41,
+     "typicalTradedValue": 16010904.5,
+     "observations": 2
     },
     {
      "ticker": "BRSR3",
-     "price": 18.05,
-     "typicalTradedValue": 46930,
-     "observations": 1
+     "price": 18.34,
+     "typicalTradedValue": 97742,
+     "observations": 2
     },
     {
      "ticker": "BRSR5",
-     "price": 17,
-     "typicalTradedValue": 3400,
-     "observations": 1
+     "price": 17.99,
+     "typicalTradedValue": 3499,
+     "observations": 2
     }
    ],
    "financials": {
@@ -13982,63 +13853,19 @@
    }
   },
   {
-   "cnpj": "92749225000163",
-   "cvmCode": "6629",
-   "legalName": "HERCULES S/A - FABRICA DE TALHERES",
-   "tradingName": "HERCULES",
-   "sector": "Consumer Durables",
-   "status": "operational",
-   "marketCapitalisation": 2241480,
-   "listings": [
-    {
-     "ticker": "HETA4",
-     "price": 5.1,
-     "typicalTradedValue": 509.99999999999994,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": 4138000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": 1566000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": 1839000
-    },
-    "cashAndEquivalents": 13000,
-    "shortTermInvestments": 0,
-    "grossDebt": 324582000,
-    "shareholdersEquity": -349545000,
-    "totalAssets": 11015000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "92754738000162",
    "cvmCode": "8133",
    "legalName": "LOJAS RENNER SA",
    "tradingName": "LOJAS RENNER",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 11251318440,
+   "marketCapitalisation": 14633739646,
    "listings": [
     {
      "ticker": "LREN3",
-     "price": 11.15,
-     "typicalTradedValue": 94302240,
-     "observations": 1
+     "price": 9.65,
+     "typicalTradedValue": 182622162.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -14079,19 +13906,19 @@
    "tradingName": "TAURUS ARMAS",
    "sector": "Electronic Technology",
    "status": "operational",
-   "marketCapitalisation": 908453592,
+   "marketCapitalisation": 1569584782,
    "listings": [
     {
      "ticker": "TASA4",
-     "price": 6.76,
-     "typicalTradedValue": 6272604,
-     "observations": 1
+     "price": 4.82,
+     "typicalTradedValue": 7646858,
+     "observations": 2
     },
     {
      "ticker": "TASA3",
-     "price": 6.79,
-     "typicalTradedValue": 404684,
-     "observations": 1
+     "price": 6.11,
+     "typicalTradedValue": 470265.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -14132,13 +13959,13 @@
    "tradingName": "IRANI",
    "sector": "Process Industries",
    "status": "operational",
-   "marketCapitalisation": 1818157162,
+   "marketCapitalisation": 1872907136,
    "listings": [
     {
      "ticker": "RANI3",
-     "price": 7.96,
-     "typicalTradedValue": 5106340,
-     "observations": 1
+     "price": 7.48,
+     "typicalTradedValue": 9015142,
+     "observations": 2
     }
    ],
    "financials": {
@@ -14173,63 +14000,19 @@
    }
   },
   {
-   "cnpj": "93828986000173",
-   "cvmCode": "13854",
-   "legalName": "CEMEPE INVESTIMENTOS SA",
-   "tradingName": "CEMEPE",
-   "sector": "Miscellaneous",
-   "status": "operational",
-   "marketCapitalisation": 1758236,
-   "listings": [
-    {
-     "ticker": "MAPT3",
-     "price": 2.06,
-     "typicalTradedValue": 206,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": -102000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": -93000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": -98000
-    },
-    "cashAndEquivalents": 0,
-    "shortTermInvestments": 0,
-    "grossDebt": 0,
-    "shareholdersEquity": -6600000,
-    "totalAssets": 773000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "94813102000170",
    "cvmCode": "25950",
    "legalName": "TRÊS TENTOS AGROINDUSTRIAL S.A.",
    "tradingName": "3TENTOS",
    "sector": "Commercial Services",
    "status": "operational",
-   "marketCapitalisation": 5302812011,
+   "marketCapitalisation": 7080430838,
    "listings": [
     {
      "ticker": "TTEN3",
-     "price": 10.38,
-     "typicalTradedValue": 19096086,
-     "observations": 1
+     "price": 11.29,
+     "typicalTradedValue": 25067841.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -14264,63 +14047,19 @@
    }
   },
   {
-   "cnpj": "95426862000197",
-   "cvmCode": "1570",
-   "legalName": "EXCELSIOR ALIMENTOS SA.",
-   "tradingName": "EXCELSIOR",
-   "sector": "Distribution Services",
-   "status": "operational",
-   "marketCapitalisation": 221828613,
-   "listings": [
-    {
-     "ticker": "BAUH4",
-     "price": 93.39,
-     "typicalTradedValue": 9339,
-     "observations": 1
-    }
-   ],
-   "financials": {
-    "balanceSheetAt": "2026-06-30",
-    "annual": {
-     "start": "2025-01-01",
-     "end": "2025-12-31",
-     "kind": "annual",
-     "ebit": 23892000
-    },
-    "currentToDate": {
-     "start": "2026-01-01",
-     "end": "2026-06-30",
-     "kind": "quarterly",
-     "ebit": 10029000
-    },
-    "priorToDate": {
-     "start": "2025-01-01",
-     "end": "2025-06-30",
-     "kind": "quarterly",
-     "ebit": 12495000
-    },
-    "cashAndEquivalents": 79142000,
-    "shortTermInvestments": 0,
-    "grossDebt": 0,
-    "shareholdersEquity": 153407000,
-    "totalAssets": 218386000,
-    "hasOperatingResultLine": true
-   }
-  },
-  {
    "cnpj": "96418264021802",
    "cvmCode": "25038",
    "legalName": "LOJAS QUERO QUERO S.A.",
    "tradingName": "QUERO-QUERO",
    "sector": "Retail Trade",
    "status": "operational",
-   "marketCapitalisation": 268992437,
+   "marketCapitalisation": 631097654,
    "listings": [
     {
      "ticker": "LJQQ3",
-     "price": 1.3,
-     "typicalTradedValue": 1297270,
-     "observations": 1
+     "price": 1.35,
+     "typicalTradedValue": 4363632.5,
+     "observations": 2
     }
    ],
    "financials": {
@@ -14361,13 +14100,13 @@
    "tradingName": "DEXCO",
    "sector": "Producer Manufacturing",
    "status": "operational",
-   "marketCapitalisation": 4873294641,
+   "marketCapitalisation": 7292091083,
    "listings": [
     {
      "ticker": "DXCO3",
-     "price": 5.47,
-     "typicalTradedValue": 3590508,
-     "observations": 1
+     "price": 5.38,
+     "typicalTradedValue": 11364660,
+     "observations": 2
     }
    ],
    "financials": {
